@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Limpiador de texto</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel-2: #1f2937;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #22c55e;
+      --border: #334155;
+      --danger: #ef4444;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 42px);
+    }
+    .sub {
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 320px 1fr 1fr;
+      gap: 18px;
+    }
+    .card {
+      background: rgba(17,24,39,.9);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    }
+    .card h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+    }
+    .controls label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(148,163,184,.12);
+      cursor: pointer;
+    }
+    .controls label:last-child { border-bottom: 0; }
+    .controls input { margin-top: 3px; }
+    .controls small {
+      display: block;
+      color: var(--muted);
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+    textarea {
+      width: 100%;
+      min-height: 430px;
+      resize: vertical;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: #0b1220;
+      color: var(--text);
+      padding: 14px;
+      font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      outline: none;
+    }
+    textarea:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    button {
+      border: 0;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--panel-2);
+      color: var(--text);
+    }
+    button.primary { background: var(--accent); color: #052e16; }
+    button.danger { background: var(--danger); color: white; }
+    button:hover { filter: brightness(1.05); }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .stat {
+      background: #0b1220;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .muted { color: var(--muted); }
+    .footer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+      textarea { min-height: 280px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Limpiador de texto</h1>
+    <div class="sub">
+      Pega texto con formato raro y límpialo al instante. Todo se procesa en tu navegador.
+    </div>
+
+    <div class="grid">
+      <section class="card controls">
+        <h2>Opciones</h2>
+
+        <label>
+          <input type="checkbox" id="trimLines" checked>
+          <span><strong>Quitar espacios al inicio y final de cada línea</strong><small>Muy útil cuando copias desde correos, PDFs o Excel.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="collapseSpaces" checked>
+          <span><strong>Reducir espacios dobles a uno</strong><small>Convierte secuencias largas de espacios en un solo espacio.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="removeBlankLines">
+          <span><strong>Eliminar líneas vacías</strong><small>Deja solo líneas con contenido.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="collapseBlankLines" checked>
+          <span><strong>Reducir bloques de líneas vacías</strong><small>Si hay muchas líneas en blanco seguidas, las deja en una sola.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="normalizeQuotes">
+          <span><strong>Normalizar comillas “raras”</strong><small>Convierte comillas curvas y apóstrofos tipográficos a formato estándar.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="normalizeDashes">
+          <span><strong>Normalizar guiones largos</strong><small>Convierte em dash y en dash a guion simple.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="removeEmojis">
+          <span><strong>Quitar emojis y pictogramas</strong><small>Útil para limpiar texto antes de pegarlo en sistemas delicados.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="removeDiacritics">
+          <span><strong>Quitar tildes y acentos</strong><small>Ejemplo: acción → accion. Útil para slugs o sistemas antiguos.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="sortLines">
+          <span><strong>Ordenar líneas alfabéticamente</strong><small>Ideal para listas, tags o pequeños inventarios.</small></span>
+        </label>
+
+        <label>
+          <input type="checkbox" id="dedupeLines">
+          <span><strong>Eliminar líneas duplicadas</strong><small>Conserva la primera aparición de cada línea.</small></span>
+        </label>
+
+        <div class="actions">
+          <button class="primary" id="processBtn">Limpiar texto</button>
+          <button id="swapBtn">← Pasar a entrada</button>
+          <button class="danger" id="resetBtn">Vaciar</button>
+        </div>
+
+        <div class="footer">
+          Consejo SEO si la publicas: crea páginas separadas para utilidades concretas como “quitar emojis de un texto”, “limpiar texto para Excel” o “eliminar líneas duplicadas”.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Texto original</h2>
+        <textarea id="input" placeholder="Pega aquí tu texto...">  Hola,   mundo.  
+
+Esto   es   una   prueba.
+
+
+Línea repetida
+Línea repetida
+Texto con comillas “curvas” y guiones — raros 😄
+acción, información, útil
+        </textarea>
+        <div class="stats">
+          <div class="stat"><strong id="inChars">0</strong><span class="muted">Caracteres</span></div>
+          <div class="stat"><strong id="inWords">0</strong><span class="muted">Palabras</span></div>
+          <div class="stat"><strong id="inLines">0</strong><span class="muted">Líneas</span></div>
+          <div class="stat"><strong id="inBytes">0</strong><span class="muted">Bytes aprox.</span></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Resultado</h2>
+        <textarea id="output" placeholder="Aquí aparecerá el texto limpio..."></textarea>
+        <div class="actions">
+          <button class="primary" id="copyBtn">Copiar resultado</button>
+          <button id="downloadBtn">Descargar .txt</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong id="outChars">0</strong><span class="muted">Caracteres</span></div>
+          <div class="stat"><strong id="outWords">0</strong><span class="muted">Palabras</span></div>
+          <div class="stat"><strong id="outLines">0</strong><span class="muted">Líneas</span></div>
+          <div class="stat"><strong id="savedChars">0</strong><span class="muted">Caracteres ahorrados</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+
+    const input = $('input');
+    const output = $('output');
+
+    const options = [
+      'trimLines','collapseSpaces','removeBlankLines','collapseBlankLines',
+      'normalizeQuotes','normalizeDashes','removeEmojis','removeDiacritics',
+      'sortLines','dedupeLines'
+    ].map($);
+
+    function countWords(text) {
+      const m = text.trim().match(/\S+/g);
+      return m ? m.length : 0;
+    }
+
+    function countLines(text) {
+      if (!text) return 0;
+      return text.split(/\r?\n/).length;
+    }
+
+    function updateStats() {
+      const inText = input.value;
+      const outText = output.value;
+      $('inChars').textContent = inText.length;
+      $('inWords').textContent = countWords(inText);
+      $('inLines').textContent = countLines(inText);
+      $('inBytes').textContent = new TextEncoder().encode(inText).length;
+      $('outChars').textContent = outText.length;
+      $('outWords').textContent = countWords(outText);
+      $('outLines').textContent = countLines(outText);
+      $('savedChars').textContent = Math.max(0, inText.length - outText.length);
+    }
+
+    function removeEmoji(text) {
+      return text.replace(/\p{Extended_Pictographic}|\p{Emoji_Presentation}/gu, '');
+    }
+
+    function cleanText(text) {
+      let lines = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
+
+      if ($('trimLines').checked) {
+        lines = lines.map(line => line.trim());
+      }
+
+      if ($('collapseSpaces').checked) {
+        lines = lines.map(line => line.replace(/[ \t]{2,}/g, ' '));
+      }
+
+      let joined = lines.join('\n');
+
+      if ($('normalizeQuotes').checked) {
+        joined = joined
+          .replace(/[“”«»]/g, '"')
+          .replace(/[‘’´`]/g, "'");
+      }
+
+      if ($('normalizeDashes').checked) {
+        joined = joined.replace(/[—–]/g, '-');
+      }
+
+      if ($('removeEmojis').checked) {
+        joined = removeEmoji(joined);
+      }
+
+      if ($('removeDiacritics').checked) {
+        joined = joined.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      }
+
+      lines = joined.split('\n');
+
+      if ($('removeBlankLines').checked) {
+        lines = lines.filter(line => line.trim() !== '');
+      }
+
+      if ($('dedupeLines').checked) {
+        const seen = new Set();
+        lines = lines.filter(line => {
+          const key = line;
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        });
+      }
+
+      if ($('sortLines').checked) {
+        lines = [...lines].sort((a, b) => a.localeCompare(b, 'es', { sensitivity: 'base' }));
+      }
+
+      joined = lines.join('\n');
+
+      if ($('collapseBlankLines').checked && !$('removeBlankLines').checked) {
+        joined = joined.replace(/\n{3,}/g, '\n\n');
+      }
+
+      return joined;
+    }
+
+    function processText() {
+      output.value = cleanText(input.value);
+      updateStats();
+    }
+
+    function resetAll() {
+      input.value = '';
+      output.value = '';
+      updateStats();
+      input.focus();
+    }
+
+    $('processBtn').addEventListener('click', processText);
+    $('resetBtn').addEventListener('click', resetAll);
+    $('swapBtn').addEventListener('click', () => {
+      input.value = output.value;
+      processText();
+    });
+
+    $('copyBtn').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(output.value);
+        $('copyBtn').textContent = 'Copiado';
+        setTimeout(() => $('copyBtn').textContent = 'Copiar resultado', 1200);
+      } catch {
+        output.select();
+        document.execCommand('copy');
+      }
+    });
+
+    $('downloadBtn').addEventListener('click', () => {
+      const blob = new Blob([output.value], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'texto-limpio.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    input.addEventListener('input', updateStats);
+    options.forEach(el => el.addEventListener('change', processText));
+
+    processText();
+  </script>
+</body>
+</html>
