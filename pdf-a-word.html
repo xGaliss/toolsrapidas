@@ -1,0 +1,467 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>PDF a Word online gratis | ToolsRapidas</title>
+    <meta name="description" content="Convierte PDF a Word online gratis extrayendo el texto de tu PDF directamente desde el navegador.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/pdf-a-word.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="PDF a Word online | ToolsRapidas">
+    <meta property="og:description" content="Extrae texto de PDF y descárgalo en formato Word de forma rápida.">
+    <meta property="og:url" content="https://toolsrapidas.com/pdf-a-word.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PDF a Word online | ToolsRapidas" />
+    <meta name="twitter:description" content="Convierte el texto de un PDF a un documento Word básico online gratis." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "PDF a Word online",
+          "url": "https://toolsrapidas.com/pdf-a-word.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte PDF a Word online extrayendo el texto del documento directamente desde el navegador."
+        }
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        .upload-box {
+            border: 1px dashed rgba(148,163,184,.25);
+            border-radius: 16px;
+            padding: 18px;
+            background: #0b1220;
+        }
+
+        .tool-input,
+        textarea {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            outline: none;
+        }
+
+            .tool-input:focus,
+            textarea:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            margin-top: 16px;
+        }
+
+        .tool-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .tool-help,
+        .status-box {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>PDF a Word online</h1>
+            <p class="tool-lead">
+                Extrae el texto de un PDF y descárgalo como documento Word básico directamente desde el navegador. Ideal para copiar, editar o reutilizar contenido.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-single">
+                    <section class="card tool-panel">
+                        <h2>Sube tu PDF</h2>
+
+                        <div class="upload-box">
+                            <input class="tool-input" type="file" id="pdfFile" accept="application/pdf" />
+
+                            <div class="tool-actions">
+                                <button class="btn primary" id="extractBtn" type="button">Convertir PDF a Word</button>
+                                <a class="btn secondary" id="downloadBtn" href="#" download="documento.doc" hidden>Descargar Word</a>
+                            </div>
+
+                            <div class="status-box" id="statusText">Selecciona un PDF para extraer su texto.</div>
+                        </div>
+
+                        <div class="tool-help">
+                            Esta versión extrae el texto del PDF y genera un documento Word básico. Funciona muy bien para PDFs de texto, pero no conserva maquetaciones complejas como un convertidor profesional de servidor.
+                        </div>
+
+                        <textarea id="outputText" placeholder="Aquí aparecerá el texto extraído del PDF..."></textarea>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajar con PDF online</h2>
+                        <p>Extrae, convierte y organiza archivos PDF fácilmente desde tu navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="pdf-a-texto.html">PDF a texto</a></h3>
+                        <p>Extrae texto limpio de un PDF online de forma rápida y sencilla.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="unir-pdf.html">Unir PDF</a></h3>
+                        <p>Combina varios archivos PDF en un único documento descargable.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="imagen-a-texto.html">Imagen a texto</a></h3>
+                        <p>Convierte imágenes con texto en contenido editable con OCR.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras y caracteres del contenido extraído fácilmente.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Convertir PDF a Word online</h2>
+                    <p>
+                        Esta herramienta permite extraer texto de un PDF y descargarlo como documento Word básico online gratis desde el navegador.
+                    </p>
+
+                    <h2>¿Para qué sirve un PDF a Word?</h2>
+                    <p>
+                        Es útil cuando necesitas editar el contenido de un PDF, copiarlo, reutilizar fragmentos o pasarlo a un formato más cómodo para trabajar.
+                    </p>
+
+                    <h2>Qué tipo de conversión realiza</h2>
+                    <p>
+                        La herramienta extrae el texto del PDF y lo convierte en un archivo compatible con Word. Es ideal para documentos de texto sencillos.
+                    </p>
+
+                    <h2>Ventajas de usar esta herramienta</h2>
+                    <p>
+                        No necesitas instalar software y puedes descargar rápidamente el contenido en un formato editable desde tu propio dispositivo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Convierte el PDF manteniendo el diseño exacto?</summary>
+                        <p>No siempre. Esta versión está orientada a extraer texto y generar un Word básico editable.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para PDFs escaneados?</summary>
+                        <p>Si el PDF no contiene texto real sino imágenes, necesitarás OCR. Para eso puedes usar la herramienta de imagen a texto.</p>
+                    </details>
+                    <details>
+                        <summary>¿El archivo se sube a un servidor?</summary>
+                        <p>No. El procesamiento se realiza en el navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para escritorio, móvil y tablet.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs" type="module"></script>
+    <script type="module">
+        import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs';
+
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs';
+
+        const pdfFile = document.getElementById('pdfFile');
+        const extractBtn = document.getElementById('extractBtn');
+        const outputText = document.getElementById('outputText');
+        const statusText = document.getElementById('statusText');
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        let extractedText = '';
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+
+        function createWordDocument(text) {
+            const html = `
+                <html xmlns:o="urn:schemas-microsoft-com:office:office"
+                      xmlns:w="urn:schemas-microsoft-com:office:word"
+                      xmlns="http://www.w3.org/TR/REC-html40">
+                <head>
+                    <meta charset="utf-8">
+                    <title>Documento</title>
+                </head>
+                <body>
+                    <pre style="font-family:Arial, sans-serif; white-space:pre-wrap;">${escapeHtml(text)}</pre>
+                </body>
+                </html>
+            `;
+
+            return new Blob(['\ufeff', html], { type: 'application/msword' });
+        }
+
+        extractBtn.addEventListener('click', async function () {
+            const file = pdfFile.files[0];
+            if (!file) {
+                statusText.textContent = 'Primero debes seleccionar un PDF.';
+                return;
+            }
+
+            extractBtn.disabled = true;
+            outputText.value = '';
+            downloadBtn.hidden = true;
+            extractedText = '';
+            statusText.textContent = 'Leyendo PDF...';
+
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+
+                let allText = '';
+
+                for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
+                    statusText.textContent = `Extrayendo texto de la página ${pageNumber} de ${pdf.numPages}...`;
+
+                    const page = await pdf.getPage(pageNumber);
+                    const textContent = await page.getTextContent();
+
+                    const pageText = textContent.items
+                        .map(item => item.str)
+                        .join(' ')
+                        .replace(/\s+/g, ' ')
+                        .trim();
+
+                    allText += pageText + '\n\n';
+                }
+
+                extractedText = allText.trim();
+                outputText.value = extractedText;
+
+                if (!extractedText) {
+                    statusText.textContent = 'No se encontró texto en el PDF.';
+                    return;
+                }
+
+                const wordBlob = createWordDocument(extractedText);
+                const wordUrl = URL.createObjectURL(wordBlob);
+
+                downloadBtn.href = wordUrl;
+                downloadBtn.download = 'pdf-convertido.doc';
+                downloadBtn.hidden = false;
+
+                statusText.textContent = 'Conversión completada. Ya puedes descargar el documento Word.';
+            } catch (error) {
+                console.error(error);
+                statusText.textContent = 'No se pudo procesar el PDF.';
+            } finally {
+                extractBtn.disabled = false;
+            }
+        });
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>

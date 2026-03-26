@@ -1,0 +1,454 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Unir PDF online gratis | Combinar PDFs | ToolsRapidas</title>
+    <meta name="description" content="Une varios archivos PDF online gratis en un solo documento. Rápido, fácil y sin instalar programas.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/unir-pdf.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Unir PDF online | ToolsRapidas">
+    <meta property="og:description" content="Combina varios archivos PDF en un único documento de forma rápida y gratis.">
+    <meta property="og:url" content="https://toolsrapidas.com/unir-pdf.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Unir PDF online | ToolsRapidas" />
+    <meta name="twitter:description" content="Combina varios PDFs en uno solo directamente desde el navegador." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Unir PDF online",
+          "url": "https://toolsrapidas.com/unir-pdf.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Une varios archivos PDF online gratis en un solo documento directamente desde el navegador."
+        }
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        .upload-box {
+            border: 1px dashed rgba(148,163,184,.25);
+            border-radius: 16px;
+            padding: 18px;
+            background: #0b1220;
+        }
+
+        .tool-input {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            outline: none;
+        }
+
+            .tool-input:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        .tool-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .tool-help,
+        .status-box {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .file-list {
+            margin-top: 16px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .file-item {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 12px 14px;
+            color: var(--text);
+            font-size: 14px;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Unir PDF online</h1>
+            <p class="tool-lead">
+                Combina varios archivos PDF en un único documento gratis y directamente desde el navegador. Sin instalar programas ni registrarte.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-single">
+                    <section class="card tool-panel">
+                        <h2>Sube tus PDFs</h2>
+
+                        <div class="upload-box">
+                            <input class="tool-input" type="file" id="pdfFiles" accept="application/pdf" multiple />
+
+                            <div class="tool-actions">
+                                <button class="btn primary" id="mergeBtn" type="button">Unir archivos PDF</button>
+                                <a class="btn secondary" id="downloadBtn" href="#" download="pdf-unido.pdf" hidden>Descargar PDF unido</a>
+                            </div>
+
+                            <div class="status-box" id="statusText">Selecciona dos o más archivos PDF para unirlos.</div>
+
+                            <div class="file-list" id="fileList"></div>
+                        </div>
+
+                        <div class="tool-help">
+                            Puedes combinar varios documentos en un solo PDF para compartirlos, archivarlos o enviarlos más fácilmente.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajar con PDF online</h2>
+                        <p>Organiza, convierte y extrae contenido de tus documentos PDF fácilmente.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="pdf-a-texto.html">PDF a texto</a></h3>
+                        <p>Extrae texto de archivos PDF online gratis y sin instalar programas.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="pdf-a-word.html">PDF a Word</a></h3>
+                        <p>Convierte el texto de un PDF en un documento editable compatible con Word.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="imagen-a-texto.html">Imagen a texto</a></h3>
+                        <p>Extrae texto de capturas, fotos y escaneos online con OCR.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras y caracteres del contenido extraído o convertido.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Unir PDFs online</h2>
+                    <p>
+                        Esta herramienta te permite combinar varios archivos PDF online gratis en un solo documento directamente desde el navegador.
+                    </p>
+
+                    <h2>¿Para qué sirve unir PDFs?</h2>
+                    <p>
+                        Es útil para juntar facturas, apuntes, contratos, documentos escaneados o archivos sueltos en un único PDF más cómodo de compartir.
+                    </p>
+
+                    <h2>Cómo funciona</h2>
+                    <p>
+                        Seleccionas varios PDFs, la herramienta los combina en el orden cargado y genera un archivo final descargable.
+                    </p>
+
+                    <h2>Ventajas de usar esta herramienta</h2>
+                    <p>
+                        Todo el proceso se hace online desde tu navegador, sin instalar programas y sin configuraciones complicadas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Puedo unir varios PDFs en uno?</summary>
+                        <p>Sí. Solo tienes que subir varios archivos PDF y descargar el resultado combinado.</p>
+                    </details>
+                    <details>
+                        <summary>¿Se mantiene el contenido de cada PDF?</summary>
+                        <p>Sí. La herramienta une las páginas de cada archivo en un documento final.</p>
+                    </details>
+                    <details>
+                        <summary>¿Importa el orden de los archivos?</summary>
+                        <p>Sí. El PDF final se genera siguiendo el orden en el que selecciones o cargues los documentos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para escritorio, móvil y tablet.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script>
+        const pdfFiles = document.getElementById('pdfFiles');
+        const mergeBtn = document.getElementById('mergeBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const statusText = document.getElementById('statusText');
+        const fileList = document.getElementById('fileList');
+
+        function renderFileList() {
+            fileList.innerHTML = '';
+            const files = Array.from(pdfFiles.files);
+
+            if (!files.length) return;
+
+            files.forEach((file, index) => {
+                const item = document.createElement('div');
+                item.className = 'file-item';
+                item.textContent = `${index + 1}. ${file.name}`;
+                fileList.appendChild(item);
+            });
+        }
+
+        pdfFiles.addEventListener('change', function () {
+            renderFileList();
+
+            if (pdfFiles.files.length >= 2) {
+                statusText.textContent = `${pdfFiles.files.length} archivos PDF listos para unir.`;
+            } else if (pdfFiles.files.length === 1) {
+                statusText.textContent = 'Necesitas al menos 2 archivos PDF para unirlos.';
+            } else {
+                statusText.textContent = 'Selecciona dos o más archivos PDF para unirlos.';
+            }
+
+            downloadBtn.hidden = true;
+        });
+
+        mergeBtn.addEventListener('click', async function () {
+            const files = Array.from(pdfFiles.files);
+
+            if (files.length < 2) {
+                statusText.textContent = 'Debes seleccionar al menos 2 archivos PDF.';
+                return;
+            }
+
+            mergeBtn.disabled = true;
+            downloadBtn.hidden = true;
+            statusText.textContent = 'Uniendo archivos PDF...';
+
+            try {
+                const mergedPdf = await PDFLib.PDFDocument.create();
+
+                for (let i = 0; i < files.length; i++) {
+                    statusText.textContent = `Procesando archivo ${i + 1} de ${files.length}...`;
+
+                    const fileBytes = await files[i].arrayBuffer();
+                    const pdf = await PDFLib.PDFDocument.load(fileBytes);
+                    const copiedPages = await mergedPdf.copyPages(pdf, pdf.getPageIndices());
+
+                    copiedPages.forEach(page => mergedPdf.addPage(page));
+                }
+
+                const mergedBytes = await mergedPdf.save();
+                const blob = new Blob([mergedBytes], { type: 'application/pdf' });
+                const url = URL.createObjectURL(blob);
+
+                downloadBtn.href = url;
+                downloadBtn.download = 'pdf-unido.pdf';
+                downloadBtn.hidden = false;
+
+                statusText.textContent = 'PDF unido correctamente. Ya puedes descargarlo.';
+            } catch (error) {
+                console.error(error);
+                statusText.textContent = 'No se pudieron unir los archivos PDF.';
+            } finally {
+                mergeBtn.disabled = false;
+            }
+        });
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>

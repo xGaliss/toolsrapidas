@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Convertidor de timestamp online | ToolsRapidas</title>
+    <meta name="description" content="Convierte Unix timestamp a fecha y fecha a timestamp online gratis. Útil para desarrollo, logs y sistemas.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/convertidor-timestamp.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Convertidor de timestamp online | ToolsRapidas">
+    <meta property="og:description" content="Pasa de Unix timestamp a fecha y viceversa fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/convertidor-timestamp.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Convertidor de timestamp online | ToolsRapidas" />
+    <meta name="twitter:description" content="Convierte fechas y timestamps online gratis." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Convertidor de timestamp online",
+          "url": "https://toolsrapidas.com/convertidor-timestamp.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte Unix timestamp a fecha y fecha a timestamp online gratis directamente desde el navegador."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea,
+        input {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus,
+            input:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 220px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+            }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .field-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2 {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Convertidor de timestamp online</h1>
+            <p class="tool-lead">
+                Convierte Unix timestamp a fecha legible y transforma fechas a timestamp fácilmente. Muy útil para logs, desarrollo, APIs y administración de sistemas.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Timestamp a fecha</h2>
+
+                        <div class="field-stack">
+                            <input id="timestampInput" type="text" placeholder="Ejemplo: 1710000000">
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="toDateBtn">Convertir a fecha</button>
+                            <button id="nowTimestampBtn">Usar timestamp actual</button>
+                        </div>
+
+                        <div class="tool-help">
+                            Introduce un Unix timestamp en segundos o milisegundos para convertirlo a una fecha legible.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Fecha a timestamp</h2>
+
+                        <div class="field-stack">
+                            <input id="dateInput" type="datetime-local">
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="toTimestampBtn">Convertir a timestamp</button>
+                            <button id="nowDateBtn">Usar fecha actual</button>
+                        </div>
+
+                        <div class="tool-help">
+                            Selecciona una fecha y hora para obtener su valor Unix timestamp correspondiente.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <section class="card tool-panel">
+                    <h2>Resultado</h2>
+                    <textarea id="output" placeholder="Aquí aparecerá el resultado..."></textarea>
+
+                    <div class="tool-buttons">
+                        <button class="primary" id="copyBtn">Copiar</button>
+                        <button id="clearBtn">Limpiar</button>
+                    </div>
+
+                    <div class="tool-help">
+                        El cálculo se realiza directamente en tu navegador, sin enviar datos a servidores externos.
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para desarrolladores y trabajo técnico</h2>
+                        <p>Analiza, convierte y genera datos útiles para sistemas, APIs, scripts y desarrollo.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="base64.html">Base64 encode y decode</a></h3>
+                        <p>Convierte texto a Base64 y decodifica contenido fácilmente.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="uuid-generator.html">Generador de UUID</a></h3>
+                        <p>Genera identificadores UUID v4 únicos con un clic.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="visor-json.html">Visor JSON</a></h3>
+                        <p>Visualiza y revisa estructuras JSON para desarrollo y pruebas.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta caracteres y líneas en logs, documentación o texto técnico.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Convertir timestamp online</h2>
+                    <p>
+                        Esta herramienta sirve para convertir Unix timestamp a fecha legible y para transformar fechas en timestamp online gratis.
+                    </p>
+
+                    <h2>¿Qué es un Unix timestamp?</h2>
+                    <p>
+                        Un Unix timestamp es una forma de representar una fecha y hora como el número de segundos o milisegundos transcurridos desde el 1 de enero de 1970.
+                    </p>
+
+                    <h2>¿Cuándo es útil?</h2>
+                    <p>
+                        Es muy útil para desarrollo, APIs, revisión de logs, eventos de sistemas, bases de datos, scripts y tareas técnicas.
+                    </p>
+
+                    <h2>Ventajas de usar esta herramienta</h2>
+                    <p>
+                        Puedes convertir datos rápidamente, comprobar valores temporales y copiar el resultado directamente sin instalar software.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué hace esta herramienta?</summary>
+                        <p>Convierte Unix timestamp a fecha legible y también transforma fechas a timestamp.</p>
+                    </details>
+                    <details>
+                        <summary>¿Acepta timestamps en segundos y milisegundos?</summary>
+                        <p>Sí. Detecta automáticamente si el valor parece estar en segundos o en milisegundos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para logs, APIs y desarrollo?</summary>
+                        <p>Sí. Es especialmente útil para revisar tiempos en sistemas, integraciones y entornos técnicos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Necesito instalar algo?</summary>
+                        <p>No. Todo funciona directamente en el navegador.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const timestampInput = document.getElementById("timestampInput");
+        const dateInput = document.getElementById("dateInput");
+        const output = document.getElementById("output");
+
+        function formatDate(date) {
+            return [
+                `Fecha local: ${date.toString()}`,
+                `ISO UTC: ${date.toISOString()}`,
+                `Timestamp segundos: ${Math.floor(date.getTime() / 1000)}`,
+                `Timestamp milisegundos: ${date.getTime()}`
+            ].join("\n");
+        }
+
+        document.getElementById("toDateBtn").addEventListener("click", () => {
+            const raw = timestampInput.value.trim();
+
+            if (!raw || isNaN(raw)) {
+                output.value = "Introduce un timestamp válido.";
+                return;
+            }
+
+            let numeric = Number(raw);
+
+            if (raw.length <= 10) {
+                numeric = numeric * 1000;
+            }
+
+            const date = new Date(numeric);
+
+            if (isNaN(date.getTime())) {
+                output.value = "No se pudo convertir el timestamp.";
+                return;
+            }
+
+            output.value = formatDate(date);
+        });
+
+        document.getElementById("toTimestampBtn").addEventListener("click", () => {
+            if (!dateInput.value) {
+                output.value = "Selecciona una fecha válida.";
+                return;
+            }
+
+            const date = new Date(dateInput.value);
+
+            if (isNaN(date.getTime())) {
+                output.value = "No se pudo convertir la fecha.";
+                return;
+            }
+
+            output.value = [
+                `Fecha seleccionada: ${date.toString()}`,
+                `ISO UTC: ${date.toISOString()}`,
+                `Timestamp segundos: ${Math.floor(date.getTime() / 1000)}`,
+                `Timestamp milisegundos: ${date.getTime()}`
+            ].join("\n");
+        });
+
+        document.getElementById("nowTimestampBtn").addEventListener("click", () => {
+            timestampInput.value = Math.floor(Date.now() / 1000);
+        });
+
+        document.getElementById("nowDateBtn").addEventListener("click", () => {
+            const now = new Date();
+            const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+                .toISOString()
+                .slice(0, 16);
+
+            dateInput.value = local;
+        });
+
+        document.getElementById("copyBtn").addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(output.value);
+                const btn = document.getElementById("copyBtn");
+                btn.textContent = "Copiado";
+                setTimeout(() => btn.textContent = "Copiar", 1000);
+            } catch { }
+        });
+
+        document.getElementById("clearBtn").addEventListener("click", () => {
+            timestampInput.value = "";
+            dateInput.value = "";
+            output.value = "";
+        });
+    </script>
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>

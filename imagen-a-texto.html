@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Imagen a texto online gratis | OCR online | ToolsRapidas</title>
+    <meta name="description" content="Extrae texto de imágenes online gratis con OCR. Sube una foto o captura y copia el texto fácilmente.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/imagen-a-texto.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Imagen a texto online | ToolsRapidas">
+    <meta property="og:description" content="Extrae texto de imágenes online gratis con OCR.">
+    <meta property="og:url" content="https://toolsrapidas.com/imagen-a-texto.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Imagen a texto online | ToolsRapidas" />
+    <meta name="twitter:description" content="Convierte imágenes en texto editable online gratis." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Imagen a texto online",
+          "url": "https://toolsrapidas.com/imagen-a-texto.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Extrae texto de imágenes online gratis con OCR directamente desde el navegador."
+        }
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        .upload-box {
+            border: 1px dashed rgba(148,163,184,.25);
+            border-radius: 16px;
+            padding: 18px;
+            background: #0b1220;
+        }
+
+        .tool-row {
+            display: grid;
+            grid-template-columns: 1fr 220px;
+            gap: 12px;
+            margin-top: 14px;
+        }
+
+        .tool-input,
+        .tool-select,
+        textarea {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            outline: none;
+        }
+
+            .tool-input:focus,
+            .tool-select:focus,
+            textarea:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 280px;
+            resize: vertical;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            margin-top: 16px;
+        }
+
+        .tool-actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        .preview-card {
+            margin-top: 18px;
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+        }
+
+            .preview-card h3 {
+                margin: 0 0 10px;
+                font-size: 16px;
+            }
+
+        .preview-image {
+            width: 100%;
+            max-height: 360px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #08111f;
+            border: 1px solid rgba(148,163,184,.08);
+        }
+
+        .tool-help,
+        .status-box {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: rgba(148,163,184,.12);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 14px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #60a5fa, #34d399);
+            transition: width .2s ease;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .tool-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Imagen a texto online</h1>
+            <p class="tool-lead">
+                Extrae texto de una imagen con OCR gratis. Sube una foto, captura o escaneo y convierte su contenido en texto editable en segundos.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-single">
+                    <section class="card tool-panel">
+                        <h2>Sube una imagen</h2>
+
+                        <div class="upload-box">
+                            <input class="tool-input" type="file" id="imageFile" accept="image/*" />
+
+                            <div class="tool-row">
+                                <select class="tool-select" id="ocrLanguage">
+                                    <option value="spa">OCR en español</option>
+                                    <option value="eng">OCR en inglés</option>
+                                    <option value="por">OCR en portugués</option>
+                                </select>
+
+                                <button class="btn primary" id="extractBtn" type="button">Extraer texto</button>
+                            </div>
+
+                            <div class="progress-bar" aria-hidden="true">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+
+                            <div class="status-box" id="statusText">Selecciona una imagen y pulsa en extraer texto.</div>
+                        </div>
+
+                        <div class="tool-help">
+                            Ideal para capturas de pantalla, documentos escaneados, fotos de apuntes, tickets, menús, facturas o imágenes con texto.
+                        </div>
+
+                        <div class="preview-card">
+                            <h3>Vista previa</h3>
+                            <img class="preview-image" id="previewImage" alt="Vista previa de la imagen subida" hidden />
+                        </div>
+
+                        <textarea id="outputText" placeholder="Aquí aparecerá el texto extraído..."></textarea>
+
+                        <div class="tool-actions">
+                            <button class="btn secondary" id="copyBtn" type="button">Copiar texto</button>
+                            <button class="btn secondary" id="clearBtn" type="button">Limpiar</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajar con imágenes y texto</h2>
+                        <p>Extrae, convierte y formatea contenido fácilmente desde el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="convertir-imagen.html">Convertir imagen</a></h3>
+                        <p>Pasa imágenes de JPG a PNG o de PNG a JPG online gratis.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="quitar-saltos-linea.html">Quitar saltos de línea</a></h3>
+                        <p>Limpia texto para copiarlo mejor en Word, Excel, email o formularios.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras, caracteres y líneas en cualquier texto rápidamente.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="pdf-a-texto.html">PDF a texto</a></h3>
+                        <p>Extrae texto de archivos PDF online gratis y sin instalar programas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Convertir imagen a texto online</h2>
+                    <p>
+                        Esta herramienta permite extraer texto de imágenes online gratis usando OCR directamente desde el navegador.
+                    </p>
+
+                    <h2>¿Para qué sirve el OCR?</h2>
+                    <p>
+                        El OCR reconoce letras y palabras dentro de una imagen para convertirlas en texto editable y copiable.
+                    </p>
+
+                    <h2>Qué tipos de imágenes puedes usar</h2>
+                    <p>
+                        Puedes subir capturas de pantalla, fotografías de documentos, hojas impresas, apuntes, tickets, menús o imágenes con texto legible.
+                    </p>
+
+                    <h2>Ventajas de usar esta herramienta</h2>
+                    <p>
+                        No necesitas instalar programas. Todo el proceso se hace desde la web y puedes copiar el texto en segundos para reutilizarlo donde quieras.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué hace esta herramienta?</summary>
+                        <p>Analiza una imagen y extrae su texto con OCR para que puedas copiarlo o editarlo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona con fotos hechas con el móvil?</summary>
+                        <p>Sí. Cuanto mejor iluminada y más nítida esté la imagen, mejor será el resultado.</p>
+                    </details>
+                    <details>
+                        <summary>¿El texto extraído puede tener errores?</summary>
+                        <p>Sí. Si la imagen tiene poca calidad, inclinación o letras borrosas, puede haber pequeños fallos de reconocimiento.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para escritorio, móvil y tablet.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+    <script>
+        const imageFile = document.getElementById('imageFile');
+        const ocrLanguage = document.getElementById('ocrLanguage');
+        const extractBtn = document.getElementById('extractBtn');
+        const previewImage = document.getElementById('previewImage');
+        const outputText = document.getElementById('outputText');
+        const copyBtn = document.getElementById('copyBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const statusText = document.getElementById('statusText');
+        const progressFill = document.getElementById('progressFill');
+
+        imageFile.addEventListener('change', function () {
+            const file = imageFile.files[0];
+
+            if (!file) {
+                previewImage.hidden = true;
+                statusText.textContent = 'Selecciona una imagen y pulsa en extraer texto.';
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                previewImage.src = e.target.result;
+                previewImage.hidden = false;
+            };
+            reader.readAsDataURL(file);
+
+            outputText.value = '';
+            progressFill.style.width = '0%';
+            statusText.textContent = 'Imagen cargada. Ya puedes iniciar el OCR.';
+        });
+
+        extractBtn.addEventListener('click', async function () {
+            const file = imageFile.files[0];
+            if (!file) {
+                statusText.textContent = 'Primero debes seleccionar una imagen.';
+                return;
+            }
+
+            extractBtn.disabled = true;
+            outputText.value = '';
+            progressFill.style.width = '0%';
+            statusText.textContent = 'Procesando imagen...';
+
+            try {
+                const result = await Tesseract.recognize(file, ocrLanguage.value, {
+                    logger: function (m) {
+                        if (m.status === 'recognizing text' && typeof m.progress === 'number') {
+                            progressFill.style.width = `${Math.round(m.progress * 100)}%`;
+                            statusText.textContent = `Extrayendo texto... ${Math.round(m.progress * 100)}%`;
+                        }
+                    }
+                });
+
+                outputText.value = result.data.text.trim();
+                progressFill.style.width = '100%';
+                statusText.textContent = outputText.value
+                    ? 'Texto extraído correctamente.'
+                    : 'No se encontró texto claro en la imagen.';
+            } catch (error) {
+                console.error(error);
+                statusText.textContent = 'Ocurrió un error al procesar la imagen.';
+            } finally {
+                extractBtn.disabled = false;
+            }
+        });
+
+        copyBtn.addEventListener('click', async function () {
+            try {
+                await navigator.clipboard.writeText(outputText.value);
+                statusText.textContent = 'Texto copiado al portapapeles.';
+            } catch {
+                statusText.textContent = 'No se pudo copiar el texto.';
+            }
+        });
+
+        clearBtn.addEventListener('click', function () {
+            imageFile.value = '';
+            previewImage.src = '';
+            previewImage.hidden = true;
+            outputText.value = '';
+            progressFill.style.width = '0%';
+            statusText.textContent = 'Herramienta reiniciada.';
+        });
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>
