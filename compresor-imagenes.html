@@ -3,162 +3,162 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Compresor de imágenes online gratis | JPG, PNG y WebP | ToolsRapidas</title>
     <meta name="description" content="Comprime imágenes online gratis. Reduce el tamaño de archivos JPG, PNG y WebP sin perder calidad y sin instalar nada.">
-    <link rel="canonical" href="https://toolsrapidas.com/compresor-imagenes.html">
-    <meta property="og:title" content="Compresor de imágenes online gratis | ToolsRapidas">
-    <meta property="og:description" content="Reduce el tamaño de imágenes JPG, PNG y WebP online y gratis.">
-    <meta property="og:site_name" content="ToolsRapidas">
-    <link rel="icon" href="/favicon.ico">
-    <!-- Google tag (gtag.js) -->
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/compresor-imagenes.html" />
+    <meta name="theme-color" content="#08111f" />
+
+    <meta property="og:title" content="Compresor de imágenes online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Reduce el tamaño de imágenes JPG, PNG y WebP online y gratis." />
+    <meta property="og:url" content="https://toolsrapidas.com/compresor-imagenes.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Compresor de imágenes online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Reduce el tamaño de imágenes JPG, PNG y WebP online y gratis." />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Compresor de imágenes online",
+          "url": "https://toolsrapidas.com/compresor-imagenes.html",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Comprime imágenes JPG, PNG y WebP online gratis directamente desde el navegador."
+        }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-984EW75R9H');
     </script>
+
     <style>
-        :root {
-            --bg: #0b1220;
-            --card: #111827;
-            --line: #334155;
-            --soft: #020617;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
-            --accent2: #38bdf8;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(180deg,#07101d,#0f172a);
-            color: var(--text);
-            padding: 24px;
+            font-size: 18px;
         }
 
-        .wrap {
-            max-width: 1280px;
-            margin: 0 auto;
+        .tool-layout-2 {
             display: grid;
             grid-template-columns: 1.05fr 0.95fr;
-            gap: 20px;
+            gap: 18px;
         }
 
-        .card {
-            background: #111827;
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.22);
-        }
-
-        h1 {
-            margin: 0 0 8px 0;
-            font-size: 28px;
-        }
-
-        p.sub {
-            margin: 0 0 16px 0;
-            color: var(--muted);
+        .tool-panel h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
         }
 
         .dropzone {
-            border: 2px dashed var(--line);
-            border-radius: 14px;
-            padding: 22px;
+            border: 2px dashed rgba(148,163,184,.18);
+            border-radius: 16px;
+            padding: 20px;
             text-align: center;
-            background: #0f172a;
-            transition: .15s ease;
+            background: #0b1220;
             cursor: pointer;
+            transition: .2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            width: 100%;
+            overflow: hidden;
         }
 
             .dropzone.drag {
-                border-color: var(--accent2);
-                background: #0b1629;
+                border-color: var(--brand);
+                background: rgba(56,189,248,.08);
             }
 
             .dropzone strong {
-                display: block;
                 font-size: 16px;
                 margin-bottom: 6px;
+                text-align: center;
             }
 
             .dropzone span {
                 color: var(--muted);
                 font-size: 13px;
+                text-align: center;
+                line-height: 1.5;
             }
 
         input[type="file"] {
             display: none;
         }
 
-        .grid {
+        .tool-controls-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
             margin-top: 16px;
         }
 
-        label {
-            display: block;
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 6px;
-        }
+            .tool-controls-grid label,
+            .control label {
+                display: block;
+                margin-bottom: 8px;
+                color: var(--muted);
+                font-size: 14px;
+            }
 
-        input[type="number"], select, input[type="range"] {
-            width: 100%;
-        }
+            .tool-controls-grid input[type="number"],
+            .tool-controls-grid select,
+            .tool-controls-grid input[type="range"] {
+                width: 100%;
+            }
 
-        input[type="number"], select {
-            border-radius: 10px;
-            border: 1px solid var(--line);
-            background: #020617;
-            color: var(--text);
-            padding: 11px 12px;
-            font-size: 14px;
-            outline: none;
-        }
+            .tool-controls-grid input[type="number"],
+            .tool-controls-grid select {
+                border-radius: 12px;
+                border: 1px solid rgba(148,163,184,.14);
+                background: #020617;
+                color: var(--text);
+                padding: 11px 12px;
+                font-size: 14px;
+                outline: none;
+            }
 
-        input[type="range"] {
-            accent-color: var(--accent);
-        }
+            .tool-controls-grid input[type="range"] {
+                accent-color: var(--brand2);
+            }
 
-        .row {
+        .tool-checks {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 16px;
             align-items: center;
             margin-top: 16px;
         }
-
-        button {
-            border: none;
-            border-radius: 10px;
-            padding: 11px 14px;
-            cursor: pointer;
-            font-weight: 700;
-            background: var(--accent);
-            color: #052e16;
-        }
-
-            button.secondary {
-                background: #1e293b;
-                color: var(--text);
-                border: 1px solid var(--line);
-            }
-
-            button:disabled {
-                opacity: .55;
-                cursor: not-allowed;
-            }
 
         .check {
             display: flex;
@@ -172,6 +172,78 @@
                 width: auto;
             }
 
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+            }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+                .tool-buttons button.secondary {
+                    background: #162033;
+                    color: var(--text);
+                    border: 1px solid rgba(148,163,184,.14);
+                }
+
+                .tool-buttons button:disabled {
+                    opacity: .6;
+                    cursor: not-allowed;
+                }
+
+        .status {
+            min-height: 18px;
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 14px;
+        }
+
+        .kpi {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .kpi .box {
+                background: #0b1220;
+                border: 1px solid rgba(148,163,184,.12);
+                border-radius: 12px;
+                padding: 12px;
+            }
+
+                .kpi .box .label {
+                    color: var(--muted);
+                    font-size: 12px;
+                    margin-bottom: 6px;
+                }
+
+                .kpi .box .value {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+
         .preview-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -179,8 +251,8 @@
         }
 
         .preview-box {
-            background: #020617;
-            border: 1px solid var(--line);
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
             border-radius: 14px;
             padding: 14px;
         }
@@ -198,7 +270,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border: 1px solid #243041;
+            border: 1px solid rgba(148,163,184,.12);
         }
 
             .img-wrap img {
@@ -214,155 +286,250 @@
             line-height: 1.5;
         }
 
-        .status {
-            min-height: 18px;
-            margin-top: 12px;
-            color: var(--muted);
-            font-size: 13px;
-        }
-
         .pill {
             display: inline-block;
             padding: 4px 8px;
             border-radius: 999px;
             background: #1e293b;
-            border: 1px solid var(--line);
+            border: 1px solid rgba(148,163,184,.14);
             color: var(--text);
             font-size: 12px;
             margin-right: 6px;
             margin-top: 6px;
         }
 
-        .kpi {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            gap: 10px;
-            margin-top: 14px;
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
         }
 
-            .kpi .box {
-                background: #0f172a;
-                border: 1px solid var(--line);
-                border-radius: 12px;
-                padding: 12px;
-            }
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
 
-                .kpi .box .label {
-                    color: var(--muted);
-                    font-size: 12px;
-                    margin-bottom: 6px;
-                }
-
-                .kpi .box .value {
-                    font-size: 18px;
-                    font-weight: 700;
-                }
-
-        .hint {
-            margin-top: 12px;
-            color: var(--muted);
-            font-size: 12px;
-            line-height: 1.5;
+        .related-tools .card p {
+            margin: 0;
         }
 
         @media (max-width: 980px) {
-            .wrap {
-                grid-template-columns: 1fr
-            }
-
-            .grid, .preview-grid, .kpi {
-                grid-template-columns: 1fr
+            .tool-layout-2,
+            .tool-controls-grid,
+            .preview-grid,
+            .kpi {
+                grid-template-columns: 1fr;
             }
 
             .img-wrap {
-                min-height: 240px
+                min-height: 240px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <section class="card">
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tool-hero">
+        <div class="container">
             <h1>Compresor y redimensionador de imágenes</h1>
-            <p class="sub">Reduce peso y cambia tamaño de JPG, PNG y WebP directamente en tu navegador. Sin subir nada al servidor.</p>
+            <p class="tool-lead">
+                Reduce peso y cambia tamaño de JPG, PNG y WebP directamente en tu navegador. Sin subir nada al servidor.
+            </p>
+        </div>
+    </header>
 
-            <label class="dropzone" id="dropzone" for="fileInput">
-                <strong>Arrastra una imagen aquí o haz clic para seleccionarla</strong>
-                <span>Formatos admitidos: JPG, PNG, WebP</span>
-            </label>
-            <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" />
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Opciones</h2>
 
-            <div class="grid">
-                <div>
-                    <label for="formatSelect">Formato de salida</label>
-                    <select id="formatSelect">
-                        <option value="image/jpeg">JPG</option>
-                        <option value="image/png">PNG</option>
-                        <option value="image/webp">WebP</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="qualityRange">Calidad: <span id="qualityLabel">82</span>%</label>
-                    <input id="qualityRange" type="range" min="10" max="100" step="1" value="82" />
-                </div>
+                        <label class="dropzone" id="dropzone" for="fileInput">
+                            <strong>Arrastra una imagen aquí o haz clic para seleccionarla</strong>
+                            <span>Formatos admitidos: JPG, PNG, WebP</span>
+                        </label>
+                        <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" />
 
-                <div>
-                    <label for="widthInput">Ancho (px)</label>
-                    <input id="widthInput" type="number" min="1" placeholder="Auto" />
-                </div>
-                <div>
-                    <label for="heightInput">Alto (px)</label>
-                    <input id="heightInput" type="number" min="1" placeholder="Auto" />
-                </div>
-            </div>
+                        <div class="tool-controls-grid">
+                            <div>
+                                <label for="formatSelect">Formato de salida</label>
+                                <select id="formatSelect">
+                                    <option value="image/jpeg">JPG</option>
+                                    <option value="image/png">PNG</option>
+                                    <option value="image/webp">WebP</option>
+                                </select>
+                            </div>
 
-            <div class="row">
-                <label class="check"><input id="keepRatio" type="checkbox" checked /> Mantener proporción</label>
-                <label class="check"><input id="stripMeta" type="checkbox" checked /> Sin metadatos extra</label>
-            </div>
+                            <div>
+                                <label for="qualityRange">Calidad: <span id="qualityLabel">82</span>%</label>
+                                <input id="qualityRange" type="range" min="10" max="100" step="1" value="82" />
+                            </div>
 
-            <div class="row">
-                <button id="compressBtn" disabled>Comprimir imagen</button>
-                <button id="downloadBtn" class="secondary" disabled>Descargar</button>
-                <button id="resetBtn" class="secondary" disabled>Reset</button>
-            </div>
+                            <div>
+                                <label for="widthInput">Ancho (px)</label>
+                                <input id="widthInput" type="number" min="1" placeholder="Auto" />
+                            </div>
 
-            <div class="kpi">
-                <div class="box">
-                    <div class="label">Tamaño original</div>
-                    <div class="value" id="originalSizeValue">—</div>
-                </div>
-                <div class="box">
-                    <div class="label">Tamaño final</div>
-                    <div class="value" id="finalSizeValue">—</div>
-                </div>
-                <div class="box">
-                    <div class="label">Ahorro</div>
-                    <div class="value" id="savingValue">—</div>
-                </div>
-            </div>
+                            <div>
+                                <label for="heightInput">Alto (px)</label>
+                                <input id="heightInput" type="number" min="1" placeholder="Auto" />
+                            </div>
+                        </div>
 
-            <div id="status" class="status">Selecciona una imagen para empezar.</div>
-            <div class="hint">
-                Consejo: JPG no soporta transparencia, así que si tu imagen tiene fondo transparente y la exportas a JPG se rellenará con blanco. Para mantener transparencia usa PNG o WebP.
+                        <div class="tool-checks">
+                            <label class="check"><input id="keepRatio" type="checkbox" checked /> Mantener proporción</label>
+                            <label class="check"><input id="stripMeta" type="checkbox" checked /> Sin metadatos extra</label>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="compressBtn" disabled>Comprimir imagen</button>
+                            <button class="secondary" id="downloadBtn" disabled>Descargar</button>
+                            <button class="secondary" id="resetBtn" disabled>Reset</button>
+                        </div>
+
+                        <div class="kpi">
+                            <div class="box">
+                                <div class="label">Tamaño original</div>
+                                <div class="value" id="originalSizeValue">—</div>
+                            </div>
+                            <div class="box">
+                                <div class="label">Tamaño final</div>
+                                <div class="value" id="finalSizeValue">—</div>
+                            </div>
+                            <div class="box">
+                                <div class="label">Ahorro</div>
+                                <div class="value" id="savingValue">—</div>
+                            </div>
+                        </div>
+
+                        <div id="status" class="status">Selecciona una imagen para empezar.</div>
+
+                        <div class="hint">
+                            Consejo: JPG no soporta transparencia, así que si tu imagen tiene fondo transparente y la exportas a JPG se rellenará con blanco. Para mantener transparencia usa PNG o WebP.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Vista previa</h2>
+
+                        <div class="preview-grid">
+                            <div class="preview-box">
+                                <h3>Original</h3>
+                                <div class="img-wrap"><img id="originalPreview" alt="Vista previa original" /></div>
+                                <div class="meta" id="originalMeta">Sin imagen cargada.</div>
+                            </div>
+
+                            <div class="preview-box">
+                                <h3>Comprimida</h3>
+                                <div class="img-wrap"><img id="compressedPreview" alt="Vista previa comprimida" /></div>
+                                <div class="meta" id="compressedMeta">Todavía no has comprimido nada.</div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
 
-        <section class="card">
-            <div class="preview-grid">
-                <div class="preview-box">
-                    <h3>Original</h3>
-                    <div class="img-wrap"><img id="originalPreview" alt="Vista previa original" /></div>
-                    <div class="meta" id="originalMeta">Sin imagen cargada.</div>
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Más herramientas para reducir y optimizar imágenes</h2>
+                        <p>Además de comprimir imágenes, también puedes convertir formatos y adaptar dimensiones según el uso que necesites.</p>
+                    </div>
                 </div>
-                <div class="preview-box">
-                    <h3>Comprimida</h3>
-                    <div class="img-wrap"><img id="compressedPreview" alt="Vista previa comprimida" /></div>
-                    <div class="meta" id="compressedMeta">Todavía no has comprimido nada.</div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="convertir-webp.html">Convertir JPG y PNG a WebP</a></h3>
+                        <p>Pasa tus imágenes a WebP para mejorar velocidad y SEO.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="redimensionar-imagen.html">Redimensionar imagen</a></h3>
+                        <p>Ajusta el tamaño de imágenes de forma rápida y sencilla.</p>
+                    </article>
                 </div>
             </div>
         </section>
-    </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Comprimir imágenes online</h2>
+                    <p>
+                        Esta herramienta te permite comprimir imágenes JPG, PNG y WebP online gratis directamente desde el navegador.
+                        También puedes cambiar el tamaño antes de descargar el archivo final.
+                    </p>
+
+                    <h2>Formatos compatibles</h2>
+                    <p>
+                        Puedes trabajar con imágenes JPG, PNG y WebP. Es ideal para web, email, redes sociales o cualquier uso donde importe el peso del archivo.
+                    </p>
+
+                    <h2>¿Por qué optimizar imágenes?</h2>
+                    <p>
+                        Optimizar imágenes ayuda a mejorar la velocidad de carga, reducir consumo de datos, ahorrar espacio y mejorar el SEO de una página web.
+                    </p>
+
+                    <h2>Ventajas de este compresor de imágenes</h2>
+                    <p>
+                        Todo el procesamiento se hace en tu navegador. No subimos archivos a servidores externos, así que el proceso es rápido, privado y cómodo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Puedo comprimir JPG, PNG y WebP?</summary>
+                        <p>Sí. Esta herramienta permite comprimir imágenes en formato JPG, PNG y WebP directamente desde el navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Se suben las imágenes a un servidor?</summary>
+                        <p>No. El procesamiento se realiza localmente en tu navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo cambiar el tamaño además de comprimir?</summary>
+                        <p>Sí. Puedes definir ancho y alto para redimensionar la imagen antes de descargarla.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para escritorio, móvil y tablet.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>Acceso directo desde cualquier navegador.</div>
+        </div>
+    </footer>
 
     <script>
         const $ = (id) => document.getElementById(id);
@@ -447,11 +614,11 @@
                 $("widthInput").value = img.width;
                 $("heightInput").value = img.height;
                 $("originalMeta").innerHTML = `
-              <span class="pill">${file.type}</span>
-              <span class="pill">${img.width} × ${img.height}px</span>
-              <span class="pill">${formatBytes(file.size)}</span>
-              <div style="margin-top:8px;">Archivo: ${file.name}</div>
-            `;
+                        <span class="pill">${file.type}</span>
+                        <span class="pill">${img.width} × ${img.height}px</span>
+                        <span class="pill">${formatBytes(file.size)}</span>
+                        <div style="margin-top:8px;">Archivo: ${file.name}</div>
+                    `;
                 $("compressBtn").disabled = false;
                 $("resetBtn").disabled = false;
                 setStatus("Imagen cargada. Ajusta las opciones y pulsa “Comprimir imagen”.");
@@ -534,11 +701,11 @@
                 compressedUrl = URL.createObjectURL(blob);
                 $("compressedPreview").src = compressedUrl;
                 $("compressedMeta").innerHTML = `
-              <span class="pill">${format}</span>
-              <span class="pill">${outWidth} × ${outHeight}px</span>
-              <span class="pill">${formatBytes(blob.size)}</span>
-              <div style="margin-top:8px;">Calidad: ${$("qualityRange").value}%</div>
-            `;
+                        <span class="pill">${format}</span>
+                        <span class="pill">${outWidth} × ${outHeight}px</span>
+                        <span class="pill">${formatBytes(blob.size)}</span>
+                        <div style="margin-top:8px;">Calidad: ${$("qualityRange").value}%</div>
+                    `;
 
                 $("finalSizeValue").textContent = formatBytes(blob.size);
 
@@ -610,16 +777,5 @@
 
         updateQualityLabel();
     </script>
-
-    <section class="seo-content">
-        <h2>Comprimir imágenes online</h2>
-        <p>Reduce el tamaño de imágenes sin perder calidad directamente desde el navegador.</p>
-
-        <h2>Formatos compatibles</h2>
-        <p>JPG, PNG y WebP. Ideal para web, email o redes sociales.</p>
-
-        <h2>¿Por qué optimizar imágenes?</h2>
-        <p>Mejora la velocidad de carga, el SEO y reduce el consumo de datos.</p>
-    </section>
 </body>
 </html>

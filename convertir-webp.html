@@ -1,92 +1,84 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Convertir imagen a WebP online gratis | JPG y PNG a WebP | ToolsRapidas</title>
     <meta name="description" content="Convierte imágenes JPG o PNG a WebP online gratis. Reduce peso, optimiza imágenes y descarga el archivo en segundos.">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://toolsrapidas.com/convertir-webp.html">
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/convertir-webp.html" />
+    <meta name="theme-color" content="#08111f" />
 
-    <meta property="og:title" content="Convertir imagen a WebP online | ToolsRapidas">
-    <meta property="og:description" content="Convierte JPG y PNG a WebP gratis y reduce el tamaño de tus imágenes.">
-    <meta property="og:url" content="https://toolsrapidas.com/convertir-webp.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="ToolsRapidas">
-    <meta name="theme-color" content="#0f172a">
+    <meta property="og:title" content="Convertir imagen a WebP online | ToolsRapidas" />
+    <meta property="og:description" content="Convierte JPG y PNG a WebP gratis y reduce el tamaño de tus imágenes." />
+    <meta property="og:url" content="https://toolsrapidas.com/convertir-webp.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Convertir imagen a WebP online | ToolsRapidas" />
+    <meta name="twitter:description" content="Convierte JPG y PNG a WebP gratis y reduce el tamaño de tus imágenes." />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Convertir imagen a WebP online",
+          "url": "https://toolsrapidas.com/convertir-webp.html",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte imágenes JPG y PNG a WebP online gratis directamente desde el navegador."
+        }
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-984EW75R9H');
     </script>
 
     <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #111827;
-            --panel-2: #1f2937;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
-            --border: #334155;
-            --danger: #ef4444;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(28px, 4vw, 42px);
-        }
-
-        .sub {
+        .tool-lead {
             color: var(--muted);
-            margin-bottom: 24px;
-            line-height: 1.5;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
         }
 
-        .grid {
+        .tool-layout {
             display: grid;
             grid-template-columns: 320px 1fr 1fr;
             gap: 18px;
         }
 
-        .card {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .tool-panel h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
         }
 
-            .card h2 {
-                font-size: 18px;
-                margin: 0 0 12px;
-            }
-
         .dropzone {
-            border: 2px dashed var(--border);
+            border: 2px dashed rgba(148,163,184,.18);
             border-radius: 16px;
             padding: 20px;
             text-align: center;
@@ -103,7 +95,7 @@
         }
 
             .dropzone.dragover {
-                border-color: var(--accent);
+                border-color: var(--brand2);
                 background: rgba(34,197,94,.08);
             }
 
@@ -117,6 +109,7 @@
                 color: var(--muted);
                 font-size: 13px;
                 text-align: center;
+                line-height: 1.5;
             }
 
         input[type="file"] {
@@ -124,7 +117,7 @@
         }
 
         .control {
-            margin-bottom: 16px;
+            margin-top: 18px;
         }
 
             .control label {
@@ -144,42 +137,49 @@
             color: var(--text);
         }
 
-        .actions {
+        .tool-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 14px;
         }
 
-        button {
-            border: 0;
-            border-radius: 12px;
-            padding: 10px 14px;
-            font-weight: 600;
-            cursor: pointer;
-            background: var(--panel-2);
-            color: var(--text);
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+            }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+                .tool-buttons button.danger {
+                    background: #ef4444;
+                    color: #fff;
+                }
+
+                .tool-buttons button:disabled {
+                    opacity: .6;
+                    cursor: not-allowed;
+                }
+
+        .hint {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+            margin-top: 14px;
         }
-
-            button.primary {
-                background: var(--accent);
-                color: #052e16;
-            }
-
-            button.danger {
-                background: var(--danger);
-                color: white;
-            }
-
-            button:disabled {
-                opacity: .6;
-                cursor: not-allowed;
-            }
 
         .preview {
             width: 100%;
             min-height: 260px;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.12);
             border-radius: 14px;
             background: #0b1220;
             display: flex;
@@ -194,6 +194,10 @@
                 display: block;
             }
 
+        .muted-text {
+            color: var(--muted);
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -203,7 +207,7 @@
 
         .stat {
             background: #0b1220;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.12);
             border-radius: 12px;
             padding: 12px;
         }
@@ -214,46 +218,23 @@
                 margin-bottom: 4px;
             }
 
-        .muted {
-            color: var(--muted);
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
         }
 
-        .hint {
-            color: var(--muted);
-            font-size: 13px;
-            line-height: 1.5;
-            margin-top: 14px;
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
         }
 
-        .seo-content {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding: 0 24px 48px;
+        .related-tools .card p {
+            margin: 0;
         }
-
-        .seo-box {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
-        }
-
-            .seo-box h2 {
-                margin: 0 0 12px;
-                font-size: clamp(24px, 3vw, 32px);
-                color: var(--text);
-            }
-
-            .seo-box p {
-                margin: 0 0 20px;
-                color: var(--muted);
-                line-height: 1.7;
-                max-width: 900px;
-            }
 
         @media (max-width: 980px) {
-            .grid {
+            .tool-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -264,90 +245,185 @@
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Convertir imagen a WebP online</h1>
-        <div class="sub">
-            Convierte imágenes JPG o PNG a WebP gratis directamente desde el navegador. Rápido, sin instalación y sin subir archivos a servidores.
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="grid">
-            <section class="card">
-                <h2>Opciones</h2>
-
-                <label class="dropzone" id="dropzone">
-                    <strong>Arrastra tu imagen aquí</strong>
-                    <span>o haz clic para seleccionar un archivo JPG o PNG</span>
-                    <input type="file" id="fileInput" accept="image/jpeg,image/png" />
-                </label>
-
-                <div class="control" style="margin-top:18px;">
-                    <label for="quality">Calidad WebP</label>
-                    <input type="range" id="quality" min="10" max="100" value="82" />
-                    <div class="quality-value">Calidad actual: <span id="qualityText">82</span>%</div>
-                </div>
-
-                <div class="actions">
-                    <button class="primary" id="convertBtn" disabled>Convertir a WebP</button>
-                    <button id="downloadBtn" disabled>Descargar .webp</button>
-                    <button class="danger" id="resetBtn">Vaciar</button>
-                </div>
-
-                <div class="hint">
-                    WebP suele reducir bastante el peso de imágenes para web. Ideal para SEO, velocidad de carga y ahorro de ancho de banda.
-                </div>
-            </section>
-
-            <section class="card">
-                <h2>Imagen original</h2>
-                <div class="preview" id="originalPreview">
-                    <span class="muted">No hay imagen cargada</span>
-                </div>
-                <div class="stats">
-                    <div class="stat"><strong id="origSize">0 KB</strong><span class="muted">Tamaño</span></div>
-                    <div class="stat"><strong id="origDim">—</strong><span class="muted">Dimensiones</span></div>
-                </div>
-            </section>
-
-            <section class="card">
-                <h2>Resultado WebP</h2>
-                <div class="preview" id="resultPreview">
-                    <span class="muted">Aquí verás el resultado</span>
-                </div>
-                <div class="stats">
-                    <div class="stat"><strong id="webpSize">0 KB</strong><span class="muted">Tamaño WebP</span></div>
-                    <div class="stat"><strong id="savedPct">0%</strong><span class="muted">Ahorro</span></div>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <section class="seo-content">
-        <div class="seo-box">
-            <h2>Convertir imagen a WebP online</h2>
-            <p>
-                Esta herramienta te permite convertir imágenes JPG y PNG a WebP online gratis directamente desde el navegador.
-                Es una forma rápida de optimizar imágenes para páginas web sin instalar programas ni depender de servicios externos.
-            </p>
-
-            <h2>¿Por qué usar WebP?</h2>
-            <p>
-                El formato WebP suele ofrecer archivos más ligeros que JPG o PNG manteniendo una buena calidad visual.
-                Esto mejora la velocidad de carga de una web, ayuda al SEO y reduce el consumo de datos.
-            </p>
-
-            <h2>¿Cuándo conviene convertir imágenes a WebP?</h2>
-            <p>
-                WebP es muy útil para blogs, tiendas online, landing pages, portfolio y cualquier sitio que quiera cargar más rápido.
-                También es una buena opción para ahorrar espacio en imágenes destinadas a email o documentación web.
-            </p>
-
-            <h2>Ventajas de este convertidor WebP</h2>
-            <p>
-                Todo el procesamiento se hace en tu navegador. No subimos tus archivos a ningún servidor, así que el proceso es rápido,
-                privado y cómodo tanto en ordenador como en móvil.
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Convertir imagen a WebP online</h1>
+            <p class="tool-lead">
+                Convierte imágenes JPG o PNG a WebP gratis directamente desde el navegador. Rápido, sin instalación y sin subir archivos a servidores.
             </p>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Opciones</h2>
+
+                        <label class="dropzone" id="dropzone">
+                            <strong>Arrastra tu imagen aquí</strong>
+                            <span>o haz clic para seleccionar un archivo JPG o PNG</span>
+                            <input type="file" id="fileInput" accept="image/jpeg,image/png" />
+                        </label>
+
+                        <div class="control">
+                            <label for="quality">Calidad WebP</label>
+                            <input type="range" id="quality" min="10" max="100" value="82" />
+                            <div class="quality-value">Calidad actual: <span id="qualityText">82</span>%</div>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="convertBtn" disabled>Convertir a WebP</button>
+                            <button id="downloadBtn" disabled>Descargar .webp</button>
+                            <button class="danger" id="resetBtn">Vaciar</button>
+                        </div>
+
+                        <div class="hint">
+                            WebP suele reducir bastante el peso de imágenes para web. Ideal para SEO, velocidad de carga y ahorro de ancho de banda.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Imagen original</h2>
+                        <div class="preview" id="originalPreview">
+                            <span class="muted-text">No hay imagen cargada</span>
+                        </div>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong id="origSize">0 KB</strong>
+                                <span class="muted-text">Tamaño</span>
+                            </div>
+                            <div class="stat">
+                                <strong id="origDim">—</strong>
+                                <span class="muted-text">Dimensiones</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultado WebP</h2>
+                        <div class="preview" id="resultPreview">
+                            <span class="muted-text">Aquí verás el resultado</span>
+                        </div>
+                        <div class="stats">
+                            <div class="stat">
+                                <strong id="webpSize">0 KB</strong>
+                                <span class="muted-text">Tamaño WebP</span>
+                            </div>
+                            <div class="stat">
+                                <strong id="savedPct">0%</strong>
+                                <span class="muted-text">Ahorro</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Otras herramientas para optimizar imágenes</h2>
+                        <p>Reduce el peso, cambia el tamaño y mejora tus imágenes para web.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="compresor-imagenes.html">Comprimir imágenes online</a></h3>
+                        <p>Reduce el tamaño de tus imágenes sin perder calidad.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="redimensionar-imagen.html">Redimensionar imagen</a></h3>
+                        <p>Ajusta dimensiones para web o redes sociales.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Convertir imagen a WebP online</h2>
+                    <p>
+                        Esta herramienta te permite convertir imágenes JPG y PNG a WebP online gratis directamente desde el navegador.
+                        Es una forma rápida de optimizar imágenes para páginas web sin instalar programas ni depender de servicios externos.
+                    </p>
+
+                    <h2>¿Por qué usar WebP?</h2>
+                    <p>
+                        El formato WebP suele ofrecer archivos más ligeros que JPG o PNG manteniendo una buena calidad visual.
+                        Esto mejora la velocidad de carga de una web, ayuda al SEO y reduce el consumo de datos.
+                    </p>
+
+                    <h2>¿Cuándo conviene convertir imágenes a WebP?</h2>
+                    <p>
+                        WebP es muy útil para blogs, tiendas online, landing pages, portfolio y cualquier sitio que quiera cargar más rápido.
+                        También es una buena opción para ahorrar espacio en imágenes destinadas a email o documentación web.
+                    </p>
+
+                    <h2>Ventajas de este convertidor WebP</h2>
+                    <p>
+                        Todo el procesamiento se hace en tu navegador. No subimos tus archivos a ningún servidor, así que el proceso es rápido,
+                        privado y cómodo tanto en ordenador como en móvil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Necesita instalación?</summary>
+                        <p>No. Esta herramienta funciona directamente desde el navegador, sin descargar ni instalar programas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Se suben mis imágenes a un servidor?</summary>
+                        <p>No. La conversión se hace en tu navegador, así que tus archivos no se envían a servidores externos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Qué formatos puedo convertir a WebP?</summary>
+                        <p>Puedes convertir imágenes JPG y PNG a WebP online de forma rápida.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para usarse tanto en escritorio como en móviles y tablets.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>Acceso directo desde cualquier navegador.</div>
+        </div>
+    </footer>
 
     <script>
         const fileInput = document.getElementById('fileInput');
@@ -382,8 +458,8 @@
             convertBtn.disabled = true;
             downloadBtn.disabled = true;
 
-            originalPreview.innerHTML = '<span class="muted">No hay imagen cargada</span>';
-            resultPreview.innerHTML = '<span class="muted">Aquí verás el resultado</span>';
+            originalPreview.innerHTML = '<span class="muted-text">No hay imagen cargada</span>';
+            resultPreview.innerHTML = '<span class="muted-text">Aquí verás el resultado</span>';
 
             origSize.textContent = '0 KB';
             origDim.textContent = '—';
