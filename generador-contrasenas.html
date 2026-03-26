@@ -1,0 +1,394 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generador de contraseñas seguras online | ToolsRapidas</title>
+    <meta name="description" content="Genera contraseñas seguras online gratis. Elige longitud, símbolos, números y mayúsculas para crear passwords fuertes.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/generador-contrasenas.html">
+
+    <meta property="og:title" content="Generador de contraseñas seguras | ToolsRapidas">
+    <meta property="og:description" content="Crea contraseñas seguras online con longitud y opciones personalizadas.">
+    <meta property="og:url" content="https://toolsrapidas.com/generador-contrasenas.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+    <meta name="theme-color" content="#0f172a">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --panel-2: #1f2937;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+            --border: #334155;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .card h2 {
+                font-size: 18px;
+                margin: 0 0 12px;
+            }
+
+        .option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(148,163,184,.12);
+        }
+
+            .option:last-child {
+                border-bottom: 0;
+            }
+
+            .option label {
+                color: var(--text);
+            }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        input[type="checkbox"] {
+            transform: scale(1.1);
+        }
+
+        .value {
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .result-box {
+            background: #0b1220;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            font: 18px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            word-break: break-all;
+            min-height: 72px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--panel-2);
+            color: var(--text);
+        }
+
+            button.primary {
+                background: var(--accent);
+                color: #052e16;
+            }
+
+        .strength {
+            margin-top: 16px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 12px;
+            background: #0b1220;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--danger);
+            transition: width .2s ease;
+        }
+
+        .strength-text {
+            margin-top: 10px;
+            color: var(--muted);
+        }
+
+        .seo-content {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding: 0 24px 48px;
+        }
+
+        .seo-box {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .seo-box h2 {
+                margin: 0 0 12px;
+                font-size: clamp(24px, 3vw, 32px);
+                color: var(--text);
+            }
+
+            .seo-box p {
+                margin: 0 0 20px;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 900px;
+            }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Generador de contraseñas seguras</h1>
+        <div class="sub">
+            Crea contraseñas fuertes online gratis con longitud personalizada, mayúsculas, números y símbolos.
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Opciones</h2>
+
+                <div class="option" style="display:block;">
+                    <label for="length">Longitud</label>
+                    <input type="range" id="length" min="6" max="64" value="16">
+                    <div class="value">Longitud actual: <span id="lengthValue">16</span></div>
+                </div>
+
+                <div class="option">
+                    <label for="uppercase">Mayúsculas</label>
+                    <input type="checkbox" id="uppercase" checked>
+                </div>
+
+                <div class="option">
+                    <label for="lowercase">Minúsculas</label>
+                    <input type="checkbox" id="lowercase" checked>
+                </div>
+
+                <div class="option">
+                    <label for="numbers">Números</label>
+                    <input type="checkbox" id="numbers" checked>
+                </div>
+
+                <div class="option">
+                    <label for="symbols">Símbolos</label>
+                    <input type="checkbox" id="symbols" checked>
+                </div>
+
+                <div class="actions">
+                    <button class="primary" id="generateBtn">Generar contraseña</button>
+                    <button id="copyBtn">Copiar</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Resultado</h2>
+
+                <div class="result-box" id="result">Haz clic en “Generar contraseña”</div>
+
+                <div class="strength">
+                    <div class="bar">
+                        <div class="bar-fill" id="barFill"></div>
+                    </div>
+                    <div class="strength-text" id="strengthText">Nivel de seguridad: —</div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-box">
+            <h2>Generar contraseñas seguras online</h2>
+            <p>
+                Esta herramienta te permite crear contraseñas seguras online gratis con distintos niveles de complejidad.
+                Puedes elegir la longitud y decidir si quieres incluir mayúsculas, minúsculas, números y símbolos.
+            </p>
+
+            <h2>¿Cómo crear una contraseña fuerte?</h2>
+            <p>
+                Una buena contraseña debe ser larga, aleatoria y combinar varios tipos de caracteres.
+                Cuanto más larga y variada sea, más difícil será adivinarla o romperla.
+            </p>
+
+            <h2>¿Para qué sirve?</h2>
+            <p>
+                Es útil para cuentas de correo, redes sociales, banca online, paneles de administración y cualquier servicio donde necesites una contraseña segura.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const lengthInput = document.getElementById('length');
+        const lengthValue = document.getElementById('lengthValue');
+        const uppercase = document.getElementById('uppercase');
+        const lowercase = document.getElementById('lowercase');
+        const numbers = document.getElementById('numbers');
+        const symbols = document.getElementById('symbols');
+        const result = document.getElementById('result');
+        const barFill = document.getElementById('barFill');
+        const strengthText = document.getElementById('strengthText');
+
+        const upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const lowerChars = 'abcdefghijklmnopqrstuvwxyz';
+        const numberChars = '0123456789';
+        const symbolChars = '!@#$%^&*()_+-={}[]<>?';
+
+        function updateLength() {
+            lengthValue.textContent = lengthInput.value;
+        }
+
+        function getPool() {
+            let pool = '';
+            if (uppercase.checked) pool += upperChars;
+            if (lowercase.checked) pool += lowerChars;
+            if (numbers.checked) pool += numberChars;
+            if (symbols.checked) pool += symbolChars;
+            return pool;
+        }
+
+        function randomChar(str) {
+            return str[Math.floor(Math.random() * str.length)];
+        }
+
+        function generatePassword() {
+            const pool = getPool();
+            const length = Number(lengthInput.value);
+
+            if (!pool) {
+                result.textContent = 'Selecciona al menos una opción.';
+                updateStrength('');
+                return;
+            }
+
+            let password = '';
+            for (let i = 0; i < length; i++) {
+                password += randomChar(pool);
+            }
+
+            result.textContent = password;
+            updateStrength(password);
+        }
+
+        function updateStrength(password) {
+            if (!password) {
+                barFill.style.width = '0%';
+                barFill.style.background = '#ef4444';
+                strengthText.textContent = 'Nivel de seguridad: —';
+                return;
+            }
+
+            let score = 0;
+
+            if (password.length >= 8) score += 20;
+            if (password.length >= 12) score += 20;
+            if (password.length >= 16) score += 20;
+            if (/[A-Z]/.test(password)) score += 10;
+            if (/[a-z]/.test(password)) score += 10;
+            if (/[0-9]/.test(password)) score += 10;
+            if (/[^A-Za-z0-9]/.test(password)) score += 10;
+
+            score = Math.min(score, 100);
+            barFill.style.width = score + '%';
+
+            if (score < 40) {
+                barFill.style.background = '#ef4444';
+                strengthText.textContent = 'Nivel de seguridad: Débil';
+            } else if (score < 70) {
+                barFill.style.background = '#f59e0b';
+                strengthText.textContent = 'Nivel de seguridad: Media';
+            } else {
+                barFill.style.background = '#22c55e';
+                strengthText.textContent = 'Nivel de seguridad: Fuerte';
+            }
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', generatePassword);
+
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            const text = result.textContent;
+            if (!text || text.startsWith('Haz clic') || text.startsWith('Selecciona')) return;
+
+            try {
+                await navigator.clipboard.writeText(text);
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Copiado';
+                setTimeout(() => btn.textContent = 'Copiar', 1200);
+            } catch {
+                //
+            }
+        });
+
+        lengthInput.addEventListener('input', updateLength);
+        updateLength();
+    </script>
+</body>
+</html>

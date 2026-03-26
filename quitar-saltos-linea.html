@@ -1,0 +1,219 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quitar saltos de línea online | ToolsRapidas</title>
+    <meta name="description" content="Quita saltos de línea online gratis. Une texto cortado en varias líneas y déjalo limpio para copiar o pegar.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/quitar-saltos-linea.html">
+
+    <meta property="og:title" content="Quitar saltos de línea online | ToolsRapidas">
+    <meta property="og:description" content="Elimina saltos de línea y une texto fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/quitar-saltos-linea.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+    <meta name="theme-color" content="#0f172a">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --border: #334155;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+            background: linear-gradient(180deg,#0b1220 0%,#111827 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px,4vw,42px)
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.5
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .card h2 {
+                font-size: 18px;
+                margin: 0 0 12px
+            }
+
+        textarea {
+            width: 100%;
+            min-height: 360px;
+            resize: vertical;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+            outline: none;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: #1f2937;
+            color: var(--text);
+        }
+
+            button.primary {
+                background: var(--accent);
+                color: #052e16
+            }
+
+        .seo-content {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 0 24px 48px
+        }
+
+        .seo-box {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .seo-box h2 {
+                margin: 0 0 12px;
+                font-size: clamp(24px,3vw,32px)
+            }
+
+            .seo-box p {
+                margin: 0 0 20px;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 900px
+            }
+
+        @media (max-width: 980px) {
+            .grid {
+                grid-template-columns: 1fr
+            }
+
+            textarea {
+                min-height: 260px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Quitar saltos de línea online</h1>
+        <div class="sub">Une texto cortado en varias líneas y déjalo limpio para copiar y pegar.</div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Texto original</h2>
+<textarea id="input" placeholder="Pega aquí tu texto...">Este es un texto
+copiado desde un PDF
+que viene cortado
+en varias líneas.</textarea>
+                <div class="actions">
+                    <button class="primary" id="joinBtn">Quitar saltos</button>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Resultado</h2>
+<textarea id="output" placeholder="Aquí aparecerá el resultado..."></textarea>
+                <div class="actions">
+                    <button class="primary" id="copyBtn">Copiar</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-box">
+            <h2>Eliminar saltos de línea online</h2>
+            <p>Esta herramienta sirve para quitar saltos de línea de un texto y unir párrafos cortados en varias líneas.</p>
+            <h2>¿Cuándo es útil?</h2>
+            <p>Es especialmente útil cuando copias texto desde PDFs, correos, documentos o páginas web y el contenido queda partido línea por línea.</p>
+            <h2>Para qué sirve</h2>
+            <p>Te ayuda a limpiar texto para Word, Excel, formularios, emails o cualquier sistema donde quieras un texto continuo y más legible.</p>
+        </div>
+    </section>
+
+    <script>
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+
+document.getElementById("joinBtn").addEventListener("click", () => {
+  const cleaned = input.value
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/\n+/g, " ")
+    .replace(/[ \t]{2,}/g, " ")
+    .trim();
+  output.value = cleaned;
+});
+
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  try{
+    await navigator.clipboard.writeText(output.value);
+    const btn = document.getElementById("copyBtn");
+    btn.textContent = "Copiado";
+    setTimeout(() => btn.textContent = "Copiar", 1000);
+  }catch{}
+});
+    </script>
+</body>
+</html>

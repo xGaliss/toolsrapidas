@@ -1,0 +1,266 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Texto invisible para WhatsApp online | ToolsRapidas</title>
+    <meta name="description" content="Genera texto invisible para WhatsApp online gratis. Copia caracteres invisibles y envía mensajes vacíos fácilmente.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/texto-invisible-whatsapp.html">
+
+    <meta property="og:title" content="Texto invisible para WhatsApp | ToolsRapidas">
+    <meta property="og:description" content="Copia texto invisible para WhatsApp y envía mensajes vacíos.">
+    <meta property="og:url" content="https://toolsrapidas.com/texto-invisible-whatsapp.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+    <meta name="theme-color" content="#0f172a">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --panel-2: #1f2937;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+            --border: #334155;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .card h2 {
+                font-size: 18px;
+                margin: 0 0 12px;
+            }
+
+        .result-box {
+            background: #0b1220;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font: 18px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            word-break: break-all;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--panel-2);
+            color: var(--text);
+        }
+
+            button.primary {
+                background: var(--accent);
+                color: #052e16;
+            }
+
+        .control {
+            margin-bottom: 16px;
+        }
+
+            .control label {
+                display: block;
+                margin-bottom: 8px;
+                color: var(--muted);
+            }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        .seo-content {
+            max-width: 1000px;
+            margin: 40px auto 0;
+            padding: 0 24px 48px;
+        }
+
+        .seo-box {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .seo-box h2 {
+                margin: 0 0 12px;
+                font-size: clamp(24px, 3vw, 32px);
+                color: var(--text);
+            }
+
+            .seo-box p {
+                margin: 0 0 20px;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 900px;
+            }
+
+        .note {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Texto invisible para WhatsApp</h1>
+        <div class="sub">
+            Genera caracteres invisibles para copiar y pegar en WhatsApp o en otras apps.
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Opciones</h2>
+
+                <div class="control">
+                    <label for="count">Cantidad de caracteres invisibles</label>
+                    <input type="range" id="count" min="1" max="50" value="5">
+                    <div class="note">Cantidad actual: <span id="countValue">5</span></div>
+                </div>
+
+                <div class="actions">
+                    <button class="primary" id="generateBtn">Generar</button>
+                    <button id="copyBtn">Copiar</button>
+                </div>
+
+                <div class="note">
+                    Úsalo para enviar un mensaje vacío, crear separaciones visuales o copiar un carácter invisible.
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Resultado</h2>
+                <div class="result-box" id="result"></div>
+                <div class="note">
+                    Aunque no veas nada, el resultado contiene caracteres invisibles reales.
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-box">
+            <h2>Generar texto invisible para WhatsApp</h2>
+            <p>
+                Esta herramienta te permite copiar texto invisible para WhatsApp de forma rápida.
+                Es útil para enviar mensajes vacíos, crear separaciones en texto o usar caracteres que no se ven.
+            </p>
+
+            <h2>¿Cómo funciona?</h2>
+            <p>
+                El sistema genera caracteres Unicode invisibles que puedes copiar y pegar en WhatsApp u otras aplicaciones compatibles.
+            </p>
+
+            <h2>¿Para qué sirve?</h2>
+            <p>
+                Sirve para mandar mensajes vacíos, poner nombres en blanco en algunos contextos o añadir espacios invisibles donde una app normalmente no los deja.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const count = document.getElementById('count');
+        const countValue = document.getElementById('countValue');
+        const result = document.getElementById('result');
+
+        const invisibleChar = '\u3164';
+
+        function generateInvisibleText() {
+            const total = Number(count.value);
+            result.textContent = invisibleChar.repeat(total);
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', generateInvisibleText);
+
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(result.textContent);
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Copiado';
+                setTimeout(() => btn.textContent = 'Copiar', 1200);
+            } catch {}
+        });
+
+        count.addEventListener('input', () => {
+            countValue.textContent = count.value;
+            generateInvisibleText();
+        });
+
+        generateInvisibleText();
+    </script>
+</body>
+</html>

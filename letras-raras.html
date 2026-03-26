@@ -1,0 +1,261 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generador de letras raras online | Fancy text para Instagram y TikTok | ToolsRapidas</title>
+    <meta name="description" content="Convierte texto normal en letras raras y fancy text para Instagram, TikTok, WhatsApp y más. Copia y pega al instante.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/letras-raras.html">
+
+    <meta property="og:title" content="Generador de letras raras | ToolsRapidas">
+    <meta property="og:description" content="Crea fancy text para Instagram, TikTok y WhatsApp fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/letras-raras.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+    <meta name="theme-color" content="#0f172a">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --border: #334155;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+            background: linear-gradient(180deg,#0b1220 0%,#111827 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px,4vw,42px)
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.5
+        }
+
+        .card {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+            margin-bottom: 18px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            resize: vertical;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 15px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+            outline: none;
+        }
+
+        .variant {
+            background: #0b1220;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 12px;
+        }
+
+        .variant-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .variant-name {
+            font-weight: 700
+        }
+
+        .result {
+            word-break: break-word;
+            line-height: 1.7;
+            color: var(--text);
+        }
+
+        button {
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: #1f2937;
+            color: var(--text);
+        }
+
+            button.primary {
+                background: var(--accent);
+                color: #052e16
+            }
+
+        .seo-content {
+            max-width: 1100px;
+            margin: 40px auto 0;
+            padding: 0 24px 48px
+        }
+
+        .seo-box {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .seo-box h2 {
+                margin: 0 0 12px;
+                font-size: clamp(24px,3vw,32px)
+            }
+
+            .seo-box p {
+                margin: 0 0 20px;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 900px
+            }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Generador de letras raras</h1>
+        <div class="sub">Convierte texto normal en estilos fancy para Instagram, TikTok, WhatsApp o bios.</div>
+
+        <section class="card">
+            <h2>Texto original</h2>
+<textarea id="input" placeholder="Escribe aquí tu texto...">ToolsRapidas</textarea>
+            <div style="margin-top:14px;">
+                <button class="primary" id="generateBtn">Generar estilos</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Resultados</h2>
+            <div id="results"></div>
+        </section>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-box">
+            <h2>Generador de fancy text online</h2>
+            <p>Esta herramienta convierte texto normal en letras raras y estilos decorativos para redes sociales, perfiles, nombres y mensajes.</p>
+            <h2>¿Para qué sirve?</h2>
+            <p>Sirve para crear biografías más llamativas en Instagram, nombres diferentes en TikTok o mensajes con estilo en WhatsApp y otras apps.</p>
+            <h2>Cómo usarlo</h2>
+            <p>Escribe tu texto, genera los estilos y copia el que más te guste para pegarlo donde quieras.</p>
+        </div>
+    </section>
+
+    <script>
+const input = document.getElementById('input');
+const results = document.getElementById('results');
+
+const maps = {
+  "Negrita Unicode": {
+    a:"𝗮",b:"𝗯",c:"𝗰",d:"𝗱",e:"𝗲",f:"𝗳",g:"𝗴",h:"𝗵",i:"𝗶",j:"𝗷",k:"𝗸",l:"𝗹",m:"𝗺",n:"𝗻",o:"𝗼",p:"𝗽",q:"𝗾",r:"𝗿",s:"𝘀",t:"𝘁",u:"𝘂",v:"𝘃",w:"𝘄",x:"𝘅",y:"𝘆",z:"𝘇",
+    A:"𝗔",B:"𝗕",C:"𝗖",D:"𝗗",E:"𝗘",F:"𝗙",G:"𝗚",H:"𝗛",I:"𝗜",J:"𝗝",K:"𝗞",L:"𝗟",M:"𝗠",N:"𝗡",O:"𝗢",P:"𝗣",Q:"𝗤",R:"𝗥",S:"𝗦",T:"𝗧",U:"𝗨",V:"𝗩",W:"𝗪",X:"𝗫",Y:"𝗬",Z:"𝗭"
+  },
+  "Cursiva Unicode": {
+    a:"𝘢",b:"𝘣",c:"𝘤",d:"𝘥",e:"𝘦",f:"𝘧",g:"𝘨",h:"𝘩",i:"𝘪",j:"𝘫",k:"𝘬",l:"𝘭",m:"𝘮",n:"𝘯",o:"𝘰",p:"𝘱",q:"𝘲",r:"𝘳",s:"𝘴",t:"𝘵",u:"𝘶",v:"𝘷",w:"𝘸",x:"𝘹",y:"𝘺",z:"𝘻",
+    A:"𝘈",B:"𝘉",C:"𝘊",D:"𝘋",E:"𝘌",F:"𝘍",G:"𝘎",H:"𝘏",I:"𝘐",J:"𝘑",K:"𝘒",L:"𝘓",M:"𝘔",N:"𝘕",O:"𝘖",P:"𝘗",Q:"𝘘",R:"𝘙",S:"𝘚",T:"𝘛",U:"𝘜",V:"𝘝",W:"𝘞",X:"𝘟",Y:"𝘠",Z:"𝘡"
+  },
+  "Monospace": {
+    a:"𝚊",b:"𝚋",c:"𝚌",d:"𝚍",e:"𝚎",f:"𝚏",g:"𝚐",h:"𝚑",i:"𝚒",j:"𝚓",k:"𝚔",l:"𝚕",m:"𝚖",n:"𝚗",o:"𝚘",p:"𝚙",q:"𝚚",r:"𝚛",s:"𝚜",t:"𝚝",u:"𝚞",v:"𝚟",w:"𝚠",x:"𝚡",y:"𝚢",z:"𝚣",
+    A:"𝙰",B:"𝙱",C:"𝙲",D:"𝙳",E:"𝙴",F:"𝙵",G:"𝙶",H:"𝙷",I:"𝙸",J:"𝙹",K:"𝙺",L:"𝙻",M:"𝙼",N:"𝙽",O:"𝙾",P:"𝙿",Q:"𝚀",R:"𝚁",S:"𝚂",T:"𝚃",U:"𝚄",V:"𝚅",W:"𝚆",X:"𝚇",Y:"𝚈",Z:"𝚉"
+  }
+};
+
+function transform(text, map){
+  return [...text].map(ch => map[ch] || ch).join('');
+}
+
+function spaced(text){
+  return [...text].join(' ');
+}
+
+function bubble(text){
+  const m = {
+    a:"ⓐ",b:"ⓑ",c:"ⓒ",d:"ⓓ",e:"ⓔ",f:"ⓕ",g:"ⓖ",h:"ⓗ",i:"ⓘ",j:"ⓙ",k:"ⓚ",l:"ⓛ",m:"ⓜ",n:"ⓝ",o:"ⓞ",p:"ⓟ",q:"ⓠ",r:"ⓡ",s:"ⓢ",t:"ⓣ",u:"ⓤ",v:"ⓥ",w:"ⓦ",x:"ⓧ",y:"ⓨ",z:"ⓩ",
+    A:"Ⓐ",B:"Ⓑ",C:"Ⓒ",D:"Ⓓ",E:"Ⓔ",F:"Ⓕ",G:"Ⓖ",H:"Ⓗ",I:"Ⓘ",J:"Ⓙ",K:"Ⓚ",L:"Ⓛ",M:"Ⓜ",N:"Ⓝ",O:"Ⓞ",P:"Ⓟ",Q:"Ⓠ",R:"Ⓡ",S:"Ⓢ",T:"Ⓣ",U:"Ⓤ",V:"Ⓥ",W:"Ⓦ",X:"Ⓧ",Y:"Ⓨ",Z:"Ⓩ"
+  };
+  return [...text].map(ch => m[ch] || ch).join('');
+}
+
+function makeVariants(text){
+  return [
+    ["Negrita Unicode", transform(text, maps["Negrita Unicode"])],
+    ["Cursiva Unicode", transform(text, maps["Cursiva Unicode"])],
+    ["Monospace", transform(text, maps["Monospace"])],
+    ["Espaciado", spaced(text)],
+    ["Círculos", bubble(text)]
+  ];
+}
+
+function render(){
+  const text = input.value || "";
+  const variants = makeVariants(text);
+  results.innerHTML = "";
+
+  variants.forEach(([name, value]) => {
+    const item = document.createElement("div");
+    item.className = "variant";
+    item.innerHTML = `
+      <div class="variant-top">
+        <div class="variant-name">${name}</div>
+        <button type="button">Copiar</button>
+      </div>
+      <div class="result">${value}</div>
+    `;
+    item.querySelector("button").addEventListener("click", async () => {
+      try{
+        await navigator.clipboard.writeText(value);
+        item.querySelector("button").textContent = "Copiado";
+        setTimeout(() => item.querySelector("button").textContent = "Copiar", 1000);
+      }catch{}
+    });
+    results.appendChild(item);
+  });
+}
+
+document.getElementById("generateBtn").addEventListener("click", render);
+render();
+    </script>
+</body>
+</html>

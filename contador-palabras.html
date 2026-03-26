@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contador de palabras y caracteres online | ToolsRapidas</title>
+    <meta name="description" content="Cuenta palabras, caracteres, líneas y tiempo de lectura online gratis.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/contador-palabras.html">
+
+    <meta property="og:title" content="Contador de palabras online | ToolsRapidas">
+    <meta property="og:description" content="Cuenta palabras y caracteres fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/contador-palabras.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter,system-ui;
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 20px;
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 300px;
+            background: #111827;
+            color: white;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Contador de palabras</h1>
+
+<textarea id="text" placeholder="Escribe o pega tu texto aquí..."></textarea>
+
+        <div class="stats">
+            <div class="card"><strong id="words">0</strong><br>Palabras</div>
+            <div class="card"><strong id="chars">0</strong><br>Caracteres</div>
+            <div class="card"><strong id="charsNoSpace">0</strong><br>Sin espacios</div>
+            <div class="card"><strong id="lines">0</strong><br>Líneas</div>
+            <div class="card"><strong id="reading">0 min</strong><br>Lectura</div>
+            <div class="card"><strong id="speaking">0 min</strong><br>Habla</div>
+        </div>
+
+    </div>
+
+    <script>
+const text=document.getElementById("text");
+
+text.addEventListener("input",update);
+
+function update(){
+let value=text.value;
+
+let words=value.trim().match(/\S+/g);
+words=words?words.length:0;
+
+let chars=value.length;
+let charsNoSpace=value.replace(/\s/g,"").length;
+let lines=value.split(/\n/).length;
+
+let reading=Math.ceil(words/200);
+let speaking=Math.ceil(words/130);
+
+document.getElementById("words").textContent=words;
+document.getElementById("chars").textContent=chars;
+document.getElementById("charsNoSpace").textContent=charsNoSpace;
+document.getElementById("lines").textContent=lines;
+document.getElementById("reading").textContent=reading+" min";
+document.getElementById("speaking").textContent=speaking+" min";
+}
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Redimensionar imagen online gratis | Cambiar tamaño JPG y PNG | ToolsRapidas</title>
+    <meta name="description" content="Redimensiona imágenes online gratis. Cambia el tamaño de JPG y PNG fácilmente sin perder calidad.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/redimensionar-imagen.html">
+
+    <meta property="og:title" content="Redimensionar imagen online | ToolsRapidas">
+    <meta property="og:description" content="Cambia el tamaño de imágenes JPG y PNG fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/redimensionar-imagen.html">
+    <meta property="og:type" content="website">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+            --border: #334155;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter,system-ui;
+            background: linear-gradient(180deg,#0b1220,#111827);
+            color: var(--text);
+        }
+
+        .wrap {
+            max-width: 1000px;
+            margin: auto;
+            padding: 24px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #111827;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+        }
+
+        .preview {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #0b1220;
+        }
+
+            .preview img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+
+        .controls {
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: #0b1220;
+            color: white;
+        }
+
+        button {
+            padding: 10px 14px;
+            border-radius: 10px;
+            border: none;
+            background: var(--accent);
+            color: #052e16;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .seo {
+            margin-top: 40px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Redimensionar imagen online</h1>
+        <div class="sub">Cambia el tamaño de tus imágenes fácilmente.</div>
+
+        <div class="card">
+            <input type="file" id="file">
+
+            <div class="preview" id="preview">Sin imagen</div>
+
+            <div class="controls">
+                <label>Ancho</label>
+                <input type="number" id="width">
+
+                <label>Alto</label>
+                <input type="number" id="height">
+
+                <button onclick="resize()">Redimensionar</button>
+                <button onclick="download()">Descargar</button>
+            </div>
+        </div>
+
+        <div class="seo">
+            <h2>Redimensionar imágenes online</h2>
+            <p>Puedes cambiar el tamaño de imágenes JPG y PNG fácilmente sin instalar programas.</p>
+        </div>
+    </div>
+
+    <script>
+let img=new Image();
+let canvas=document.createElement("canvas");
+
+document.getElementById("file").onchange=e=>{
+let file=e.target.files[0];
+let reader=new FileReader();
+reader.onload=()=>{
+img.src=reader.result;
+img.onload=()=>{
+document.getElementById("preview").innerHTML="";
+document.getElementById("preview").appendChild(img);
+document.getElementById("width").value=img.width;
+document.getElementById("height").value=img.height;
+}
+}
+reader.readAsDataURL(file);
+}
+
+function resize(){
+let w=document.getElementById("width").value;
+let h=document.getElementById("height").value;
+
+canvas.width=w;
+canvas.height=h;
+let ctx=canvas.getContext("2d");
+ctx.drawImage(img,0,0,w,h);
+
+let newImg=new Image();
+newImg.src=canvas.toDataURL();
+
+document.getElementById("preview").innerHTML="";
+document.getElementById("preview").appendChild(newImg);
+}
+
+function download(){
+let a=document.createElement("a");
+a.href=canvas.toDataURL();
+a.download="imagen.png";
+a.click();
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Contador de caracteres para Instagram, Twitter y TikTok | ToolsRapidas</title>
+    <meta name="description" content="Cuenta caracteres para Instagram, Twitter (X) y TikTok. Controla límites y evita errores al publicar.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/contador-caracteres-redes.html">
+
+    <meta property="og:title" content="Contador de caracteres redes sociales | ToolsRapidas">
+    <meta property="og:description" content="Cuenta caracteres para Instagram, Twitter y TikTok fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/contador-caracteres-redes.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter,system-ui;
+            background: #0f172a;
+            color: #e5e7eb;
+            padding: 20px;
+        }
+
+        .wrap {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            background: #111827;
+            color: white;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .stats {
+            margin-top: 20px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .card {
+            background: #111827;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .limit {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .ok {
+            color: #22c55e;
+        }
+
+        .warn {
+            color: #f59e0b;
+        }
+
+        .bad {
+            color: #ef4444;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Contador de caracteres para redes</h1>
+
+<textarea id="text" placeholder="Escribe tu texto..."></textarea>
+
+        <div class="stats">
+            <div class="card">
+                <span>Instagram</span>
+                <span id="ig"></span>
+            </div>
+
+            <div class="card">
+                <span>Twitter (X)</span>
+                <span id="tw"></span>
+            </div>
+
+            <div class="card">
+                <span>TikTok</span>
+                <span id="tt"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+const text=document.getElementById("text");
+
+function update(){
+let len=text.value.length;
+
+set("ig",len,2200);
+set("tw",len,280);
+set("tt",len,2200);
+}
+
+function set(id,len,max){
+let el=document.getElementById(id);
+let remaining=max-len;
+
+let cls="ok";
+if(remaining<50) cls="warn";
+if(remaining<0) cls="bad";
+
+el.innerHTML=`<span class="${cls}">${len}/${max}</span>`;
+}
+
+text.addEventListener("input",update);
+update();
+    </script>
+
+</body>
+</html>

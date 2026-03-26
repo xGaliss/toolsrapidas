@@ -1,0 +1,407 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Extraer texto de PDF online gratis | PDF a texto | ToolsRapidas</title>
+    <meta name="description" content="Extrae texto de PDF online gratis. Convierte PDF a texto limpio fácilmente sin instalar programas.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/pdf-a-texto.html">
+
+    <meta property="og:title" content="Extraer texto de PDF online | ToolsRapidas">
+    <meta property="og:description" content="Convierte PDF a texto limpio fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/pdf-a-texto.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+    <meta name="theme-color" content="#0f172a">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --panel-2: #1f2937;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+            --border: #334155;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .card h2 {
+                font-size: 18px;
+                margin: 0 0 12px;
+            }
+
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            background: #0b1220;
+            cursor: pointer;
+            transition: .2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            width: 100%;
+        }
+
+            .dropzone.dragover {
+                border-color: var(--accent);
+                background: rgba(34,197,94,.08);
+            }
+
+            .dropzone strong {
+                font-size: 16px;
+                margin-bottom: 6px;
+                text-align: center;
+            }
+
+            .dropzone span {
+                color: var(--muted);
+                font-size: 13px;
+                text-align: center;
+            }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 430px;
+            resize: vertical;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--panel-2);
+            color: var(--text);
+        }
+
+            button.primary {
+                background: var(--accent);
+                color: #052e16;
+            }
+
+            button.danger {
+                background: var(--danger);
+                color: white;
+            }
+
+            button:disabled {
+                opacity: .6;
+                cursor: not-allowed;
+            }
+
+        .status {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+            min-height: 22px;
+        }
+
+        .seo-content {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 0 24px 48px;
+        }
+
+        .seo-box {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .seo-box h2 {
+                margin: 0 0 12px;
+                font-size: clamp(24px, 3vw, 32px);
+                color: var(--text);
+            }
+
+            .seo-box p {
+                margin: 0 0 20px;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 900px;
+            }
+
+        @media (max-width: 980px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Extraer texto de PDF online</h1>
+        <div class="sub">
+            Sube un PDF y extrae su texto directamente desde el navegador. Sin instalar nada.
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Opciones</h2>
+
+                <label class="dropzone" id="dropzone">
+                    <strong>Arrastra tu PDF aquí</strong>
+                    <span>o haz clic para seleccionar un archivo PDF</span>
+                    <input type="file" id="pdfFile" accept="application/pdf" />
+                </label>
+
+                <div class="actions">
+                    <button class="primary" id="extractBtn" disabled>Extraer texto</button>
+                    <button id="copyBtn" disabled>Copiar</button>
+                    <button id="downloadBtn" disabled>Descargar .txt</button>
+                    <button class="danger" id="resetBtn">Vaciar</button>
+                </div>
+
+                <div class="status" id="status">Selecciona un PDF para empezar.</div>
+            </section>
+
+            <section class="card">
+                <h2>Texto extraído</h2>
+                <textarea id="output" placeholder="Aquí aparecerá el texto del PDF..."></textarea>
+            </section>
+        </div>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-box">
+            <h2>Extraer texto de PDF online</h2>
+            <p>
+                Esta herramienta te permite convertir un PDF a texto directamente desde el navegador.
+                Es útil para copiar contenido, reutilizar texto o limpiar documentos antes de pegarlos en Word, Excel o email.
+            </p>
+
+            <h2>¿Para qué sirve pasar un PDF a texto?</h2>
+            <p>
+                Extraer texto de un PDF facilita editar contenido, reutilizar fragmentos, analizar documentación o limpiar información copiada desde informes y facturas.
+            </p>
+
+            <h2>Ventajas</h2>
+            <p>
+                El proceso se realiza en tu navegador. No subimos el archivo a ningún servidor, así que es más rápido y privado.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        if (window.pdfjsLib) {
+            pdfjsLib.GlobalWorkerOptions.workerSrc =
+                'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        }
+
+        const pdfFile = document.getElementById('pdfFile');
+        const extractBtn = document.getElementById('extractBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const output = document.getElementById('output');
+        const statusEl = document.getElementById('status');
+        const dropzone = document.getElementById('dropzone');
+
+        let selectedFile = null;
+
+        function setStatus(text) {
+            statusEl.textContent = text;
+        }
+
+        function resetAll() {
+            selectedFile = null;
+            pdfFile.value = '';
+            output.value = '';
+            extractBtn.disabled = true;
+            copyBtn.disabled = true;
+            downloadBtn.disabled = true;
+            setStatus('Selecciona un PDF para empezar.');
+        }
+
+        function setFile(file) {
+            if (!file) return;
+
+            if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
+                setStatus('El archivo seleccionado no es un PDF válido.');
+                return;
+            }
+
+            selectedFile = file;
+            extractBtn.disabled = false;
+            copyBtn.disabled = true;
+            downloadBtn.disabled = true;
+            output.value = '';
+            setStatus(`PDF cargado: ${file.name}`);
+        }
+
+        pdfFile.addEventListener('change', (e) => {
+            setFile(e.target.files[0]);
+        });
+
+        dropzone.addEventListener('click', () => pdfFile.click());
+
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.classList.add('dragover');
+        });
+
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('dragover');
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            setFile(file);
+        });
+
+        extractBtn.addEventListener('click', async () => {
+            if (!selectedFile) {
+                setStatus('Primero selecciona un PDF.');
+                return;
+            }
+
+            if (!window.pdfjsLib) {
+                setStatus('No se ha podido cargar PDF.js. Prueba con conexión a internet o súbelo a Vercel.');
+                return;
+            }
+
+            try {
+                setStatus('Extrayendo texto...');
+
+                const arrayBuffer = await selectedFile.arrayBuffer();
+                const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+
+                let finalText = '';
+
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    const page = await pdf.getPage(pageNum);
+                    const textContent = await page.getTextContent();
+
+                    const pageText = textContent.items.map(item => item.str).join(' ');
+                    finalText += pageText + '\n\n';
+                }
+
+                finalText = finalText
+                    .replace(/[ \t]{2,}/g, ' ')
+                    .replace(/\n{3,}/g, '\n\n')
+                    .trim();
+
+                output.value = finalText;
+                copyBtn.disabled = finalText.length === 0;
+                downloadBtn.disabled = finalText.length === 0;
+
+                setStatus(`Texto extraído correctamente. Páginas procesadas: ${pdf.numPages}`);
+            } catch (error) {
+                console.error(error);
+                setStatus('No se pudo leer el PDF. Prueba con otro archivo o revisa la consola (F12).');
+            }
+        });
+
+        copyBtn.addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(output.value);
+                setStatus('Texto copiado al portapapeles.');
+            } catch {
+                setStatus('No se pudo copiar el texto.');
+            }
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            const blob = new Blob([output.value], { type: 'text/plain;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'texto-extraido.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            setStatus('Archivo descargado.');
+        });
+
+        resetBtn.addEventListener('click', resetAll);
+    </script>
+</body>
+</html>
