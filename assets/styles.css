@@ -136,8 +136,18 @@ h1{
   .nav-links{width:100%}
 }
 .seo-content {
-    max-width: 1100px;
-    margin: 40px auto;
-    color: #aaa;
-    line-height: 1.7;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 24px 40px;
 }
+
+    .seo-content h2 {
+        margin: 0 0 10px;
+        font-size: 28px;
+    }
+
+    .seo-content p {
+        color: var(--muted);
+        line-height: 1.7;
+        margin: 0 0 18px;
+    }
