@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Calculadora salario neto a bruto online | ToolsRapidas</title>
+    <meta name="description" content="Calcula salario neto o bruto de forma orientativa online con 12 o 14 pagas y retención estimada.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/calculadora-salario-neto-bruto.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Calculadora salario neto y bruto online | ToolsRapidas">
+    <meta property="og:description" content="Estima salario neto o bruto anual y mensual fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/calculadora-salario-neto-bruto.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calculadora salario neto y bruto online | ToolsRapidas" />
+    <meta name="twitter:description" content="Estima salario neto o bruto anual y mensual fácilmente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Calculadora salario neto y bruto online",
+          "url": "https://toolsrapidas.com/calculadora-salario-neto-bruto.html",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Calcula salario neto o bruto de forma orientativa online con 12 o 14 pagas y retención estimada."
+        }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus,
+            input:focus,
+            select:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button,
+            .tool-buttons a,
+            .tool-buttons label {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .tool-buttons button.primary,
+                .tool-buttons a.primary,
+                .tool-buttons label.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .field-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .stat-card span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            margin-top: 16px;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            background: #0b1220;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(148,163,184,.12);
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .status-line {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .preview-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 999px;
+            padding: 8px 12px;
+            background: #0b1220;
+            font-size: 13px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 240px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Calculadora salario neto y bruto online</h1>
+            <p class="tool-lead">
+                Calcula de forma orientativa salario neto o bruto anual y mensual directamente desde el navegador.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="section"><div class="container"><div class="tool-layout-single">
+<section class="card tool-panel">
+<h2>Calculadora salario neto ↔ bruto</h2>
+<div class="field-stack">
+<input id="salary" type="number" step="0.01" value="30000" placeholder="Importe anual">
+<select id="direction"><option value="grossToNet">Bruto anual a neto estimado</option><option value="netToGross">Neto anual a bruto estimado</option></select>
+<select id="payments"><option value="12">12 pagas</option><option value="14">14 pagas</option></select>
+<select id="retention"><option value="24">Retención estimada 24%</option><option value="19">Retención estimada 19%</option><option value="15">Retención estimada 15%</option><option value="30">Retención estimada 30%</option></select>
+</div>
+<div class="tool-buttons"><button class="primary" id="calcBtn">Calcular salario</button><button id="copyBtn">Copiar</button></div>
+<div class="mini-grid">
+<div class="stat-card"><strong id="annualOut">0 €</strong><span>Resultado anual</span></div>
+<div class="stat-card"><strong id="monthlyOut">0 €</strong><span>Resultado mensual</span></div>
+<div class="stat-card"><strong id="notesOut">Estimado</strong><span>Tipo</span></div>
+</div>
+<textarea id="output" placeholder="Aquí aparecerá el detalle orientativo..."></textarea>
+<div class="tool-help">Cálculo orientativo. No sustituye el cálculo profesional de nómina ni considera todas las circunstancias personales o fiscales.</div>
+</section></div></div></section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades online para trabajar más rápido desde el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    
+<article class="card"><h3><a href="firma-email.html">Generador de firma de email</a></h3><p>Crea firmas HTML para Outlook o Gmail de forma rápida.</p></article>
+<article class="card"><h3><a href="limpiador-texto.html">Limpiador de texto</a></h3><p>Prepara textos para emails, documentos y trabajo diario.</p></article>
+<article class="card"><h3><a href="contador-palabras.html">Contador de palabras</a></h3><p>Controla longitud y lectura de textos o documentos.</p></article>
+<article class="card"><h3><a href="generador-qr.html">Generador de QR</a></h3><p>Genera códigos QR para enlaces, contacto o WiFi.</p></article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Calculadora de salario neto y bruto online</h2><p>Esta herramienta ofrece una estimación orientativa para pasar de salario bruto anual a neto o de neto a bruto.</p><h2>¿Para qué sirve?</h2><p>Es útil para valorar ofertas, revisar remuneraciones, hacer cálculos rápidos y tener una referencia aproximada mensual.</p><h2>Qué incluye</h2><p>Permite elegir 12 o 14 pagas y aplicar un porcentaje orientativo de retención para obtener una cifra aproximada.</p><h2>Importante</h2><p>El resultado es orientativo y puede variar según comunidad, contrato, IRPF, cotizaciones y circunstancias personales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open><summary>¿Es un cálculo exacto?</summary><p>No. Es una estimación orientativa para tener una referencia rápida.</p></details>
+<details><summary>¿Puedo calcular de bruto a neto y de neto a bruto?</summary><p>Sí. Puedes usar ambas direcciones desde el selector.</p></details>
+<details><summary>¿Influye el número de pagas?</summary><p>Sí. Puedes elegir 12 o 14 pagas para ver el reparto mensual aproximado.</p></details>
+<details><summary>¿Sirve como referencia para ofertas?</summary><p>Sí. Es útil para tener una estimación rápida antes de un cálculo más detallado.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+const money = n => new Intl.NumberFormat('es-ES',{style:'currency',currency:'EUR',maximumFractionDigits:2}).format(n);
+document.getElementById("calcBtn").addEventListener("click", ()=>{
+  const salary = parseFloat(document.getElementById("salary").value || "0");
+  const retention = parseFloat(document.getElementById("retention").value) / 100;
+  const direction = document.getElementById("direction").value;
+  const pays = parseInt(document.getElementById("payments").value,10);
+  let annual = 0;
+  if(direction === "grossToNet") annual = salary * (1-retention);
+  else annual = salary / (1-retention);
+  document.getElementById("annualOut").textContent = money(annual);
+  document.getElementById("monthlyOut").textContent = money(annual/pays);
+  document.getElementById("notesOut").textContent = "Orientativo";
+  document.getElementById("output").value = `Resultado anual estimado: ${money(annual)}\nResultado mensual estimado (${pays} pagas): ${money(annual/pays)}\nRetención aplicada: ${document.getElementById("retention").value}%\n\nEste cálculo es orientativo y no sustituye una nómina real.`;
+});
+document.getElementById("copyBtn").addEventListener("click", async()=>{ try{ await navigator.clipboard.writeText(document.getElementById("output").value);}catch{} });
+document.getElementById("calcBtn").click();
+</script>
+
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Conversor Excel a CSV online | ToolsRapidas</title>
+    <meta name="description" content="Convierte archivos Excel a CSV online gratis directamente desde el navegador.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/excel-a-csv.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Conversor Excel a CSV online | ToolsRapidas">
+    <meta property="og:description" content="Pasa Excel a CSV online rápidamente.">
+    <meta property="og:url" content="https://toolsrapidas.com/excel-a-csv.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Conversor Excel a CSV online | ToolsRapidas" />
+    <meta name="twitter:description" content="Pasa Excel a CSV online rápidamente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Conversor Excel a CSV online",
+          "url": "https://toolsrapidas.com/excel-a-csv.html",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte archivos Excel a CSV online gratis directamente desde el navegador."
+        }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus,
+            input:focus,
+            select:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button,
+            .tool-buttons a,
+            .tool-buttons label {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .tool-buttons button.primary,
+                .tool-buttons a.primary,
+                .tool-buttons label.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .field-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .stat-card span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            margin-top: 16px;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            background: #0b1220;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(148,163,184,.12);
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .status-line {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .preview-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 999px;
+            padding: 8px 12px;
+            background: #0b1220;
+            font-size: 13px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 240px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Conversor Excel a CSV online</h1>
+            <p class="tool-lead">
+                Convierte archivos Excel a CSV online gratis directamente desde el navegador usando la primera hoja del documento.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="section"><div class="container"><div class="tool-layout-single">
+<section class="card tool-panel">
+<h2>Convertir Excel a CSV</h2>
+<input id="fileInput" type="file" accept=".xlsx,.xls,.csv">
+<div class="tool-buttons"><button class="primary" id="convertBtn">Convertir a CSV</button><button id="downloadBtn">Descargar CSV</button></div>
+<div class="status-line" id="statusLine">Sube un archivo Excel para convertirlo a CSV.</div>
+<textarea id="output" placeholder="Aquí aparecerá el CSV convertido..."></textarea>
+<div class="tool-help">La conversión se realiza en el navegador usando la primera hoja del archivo Excel.</div>
+</section></div></div></section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades online para trabajar más rápido desde el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    
+<article class="card"><h3><a href="firma-email.html">Generador de firma de email</a></h3><p>Crea firmas HTML para Outlook o Gmail de forma rápida.</p></article>
+<article class="card"><h3><a href="limpiador-texto.html">Limpiador de texto</a></h3><p>Prepara textos para emails, documentos y trabajo diario.</p></article>
+<article class="card"><h3><a href="contador-palabras.html">Contador de palabras</a></h3><p>Controla longitud y lectura de textos o documentos.</p></article>
+<article class="card"><h3><a href="generador-qr.html">Generador de QR</a></h3><p>Genera códigos QR para enlaces, contacto o WiFi.</p></article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Conversor Excel a CSV online</h2><p>Esta herramienta convierte archivos Excel a CSV online directamente desde el navegador, usando la primera hoja del documento.</p><h2>¿Para qué sirve?</h2><p>Es útil para importar datos en otros sistemas, limpiar hojas, compartir tablas o trabajar con formatos más universales.</p><h2>Qué archivos admite</h2><p>Puedes subir archivos XLSX y XLS para obtener un CSV listo para copiar o descargar.</p><h2>Ventajas de usar esta herramienta</h2><p>No necesitas instalar programas y puedes convertir rápidamente una hoja Excel a texto CSV reutilizable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open><summary>¿Qué hace esta herramienta?</summary><p>Convierte un archivo Excel a formato CSV usando la primera hoja del documento.</p></details>
+<details><summary>¿Sirve con archivos XLSX y XLS?</summary><p>Sí. Admite ambos formatos.</p></details>
+<details><summary>¿Qué hoja convierte?</summary><p>Convierte la primera hoja disponible del archivo.</p></details>
+<details><summary>¿El archivo se sube a un servidor?</summary><p>No. Se procesa localmente en tu navegador.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+let currentCsv = "";
+document.getElementById("convertBtn").addEventListener("click", async()=>{
+  const file = document.getElementById("fileInput").files[0];
+  if(!file){ document.getElementById("statusLine").textContent = "Primero debes seleccionar un archivo."; return; }
+  const data = await file.arrayBuffer();
+  const wb = XLSX.read(data, {type:'array'});
+  const sheet = wb.Sheets[wb.SheetNames[0]];
+  currentCsv = XLSX.utils.sheet_to_csv(sheet);
+  document.getElementById("output").value = currentCsv;
+  document.getElementById("statusLine").textContent = `Conversión completada usando la hoja: ${wb.SheetNames[0]}`;
+});
+document.getElementById("downloadBtn").addEventListener("click", ()=>{
+  const blob = new Blob([currentCsv], {type:"text/csv;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "archivo-convertido.csv";
+  a.click();
+});
+</script>
+
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

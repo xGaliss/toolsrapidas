@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Comparador de JSON online | Diff JSON | ToolsRapidas</title>
+    <meta name="description" content="Compara dos JSON online gratis y detecta diferencias entre claves, valores y estructuras anidadas.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/comparador-json.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Comparador de JSON online | ToolsRapidas">
+    <meta property="og:description" content="Compara dos JSON y detecta diferencias fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/comparador-json.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Comparador de JSON online | ToolsRapidas" />
+    <meta name="twitter:description" content="Compara dos JSON y detecta diferencias fácilmente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Comparador de JSON online",
+          "url": "https://toolsrapidas.com/comparador-json.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Compara dos JSON online gratis y detecta diferencias entre claves, valores y estructuras anidadas."
+        }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus,
+            input:focus,
+            select:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button,
+            .tool-buttons a,
+            .tool-buttons label {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .tool-buttons button.primary,
+                .tool-buttons a.primary,
+                .tool-buttons label.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .field-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .stat-card span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            margin-top: 16px;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            background: #0b1220;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(148,163,184,.12);
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .status-line {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .preview-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 999px;
+            padding: 8px 12px;
+            background: #0b1220;
+            font-size: 13px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 240px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Comparador de JSON online</h1>
+            <p class="tool-lead">
+                Compara dos estructuras JSON y detecta cambios, campos añadidos o valores eliminados de forma rápida directamente desde el navegador.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="section"><div class="container"><div class="tool-layout-2">
+<section class="card tool-panel">
+<h2>JSON original</h2>
+<textarea id="leftInput" placeholder='Pega aquí el primer JSON...'>{"nombre":"Ana","rol":"admin","activo":true}</textarea>
+<div class="tool-buttons">
+<button class="primary" id="compareBtn">Comparar JSON</button>
+<button id="beautifyLeftBtn">Formatear izquierda</button>
+</div>
+<div class="tool-help">Pega el JSON original o la versión A del objeto que quieres comparar.</div>
+</section>
+<section class="card tool-panel">
+<h2>JSON comparado</h2>
+<textarea id="rightInput" placeholder='Pega aquí el segundo JSON...'>{"nombre":"Ana","rol":"user","activo":true,"equipo":"IT"}</textarea>
+<div class="tool-buttons">
+<button class="primary" id="copyBtn">Copiar diferencias</button>
+<button id="beautifyRightBtn">Formatear derecha</button>
+</div>
+<div class="tool-help">Pega la segunda versión para detectar claves añadidas, cambiadas o eliminadas.</div>
+</section>
+</div></div></section>
+<section class="section"><div class="container"><section class="card tool-panel">
+<h2>Resultado de la comparación</h2>
+<textarea id="output" placeholder="Aquí aparecerán las diferencias detectadas..."></textarea>
+<div class="mini-grid">
+<div class="stat-card"><strong id="changedCount">0</strong><span>Cambiadas</span></div>
+<div class="stat-card"><strong id="addedCount">0</strong><span>Añadidas</span></div>
+<div class="stat-card"><strong id="removedCount">0</strong><span>Eliminadas</span></div>
+</div>
+<div class="tool-help">La comparación recorre objetos y arrays para mostrar rutas, valor original y valor nuevo.</div>
+</section></div></section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades online para trabajar más rápido desde el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    
+<article class="card"><h3><a href="visor-json.html">Visor JSON</a></h3><p>Valida y formatea JSON fácilmente para APIs y datos.</p></article>
+<article class="card"><h3><a href="base64.html">Base64</a></h3><p>Codifica y decodifica texto Base64 online gratis.</p></article>
+<article class="card"><h3><a href="uuid-generator.html">Generador de UUID</a></h3><p>Genera identificadores únicos para desarrollo y sistemas.</p></article>
+<article class="card"><h3><a href="convertidor-timestamp.html">Convertidor de timestamp</a></h3><p>Convierte fechas y timestamps para logs y APIs.</p></article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Comparador de JSON online</h2><p>Esta herramienta sirve para comparar dos estructuras JSON y detectar diferencias entre claves, valores, arrays y objetos anidados.</p><h2>¿Cuándo es útil?</h2><p>Es útil para revisar respuestas de API, archivos de configuración, payloads, pruebas técnicas, mocks y cambios entre versiones de datos.</p><h2>Qué puedes detectar</h2><p>Puedes ver campos añadidos, eliminados y modificados con sus rutas correspondientes para localizar cambios más rápido.</p><h2>Ventajas de usar esta herramienta</h2><p>Todo el procesamiento se hace en el navegador, sin subir datos a servidores externos y con formato listo para copiar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open><summary>¿Qué hace esta herramienta?</summary><p>Compara dos JSON y muestra qué claves o valores han cambiado, se han añadido o se han eliminado.</p></details>
+<details><summary>¿Funciona con objetos anidados?</summary><p>Sí. Recorre rutas internas para comparar estructuras más complejas.</p></details>
+<details><summary>¿Los datos se suben a un servidor?</summary><p>No. Todo se procesa localmente en tu navegador.</p></details>
+<details><summary>¿Puedo copiar el resultado?</summary><p>Sí. Puedes copiar el resumen de diferencias con un clic.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+const leftInput = document.getElementById("leftInput");
+const rightInput = document.getElementById("rightInput");
+const output = document.getElementById("output");
+
+function normalize(obj) {
+  if (Array.isArray(obj)) return obj.map(normalize);
+  if (obj && typeof obj === "object") {
+    return Object.keys(obj).sort().reduce((acc, key) => { acc[key] = normalize(obj[key]); return acc; }, {});
+  }
+  return obj;
+}
+function diff(a, b, path = "$", results = []) {
+  if (Array.isArray(a) && Array.isArray(b)) {
+    const max = Math.max(a.length, b.length);
+    for (let i = 0; i < max; i++) diff(a[i], b[i], `${path}[${i}]`, results);
+    return results;
+  }
+  if (a && typeof a === "object" && b && typeof b === "object" && !Array.isArray(a) && !Array.isArray(b)) {
+    const keys = new Set([...Object.keys(a), ...Object.keys(b)]);
+    [...keys].sort().forEach(key => diff(a[key], b[key], `${path}.${key}`, results));
+    return results;
+  }
+  if (typeof a === "undefined" && typeof b !== "undefined") results.push({ type: "AÑADIDO", path, before: "", after: JSON.stringify(b) });
+  else if (typeof a !== "undefined" && typeof b === "undefined") results.push({ type: "ELIMINADO", path, before: JSON.stringify(a), after: "" });
+  else if (JSON.stringify(a) !== JSON.stringify(b)) results.push({ type: "CAMBIADO", path, before: JSON.stringify(a), after: JSON.stringify(b) });
+  return results;
+}
+function beautify(side) {
+  try {
+    const el = side === "left" ? leftInput : rightInput;
+    el.value = JSON.stringify(JSON.parse(el.value), null, 2);
+  } catch {
+    alert("El JSON no es válido.");
+  }
+}
+document.getElementById("beautifyLeftBtn").addEventListener("click", () => beautify("left"));
+document.getElementById("beautifyRightBtn").addEventListener("click", () => beautify("right"));
+document.getElementById("compareBtn").addEventListener("click", () => {
+  try {
+    const left = normalize(JSON.parse(leftInput.value));
+    const right = normalize(JSON.parse(rightInput.value));
+    const rows = diff(left, right);
+    document.getElementById("changedCount").textContent = rows.filter(r => r.type === "CAMBIADO").length;
+    document.getElementById("addedCount").textContent = rows.filter(r => r.type === "AÑADIDO").length;
+    document.getElementById("removedCount").textContent = rows.filter(r => r.type === "ELIMINADO").length;
+    output.value = rows.length ? rows.map(r => `[${r.type}] ${r.path}\nAntes: ${r.before}\nDespués: ${r.after}`).join("\n\n") : "No se han detectado diferencias.";
+  } catch {
+    output.value = "Uno de los JSON no es válido.";
+  }
+});
+document.getElementById("copyBtn").addEventListener("click", async () => { try { await navigator.clipboard.writeText(output.value); } catch {} });
+</script>
+
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generador de logs fake online | ToolsRapidas</title>
+    <meta name="description" content="Genera logs fake online para testing, demos, documentación, alertas y parsers de logs.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/generador-logs-fake.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Generador de logs fake online | ToolsRapidas">
+    <meta property="og:description" content="Crea logs ficticios para pruebas técnicas y documentación.">
+    <meta property="og:url" content="https://toolsrapidas.com/generador-logs-fake.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de logs fake online | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea logs ficticios para pruebas técnicas y documentación." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de logs fake online",
+          "url": "https://toolsrapidas.com/generador-logs-fake.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Genera logs fake online para testing, demos, documentación, alertas y parsers de logs."
+        }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus,
+            input:focus,
+            select:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button,
+            .tool-buttons a,
+            .tool-buttons label {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .tool-buttons button.primary,
+                .tool-buttons a.primary,
+                .tool-buttons label.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .field-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .stat-card span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            margin-top: 16px;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            background: #0b1220;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(148,163,184,.12);
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .status-line {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .preview-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 999px;
+            padding: 8px 12px;
+            background: #0b1220;
+            font-size: 13px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 240px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de logs fake online</h1>
+            <p class="tool-lead">
+                Genera logs ficticios y realistas para testing, demos, documentación o pruebas de observabilidad directamente desde el navegador.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="section"><div class="container"><div class="tool-layout-2">
+<section class="card tool-panel">
+<h2>Configurar logs</h2>
+<div class="field-stack">
+<select id="logType"><option value="app">Aplicación</option><option value="api">API</option><option value="security">Seguridad</option><option value="server">Servidor</option></select>
+<select id="logLevel"><option value="mix">Niveles mezclados</option><option value="INFO">Solo INFO</option><option value="WARN">Solo WARN</option><option value="ERROR">Solo ERROR</option></select>
+<input id="serviceName" type="text" value="orders-service" placeholder="Servicio o aplicación">
+<input id="lineCount" type="number" value="20" min="5" max="200" placeholder="Número de líneas">
+</div>
+<div class="tool-buttons">
+<button class="primary" id="generateBtn">Generar logs fake</button>
+<button id="copyBtn">Copiar logs</button>
+</div>
+<div class="tool-help">Crea logs de prueba para demos, testing, documentación, parser de logs o ejemplos internos.</div>
+</section>
+<section class="card tool-panel">
+<h2>Resultado</h2>
+<textarea id="output" placeholder="Aquí aparecerán los logs generados..."></textarea>
+<div class="tool-buttons">
+<button class="primary" id="downloadBtn">Descargar .log</button>
+<button id="clearBtn">Limpiar</button>
+</div>
+<div class="tool-help">Puedes usar el resultado en pruebas de observabilidad, filtros, alertas o ejemplos para documentación.</div>
+</section>
+</div></div></section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades online para trabajar más rápido desde el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    
+<article class="card"><h3><a href="visor-json.html">Visor JSON</a></h3><p>Valida y formatea JSON fácilmente para APIs y datos.</p></article>
+<article class="card"><h3><a href="base64.html">Base64</a></h3><p>Codifica y decodifica texto Base64 online gratis.</p></article>
+<article class="card"><h3><a href="uuid-generator.html">Generador de UUID</a></h3><p>Genera identificadores únicos para desarrollo y sistemas.</p></article>
+<article class="card"><h3><a href="convertidor-timestamp.html">Convertidor de timestamp</a></h3><p>Convierte fechas y timestamps para logs y APIs.</p></article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Generador de logs fake online</h2><p>Esta herramienta crea logs de ejemplo para testing, documentación, demos, observabilidad y desarrollo de parsers o alertas.</p><h2>¿Para qué sirve?</h2><p>Sirve para generar registros ficticios de aplicación, servidor, seguridad o API sin usar datos reales.</p><h2>Qué tipo de logs puedes generar</h2><p>Puedes crear líneas con timestamp, nivel, servicio, IP, método, ruta, usuario y mensajes típicos de error o actividad.</p><h2>Ventajas de usar esta herramienta</h2><p>Generas ejemplos realistas al instante, listos para copiar, guardar o utilizar en pruebas técnicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open><summary>¿Qué hace esta herramienta?</summary><p>Genera logs ficticios con formato realista para testing, demos y documentación.</p></details>
+<details><summary>¿Puedo elegir el tipo de log?</summary><p>Sí. Puedes generar logs de aplicación, API, servidor o seguridad.</p></details>
+<details><summary>¿Usa datos reales?</summary><p>No. Los datos generados son ficticios y pensados para pruebas.</p></details>
+<details><summary>¿Puedo descargarlos?</summary><p>Sí. Puedes copiar el resultado o descargarlo en formato .log.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+const out = document.getElementById("output");
+const levels = ["INFO","WARN","ERROR","DEBUG"];
+const messages = {
+  app:["Task completed","Worker started","Cache refresh done","Background job queued","User preferences updated"],
+  api:["GET /orders 200","POST /login 401","GET /users 200","PUT /items 500","DELETE /session 204"],
+  security:["Failed login detected","Token expired","New device registered","Privilege escalation denied","Password reset requested"],
+  server:["CPU usage high","Service restarted","Disk check completed","Port opened successfully","Connection pool exhausted"]
+};
+function rand(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function ip(){ return `${10+Math.floor(Math.random()*200)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`; }
+function user(){ return rand(["agalisteo","mrodriguez","admin","svc-backup","support01","api-user"]); }
+function makeLogs(){
+  const type = document.getElementById("logType").value;
+  const selectedLevel = document.getElementById("logLevel").value;
+  const service = document.getElementById("serviceName").value.trim() || "app-service";
+  const count = Math.max(5, Math.min(200, parseInt(document.getElementById("lineCount").value || "20", 10)));
+  const lines = [];
+  for(let i=0;i<count;i++){
+    const ts = new Date(Date.now() - Math.floor(Math.random()*86400000)).toISOString();
+    const level = selectedLevel === "mix" ? rand(levels) : selectedLevel;
+    const msg = rand(messages[type]);
+    lines.push(`${ts} [${level}] service=${service} user=${user()} ip=${ip()} traceId=${crypto.randomUUID()} msg="${msg}"`);
+  }
+  out.value = lines.sort().join("\n");
+}
+document.getElementById("generateBtn").addEventListener("click", makeLogs);
+document.getElementById("copyBtn").addEventListener("click", async()=>{ try{ await navigator.clipboard.writeText(out.value);}catch{} });
+document.getElementById("clearBtn").addEventListener("click", ()=> out.value = "");
+document.getElementById("downloadBtn").addEventListener("click", ()=>{
+  const blob = new Blob([out.value], {type:"text/plain;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "logs-fake.log";
+  a.click();
+});
+makeLogs();
+</script>
+
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Generador de datos fake online | ToolsRapidas</title>
+    <meta name="description" content="Genera datos fake online como nombres, emails, empresas, teléfonos e IBAN ficticios para testing y demos.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/generador-datos-fake.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Generador de datos fake online | ToolsRapidas">
+    <meta property="og:description" content="Crea datos ficticios para testing, demos y desarrollo.">
+    <meta property="og:url" content="https://toolsrapidas.com/generador-datos-fake.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de datos fake online | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea datos ficticios para testing, demos y desarrollo." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de datos fake online",
+          "url": "https://toolsrapidas.com/generador-datos-fake.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Genera datos fake online como nombres, emails, empresas, teléfonos e IBAN ficticios para testing y demos."
+        }
+    </script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea,
+        input,
+        select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus,
+            input:focus,
+            select:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button,
+            .tool-buttons a,
+            .tool-buttons label {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .tool-buttons button.primary,
+                .tool-buttons a.primary,
+                .tool-buttons label.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .field-stack {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
+
+        .stat-card span {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            margin-top: 16px;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            background: #0b1220;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        th, td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(148,163,184,.12);
+            text-align: left;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        th {
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .status-line {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .preview-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            margin-top: 16px;
+        }
+
+        .chip-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 999px;
+            padding: 8px 12px;
+            background: #0b1220;
+            font-size: 13px;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 240px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de datos fake online</h1>
+            <p class="tool-lead">
+                Genera datos ficticios como nombres, emails, teléfonos, empresa, ciudad e IBAN para testing, demos y desarrollo.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        
+<section class="section"><div class="container"><div class="tool-layout-single">
+<section class="card tool-panel">
+<h2>Generar datos fake</h2>
+<div class="field-stack">
+<select id="country"><option value="es">España</option><option value="latam">LatAm</option><option value="mix">Mixto</option></select>
+<select id="format"><option value="table">Tabla</option><option value="csv">CSV</option><option value="json">JSON</option></select>
+<input id="rows" type="number" value="10" min="1" max="100" placeholder="Número de registros">
+</div>
+<div class="tool-buttons">
+<button class="primary" id="generateBtn">Generar datos</button>
+<button id="copyBtn">Copiar</button>
+<button id="downloadBtn">Descargar</button>
+</div>
+<div class="tool-help">Crea nombres, emails, teléfonos, DNI/ID ficticios, empresa, ciudad e IBAN de ejemplo para testing o demos.</div>
+<div class="table-wrap"><table><thead><tr><th>Nombre</th><th>Email</th><th>Empresa</th><th>Ciudad</th><th>Teléfono</th><th>IBAN</th></tr></thead><tbody id="tableBody"></tbody></table></div>
+<textarea id="output" placeholder="Aquí aparecerá el resultado en CSV o JSON..."></textarea>
+</section>
+</div></div></section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades online para trabajar más rápido desde el navegador.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    
+<article class="card"><h3><a href="visor-json.html">Visor JSON</a></h3><p>Valida y formatea JSON fácilmente para APIs y datos.</p></article>
+<article class="card"><h3><a href="base64.html">Base64</a></h3><p>Codifica y decodifica texto Base64 online gratis.</p></article>
+<article class="card"><h3><a href="uuid-generator.html">Generador de UUID</a></h3><p>Genera identificadores únicos para desarrollo y sistemas.</p></article>
+<article class="card"><h3><a href="convertidor-timestamp.html">Convertidor de timestamp</a></h3><p>Convierte fechas y timestamps para logs y APIs.</p></article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Generador de datos fake online</h2><p>Esta herramienta crea datos ficticios para testing, demos, desarrollo, seeds, formularios y ejemplos sin usar información real.</p><h2>¿Qué datos genera?</h2><p>Puede generar nombres, apellidos, emails, empresas, ciudades, teléfonos e IBAN ficticios en formato tabla, CSV o JSON.</p><h2>¿Para qué sirve?</h2><p>Sirve para pruebas de sistemas, bases de datos, mockups, formularios y validaciones internas.</p><h2>Ventajas de usar esta herramienta</h2><p>Obtienes datos listos para copiar o descargar con formatos cómodos para desarrollo y testing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open><summary>¿Qué hace esta herramienta?</summary><p>Genera registros ficticios para testing, demos y desarrollo.</p></details>
+<details><summary>¿Los datos son reales?</summary><p>No. Son completamente ficticios y pensados para pruebas.</p></details>
+<details><summary>¿Puedo descargar el resultado?</summary><p>Sí. Puedes copiarlo o descargarlo en JSON o CSV.</p></details>
+<details><summary>¿Sirve para bases de datos o formularios?</summary><p>Sí. Es útil para poblar formularios, demos, tablas y entornos de prueba.</p></details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+const names = {es:["Alejandro","Lucía","Marta","Carlos","Héctor","Sofía","Pablo","Ana"],latam:["Mateo","Camila","Valentina","Santiago","Emilia","Thiago","Mia","Nicolás"]};
+const surnames = ["García","López","Fernández","Meco","Martínez","Romero","Torres","Navarro"];
+const companies = ["TechNova","DataPulse","CloudWorks","Soluciones Atlas","PixelStack","Iberia Systems","Nexo Digital"];
+const cities = ["Madrid","Barcelona","Sevilla","Valencia","Málaga","Bogotá","CDMX","Buenos Aires"];
+function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function digits(n){ return Array.from({length:n},()=>Math.floor(Math.random()*10)).join(""); }
+function fakeIban(){ return "ES" + digits(2) + digits(4) + digits(4) + digits(2) + digits(10); }
+function makeRows(){
+  const mode = document.getElementById("country").value;
+  const rows = Math.max(1, Math.min(100, parseInt(document.getElementById("rows").value || "10",10)));
+  const pool = mode==="mix" ? [...names.es, ...names.latam] : names[mode];
+  return Array.from({length:rows}, ()=>{
+    const nombre = `${pick(pool)} ${pick(surnames)} ${pick(surnames)}`;
+    const email = nombre.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/ /g,".") + "@example.com";
+    return {
+      nombre,
+      email,
+      empresa: pick(companies),
+      ciudad: pick(cities),
+      telefono: "+34 6" + digits(8),
+      iban: fakeIban()
+    };
+  });
+}
+function render(rows){
+  const format = document.getElementById("format").value;
+  document.getElementById("tableBody").innerHTML = rows.map(r=>`<tr><td>${r.nombre}</td><td>${r.email}</td><td>${r.empresa}</td><td>${r.ciudad}</td><td>${r.telefono}</td><td>${r.iban}</td></tr>`).join("");
+  let text = "";
+  if(format==="json") text = JSON.stringify(rows, null, 2);
+  else {
+    const header = ["nombre","email","empresa","ciudad","telefono","iban"];
+    const csv = [header.join(",")].concat(rows.map(r=>header.map(k=>`"${String(r[k]).replaceAll('"','""')}"`).join(",")));
+    text = csv.join("\n");
+  }
+  document.getElementById("output").value = text;
+}
+document.getElementById("generateBtn").addEventListener("click", ()=> render(makeRows()));
+document.getElementById("format").addEventListener("change", ()=> render(makeRows()));
+document.getElementById("copyBtn").addEventListener("click", async()=>{ try{ await navigator.clipboard.writeText(document.getElementById("output").value);}catch{} });
+document.getElementById("downloadBtn").addEventListener("click", ()=>{
+  const fmt = document.getElementById("format").value;
+  const blob = new Blob([document.getElementById("output").value], {type:"text/plain;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = fmt === "json" ? "datos-fake.json" : "datos-fake.csv";
+  a.click();
+});
+render(makeRows());
+</script>
+
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

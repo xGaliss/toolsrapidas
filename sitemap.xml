@@ -31,7 +31,7 @@
 		<loc>https://toolsrapidas.com/quitar-saltos-linea.html</loc>
 	</url>
 	<url>
-		<loc>https://toolsrapidas.com/texto-invisible-whatshapp.html</loc>
+		<loc>https://toolsrapidas.com/texto-invisible-whatsapp.html</loc>
 	</url>
 	<url>
 		<loc>https://toolsrapidas.com/contador-caracteres-redes.html</loc>
@@ -40,12 +40,88 @@
 		<loc>https://toolsrapidas.com/contador-palabras.html</loc>
 	</url>
 	<url>
-		<loc>https://toolsrapidas.com/formatear-whatshapp.html</loc>
+		<loc>https://toolsrapidas.com/formatear-whatsapp.html</loc>
 	</url>
 	<url>
 		<loc>https://toolsrapidas.com/generador-contrasenas.html</loc>
 	</url>
 	<url>
-		<loc>https://toolsrapidas.com/letras-palabras.html</loc>
+		<loc>https://toolsrapidas.com/letras-raras.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/convertir-imagen.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/imagen-a-texto.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/base64.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/uuid-generator.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/convertidor-timestamp.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/comparador-json.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/validador-jwt.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/decodificador-jwt.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-logs-fake.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-datos-fake.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-endpoints-mock.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/calculadora-iva.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/calculadora-salario-neto-bruto.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-emails-profesionales.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/excel-a-csv.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-contratos-simples.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-meta-titles-descriptions.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/analizador-densidad-palabras-clave.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/contador-keywords.html</loc>
+	</url>
+	<url>
+		<loc>https://toolsrapidas.com/generador-hashtags.html</loc>
+	</url>
+
+	<url>
+		<loc>https://toolsrapidas.com/aviso-legal.html</loc>
+	</url>
+
+	<url>
+		<loc>https://toolsrapidas.com/politica-privacidad.html</loc>
+	</url>
+
+	<url>
+		<loc>https://toolsrapidas.com/politica-cookies.html</loc>
+	</url>
+
+	<url>
+		<loc>https://toolsrapidas.com/contacto.html</loc>
 	</url>
 </urlset>
