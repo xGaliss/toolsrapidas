@@ -1,388 +1,453 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visor y formateador JSON</title>
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#111827;
-      --soft:#0f172a;
-      --line:#334155;
-      --text:#e5e7eb;
-      --muted:#94a3b8;
-      --accent:#38bdf8;
-      --ok:#22c55e;
-      --bad:#ef4444;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,#07101d,#0f172a);
-      color:var(--text);
-      padding:24px;
-    }
-    .wrap{
-      max-width:1280px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-    }
-    .card{
-      background:rgba(17,24,39,.96);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
-    }
-    h1{
-      margin:0 0 8px 0;
-      font-size:28px;
-    }
-    p.sub{
-      margin:0 0 16px 0;
-      color:var(--muted);
-    }
-    .toolbar{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-bottom:14px;
-    }
-    button, select, input{
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:#0b1220;
-      color:var(--text);
-      padding:10px 12px;
-      font-size:14px;
-    }
-    button{
-      cursor:pointer;
-      background:var(--accent);
-      color:#082f49;
-      border:none;
-      font-weight:700;
-    }
-    button.secondary{
-      background:#1e293b;
-      color:var(--text);
-      border:1px solid var(--line);
-    }
-    textarea{
-      width:100%;
-      min-height:430px;
-      resize:vertical;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:#020617;
-      color:#e2e8f0;
-      padding:14px;
-      font-family:Consolas, monospace;
-      font-size:14px;
-      line-height:1.5;
-      outline:none;
-    }
-    .status{
-      margin-top:10px;
-      font-size:13px;
-      color:var(--muted);
-      min-height:20px;
-    }
-    .ok{color:var(--ok)}
-    .bad{color:var(--bad)}
-    .tree{
-      min-height:430px;
-      overflow:auto;
-      background:#020617;
-      border:1px solid var(--line);
-      border-radius:12px;
-      padding:14px;
-      font-family:Consolas, monospace;
-      font-size:14px;
-      line-height:1.55;
-      white-space:pre-wrap;
-      word-break:break-word;
-    }
-    .key{color:#7dd3fc}
-    .string{color:#86efac}
-    .number{color:#fca5a5}
-    .boolean{color:#fcd34d}
-    .null{color:#c4b5fd}
-    .brace{color:#94a3b8}
-    .hint{
-      margin-top:10px;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.5;
-    }
-    .search{
-      display:flex;
-      gap:10px;
-      margin-bottom:12px;
-    }
-    .search input{
-      flex:1;
-      background:#020617;
-    }
-    .count{
-      font-size:12px;
-      color:var(--muted);
-      margin-top:8px;
-    }
-    mark{
-      background:#fef08a;
-      color:#111827;
-      padding:0 2px;
-      border-radius:3px;
-    }
-    @media (max-width: 980px){
-      .wrap{grid-template-columns:1fr}
-      textarea,.tree{min-height:320px}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visor y formateador JSON online gratis | ToolsRapidas</title>
+    <meta name="description" content="Valida, formatea y minifica JSON online gratis. Ideal para trabajar con APIs y datos.">
+    <link rel="canonical" href="https://toolsrapidas.com/visor-json.html">
+    <meta property="og:title" content="Visor JSON online | ToolsRapidas">
+    <meta property="og:description" content="Formatea y valida JSON fácilmente.">
+    <style>
+        :root {
+            --bg: #0b1220;
+            --card: #111827;
+            --soft: #0f172a;
+            --line: #334155;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --ok: #22c55e;
+            --bad: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg,#07101d,#0f172a);
+            color: var(--text);
+            padding: 24px;
+        }
+
+        .wrap {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.96);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 28px;
+        }
+
+        p.sub {
+            margin: 0 0 16px 0;
+            color: var(--muted);
+        }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        button, select, input {
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: #0b1220;
+            color: var(--text);
+            padding: 10px 12px;
+            font-size: 14px;
+        }
+
+        button {
+            cursor: pointer;
+            background: var(--accent);
+            color: #082f49;
+            border: none;
+            font-weight: 700;
+        }
+
+            button.secondary {
+                background: #1e293b;
+                color: var(--text);
+                border: 1px solid var(--line);
+            }
+
+        textarea {
+            width: 100%;
+            min-height: 430px;
+            resize: vertical;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: #020617;
+            color: #e2e8f0;
+            padding: 14px;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            outline: none;
+        }
+
+        .status {
+            margin-top: 10px;
+            font-size: 13px;
+            color: var(--muted);
+            min-height: 20px;
+        }
+
+        .ok {
+            color: var(--ok)
+        }
+
+        .bad {
+            color: var(--bad)
+        }
+
+        .tree {
+            min-height: 430px;
+            overflow: auto;
+            background: #020617;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .key {
+            color: #7dd3fc
+        }
+
+        .string {
+            color: #86efac
+        }
+
+        .number {
+            color: #fca5a5
+        }
+
+        .boolean {
+            color: #fcd34d
+        }
+
+        .null {
+            color: #c4b5fd
+        }
+
+        .brace {
+            color: #94a3b8
+        }
+
+        .hint {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .search {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+            .search input {
+                flex: 1;
+                background: #020617;
+            }
+
+        .count {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 8px;
+        }
+
+        mark {
+            background: #fef08a;
+            color: #111827;
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+
+        @media (max-width: 980px) {
+            .wrap {
+                grid-template-columns: 1fr
+            }
+
+            textarea, .tree {
+                min-height: 320px
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="card">
-      <h1>Visor y formateador JSON</h1>
-      <p class="sub">Pega tu JSON, valídalo, formatéalo, minifícalo y navega el resultado. Todo en local, sin backend.</p>
+    <div class="wrap">
+        <section class="card">
+            <h1>Visor y formateador JSON</h1>
+            <p class="sub">Pega tu JSON, valídalo, formatéalo, minifícalo y navega el resultado. Todo en local, sin backend.</p>
 
-      <div class="toolbar">
-        <button id="formatBtn">Formatear</button>
-        <button id="minifyBtn" class="secondary">Minificar</button>
-        <button id="validateBtn" class="secondary">Validar</button>
-        <button id="copyBtn" class="secondary">Copiar</button>
-        <button id="downloadBtn" class="secondary">Descargar .json</button>
-        <button id="demoBtn" class="secondary">Cargar demo</button>
+            <div class="toolbar">
+                <button id="formatBtn">Formatear</button>
+                <button id="minifyBtn" class="secondary">Minificar</button>
+                <button id="validateBtn" class="secondary">Validar</button>
+                <button id="copyBtn" class="secondary">Copiar</button>
+                <button id="downloadBtn" class="secondary">Descargar .json</button>
+                <button id="demoBtn" class="secondary">Cargar demo</button>
 
-        <select id="indentSize" title="Espacios">
-          <option value="2">Indentado: 2</option>
-          <option value="4">Indentado: 4</option>
-          <option value="6">Indentado: 6</option>
-        </select>
-      </div>
+                <select id="indentSize" title="Espacios">
+                    <option value="2">Indentado: 2</option>
+                    <option value="4">Indentado: 4</option>
+                    <option value="6">Indentado: 6</option>
+                </select>
+            </div>
 
-      <textarea id="input" spellcheck="false" placeholder='{"nombre":"Alejandro","rol":"sysadmin","skills":["PowerShell","Azure"],"activo":true}'></textarea>
-      <div id="status" class="status">Pega un JSON y pulsa “Formatear”.</div>
-      <div class="hint">Útil para logs, respuestas de APIs, archivos de configuración y debugging rápido.</div>
+            <textarea id="input" spellcheck="false" placeholder='{"nombre":"Alejandro","rol":"sysadmin","skills":["PowerShell","Azure"],"activo":true}'></textarea>
+            <div id="status" class="status">Pega un JSON y pulsa “Formatear”.</div>
+            <div class="hint">Útil para logs, respuestas de APIs, archivos de configuración y debugging rápido.</div>
+        </section>
+
+        <section class="card">
+            <div class="search">
+                <input id="searchInput" placeholder="Buscar texto dentro del JSON renderizado" />
+                <button id="searchBtn" class="secondary">Buscar</button>
+                <button id="clearSearchBtn" class="secondary">Quitar resaltado</button>
+            </div>
+
+            <div id="tree" class="tree">{}</div>
+            <div id="count" class="count"></div>
+        </section>
+    </div>
+
+    <script>
+        const $ = (id) => document.getElementById(id);
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        function setStatus(text, type = "") {
+            $("status").className = "status" + (type ? " " + type : "");
+            $("status").textContent = text;
+        }
+
+        function renderJson(value, depth = 0) {
+            const indent = "&nbsp;".repeat(depth * 2);
+
+            if (value === null) {
+                return `<span class="null">null</span>`;
+            }
+
+            if (typeof value === "string") {
+                return `<span class="string">"${escapeHtml(value)}"</span>`;
+            }
+
+            if (typeof value === "number") {
+                return `<span class="number">${value}</span>`;
+            }
+
+            if (typeof value === "boolean") {
+                return `<span class="boolean">${value}</span>`;
+            }
+
+            if (Array.isArray(value)) {
+                if (!value.length) return `<span class="brace">[]</span>`;
+                let items = value.map((item, i) => {
+                    const comma = i < value.length - 1 ? '<span class="brace">,</span>' : '';
+                    return `${indent}&nbsp;&nbsp;${renderJson(item, depth + 1)}${comma}`;
+                }).join("<br>");
+                return `<span class="brace">[</span><br>${items}<br>${indent}<span class="brace">]</span>`;
+            }
+
+            if (typeof value === "object") {
+                const keys = Object.keys(value);
+                if (!keys.length) return `<span class="brace">{}</span>`;
+                let items = keys.map((key, i) => {
+                    const comma = i < keys.length - 1 ? '<span class="brace">,</span>' : '';
+                    return `${indent}&nbsp;&nbsp;<span class="key">"${escapeHtml(key)}"</span><span class="brace">: </span>${renderJson(value[key], depth + 1)}${comma}`;
+                }).join("<br>");
+                return `<span class="brace">{</span><br>${items}<br>${indent}<span class="brace">}</span>`;
+            }
+
+            return escapeHtml(String(value));
+        }
+
+        function updateCount(obj) {
+            let keys = 0;
+            let arrays = 0;
+            let values = 0;
+
+            function walk(v) {
+                if (Array.isArray(v)) {
+                    arrays++;
+                    for (const item of v) walk(item);
+                    return;
+                }
+                if (v && typeof v === "object") {
+                    const ks = Object.keys(v);
+                    keys += ks.length;
+                    for (const k of ks) walk(v[k]);
+                    return;
+                }
+                values++;
+            }
+
+            walk(obj);
+            $("count").textContent = `Claves: ${keys} · Arrays: ${arrays} · Valores finales: ${values}`;
+        }
+
+        function parseInput() {
+            const raw = $("input").value.trim();
+            if (!raw) throw new Error("No hay contenido.");
+            return JSON.parse(raw);
+        }
+
+        function formatJson() {
+            try {
+                const obj = parseInput();
+                const indent = Number($("indentSize").value || 2);
+                const pretty = JSON.stringify(obj, null, indent);
+                $("input").value = pretty;
+                $("tree").innerHTML = renderJson(obj);
+                updateCount(obj);
+                setStatus("JSON válido y formateado.", "ok");
+            } catch (err) {
+                setStatus("Error: " + err.message, "bad");
+            }
+        }
+
+        function minifyJson() {
+            try {
+                const obj = parseInput();
+                $("input").value = JSON.stringify(obj);
+                $("tree").innerHTML = renderJson(obj);
+                updateCount(obj);
+                setStatus("JSON minificado.", "ok");
+            } catch (err) {
+                setStatus("Error: " + err.message, "bad");
+            }
+        }
+
+        function validateJson() {
+            try {
+                const obj = parseInput();
+                $("tree").innerHTML = renderJson(obj);
+                updateCount(obj);
+                setStatus("JSON válido.", "ok");
+            } catch (err) {
+                setStatus("Error: " + err.message, "bad");
+            }
+        }
+
+        async function copyJson() {
+            try {
+                await navigator.clipboard.writeText($("input").value);
+                setStatus("JSON copiado al portapapeles.", "ok");
+            } catch {
+                setStatus("No se pudo copiar.", "bad");
+            }
+        }
+
+        function downloadJson() {
+            const blob = new Blob([$("input").value], { type: "application/json;charset=utf-8" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "resultado.json";
+            a.click();
+            URL.revokeObjectURL(a.href);
+        }
+
+        function highlightSearch() {
+            const term = $("searchInput").value.trim();
+            try {
+                const obj = parseInput();
+                let html = renderJson(obj);
+                if (term) {
+                    const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+                    const regex = new RegExp(escaped, "gi");
+                    html = html.replace(regex, (m) => `<mark>${m}</mark>`);
+                }
+                $("tree").innerHTML = html;
+                updateCount(obj);
+            } catch (err) {
+                setStatus("Error: " + err.message, "bad");
+            }
+        }
+
+        function clearSearch() {
+            $("searchInput").value = "";
+            validateJson();
+        }
+
+        function loadDemo() {
+            const demo = {
+                user: {
+                    name: "Alejandro Galisteo",
+                    role: "Tecnico de Sistemas",
+                    city: "Madrid"
+                },
+                skills: ["PowerShell", "Azure", "SQL Server", "Power Automate"],
+                active: true,
+                backupHealth: {
+                    daily: "Healthy",
+                    weekly: "Healthy",
+                    lastRunUtc: "2026-03-25T20:30:00Z"
+                },
+                stats: {
+                    errors: 0,
+                    durationSeconds: 18.7
+                },
+                tags: ["it", "automation", "azure"]
+            };
+            $("input").value = JSON.stringify(demo, null, 2);
+            formatJson();
+        }
+
+        $("formatBtn").addEventListener("click", formatJson);
+        $("minifyBtn").addEventListener("click", minifyJson);
+        $("validateBtn").addEventListener("click", validateJson);
+        $("copyBtn").addEventListener("click", copyJson);
+        $("downloadBtn").addEventListener("click", downloadJson);
+        $("searchBtn").addEventListener("click", highlightSearch);
+        $("clearSearchBtn").addEventListener("click", clearSearch);
+        $("demoBtn").addEventListener("click", loadDemo);
+        $("searchInput").addEventListener("keydown", (e) => {
+            if (e.key === "Enter") highlightSearch();
+        });
+
+        loadDemo();
+    </script>
+
+    <section class="seo-content">
+        <h2>Formatear JSON online</h2>
+        <p>Visualiza y corrige JSON fácilmente desde el navegador.</p>
+
+        <h2>Funciones</h2>
+        <p>Validar, formatear y minificar JSON.</p>
+
+        <h2>Uso</h2>
+        <p>Ideal para desarrolladores y APIs.</p>
     </section>
-
-    <section class="card">
-      <div class="search">
-        <input id="searchInput" placeholder="Buscar texto dentro del JSON renderizado" />
-        <button id="searchBtn" class="secondary">Buscar</button>
-        <button id="clearSearchBtn" class="secondary">Quitar resaltado</button>
-      </div>
-
-      <div id="tree" class="tree">{}</div>
-      <div id="count" class="count"></div>
-    </section>
-  </div>
-
-  <script>
-    const $ = (id) => document.getElementById(id);
-
-    function escapeHtml(str){
-      return String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-    }
-
-    function setStatus(text, type=""){
-      $("status").className = "status" + (type ? " " + type : "");
-      $("status").textContent = text;
-    }
-
-    function renderJson(value, depth = 0){
-      const indent = "&nbsp;".repeat(depth * 2);
-
-      if (value === null) {
-        return `<span class="null">null</span>`;
-      }
-
-      if (typeof value === "string") {
-        return `<span class="string">"${escapeHtml(value)}"</span>`;
-      }
-
-      if (typeof value === "number") {
-        return `<span class="number">${value}</span>`;
-      }
-
-      if (typeof value === "boolean") {
-        return `<span class="boolean">${value}</span>`;
-      }
-
-      if (Array.isArray(value)) {
-        if (!value.length) return `<span class="brace">[]</span>`;
-        let items = value.map((item, i) => {
-          const comma = i < value.length - 1 ? '<span class="brace">,</span>' : '';
-          return `${indent}&nbsp;&nbsp;${renderJson(item, depth + 1)}${comma}`;
-        }).join("<br>");
-        return `<span class="brace">[</span><br>${items}<br>${indent}<span class="brace">]</span>`;
-      }
-
-      if (typeof value === "object") {
-        const keys = Object.keys(value);
-        if (!keys.length) return `<span class="brace">{}</span>`;
-        let items = keys.map((key, i) => {
-          const comma = i < keys.length - 1 ? '<span class="brace">,</span>' : '';
-          return `${indent}&nbsp;&nbsp;<span class="key">"${escapeHtml(key)}"</span><span class="brace">: </span>${renderJson(value[key], depth + 1)}${comma}`;
-        }).join("<br>");
-        return `<span class="brace">{</span><br>${items}<br>${indent}<span class="brace">}</span>`;
-      }
-
-      return escapeHtml(String(value));
-    }
-
-    function updateCount(obj){
-      let keys = 0;
-      let arrays = 0;
-      let values = 0;
-
-      function walk(v){
-        if (Array.isArray(v)) {
-          arrays++;
-          for (const item of v) walk(item);
-          return;
-        }
-        if (v && typeof v === "object") {
-          const ks = Object.keys(v);
-          keys += ks.length;
-          for (const k of ks) walk(v[k]);
-          return;
-        }
-        values++;
-      }
-
-      walk(obj);
-      $("count").textContent = `Claves: ${keys} · Arrays: ${arrays} · Valores finales: ${values}`;
-    }
-
-    function parseInput(){
-      const raw = $("input").value.trim();
-      if (!raw) throw new Error("No hay contenido.");
-      return JSON.parse(raw);
-    }
-
-    function formatJson(){
-      try {
-        const obj = parseInput();
-        const indent = Number($("indentSize").value || 2);
-        const pretty = JSON.stringify(obj, null, indent);
-        $("input").value = pretty;
-        $("tree").innerHTML = renderJson(obj);
-        updateCount(obj);
-        setStatus("JSON válido y formateado.", "ok");
-      } catch (err) {
-        setStatus("Error: " + err.message, "bad");
-      }
-    }
-
-    function minifyJson(){
-      try {
-        const obj = parseInput();
-        $("input").value = JSON.stringify(obj);
-        $("tree").innerHTML = renderJson(obj);
-        updateCount(obj);
-        setStatus("JSON minificado.", "ok");
-      } catch (err) {
-        setStatus("Error: " + err.message, "bad");
-      }
-    }
-
-    function validateJson(){
-      try {
-        const obj = parseInput();
-        $("tree").innerHTML = renderJson(obj);
-        updateCount(obj);
-        setStatus("JSON válido.", "ok");
-      } catch (err) {
-        setStatus("Error: " + err.message, "bad");
-      }
-    }
-
-    async function copyJson(){
-      try {
-        await navigator.clipboard.writeText($("input").value);
-        setStatus("JSON copiado al portapapeles.", "ok");
-      } catch {
-        setStatus("No se pudo copiar.", "bad");
-      }
-    }
-
-    function downloadJson(){
-      const blob = new Blob([$("input").value], { type: "application/json;charset=utf-8" });
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "resultado.json";
-      a.click();
-      URL.revokeObjectURL(a.href);
-    }
-
-    function highlightSearch(){
-      const term = $("searchInput").value.trim();
-      try {
-        const obj = parseInput();
-        let html = renderJson(obj);
-        if (term) {
-          const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-          const regex = new RegExp(escaped, "gi");
-          html = html.replace(regex, (m) => `<mark>${m}</mark>`);
-        }
-        $("tree").innerHTML = html;
-        updateCount(obj);
-      } catch (err) {
-        setStatus("Error: " + err.message, "bad");
-      }
-    }
-
-    function clearSearch(){
-      $("searchInput").value = "";
-      validateJson();
-    }
-
-    function loadDemo(){
-      const demo = {
-        user: {
-          name: "Alejandro Galisteo",
-          role: "Tecnico de Sistemas",
-          city: "Madrid"
-        },
-        skills: ["PowerShell", "Azure", "SQL Server", "Power Automate"],
-        active: true,
-        backupHealth: {
-          daily: "Healthy",
-          weekly: "Healthy",
-          lastRunUtc: "2026-03-25T20:30:00Z"
-        },
-        stats: {
-          errors: 0,
-          durationSeconds: 18.7
-        },
-        tags: ["it", "automation", "azure"]
-      };
-      $("input").value = JSON.stringify(demo, null, 2);
-      formatJson();
-    }
-
-    $("formatBtn").addEventListener("click", formatJson);
-    $("minifyBtn").addEventListener("click", minifyJson);
-    $("validateBtn").addEventListener("click", validateJson);
-    $("copyBtn").addEventListener("click", copyJson);
-    $("downloadBtn").addEventListener("click", downloadJson);
-    $("searchBtn").addEventListener("click", highlightSearch);
-    $("clearSearchBtn").addEventListener("click", clearSearch);
-    $("demoBtn").addEventListener("click", loadDemo);
-    $("searchInput").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") highlightSearch();
-    });
-
-    loadDemo();
-  </script>
 </body>
 </html>

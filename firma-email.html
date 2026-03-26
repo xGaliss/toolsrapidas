@@ -1,359 +1,403 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generador de Firma de Email</title>
-  <style>
-    :root{
-      --bg:#0f172a;
-      --card:#111827;
-      --soft:#1f2937;
-      --line:#334155;
-      --text:#e5e7eb;
-      --muted:#94a3b8;
-      --accent:#22c55e;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg,#0b1220,#111827);
-      color:var(--text);
-      padding:24px;
-    }
-    .wrap{
-      max-width:1200px;
-      margin:0 auto;
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap:20px;
-    }
-    .card{
-      background:rgba(17,24,39,.95);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
-    }
-    h1{
-      font-size:28px;
-      margin:0 0 8px 0;
-    }
-    p.sub{
-      color:var(--muted);
-      margin:0 0 18px 0;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-    label{
-      display:block;
-      font-size:13px;
-      color:var(--muted);
-      margin-bottom:6px;
-    }
-    input, textarea, select{
-      width:100%;
-      background:#0b1220;
-      border:1px solid var(--line);
-      color:var(--text);
-      border-radius:10px;
-      padding:11px 12px;
-      outline:none;
-      font-size:14px;
-    }
-    textarea{min-height:88px; resize:vertical}
-    .full{grid-column:1 / -1}
-    .row{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:16px;
-    }
-    button{
-      background:var(--accent);
-      color:#052e16;
-      border:none;
-      border-radius:10px;
-      padding:11px 14px;
-      font-weight:700;
-      cursor:pointer;
-    }
-    button.secondary{
-      background:#1e293b;
-      color:var(--text);
-      border:1px solid var(--line);
-    }
-    .preview{
-      background:white;
-      color:#111827;
-      border-radius:12px;
-      padding:18px;
-      min-height:240px;
-      overflow:auto;
-    }
-    .code{
-      width:100%;
-      min-height:180px;
-      margin-top:12px;
-      background:#020617;
-      color:#d1fae5;
-      border:1px solid var(--line);
-      border-radius:10px;
-      padding:12px;
-      font-family:Consolas, monospace;
-      font-size:13px;
-    }
-    .hint{
-      color:var(--muted);
-      font-size:12px;
-      margin-top:10px;
-      line-height:1.5;
-    }
-    @media (max-width: 900px){
-      .wrap{grid-template-columns:1fr}
-      .grid{grid-template-columns:1fr}
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de firma de email online gratis | Outlook y Gmail | ToolsRapidas</title>
+    <meta name="description" content="Crea firmas de email profesionales online gratis para Outlook y Gmail. Copia y descarga en segundos.">
+    <link rel="canonical" href="https://toolsrapidas.com/firma-email.html">
+    <meta property="og:title" content="Generador de firma de email | ToolsRapidas">
+    <meta property="og:description" content="Crea firmas de email profesionales fácilmente.">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #111827;
+            --soft: #1f2937;
+            --line: #334155;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg,#0b1220,#111827);
+            color: var(--text);
+            padding: 24px;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.95);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0 0 8px 0;
+        }
+
+        p.sub {
+            color: var(--muted);
+            margin: 0 0 18px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            background: #0b1220;
+            border: 1px solid var(--line);
+            color: var(--text);
+            border-radius: 10px;
+            padding: 11px 12px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        textarea {
+            min-height: 88px;
+            resize: vertical
+        }
+
+        .full {
+            grid-column: 1 / -1
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+        }
+
+        button {
+            background: var(--accent);
+            color: #052e16;
+            border: none;
+            border-radius: 10px;
+            padding: 11px 14px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+            button.secondary {
+                background: #1e293b;
+                color: var(--text);
+                border: 1px solid var(--line);
+            }
+
+        .preview {
+            background: white;
+            color: #111827;
+            border-radius: 12px;
+            padding: 18px;
+            min-height: 240px;
+            overflow: auto;
+        }
+
+        .code {
+            width: 100%;
+            min-height: 180px;
+            margin-top: 12px;
+            background: #020617;
+            color: #d1fae5;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px;
+            font-family: Consolas, monospace;
+            font-size: 13px;
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+            .wrap {
+                grid-template-columns: 1fr
+            }
+
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="card">
-      <h1>Generador de firma de email</h1>
-      <p class="sub">Rellena los campos y copia la firma en HTML para usarla en Outlook, Gmail o donde quieras.</p>
+    <div class="wrap">
+        <section class="card">
+            <h1>Generador de firma de email</h1>
+            <p class="sub">Rellena los campos y copia la firma en HTML para usarla en Outlook, Gmail o donde quieras.</p>
 
-      <div class="grid">
-        <div>
-          <label for="name">Nombre</label>
-          <input id="name" placeholder="Alejandro Galisteo" />
-        </div>
-        <div>
-          <label for="role">Cargo</label>
-          <input id="role" placeholder="Técnico de Sistemas" />
-        </div>
+            <div class="grid">
+                <div>
+                    <label for="name">Nombre</label>
+                    <input id="name" placeholder="Alejandro Galisteo" />
+                </div>
+                <div>
+                    <label for="role">Cargo</label>
+                    <input id="role" placeholder="Técnico de Sistemas" />
+                </div>
 
-        <div>
-          <label for="company">Empresa</label>
-          <input id="company" placeholder="Nombre de empresa" />
-        </div>
-        <div>
-          <label for="phone">Teléfono</label>
-          <input id="phone" placeholder="+34 600 000 000" />
-        </div>
+                <div>
+                    <label for="company">Empresa</label>
+                    <input id="company" placeholder="Nombre de empresa" />
+                </div>
+                <div>
+                    <label for="phone">Teléfono</label>
+                    <input id="phone" placeholder="+34 600 000 000" />
+                </div>
 
-        <div>
-          <label for="email">Email</label>
-          <input id="email" placeholder="tu@empresa.com" />
-        </div>
-        <div>
-          <label for="website">Web</label>
-          <input id="website" placeholder="https://tuempresa.com" />
-        </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" placeholder="tu@empresa.com" />
+                </div>
+                <div>
+                    <label for="website">Web</label>
+                    <input id="website" placeholder="https://tuempresa.com" />
+                </div>
 
-        <div class="full">
-          <label for="address">Dirección / texto extra</label>
-          <textarea id="address" placeholder="Madrid · Soporte IT · Horario 9:00–18:00"></textarea>
-        </div>
+                <div class="full">
+                    <label for="address">Dirección / texto extra</label>
+                    <textarea id="address" placeholder="Madrid · Soporte IT · Horario 9:00–18:00"></textarea>
+                </div>
 
-        <div>
-          <label for="brand">Color principal</label>
-          <input id="brand" type="color" value="#166534" />
-        </div>
-        <div>
-          <label for="layout">Estilo</label>
-          <select id="layout">
-            <option value="clean">Limpio</option>
-            <option value="line">Con barra lateral</option>
-            <option value="compact">Compacto</option>
-          </select>
-        </div>
+                <div>
+                    <label for="brand">Color principal</label>
+                    <input id="brand" type="color" value="#166534" />
+                </div>
+                <div>
+                    <label for="layout">Estilo</label>
+                    <select id="layout">
+                        <option value="clean">Limpio</option>
+                        <option value="line">Con barra lateral</option>
+                        <option value="compact">Compacto</option>
+                    </select>
+                </div>
 
-        <div>
-          <label for="linkedin">LinkedIn</label>
-          <input id="linkedin" placeholder="https://linkedin.com/in/usuario" />
-        </div>
-        <div>
-          <label for="disclaimer">Aviso breve</label>
-          <input id="disclaimer" placeholder="Este mensaje puede contener información confidencial." />
-        </div>
-      </div>
+                <div>
+                    <label for="linkedin">LinkedIn</label>
+                    <input id="linkedin" placeholder="https://linkedin.com/in/usuario" />
+                </div>
+                <div>
+                    <label for="disclaimer">Aviso breve</label>
+                    <input id="disclaimer" placeholder="Este mensaje puede contener información confidencial." />
+                </div>
+            </div>
 
-      <div class="row">
-        <button id="generateBtn">Generar firma</button>
-        <button id="copyHtmlBtn" class="secondary">Copiar HTML</button>
-        <button id="copyPreviewBtn" class="secondary">Copiar vista</button>
-        <button id="downloadBtn" class="secondary">Descargar HTML</button>
-        <button id="fillDemoBtn" class="secondary">Rellenar demo</button>
-      </div>
+            <div class="row">
+                <button id="generateBtn">Generar firma</button>
+                <button id="copyHtmlBtn" class="secondary">Copiar HTML</button>
+                <button id="copyPreviewBtn" class="secondary">Copiar vista</button>
+                <button id="downloadBtn" class="secondary">Descargar HTML</button>
+                <button id="fillDemoBtn" class="secondary">Rellenar demo</button>
+            </div>
 
-      <div class="hint">
-        Consejo: en Outlook suele funcionar mejor pegar la firma desde la vista previa. Si no, usa el HTML descargado.
-      </div>
-    </section>
+            <div class="hint">
+                Consejo: en Outlook suele funcionar mejor pegar la firma desde la vista previa. Si no, usa el HTML descargado.
+            </div>
+        </section>
 
-    <section class="card">
-      <h2 style="margin-top:0">Vista previa</h2>
-      <div id="preview" class="preview"></div>
-      <textarea id="code" class="code" readonly></textarea>
-    </section>
-  </div>
+        <section class="card">
+            <h2 style="margin-top:0">Vista previa</h2>
+            <div id="preview" class="preview"></div>
+            <textarea id="code" class="code" readonly></textarea>
+        </section>
+    </div>
 
-  <script>
-    const $ = (id) => document.getElementById(id);
+    <script>
+        const $ = (id) => document.getElementById(id);
 
-    function esc(str){
-      return (str || "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
-    }
+        function esc(str) {
+            return (str || "")
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
 
-    function normalizeUrl(url){
-      if(!url) return "";
-      const trimmed = url.trim();
-      if(!trimmed) return "";
-      if(/^https?:\/\//i.test(trimmed)) return trimmed;
-      return "https://" + trimmed;
-    }
+        function normalizeUrl(url) {
+            if (!url) return "";
+            const trimmed = url.trim();
+            if (!trimmed) return "";
+            if (/^https?:\/\//i.test(trimmed)) return trimmed;
+            return "https://" + trimmed;
+        }
 
-    function buildSignature(){
-      const data = {
-        name: esc($("name").value.trim()),
-        role: esc($("role").value.trim()),
-        company: esc($("company").value.trim()),
-        phone: esc($("phone").value.trim()),
-        email: esc($("email").value.trim()),
-        website: normalizeUrl($("website").value.trim()),
-        websiteText: esc($("website").value.trim().replace(/^https?:\/\//i,'')),
-        address: esc($("address").value.trim()).replace(/\n/g, "<br>"),
-        brand: $("brand").value || "#166534",
-        layout: $("layout").value,
-        linkedin: normalizeUrl($("linkedin").value.trim()),
-        disclaimer: esc($("disclaimer").value.trim()),
-      };
+        function buildSignature() {
+            const data = {
+                name: esc($("name").value.trim()),
+                role: esc($("role").value.trim()),
+                company: esc($("company").value.trim()),
+                phone: esc($("phone").value.trim()),
+                email: esc($("email").value.trim()),
+                website: normalizeUrl($("website").value.trim()),
+                websiteText: esc($("website").value.trim().replace(/^https?:\/\//i, '')),
+                address: esc($("address").value.trim()).replace(/\n/g, "<br>"),
+                brand: $("brand").value || "#166534",
+                layout: $("layout").value,
+                linkedin: normalizeUrl($("linkedin").value.trim()),
+                disclaimer: esc($("disclaimer").value.trim()),
+            };
 
-      const phoneLine = data.phone ? `<div style="margin:2px 0;"><strong>Tel:</strong> ${data.phone}</div>` : "";
-      const emailLine = data.email ? `<div style="margin:2px 0;"><strong>Email:</strong> <a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a></div>` : "";
-      const webLine = data.website ? `<div style="margin:2px 0;"><strong>Web:</strong> <a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a></div>` : "";
-      const liLine = data.linkedin ? `<div style="margin:2px 0;"><strong>LinkedIn:</strong> <a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">${esc(data.linkedin.replace(/^https?:\/\//i,''))}</a></div>` : "";
-      const addressLine = data.address ? `<div style="margin-top:8px;color:#475569;">${data.address}</div>` : "";
-      const disclaimer = data.disclaimer ? `<div style="margin-top:12px;font-size:11px;color:#64748b;">${data.disclaimer}</div>` : "";
+            const phoneLine = data.phone ? `<div style="margin:2px 0;"><strong>Tel:</strong> ${data.phone}</div>` : "";
+            const emailLine = data.email ? `<div style="margin:2px 0;"><strong>Email:</strong> <a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a></div>` : "";
+            const webLine = data.website ? `<div style="margin:2px 0;"><strong>Web:</strong> <a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a></div>` : "";
+            const liLine = data.linkedin ? `<div style="margin:2px 0;"><strong>LinkedIn:</strong> <a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">${esc(data.linkedin.replace(/^https?:\/\//i, ''))}</a></div>` : "";
+            const addressLine = data.address ? `<div style="margin-top:8px;color:#475569;">${data.address}</div>` : "";
+            const disclaimer = data.disclaimer ? `<div style="margin-top:12px;font-size:11px;color:#64748b;">${data.disclaimer}</div>` : "";
 
-      let html = "";
+            let html = "";
 
-      if(data.layout === "line"){
-        html = `
+            if (data.layout === "line") {
+                html = `
 <table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;">
-  <tr>
-    <td style="vertical-align:top;padding-right:14px;">
-      <div style="width:6px;height:110px;background:${data.brand};border-radius:4px;"></div>
-    </td>
-    <td style="vertical-align:top;">
-      <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
-      <div style="font-size:14px;color:${data.brand};font-weight:700;margin:2px 0 10px 0;">${data.role || "Tu cargo"}${data.company ? " · " + data.company : ""}</div>
-      ${phoneLine}
-      ${emailLine}
-      ${webLine}
-      ${liLine}
-      ${addressLine}
-      ${disclaimer}
-    </td>
-  </tr>
+      <tr>
+        <td style="vertical-align:top;padding-right:14px;">
+          <div style="width:6px;height:110px;background:${data.brand};border-radius:4px;"></div>
+        </td>
+        <td style="vertical-align:top;">
+          <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
+          <div style="font-size:14px;color:${data.brand};font-weight:700;margin:2px 0 10px 0;">${data.role || "Tu cargo"}${data.company ? " · " + data.company : ""}</div>
+          ${phoneLine}
+          ${emailLine}
+          ${webLine}
+          ${liLine}
+          ${addressLine}
+          ${disclaimer}
+        </td>
+      </tr>
 </table>`;
-      } else if(data.layout === "compact"){
-        html = `
+            } else if (data.layout === "compact") {
+                html = `
 <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;color:#0f172a;border-top:3px solid ${data.brand};padding-top:10px;max-width:640px;">
-  <div style="font-size:18px;font-weight:700;">${data.name || "Tu nombre"}</div>
-  <div style="color:#334155;margin-bottom:8px;">${data.role || "Tu cargo"}${data.company ? " | " + data.company : ""}</div>
-  <div>
-    ${data.phone ? `${data.phone}` : ""}
-    ${data.phone && data.email ? " · " : ""}
-    ${data.email ? `<a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a>` : ""}
-    ${(data.phone || data.email) && data.website ? " · " : ""}
-    ${data.website ? `<a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a>` : ""}
-  </div>
-  ${data.linkedin ? `<div><a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">LinkedIn</a></div>` : ""}
-  ${addressLine}
-  ${disclaimer}
-</div>`;
-      } else {
-        html = `
-<table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;max-width:680px;">
-  <tr>
-    <td style="vertical-align:top;">
-      <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
-      <div style="font-size:14px;color:${data.brand};font-weight:700;margin:3px 0 10px 0;">${data.role || "Tu cargo"}</div>
-      ${data.company ? `<div style="margin:2px 0;color:#334155;"><strong>${data.company}</strong></div>` : ""}
-      ${phoneLine}
-      ${emailLine}
-      ${webLine}
-      ${liLine}
+      <div style="font-size:18px;font-weight:700;">${data.name || "Tu nombre"}</div>
+      <div style="color:#334155;margin-bottom:8px;">${data.role || "Tu cargo"}${data.company ? " | " + data.company : ""}</div>
+      <div>
+        ${data.phone ? `${data.phone}` : ""}
+        ${data.phone && data.email ? " · " : ""}
+        ${data.email ? `<a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a>` : ""}
+        ${(data.phone || data.email) && data.website ? " · " : ""}
+        ${data.website ? `<a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a>` : ""}
+      </div>
+      ${data.linkedin ? `<div><a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">LinkedIn</a></div>` : ""}
       ${addressLine}
       ${disclaimer}
-    </td>
-  </tr>
+</div>`;
+            } else {
+                html = `
+<table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;max-width:680px;">
+      <tr>
+        <td style="vertical-align:top;">
+          <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
+          <div style="font-size:14px;color:${data.brand};font-weight:700;margin:3px 0 10px 0;">${data.role || "Tu cargo"}</div>
+          ${data.company ? `<div style="margin:2px 0;color:#334155;"><strong>${data.company}</strong></div>` : ""}
+          ${phoneLine}
+          ${emailLine}
+          ${webLine}
+          ${liLine}
+          ${addressLine}
+          ${disclaimer}
+        </td>
+      </tr>
 </table>`;
-      }
+            }
 
-      $("preview").innerHTML = html;
-      $("code").value = html.trim();
-    }
+            $("preview").innerHTML = html;
+            $("code").value = html.trim();
+        }
 
-    $("generateBtn").addEventListener("click", buildSignature);
+        $("generateBtn").addEventListener("click", buildSignature);
 
-    $("copyHtmlBtn").addEventListener("click", async () => {
-      try{
-        await navigator.clipboard.writeText($("code").value);
-        alert("HTML copiado.");
-      }catch(e){
-        alert("No se pudo copiar el HTML.");
-      }
-    });
-
-    $("copyPreviewBtn").addEventListener("click", async () => {
-      try{
-        const html = $("preview").innerHTML;
-        const blobHtml = new Blob([html], { type: "text/html" });
-        const blobText = new Blob([$("preview").innerText], { type: "text/plain" });
-        const item = new ClipboardItem({
-          "text/html": blobHtml,
-          "text/plain": blobText
+        $("copyHtmlBtn").addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText($("code").value);
+                alert("HTML copiado.");
+            } catch (e) {
+                alert("No se pudo copiar el HTML.");
+            }
         });
-        await navigator.clipboard.write([item]);
-        alert("Firma copiada desde la vista previa.");
-      }catch(e){
-        alert("Tu navegador no permite copiar HTML enriquecido. Usa 'Copiar HTML'.");
-      }
-    });
 
-    $("downloadBtn").addEventListener("click", () => {
-      const content = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Firma Email</title></head><body>${$("code").value}</body></html>`;
-      const blob = new Blob([content], { type: "text/html;charset=utf-8" });
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = "firma-email.html";
-      a.click();
-      URL.revokeObjectURL(a.href);
-    });
+        $("copyPreviewBtn").addEventListener("click", async () => {
+            try {
+                const html = $("preview").innerHTML;
+                const blobHtml = new Blob([html], { type: "text/html" });
+                const blobText = new Blob([$("preview").innerText], { type: "text/plain" });
+                const item = new ClipboardItem({
+                    "text/html": blobHtml,
+                    "text/plain": blobText
+                });
+                await navigator.clipboard.write([item]);
+                alert("Firma copiada desde la vista previa.");
+            } catch (e) {
+                alert("Tu navegador no permite copiar HTML enriquecido. Usa 'Copiar HTML'.");
+            }
+        });
 
-    $("fillDemoBtn").addEventListener("click", () => {
-      $("name").value = "Alejandro Galisteo";
-      $("role").value = "Técnico de Sistemas";
-      $("company").value = "AG Systems";
-      $("phone").value = "+34 600 123 456";
-      $("email").value = "alejandro@agsystems.es";
-      $("website").value = "https://agsystems.es";
-      $("address").value = "Madrid · Soporte IT · Automatización y sistemas";
-      $("linkedin").value = "https://linkedin.com/in/alejandrogalisteo";
-      $("disclaimer").value = "Este mensaje puede contener información confidencial.";
-      buildSignature();
-    });
+        $("downloadBtn").addEventListener("click", () => {
+            const content = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Firma Email</title></head><body>${$("code").value}</body></html>`;
+            const blob = new Blob([content], { type: "text/html;charset=utf-8" });
+            const a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "firma-email.html";
+            a.click();
+            URL.revokeObjectURL(a.href);
+        });
 
-    buildSignature();
-  </script>
+        $("fillDemoBtn").addEventListener("click", () => {
+            $("name").value = "Alejandro Galisteo";
+            $("role").value = "Técnico de Sistemas";
+            $("company").value = "AG Systems";
+            $("phone").value = "+34 600 123 456";
+            $("email").value = "alejandro@agsystems.es";
+            $("website").value = "https://agsystems.es";
+            $("address").value = "Madrid · Soporte IT · Automatización y sistemas";
+            $("linkedin").value = "https://linkedin.com/in/alejandrogalisteo";
+            $("disclaimer").value = "Este mensaje puede contener información confidencial.";
+            buildSignature();
+        });
+
+        buildSignature();
+    </script>
+    <section class="seo-content">
+        <h2>Crear firma de email online</h2>
+        <p>Genera firmas profesionales para correo electrónico.</p>
+
+        <h2>Qué puedes incluir</h2>
+        <p>Nombre, empresa, teléfono, redes sociales y enlaces.</p>
+
+        <h2>Compatible con</h2>
+        <p>Outlook, Gmail y otros clientes de correo.</p>
+    </section>
 </body>
 </html>
