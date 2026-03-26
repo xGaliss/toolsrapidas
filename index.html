@@ -3,32 +3,86 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ToolsRapidas | Herramientas online gratis y rápidas</title>
-    <meta name="description" content="Herramientas online gratis para comprimir imágenes, generar QR, limpiar texto, crear firmas de email y formatear JSON. Rápidas, fáciles de usar y sin instalación." />
+
+    <title>Herramientas online gratis | Comprimir imágenes, QR, JSON y texto</title>
+    <meta name="description" content="Herramientas online gratis y rápidas para comprimir imágenes, convertir a WebP, generar QR, limpiar texto, crear firmas de email, formatear JSON y más. Sin instalación." />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://toolsrapidas.com/" />
-    <meta property="og:title" content="ToolsRapidas | Herramientas online gratis y rápidas" />
-    <meta property="og:description" content="Herramientas online gratis para imágenes, QR, JSON, texto y email." />
+    <meta name="theme-color" content="#08111f" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Herramientas online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Utilidades online para imágenes, texto, QR, JSON y productividad. Gratis, rápidas y sin instalación." />
     <meta property="og:url" content="https://toolsrapidas.com/" />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#08111f" />
-    <link rel="stylesheet" href="assets/styles.css" />
-    <meta property="og:site_name" content="ToolsRapidas">
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Herramientas online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Comprime imágenes, convierte a WebP, genera QR, limpia texto, valida JSON y más." />
+
     <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <!-- Datos estructurados -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "ToolsRapidas",
+          "url": "https://toolsrapidas.com/",
+          "inLanguage": "es",
+          "description": "Herramientas online gratis para imágenes, texto, QR, JSON y productividad."
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Necesita instalación?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Todas las herramientas funcionan directamente desde el navegador, sin instalar programas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Las herramientas son gratis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. Puedes usar las herramientas online de forma gratuita."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Funcionan en móvil y ordenador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. ToolsRapidas está optimizada para funcionar tanto en escritorio como en dispositivos móviles."
+              }
+            }
+          ]
+        }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-984EW75R9H');
     </script>
 </head>
 <body>
     <nav class="nav">
         <div class="container nav-inner">
-            <a class="brand" href="index.html">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
                 <span class="brand-mark">Tr</span>
                 <span>ToolsRapidas</span>
             </a>
@@ -43,9 +97,9 @@
         <div class="container hero-grid">
             <div>
                 <div class="badge">Herramientas online · rápidas · gratis</div>
-                <h1>Herramientas online útiles para el día a día.</h1>
+                <h1>Herramientas online gratis para imágenes, texto, QR y productividad</h1>
                 <p class="lead">
-                    Accede a utilidades rápidas para limpiar texto, generar firmas de email, formatear JSON, crear códigos QR y comprimir imágenes sin instalar nada.
+                    Usa herramientas online rápidas y fáciles para comprimir imágenes, convertir a WebP, generar códigos QR, limpiar texto, crear firmas de email y formatear JSON sin instalar nada.
                 </p>
                 <div class="actions">
                     <a class="btn primary" href="#herramientas">Ver herramientas</a>
@@ -68,68 +122,70 @@
             <div class="container">
                 <div class="section-head">
                     <div>
-                        <h2>Herramientas disponibles</h2>
-                        <p>Utilidades simples, rápidas y listas para usar desde el navegador.</p>
+                        <h2>Herramientas online disponibles</h2>
+                        <p>Utilidades rápidas, gratis y listas para usar desde el navegador.</p>
                     </div>
                 </div>
 
                 <div class="tool-grid">
                     <article class="card">
                         <h3>Convertir imagen a WebP</h3>
-                        <p>Convierte imágenes JPG y PNG a WebP online gratis. Reduce el tamaño y mejora la velocidad de carga.</p>
+                        <p>Convierte imágenes JPG y PNG a WebP online gratis. Reduce el tamaño del archivo y mejora la velocidad de carga de tu web.</p>
                         <div class="tags">
                             <span class="tag">Imagen</span>
                             <span class="tag">WebP</span>
                             <span class="tag">SEO</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="convertir-webp.html">Abrir</a>
+                            <a class="btn primary" href="convertir-webp.html">Abrir herramienta</a>
                         </div>
                     </article>
+
                     <article class="card">
                         <h3>Limpiador de texto</h3>
-                        <p>Limpia texto sucio, elimina líneas vacías, emojis, duplicados y espacios raros para copiar mejor a Excel, Word o email.</p>
+                        <p>Limpia texto sucio, elimina líneas vacías, duplicados, emojis y espacios raros para copiar mejor a Excel, Word o email.</p>
                         <div class="tags"><span class="tag">Texto</span><span class="tag">Oficina</span><span class="tag">Productividad</span></div>
-                        <div class="actions"><a class="btn primary" href="limpiador-texto.html">Abrir</a></div>
+                        <div class="actions"><a class="btn primary" href="limpiador-texto.html">Abrir herramienta</a></div>
                     </article>
 
                     <article class="card">
                         <h3>Generador de firma de email</h3>
                         <p>Crea firmas HTML para Outlook o Gmail con vista previa, copia rápida y descarga.</p>
                         <div class="tags"><span class="tag">Email</span><span class="tag">Empresa</span><span class="tag">HTML</span></div>
-                        <div class="actions"><a class="btn primary" href="firma-email.html">Abrir</a></div>
+                        <div class="actions"><a class="btn primary" href="firma-email.html">Abrir herramienta</a></div>
                     </article>
 
                     <article class="card">
                         <h3>Visor y formateador JSON</h3>
                         <p>Valida, minifica y formatea JSON con búsqueda rápida y resumen de claves, arrays y valores.</p>
                         <div class="tags"><span class="tag">JSON</span><span class="tag">Dev</span><span class="tag">API</span></div>
-                        <div class="actions"><a class="btn primary" href="visor-json.html">Abrir</a></div>
+                        <div class="actions"><a class="btn primary" href="visor-json.html">Abrir herramienta</a></div>
                     </article>
 
                     <article class="card">
                         <h3>Generador de QR</h3>
-                        <p>Genera códigos QR para URL, WiFi, email, teléfono o texto, con descarga en PNG.</p>
+                        <p>Genera códigos QR para URL, WiFi, email, teléfono o texto con descarga en PNG.</p>
                         <div class="tags"><span class="tag">QR</span><span class="tag">WiFi</span><span class="tag">Marketing</span></div>
-                        <div class="actions"><a class="btn primary" href="generador-qr.html">Abrir</a></div>
+                        <div class="actions"><a class="btn primary" href="generador-qr.html">Abrir herramienta</a></div>
                     </article>
 
                     <article class="card">
                         <h3>Compresor de imágenes</h3>
-                        <p>Redimensiona y comprime JPG, PNG y WebP online, manteniendo transparencia cuando es necesario.</p>
-                        <div class="tags"><span class="tag">Imagen</span><span class="tag">WebP</span><span class="tag">Productividad</span></div>
-                        <div class="actions"><a class="btn primary" href="compresor-imagenes.html">Abrir</a></div>
+                        <p>Comprime y redimensiona imágenes JPG, PNG y WebP online manteniendo la mejor calidad posible.</p>
+                        <div class="tags"><span class="tag">Imagen</span><span class="tag">Compresión</span><span class="tag">Productividad</span></div>
+                        <div class="actions"><a class="btn primary" href="compresor-imagenes.html">Abrir herramienta</a></div>
                     </article>
+
                     <article class="card">
                         <h3>Redimensionar imagen</h3>
-                        <p>Cambia el tamaño de imágenes JPG y PNG online. Ajusta dimensiones fácilmente sin instalar programas.</p>
+                        <p>Cambia el tamaño de imágenes JPG y PNG online de forma rápida y sin instalar programas.</p>
                         <div class="tags">
                             <span class="tag">Imagen</span>
                             <span class="tag">Resize</span>
                             <span class="tag">SEO</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="redimensionar-imagen.html">Abrir</a>
+                            <a class="btn primary" href="redimensionar-imagen.html">Abrir herramienta</a>
                         </div>
                     </article>
 
@@ -142,7 +198,7 @@
                             <span class="tag">Social</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="formatear-whatsapp.html">Abrir</a>
+                            <a class="btn primary" href="formatear-whatsapp.html">Abrir herramienta</a>
                         </div>
                     </article>
 
@@ -155,7 +211,7 @@
                             <span class="tag">Viral</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="texto-invisible-whatsapp.html">Abrir</a>
+                            <a class="btn primary" href="texto-invisible-whatsapp.html">Abrir herramienta</a>
                         </div>
                     </article>
 
@@ -168,59 +224,59 @@
                             <span class="tag">Productividad</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="contador-palabras.html">Abrir</a>
+                            <a class="btn primary" href="contador-palabras.html">Abrir herramienta</a>
                         </div>
                     </article>
 
                     <article class="card">
                         <h3>Contador de caracteres para redes</h3>
-                        <p>Controla los límites de Instagram, Twitter (X) y TikTok antes de publicar.</p>
+                        <p>Controla los límites de Instagram, X y TikTok antes de publicar en redes sociales.</p>
                         <div class="tags">
                             <span class="tag">Social</span>
                             <span class="tag">Texto</span>
-                            <span class="tag">SEO</span>
+                            <span class="tag">Redes</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="contador-caracteres-redes.html">Abrir</a>
+                            <a class="btn primary" href="contador-caracteres-redes.html">Abrir herramienta</a>
                         </div>
                     </article>
 
                     <article class="card">
                         <h3>Generador de contraseñas</h3>
-                        <p>Crea contraseñas seguras con longitud personalizada, símbolos y validación de seguridad.</p>
+                        <p>Crea contraseñas seguras con longitud personalizada, símbolos y validación básica de seguridad.</p>
                         <div class="tags">
                             <span class="tag">Seguridad</span>
                             <span class="tag">Dev</span>
                             <span class="tag">Utilidad</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="generador-contrasenas.html">Abrir</a>
+                            <a class="btn primary" href="generador-contrasenas.html">Abrir herramienta</a>
                         </div>
                     </article>
 
                     <article class="card">
                         <h3>Quitar saltos de línea</h3>
-                        <p>Une texto cortado en múltiples líneas en un solo bloque limpio para copiar fácilmente.</p>
+                        <p>Une texto cortado en múltiples líneas en un solo bloque limpio para copiar y pegar fácilmente.</p>
                         <div class="tags">
                             <span class="tag">Texto</span>
                             <span class="tag">Oficina</span>
                             <span class="tag">Productividad</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="quitar-saltos-linea.html">Abrir</a>
+                            <a class="btn primary" href="quitar-saltos-linea.html">Abrir herramienta</a>
                         </div>
                     </article>
 
                     <article class="card">
                         <h3>Generador de letras raras</h3>
-                        <p>Convierte texto normal en estilos fancy para Instagram, TikTok y redes sociales.</p>
+                        <p>Convierte texto normal en letras fancy y estilos llamativos para Instagram, TikTok y otras redes sociales.</p>
                         <div class="tags">
                             <span class="tag">Social</span>
                             <span class="tag">Viral</span>
                             <span class="tag">Texto</span>
                         </div>
                         <div class="actions">
-                            <a class="btn primary" href="letras-raras.html">Abrir</a>
+                            <a class="btn primary" href="letras-raras.html">Abrir herramienta</a>
                         </div>
                     </article>
                 </div>
@@ -231,38 +287,72 @@
             <div class="container">
                 <div class="section-head">
                     <div>
-                        <h2>Herramientas online para productividad, imágenes y texto</h2>
-                        <p>En ToolsRapidas puedes usar utilidades online gratis para trabajar con imágenes, texto, códigos QR, JSON y correo electrónico sin instalar programas.</p>
+                        <h2>Optimizar imágenes: herramientas recomendadas</h2>
+                        <p>Si trabajas con imágenes, estas herramientas te ayudarán a mejorar calidad, tamaño y rendimiento.</p>
                     </div>
                 </div>
-                <p style="color:#94a3b8; line-height:1.8; margin:0;">
-                    Nuestra colección de herramientas está pensada para ahorrar tiempo en tareas comunes del día a día:
-                    comprimir imágenes, limpiar texto para Excel, generar firmas de email profesionales, validar JSON y crear códigos QR.
-                    Todas funcionan directamente desde el navegador para que puedas usarlas desde ordenador o móvil de forma rápida.
-                </p>
+
+                <div class="tool-grid">
+
+                    <article class="card">
+                        <h3><a href="compresor-imagenes.html">Comprimir imágenes online</a></h3>
+                        <p>Reduce el tamaño de tus imágenes sin perder calidad.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="redimensionar-imagen.html">Redimensionar imagen</a></h3>
+                        <p>Ajusta dimensiones para web o redes sociales.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="convertir-webp.html">Convertir JPG y PNG a WebP</a></h3>
+                        <p>Optimiza imágenes para mejorar velocidad y SEO.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="generador-qr.html">Generador de QR gratis</a></h3>
+                        <p>Crea códigos QR en segundos para cualquier uso.</p>
+                    </article>
+
+                </div>
             </div>
         </section>
+
 
         <section class="section" id="faq">
             <div class="container">
                 <div class="section-head">
                     <div>
                         <h2>Preguntas frecuentes</h2>
-                        <p>Información rápida sobre cómo funcionan las herramientas.</p>
+                        <p>Respuestas rápidas sobre cómo funcionan las herramientas.</p>
                     </div>
                 </div>
                 <div class="faq">
-                    <details open><summary>¿Necesita instalación?</summary><p>No. Las herramientas funcionan directamente desde el navegador.</p></details>
-                    <details><summary>¿Son gratis?</summary><p>Sí, puedes usarlas de forma gratuita desde la web.</p></details>
-                    <details><summary>¿Funcionan en móvil y ordenador?</summary><p>Sí, la web está preparada para usarse tanto en escritorio como en dispositivos móviles.</p></details>
+                    <details open>
+                        <summary>¿Necesita instalación?</summary>
+                        <p>No. Todas las herramientas funcionan directamente desde el navegador, sin descargar ni instalar programas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Son gratis?</summary>
+                        <p>Sí. Puedes usar las herramientas gratis desde la web.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funcionan en móvil y ordenador?</summary>
+                        <p>Sí. ToolsRapidas está preparada para usarse tanto en escritorio como en móviles y tablets.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo usar estas herramientas para trabajo, estudio o redes sociales?</summary>
+                        <p>Sí. Están pensadas para tareas comunes de productividad, edición de texto, imágenes, QR, email y contenido para redes.</p>
+                    </details>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
         <div class="container footer-grid">
-            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas y fáciles de usar.</div>
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
             <div>Acceso directo desde cualquier navegador.</div>
         </div>
     </footer>
