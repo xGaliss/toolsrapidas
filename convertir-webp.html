@@ -1,0 +1,497 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Convertir imagen a WebP online gratis | JPG y PNG a WebP | ToolsRapidas</title>
+    <meta name="description" content="Convierte imágenes JPG o PNG a WebP online gratis. Reduce peso, optimiza imágenes y descarga el archivo en segundos.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/convertir-webp.html">
+
+    <meta property="og:title" content="Convertir imagen a WebP online | ToolsRapidas">
+    <meta property="og:description" content="Convierte JPG y PNG a WebP gratis y reduce el tamaño de tus imágenes.">
+    <meta property="og:url" content="https://toolsrapidas.com/convertir-webp.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+    <meta name="theme-color" content="#0f172a">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #111827;
+            --panel-2: #1f2937;
+            --text: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #22c55e;
+            --border: #334155;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+        }
+
+        .sub {
+            color: var(--muted);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 320px 1fr 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .card h2 {
+                font-size: 18px;
+                margin: 0 0 12px;
+            }
+
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            background: #0b1220;
+            cursor: pointer;
+            transition: .2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .dropzone.dragover {
+                border-color: var(--accent);
+                background: rgba(34,197,94,.08);
+            }
+
+            .dropzone strong {
+                font-size: 16px;
+                margin-bottom: 6px;
+                text-align: center;
+            }
+
+            .dropzone span {
+                color: var(--muted);
+                font-size: 13px;
+                text-align: center;
+            }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .control {
+            margin-bottom: 16px;
+        }
+
+            .control label {
+                display: block;
+                margin-bottom: 8px;
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        .quality-value {
+            margin-top: 8px;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 12px;
+            padding: 10px 14px;
+            font-weight: 600;
+            cursor: pointer;
+            background: var(--panel-2);
+            color: var(--text);
+        }
+
+            button.primary {
+                background: var(--accent);
+                color: #052e16;
+            }
+
+            button.danger {
+                background: var(--danger);
+                color: white;
+            }
+
+            button:disabled {
+                opacity: .6;
+                cursor: not-allowed;
+            }
+
+        .preview {
+            width: 100%;
+            min-height: 260px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #0b1220;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+            .preview img {
+                max-width: 100%;
+                max-height: 380px;
+                display: block;
+            }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat {
+            background: #0b1220;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+            .stat strong {
+                display: block;
+                font-size: 22px;
+                margin-bottom: 4px;
+            }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .hint {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+            margin-top: 14px;
+        }
+
+        .seo-content {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding: 0 24px 48px;
+        }
+
+        .seo-box {
+            background: rgba(17,24,39,.9);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        }
+
+            .seo-box h2 {
+                margin: 0 0 12px;
+                font-size: clamp(24px, 3vw, 32px);
+                color: var(--text);
+            }
+
+            .seo-box p {
+                margin: 0 0 20px;
+                color: var(--muted);
+                line-height: 1.7;
+                max-width: 900px;
+            }
+
+        @media (max-width: 980px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .preview {
+                min-height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Convertir imagen a WebP online</h1>
+        <div class="sub">
+            Convierte imágenes JPG o PNG a WebP gratis directamente desde el navegador. Rápido, sin instalación y sin subir archivos a servidores.
+        </div>
+
+        <div class="grid">
+            <section class="card">
+                <h2>Opciones</h2>
+
+                <label class="dropzone" id="dropzone">
+                    <strong>Arrastra tu imagen aquí</strong>
+                    <span>o haz clic para seleccionar un archivo JPG o PNG</span>
+                    <input type="file" id="fileInput" accept="image/jpeg,image/png" />
+                </label>
+
+                <div class="control" style="margin-top:18px;">
+                    <label for="quality">Calidad WebP</label>
+                    <input type="range" id="quality" min="10" max="100" value="82" />
+                    <div class="quality-value">Calidad actual: <span id="qualityText">82</span>%</div>
+                </div>
+
+                <div class="actions">
+                    <button class="primary" id="convertBtn" disabled>Convertir a WebP</button>
+                    <button id="downloadBtn" disabled>Descargar .webp</button>
+                    <button class="danger" id="resetBtn">Vaciar</button>
+                </div>
+
+                <div class="hint">
+                    WebP suele reducir bastante el peso de imágenes para web. Ideal para SEO, velocidad de carga y ahorro de ancho de banda.
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Imagen original</h2>
+                <div class="preview" id="originalPreview">
+                    <span class="muted">No hay imagen cargada</span>
+                </div>
+                <div class="stats">
+                    <div class="stat"><strong id="origSize">0 KB</strong><span class="muted">Tamaño</span></div>
+                    <div class="stat"><strong id="origDim">—</strong><span class="muted">Dimensiones</span></div>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>Resultado WebP</h2>
+                <div class="preview" id="resultPreview">
+                    <span class="muted">Aquí verás el resultado</span>
+                </div>
+                <div class="stats">
+                    <div class="stat"><strong id="webpSize">0 KB</strong><span class="muted">Tamaño WebP</span></div>
+                    <div class="stat"><strong id="savedPct">0%</strong><span class="muted">Ahorro</span></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="seo-content">
+        <div class="seo-box">
+            <h2>Convertir imagen a WebP online</h2>
+            <p>
+                Esta herramienta te permite convertir imágenes JPG y PNG a WebP online gratis directamente desde el navegador.
+                Es una forma rápida de optimizar imágenes para páginas web sin instalar programas ni depender de servicios externos.
+            </p>
+
+            <h2>¿Por qué usar WebP?</h2>
+            <p>
+                El formato WebP suele ofrecer archivos más ligeros que JPG o PNG manteniendo una buena calidad visual.
+                Esto mejora la velocidad de carga de una web, ayuda al SEO y reduce el consumo de datos.
+            </p>
+
+            <h2>¿Cuándo conviene convertir imágenes a WebP?</h2>
+            <p>
+                WebP es muy útil para blogs, tiendas online, landing pages, portfolio y cualquier sitio que quiera cargar más rápido.
+                También es una buena opción para ahorrar espacio en imágenes destinadas a email o documentación web.
+            </p>
+
+            <h2>Ventajas de este convertidor WebP</h2>
+            <p>
+                Todo el procesamiento se hace en tu navegador. No subimos tus archivos a ningún servidor, así que el proceso es rápido,
+                privado y cómodo tanto en ordenador como en móvil.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const dropzone = document.getElementById('dropzone');
+        const quality = document.getElementById('quality');
+        const qualityText = document.getElementById('qualityText');
+        const convertBtn = document.getElementById('convertBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const resetBtn = document.getElementById('resetBtn');
+
+        const originalPreview = document.getElementById('originalPreview');
+        const resultPreview = document.getElementById('resultPreview');
+
+        const origSize = document.getElementById('origSize');
+        const origDim = document.getElementById('origDim');
+        const webpSize = document.getElementById('webpSize');
+        const savedPct = document.getElementById('savedPct');
+
+        let selectedFile = null;
+        let originalImage = null;
+        let webpBlob = null;
+
+        function formatKB(bytes) {
+            return (bytes / 1024).toFixed(1) + ' KB';
+        }
+
+        function resetAll() {
+            selectedFile = null;
+            originalImage = null;
+            webpBlob = null;
+            fileInput.value = '';
+            convertBtn.disabled = true;
+            downloadBtn.disabled = true;
+
+            originalPreview.innerHTML = '<span class="muted">No hay imagen cargada</span>';
+            resultPreview.innerHTML = '<span class="muted">Aquí verás el resultado</span>';
+
+            origSize.textContent = '0 KB';
+            origDim.textContent = '—';
+            webpSize.textContent = '0 KB';
+            savedPct.textContent = '0%';
+        }
+
+        function loadFile(file) {
+            if (!file) return;
+            if (!['image/jpeg', 'image/png'].includes(file.type)) {
+                alert('Solo se permiten imágenes JPG o PNG.');
+                return;
+            }
+
+            selectedFile = file;
+            webpBlob = null;
+            downloadBtn.disabled = true;
+
+            const reader = new FileReader();
+            reader.onload = () => {
+                originalImage = new Image();
+                originalImage.onload = () => {
+                    originalPreview.innerHTML = '';
+                    originalPreview.appendChild(originalImage);
+
+                    origSize.textContent = formatKB(file.size);
+                    origDim.textContent = `${originalImage.naturalWidth} × ${originalImage.naturalHeight}`;
+                    convertBtn.disabled = false;
+                };
+                originalImage.src = reader.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        fileInput.addEventListener('change', (e) => {
+            loadFile(e.target.files[0]);
+        });
+
+        dropzone.addEventListener('click', () => fileInput.click());
+
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.classList.add('dragover');
+        });
+
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('dragover');
+        });
+
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            loadFile(file);
+        });
+
+        quality.addEventListener('input', () => {
+            qualityText.textContent = quality.value;
+        });
+
+        convertBtn.addEventListener('click', () => {
+            if (!originalImage) return;
+
+            const canvas = document.createElement('canvas');
+            canvas.width = originalImage.naturalWidth;
+            canvas.height = originalImage.naturalHeight;
+
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(originalImage, 0, 0);
+
+            canvas.toBlob((blob) => {
+                if (!blob) {
+                    alert('No se pudo convertir la imagen.');
+                    return;
+                }
+
+                webpBlob = blob;
+                const url = URL.createObjectURL(blob);
+
+                const img = new Image();
+                img.onload = () => URL.revokeObjectURL(url);
+                img.src = url;
+
+                resultPreview.innerHTML = '';
+                resultPreview.appendChild(img);
+
+                webpSize.textContent = formatKB(blob.size);
+
+                const saved = ((selectedFile.size - blob.size) / selectedFile.size) * 100;
+                savedPct.textContent = `${saved > 0 ? saved.toFixed(1) : 0}%`;
+
+                downloadBtn.disabled = false;
+            }, 'image/webp', Number(quality.value) / 100);
+        });
+
+        downloadBtn.addEventListener('click', () => {
+            if (!webpBlob || !selectedFile) return;
+
+            const url = URL.createObjectURL(webpBlob);
+            const a = document.createElement('a');
+            const baseName = selectedFile.name.replace(/\.[^/.]+$/, '');
+            a.href = url;
+            a.download = `${baseName}.webp`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+
+        resetBtn.addEventListener('click', resetAll);
+    </script>
+</body>
+</html>
