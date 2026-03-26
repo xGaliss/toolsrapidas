@@ -205,6 +205,24 @@
         </div>
     </nav>
 
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
     <header class="tool-hero">
         <div class="container">
             <h1>Extraer texto de PDF online</h1>
@@ -477,6 +495,69 @@
         });
 
         resetBtn.addEventListener('click', resetAll);
+    </script>
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
     </script>
 </body>
 </html>

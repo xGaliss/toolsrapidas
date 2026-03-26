@@ -198,7 +198,23 @@
             </div>
         </div>
     </nav>
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
 
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
     <header class="tool-hero">
         <div class="container">
             <h1>Generador de firma de email</h1>
@@ -437,54 +453,54 @@
             if (data.layout === "line") {
                 html = `
 <table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;">
-        <tr>
-            <td style="vertical-align:top;padding-right:14px;">
-                <div style="width:6px;height:110px;background:${data.brand};border-radius:4px;"></div>
-            </td>
-            <td style="vertical-align:top;">
-                <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
-                <div style="font-size:14px;color:${data.brand};font-weight:700;margin:2px 0 10px 0;">${data.role || "Tu cargo"}${data.company ? " · " + data.company : ""}</div>
-                ${phoneLine}
-                ${emailLine}
-                ${webLine}
-                ${liLine}
-                ${addressLine}
-                ${disclaimer}
-            </td>
-        </tr>
+                <tr>
+                    <td style="vertical-align:top;padding-right:14px;">
+                        <div style="width:6px;height:110px;background:${data.brand};border-radius:4px;"></div>
+                    </td>
+                    <td style="vertical-align:top;">
+                        <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
+                        <div style="font-size:14px;color:${data.brand};font-weight:700;margin:2px 0 10px 0;">${data.role || "Tu cargo"}${data.company ? " · " + data.company : ""}</div>
+                        ${phoneLine}
+                        ${emailLine}
+                        ${webLine}
+                        ${liLine}
+                        ${addressLine}
+                        ${disclaimer}
+                    </td>
+                </tr>
 </table>`;
             } else if (data.layout === "compact") {
                 html = `
 <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;color:#0f172a;border-top:3px solid ${data.brand};padding-top:10px;max-width:640px;">
-        <div style="font-size:18px;font-weight:700;">${data.name || "Tu nombre"}</div>
-        <div style="color:#334155;margin-bottom:8px;">${data.role || "Tu cargo"}${data.company ? " | " + data.company : ""}</div>
-        <div>
-            ${data.phone ? `${data.phone}` : ""}
-            ${data.phone && data.email ? " · " : ""}
-            ${data.email ? `<a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a>` : ""}
-            ${(data.phone || data.email) && data.website ? " · " : ""}
-            ${data.website ? `<a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a>` : ""}
-        </div>
-        ${data.linkedin ? `<div><a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">LinkedIn</a></div>` : ""}
-        ${addressLine}
-        ${disclaimer}
+                <div style="font-size:18px;font-weight:700;">${data.name || "Tu nombre"}</div>
+                <div style="color:#334155;margin-bottom:8px;">${data.role || "Tu cargo"}${data.company ? " | " + data.company : ""}</div>
+                <div>
+                    ${data.phone ? `${data.phone}` : ""}
+                    ${data.phone && data.email ? " · " : ""}
+                    ${data.email ? `<a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a>` : ""}
+                    ${(data.phone || data.email) && data.website ? " · " : ""}
+                    ${data.website ? `<a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a>` : ""}
+                </div>
+                ${data.linkedin ? `<div><a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">LinkedIn</a></div>` : ""}
+                ${addressLine}
+                ${disclaimer}
 </div>`;
             } else {
                 html = `
 <table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;max-width:680px;">
-        <tr>
-            <td style="vertical-align:top;">
-                <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
-                <div style="font-size:14px;color:${data.brand};font-weight:700;margin:3px 0 10px 0;">${data.role || "Tu cargo"}</div>
-                ${data.company ? `<div style="margin:2px 0;color:#334155;"><strong>${data.company}</strong></div>` : ""}
-                ${phoneLine}
-                ${emailLine}
-                ${webLine}
-                ${liLine}
-                ${addressLine}
-                ${disclaimer}
-            </td>
-        </tr>
+                <tr>
+                    <td style="vertical-align:top;">
+                        <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
+                        <div style="font-size:14px;color:${data.brand};font-weight:700;margin:3px 0 10px 0;">${data.role || "Tu cargo"}</div>
+                        ${data.company ? `<div style="margin:2px 0;color:#334155;"><strong>${data.company}</strong></div>` : ""}
+                        ${phoneLine}
+                        ${emailLine}
+                        ${webLine}
+                        ${liLine}
+                        ${addressLine}
+                        ${disclaimer}
+                    </td>
+                </tr>
 </table>`;
             }
 
@@ -543,6 +559,69 @@
         });
 
         buildSignature();
+    </script>
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
     </script>
 </body>
 </html>
