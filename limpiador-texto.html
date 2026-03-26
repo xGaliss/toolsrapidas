@@ -1,88 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Limpiador de texto online gratis | Quitar espacios y duplicados | ToolsRapidas</title>
     <meta name="description" content="Limpia texto online gratis. Elimina espacios, líneas vacías, duplicados y caracteres extra para Excel o Word.">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://toolsrapidas.com/limpiador-texto.html">
-    <meta property="og:title" content="Limpiador de texto online | ToolsRapidas">
-    <meta property="og:description" content="Elimina texto sucio, espacios y duplicados fácilmente.">
-    <meta property="og:url" content="https://toolsrapidas.com/limpiador-texto.html">
-    <meta property="og:type" content="website">
-    <meta name="theme-color" content="#0f172a">
-    <meta property="og:site_name" content="ToolsRapidas">
-    <link rel="icon" href="/favicon.ico">
-    <!-- Google tag (gtag.js) -->
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/limpiador-texto.html" />
+    <meta name="theme-color" content="#08111f" />
+
+    <meta property="og:title" content="Limpiador de texto online | ToolsRapidas" />
+    <meta property="og:description" content="Elimina texto sucio, espacios y duplicados fácilmente." />
+    <meta property="og:url" content="https://toolsrapidas.com/limpiador-texto.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Limpiador de texto online | ToolsRapidas" />
+    <meta name="twitter:description" content="Elimina texto sucio, espacios y duplicados fácilmente." />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Limpiador de texto online",
+          "url": "https://toolsrapidas.com/limpiador-texto.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Limpia texto online gratis eliminando espacios, líneas vacías, duplicados y caracteres extra."
+        }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-984EW75R9H');
     </script>
+
     <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #111827;
-            --panel-2: #1f2937;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
-            --border: #334155;
-            --danger: #ef4444;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(28px, 4vw, 42px);
-        }
-
-        .sub {
+        .tool-lead {
             color: var(--muted);
-            margin-bottom: 24px;
-            line-height: 1.5;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
         }
 
-        .grid {
+        .tool-layout {
             display: grid;
             grid-template-columns: 320px 1fr 1fr;
             gap: 18px;
         }
 
-        .card {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .tool-panel h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
         }
-
-            .card h2 {
-                font-size: 18px;
-                margin: 0 0 12px;
-            }
 
         .controls label {
             display: flex;
@@ -97,8 +90,9 @@
                 border-bottom: 0;
             }
 
-        .controls input {
+        .controls input[type="checkbox"] {
             margin-top: 3px;
+            width: auto;
         }
 
         .controls small {
@@ -112,7 +106,7 @@
             width: 100%;
             min-height: 430px;
             resize: vertical;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.14);
             border-radius: 14px;
             background: #0b1220;
             color: var(--text);
@@ -126,36 +120,36 @@
                 box-shadow: 0 0 0 3px rgba(96,165,250,.15);
             }
 
-        .actions {
+        .tool-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 14px;
         }
 
-        button {
-            border: 0;
-            border-radius: 12px;
-            padding: 10px 14px;
-            font-weight: 600;
-            cursor: pointer;
-            background: var(--panel-2);
-            color: var(--text);
-        }
-
-            button.primary {
-                background: var(--accent);
-                color: #052e16;
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
             }
 
-            button.danger {
-                background: var(--danger);
-                color: white;
-            }
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
 
-            button:hover {
-                filter: brightness(1.05);
-            }
+                .tool-buttons button.danger {
+                    background: #ef4444;
+                    color: white;
+                }
+
+                .tool-buttons button:hover {
+                    filter: brightness(1.05);
+                }
 
         .stats {
             display: grid;
@@ -166,7 +160,7 @@
 
         .stat {
             background: #0b1220;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.12);
             border-radius: 12px;
             padding: 12px;
         }
@@ -177,19 +171,34 @@
                 margin-bottom: 4px;
             }
 
-        .muted {
+        .muted-text {
             color: var(--muted);
         }
 
-        .footer {
-            margin-top: 18px;
+        .tool-help {
+            margin-top: 14px;
             font-size: 13px;
             color: var(--muted);
-            line-height: 1.5;
+            line-height: 1.6;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
         }
 
         @media (max-width: 980px) {
-            .grid {
+            .tool-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -200,76 +209,100 @@
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Limpiador de texto</h1>
-        <div class="sub">
-            Pega texto con formato raro y límpialo al instante. Todo se procesa en tu navegador.
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="grid">
-            <section class="card controls">
-                <h2>Opciones</h2>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Limpiador de texto online</h1>
+            <p class="tool-lead">
+                Pega texto con formato raro, líneas vacías, espacios extra o duplicados y límpialo al instante. Todo se procesa directamente en tu navegador.
+            </p>
+        </div>
+    </header>
 
-                <label>
-                    <input type="checkbox" id="trimLines" checked>
-                    <span><strong>Quitar espacios al inicio y final de cada línea</strong><small>Muy útil cuando copias desde correos, PDFs o Excel.</small></span>
-                </label>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel controls">
+                        <h2>Opciones</h2>
 
-                <label>
-                    <input type="checkbox" id="collapseSpaces" checked>
-                    <span><strong>Reducir espacios dobles a uno</strong><small>Convierte secuencias largas de espacios en un solo espacio.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="trimLines" checked>
+                            <span><strong>Quitar espacios al inicio y final de cada línea</strong><small>Muy útil cuando copias desde correos, PDFs o Excel.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="removeBlankLines">
-                    <span><strong>Eliminar líneas vacías</strong><small>Deja solo líneas con contenido.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="collapseSpaces" checked>
+                            <span><strong>Reducir espacios dobles a uno</strong><small>Convierte secuencias largas de espacios en un solo espacio.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="collapseBlankLines" checked>
-                    <span><strong>Reducir bloques de líneas vacías</strong><small>Si hay muchas líneas en blanco seguidas, las deja en una sola.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="removeBlankLines">
+                            <span><strong>Eliminar líneas vacías</strong><small>Deja solo líneas con contenido.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="normalizeQuotes">
-                    <span><strong>Normalizar comillas “raras”</strong><small>Convierte comillas curvas y apóstrofos tipográficos a formato estándar.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="collapseBlankLines" checked>
+                            <span><strong>Reducir bloques de líneas vacías</strong><small>Si hay muchas líneas en blanco seguidas, las deja en una sola.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="normalizeDashes">
-                    <span><strong>Normalizar guiones largos</strong><small>Convierte em dash y en dash a guion simple.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="normalizeQuotes">
+                            <span><strong>Normalizar comillas “raras”</strong><small>Convierte comillas curvas y apóstrofos tipográficos a formato estándar.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="removeEmojis">
-                    <span><strong>Quitar emojis y pictogramas</strong><small>Útil para limpiar texto antes de pegarlo en sistemas delicados.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="normalizeDashes">
+                            <span><strong>Normalizar guiones largos</strong><small>Convierte em dash y en dash a guion simple.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="removeDiacritics">
-                    <span><strong>Quitar tildes y acentos</strong><small>Ejemplo: acción → accion. Útil para slugs o sistemas antiguos.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="removeEmojis">
+                            <span><strong>Quitar emojis y pictogramas</strong><small>Útil para limpiar texto antes de pegarlo en sistemas delicados.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="sortLines">
-                    <span><strong>Ordenar líneas alfabéticamente</strong><small>Ideal para listas, tags o pequeños inventarios.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="removeDiacritics">
+                            <span><strong>Quitar tildes y acentos</strong><small>Ejemplo: acción → accion. Útil para slugs o sistemas antiguos.</small></span>
+                        </label>
 
-                <label>
-                    <input type="checkbox" id="dedupeLines">
-                    <span><strong>Eliminar líneas duplicadas</strong><small>Conserva la primera aparición de cada línea.</small></span>
-                </label>
+                        <label>
+                            <input type="checkbox" id="sortLines">
+                            <span><strong>Ordenar líneas alfabéticamente</strong><small>Ideal para listas, tags o pequeños inventarios.</small></span>
+                        </label>
 
-                <div class="actions">
-                    <button class="primary" id="processBtn">Limpiar texto</button>
-                    <button id="swapBtn">← Pasar a entrada</button>
-                    <button class="danger" id="resetBtn">Vaciar</button>
-                </div>           
-            </section>
+                        <label>
+                            <input type="checkbox" id="dedupeLines">
+                            <span><strong>Eliminar líneas duplicadas</strong><small>Conserva la primera aparición de cada línea.</small></span>
+                        </label>
 
-            <section class="card">
-                <h2>Texto original</h2>
-                <textarea id="input" placeholder="Pega aquí tu texto...">  Hola,   mundo.  
+                        <div class="tool-buttons">
+                            <button class="primary" id="processBtn">Limpiar texto</button>
+                            <button id="swapBtn">← Pasar a entrada</button>
+                            <button class="danger" id="resetBtn">Vaciar</button>
+                        </div>
+
+                        <div class="tool-help">
+                            Ideal para limpiar texto copiado desde Word, Excel, PDF, emails o páginas web antes de reutilizarlo.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Texto original</h2>
+                        <textarea id="input" placeholder="Pega aquí tu texto...">  Hola,   mundo.  
 
 Esto   es   una   prueba.
 
@@ -279,30 +312,135 @@ Línea repetida
 Texto con comillas “curvas” y guiones — raros 😄
 acción, información, útil
         </textarea>
-                <div class="stats">
-                    <div class="stat"><strong id="inChars">0</strong><span class="muted">Caracteres</span></div>
-                    <div class="stat"><strong id="inWords">0</strong><span class="muted">Palabras</span></div>
-                    <div class="stat"><strong id="inLines">0</strong><span class="muted">Líneas</span></div>
-                    <div class="stat"><strong id="inBytes">0</strong><span class="muted">Bytes aprox.</span></div>
-                </div>
-            </section>
+                        <div class="stats">
+                            <div class="stat"><strong id="inChars">0</strong><span class="muted-text">Caracteres</span></div>
+                            <div class="stat"><strong id="inWords">0</strong><span class="muted-text">Palabras</span></div>
+                            <div class="stat"><strong id="inLines">0</strong><span class="muted-text">Líneas</span></div>
+                            <div class="stat"><strong id="inBytes">0</strong><span class="muted-text">Bytes aprox.</span></div>
+                        </div>
+                    </section>
 
-            <section class="card">
-                <h2>Resultado</h2>
-                <textarea id="output" placeholder="Aquí aparecerá el texto limpio..."></textarea>
-                <div class="actions">
-                    <button class="primary" id="copyBtn">Copiar resultado</button>
-                    <button id="downloadBtn">Descargar .txt</button>
+                    <section class="card tool-panel">
+                        <h2>Resultado</h2>
+                        <textarea id="output" placeholder="Aquí aparecerá el texto limpio..."></textarea>
+                        <div class="tool-buttons">
+                            <button class="primary" id="copyBtn">Copiar resultado</button>
+                            <button id="downloadBtn">Descargar .txt</button>
+                        </div>
+                        <div class="stats">
+                            <div class="stat"><strong id="outChars">0</strong><span class="muted-text">Caracteres</span></div>
+                            <div class="stat"><strong id="outWords">0</strong><span class="muted-text">Palabras</span></div>
+                            <div class="stat"><strong id="outLines">0</strong><span class="muted-text">Líneas</span></div>
+                            <div class="stat"><strong id="savedChars">0</strong><span class="muted-text">Caracteres ahorrados</span></div>
+                        </div>
+                    </section>
                 </div>
-                <div class="stats">
-                    <div class="stat"><strong id="outChars">0</strong><span class="muted">Caracteres</span></div>
-                    <div class="stat"><strong id="outWords">0</strong><span class="muted">Palabras</span></div>
-                    <div class="stat"><strong id="outLines">0</strong><span class="muted">Líneas</span></div>
-                    <div class="stat"><strong id="savedChars">0</strong><span class="muted">Caracteres ahorrados</span></div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajar con texto online</h2>
+                        <p>Limpia, formatea y analiza texto fácilmente para copiar, pegar o mejorar contenido en segundos.</p>
+                    </div>
                 </div>
-            </section>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="limpiador-texto.html">Limpiador de texto</a></h3>
+                        <p>Elimina líneas vacías, espacios innecesarios, duplicados y caracteres raros fácilmente.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="quitar-saltos-linea.html">Quitar saltos de línea</a></h3>
+                        <p>Convierte texto con saltos en un bloque limpio para copiar en Word, Excel o email.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras, caracteres y tiempo de lectura de forma rápida y online.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="formatear-whatsapp.html">Formatear texto para WhatsApp</a></h3>
+                        <p>Convierte texto en negrita, cursiva o tachado listo para copiar y enviar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Limpiar texto online</h2>
+                    <p>
+                        Esta herramienta te permite limpiar texto online gratis directamente desde el navegador.
+                        Puedes corregir contenido copiado desde correos, PDFs, documentos o páginas web y dejarlo listo para pegar en Excel, Word o cualquier otro sistema.
+                    </p>
+
+                    <h2>¿Qué puedes hacer con este limpiador de texto?</h2>
+                    <p>
+                        Puedes eliminar espacios dobles, quitar líneas vacías, borrar duplicados, normalizar comillas y guiones,
+                        eliminar emojis y limpiar caracteres extraños que suelen aparecer al copiar y pegar texto.
+                    </p>
+
+                    <h2>Usos habituales</h2>
+                    <p>
+                        Es útil para preparar texto para Excel, Word, formularios, correos electrónicos y sistemas que no aceptan bien formatos raros.
+                    </p>
+
+                    <h2>Ventajas de limpiar texto antes de usarlo</h2>
+                    <p>
+                        Un texto limpio reduce errores, mejora la legibilidad y evita problemas al importar datos o procesar contenido en otros sistemas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué hace este limpiador de texto?</summary>
+                        <p>Permite eliminar espacios innecesarios, líneas vacías, duplicados, emojis y otros caracteres extra para dejar el texto listo para copiar y pegar.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en el navegador o sube mi texto a un servidor?</summary>
+                        <p>Todo se procesa en tu navegador. El contenido no se envía a servidores externos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para texto copiado desde Excel, Word o PDF?</summary>
+                        <p>Sí. Es especialmente útil para limpiar texto copiado desde documentos, correos o tablas antes de reutilizarlo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo descargar el resultado en un archivo?</summary>
+                        <p>Sí. Puedes copiar el resultado o descargarlo como archivo TXT.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
         </div>
-    </div>
+    </footer>
 
     <script>
         const $ = (id) => document.getElementById(id);
@@ -383,9 +521,8 @@ acción, información, útil
             if ($('dedupeLines').checked) {
                 const seen = new Set();
                 lines = lines.filter(line => {
-                    const key = line;
-                    if (seen.has(key)) return false;
-                    seen.add(key);
+                    if (seen.has(line)) return false;
+                    seen.add(line);
                     return true;
                 });
             }
@@ -448,29 +585,5 @@ acción, información, útil
 
         processText();
     </script>
-    <section class="seo-content">
-        <div class="seo-box">
-            <h2>Limpiar texto online</h2>
-            <p>
-                Esta herramienta te permite limpiar texto online gratis directamente desde el navegador.
-                Puedes corregir contenido copiado desde correos, PDFs, documentos o páginas web y dejarlo listo para pegar en Excel, Word o cualquier otro sistema.
-            </p>
-
-            <h2>¿Qué puedes hacer con este limpiador de texto?</h2>
-            <p>
-                Puedes eliminar espacios dobles, quitar líneas vacías, borrar duplicados, normalizar comillas y guiones,
-                eliminar emojis y limpiar caracteres extraños que suelen aparecer al copiar y pegar texto.
-            </p>
-
-            <h2>Usos habituales</h2>
-            <p>
-                Es útil para preparar texto para Excel, Word, formularios, correos electrónicos y sistemas que no aceptan bien formatos raros.
-            </p>
-
-            <h2>Ventajas de limpiar texto antes de usarlo</h2>
-            <p>
-                Un texto limpio reduce errores, mejora la legibilidad y evita problemas al importar datos o procesar contenido en otros sistemas.
-            </p>
-        </div>
-    </section>
+</body>
 </html>

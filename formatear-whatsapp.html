@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Formateador de texto para WhatsApp online | Negrita, cursiva y tachado | ToolsRapidas</title>
+    <meta name="description" content="Da formato a texto para WhatsApp online. Convierte texto en negrita, cursiva, tachado o monoespaciado gratis y al instante.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/formatear-whatsapp.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Formateador de texto para WhatsApp | ToolsRapidas">
+    <meta property="og:description" content="Convierte texto en negrita, cursiva, tachado o monoespaciado para WhatsApp.">
+    <meta property="og:url" content="https://toolsrapidas.com/formatear-whatsapp.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Formateador de texto para WhatsApp | ToolsRapidas" />
+    <meta name="twitter:description" content="Convierte texto en negrita, cursiva, tachado o monoespaciado para WhatsApp." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Formateador de texto para WhatsApp online",
+          "url": "https://toolsrapidas.com/formatear-whatsapp.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte texto en negrita, cursiva, tachado o monoespaciado para WhatsApp online gratis."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 430px;
+            resize: vertical;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+            textarea:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+            }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+                .tool-buttons button.danger {
+                    background: #ef4444;
+                    color: #fff;
+                }
+
+        .preset-list {
+            display: grid;
+            gap: 10px;
+        }
+
+            .preset-list button {
+                text-align: left;
+            }
+
+            .preset-list strong {
+                display: block;
+                margin-bottom: 4px;
+            }
+
+        .muted-text {
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .stat {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+            .stat strong {
+                display: block;
+                font-size: 22px;
+                margin-bottom: 4px;
+            }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 280px;
+            }
+        }
+
+        .preset-list {
+            display: grid;
+            gap: 10px;
+        }
+
+            .preset-list button {
+                text-align: left;
+                width: 100%;
+                border: 1px solid rgba(148,163,184,.14);
+                border-radius: 12px;
+                padding: 14px;
+                background: #0b1220;
+                color: var(--text);
+                cursor: pointer;
+                transition: .2s ease;
+            }
+
+                .preset-list button:hover {
+                    border-color: rgba(56,189,248,.35);
+                    background: rgba(255,255,255,.02);
+                    transform: translateY(-1px);
+                }
+
+            .preset-list strong {
+                display: block;
+                margin-bottom: 4px;
+                color: var(--text);
+            }
+
+            .preset-list .muted-text {
+                color: var(--muted);
+                line-height: 1.5;
+            }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Formateador de texto para WhatsApp</h1>
+            <p class="tool-lead">
+                Convierte texto normal en negrita, cursiva, tachado o monoespaciado para pegarlo en WhatsApp de forma rápida y sencilla.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Opciones rápidas</h2>
+
+                        <div class="preset-list">
+                            <button id="boldBtn">
+                                <strong>Negrita</strong>
+                                <span class="muted-text">Ejemplo: *texto*</span>
+                            </button>
+
+                            <button id="italicBtn">
+                                <strong>Cursiva</strong>
+                                <span class="muted-text">Ejemplo: _texto_</span>
+                            </button>
+
+                            <button id="strikeBtn">
+                                <strong>Tachado</strong>
+                                <span class="muted-text">Ejemplo: ~texto~</span>
+                            </button>
+
+                            <button id="monoBtn">
+                                <strong>Monoespaciado</strong>
+                                <span class="muted-text">Ejemplo: ```texto```</span>
+                            </button>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="copyBtn">Copiar resultado</button>
+                            <button id="swapBtn">← Pasar a entrada</button>
+                            <button class="danger" id="resetBtn">Vaciar</button>
+                        </div>
+
+                        <div class="stats">
+                            <div class="stat">
+                                <strong id="inChars">0</strong>
+                                <span class="muted-text">Caracteres entrada</span>
+                            </div>
+                            <div class="stat">
+                                <strong id="outChars">0</strong>
+                                <span class="muted-text">Caracteres resultado</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-help">
+                            Ideal para resaltar mensajes importantes, crear textos más claros o dar formato a publicaciones y respuestas en WhatsApp.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Texto original</h2>
+                        <textarea id="input" placeholder="Escribe aquí tu texto...">Mensaje importante para el grupo</textarea>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultado</h2>
+                        <textarea id="output" placeholder="Aquí aparecerá el texto con formato..."></textarea>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para redes sociales y WhatsApp</h2>
+                        <p>Mejora tus textos, crea contenido viral y optimiza publicaciones para redes sociales fácilmente.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="formatear-whatsapp.html">Formatear texto para WhatsApp</a></h3>
+                        <p>Convierte texto en negrita, cursiva o tachado listo para copiar y enviar.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="texto-invisible-whatsapp.html">Texto invisible para WhatsApp</a></h3>
+                        <p>Genera caracteres invisibles para enviar mensajes vacíos o crear separaciones.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="letras-raras.html">Generador de letras raras</a></h3>
+                        <p>Transforma texto en estilos llamativos para Instagram, TikTok y otras redes.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-caracteres-redes.html">Contador de caracteres para redes</a></h3>
+                        <p>Controla límites de Instagram, X o TikTok antes de publicar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Dar formato a texto para WhatsApp online</h2>
+                    <p>
+                        Esta herramienta te permite convertir texto normal en negrita, cursiva, tachado o monoespaciado para usarlo en WhatsApp.
+                        Solo tienes que escribir tu mensaje, elegir el formato y copiar el resultado.
+                    </p>
+
+                    <h2>Formatos compatibles con WhatsApp</h2>
+                    <p>
+                        WhatsApp permite usar negrita con asteriscos, cursiva con guiones bajos, tachado con virgulillas
+                        y monoespaciado con triples comillas invertidas.
+                    </p>
+
+                    <h2>¿Para qué sirve?</h2>
+                    <p>
+                        Es útil para resaltar partes importantes de un mensaje, mejorar la presentación de textos
+                        y dar más claridad a conversaciones personales o profesionales.
+                    </p>
+
+                    <h2>Ventajas de usar formato en tus mensajes</h2>
+                    <p>
+                        Aplicar formato ayuda a destacar información importante, hacer mensajes más claros y mejorar la legibilidad en chats personales, de trabajo o grupos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué formatos puedo usar en WhatsApp?</summary>
+                        <p>Puedes aplicar negrita, cursiva, tachado y monoespaciado usando los símbolos compatibles con WhatsApp.</p>
+                    </details>
+                    <details>
+                        <summary>¿Tengo que instalar algo?</summary>
+                        <p>No. La herramienta funciona directamente en el navegador, sin instalar programas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar el resultado con un clic?</summary>
+                        <p>Sí. Puedes generar el texto con formato y copiarlo al instante para pegarlo en WhatsApp.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona también en móvil?</summary>
+                        <p>Sí. Está preparada para usarse tanto en escritorio como en móviles y tablets.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        const inChars = document.getElementById('inChars');
+        const outChars = document.getElementById('outChars');
+
+        function updateStats() {
+            inChars.textContent = input.value.length;
+            outChars.textContent = output.value.length;
+        }
+
+        function wrapText(before, after = before) {
+            const text = input.value.trim();
+            output.value = text ? `${before}${text}${after}` : '';
+            updateStats();
+        }
+
+        document.getElementById('boldBtn').addEventListener('click', () => wrapText('*'));
+        document.getElementById('italicBtn').addEventListener('click', () => wrapText('_'));
+        document.getElementById('strikeBtn').addEventListener('click', () => wrapText('~'));
+        document.getElementById('monoBtn').addEventListener('click', () => wrapText('```', '```'));
+
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            try {
+                await navigator.clipboard.writeText(output.value);
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Copiado';
+                setTimeout(() => btn.textContent = 'Copiar resultado', 1200);
+            } catch {
+                output.select();
+                document.execCommand('copy');
+            }
+        });
+
+        document.getElementById('swapBtn').addEventListener('click', () => {
+            input.value = output.value;
+            output.value = '';
+            updateStats();
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            input.value = '';
+            output.value = '';
+            updateStats();
+            input.focus();
+        });
+
+        input.addEventListener('input', updateStats);
+        updateStats();
+    </script>
+</body>
+</html>

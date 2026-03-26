@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -8,99 +8,348 @@
     <meta name="description" content="Cuenta palabras, caracteres, líneas y tiempo de lectura online gratis.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/contador-palabras.html">
+    <meta name="theme-color" content="#08111f">
 
     <meta property="og:title" content="Contador de palabras online | ToolsRapidas">
     <meta property="og:description" content="Cuenta palabras y caracteres fácilmente.">
     <meta property="og:url" content="https://toolsrapidas.com/contador-palabras.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contador de palabras online | ToolsRapidas" />
+    <meta name="twitter:description" content="Cuenta palabras y caracteres fácilmente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Contador de palabras y caracteres online",
+          "url": "https://toolsrapidas.com/contador-palabras.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Cuenta palabras, caracteres, líneas y tiempo de lectura online gratis directamente desde el navegador."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Inter,system-ui;
-            background: #0f172a;
-            color: #e5e7eb;
-            padding: 20px;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        .wrap {
-            max-width: 900px;
-            margin: auto;
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
         }
 
         textarea {
             width: 100%;
-            height: 300px;
-            background: #111827;
-            color: white;
-            border: 1px solid #334155;
-            border-radius: 10px;
-            padding: 10px;
+            min-height: 320px;
+            resize: vertical;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
         }
 
-        .stats {
+            textarea:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .stats-grid {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-            margin-top: 15px;
+            margin-top: 16px;
         }
 
-        .card {
-            background: #111827;
-            padding: 15px;
-            border-radius: 10px;
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
             text-align: center;
         }
 
-        h1 {
-            margin-bottom: 10px;
+            .stat-card strong {
+                display: block;
+                font-size: 24px;
+                margin-bottom: 6px;
+            }
+
+            .stat-card span {
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 260px;
+            }
         }
     </style>
 </head>
-
 <body>
-    <div class="wrap">
-        <h1>Contador de palabras</h1>
-
-<textarea id="text" placeholder="Escribe o pega tu texto aquí..."></textarea>
-
-        <div class="stats">
-            <div class="card"><strong id="words">0</strong><br>Palabras</div>
-            <div class="card"><strong id="chars">0</strong><br>Caracteres</div>
-            <div class="card"><strong id="charsNoSpace">0</strong><br>Sin espacios</div>
-            <div class="card"><strong id="lines">0</strong><br>Líneas</div>
-            <div class="card"><strong id="reading">0 min</strong><br>Lectura</div>
-            <div class="card"><strong id="speaking">0 min</strong><br>Habla</div>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
         </div>
+    </nav>
 
-    </div>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Contador de palabras y caracteres</h1>
+            <p class="tool-lead">
+                Cuenta palabras, caracteres, líneas y tiempos aproximados de lectura o habla online. Ideal para redactar, estudiar o preparar contenido.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-single">
+                    <section class="card tool-panel">
+                        <h2>Texto</h2>
+
+                        <textarea id="text" placeholder="Escribe o pega tu texto aquí..."></textarea>
+
+                        <div class="tool-help">
+                            Útil para artículos, trabajos, descripciones SEO, emails, documentos o publicaciones en redes sociales.
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <strong id="words">0</strong>
+                                <span>Palabras</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="chars">0</strong>
+                                <span>Caracteres</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="charsNoSpace">0</strong>
+                                <span>Sin espacios</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="lines">0</strong>
+                                <span>Líneas</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="reading">0 min</strong>
+                                <span>Lectura</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="speaking">0 min</strong>
+                                <span>Habla</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajar con texto online</h2>
+                        <p>Limpia, formatea y analiza texto fácilmente para copiar, pegar o mejorar contenido en segundos.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="limpiador-texto.html">Limpiador de texto</a></h3>
+                        <p>Elimina líneas vacías, espacios innecesarios, duplicados y caracteres raros fácilmente.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="quitar-saltos-linea.html">Quitar saltos de línea</a></h3>
+                        <p>Convierte texto con saltos en un bloque limpio para copiar en Word, Excel o email.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras, caracteres y tiempo de lectura de forma rápida y online.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="formatear-whatsapp.html">Formatear texto para WhatsApp</a></h3>
+                        <p>Convierte texto en negrita, cursiva o tachado listo para copiar y enviar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Contador de palabras online</h2>
+                    <p>
+                        Esta herramienta te permite contar palabras, caracteres, líneas y tiempos aproximados de lectura o habla online gratis directamente desde el navegador.
+                    </p>
+
+                    <h2>¿Para qué sirve un contador de palabras?</h2>
+                    <p>
+                        Es útil para redactar artículos, trabajos, textos SEO, descripciones, documentos o publicaciones donde necesitas controlar la longitud exacta del contenido.
+                    </p>
+
+                    <h2>Qué puedes medir</h2>
+                    <p>
+                        Puedes ver el número de palabras, caracteres totales, caracteres sin espacios, líneas y una estimación del tiempo de lectura y de habla.
+                    </p>
+
+                    <h2>Ventajas de usar esta herramienta</h2>
+                    <p>
+                        Todo el cálculo se hace en tu navegador, sin instalar programas y sin enviar tu texto a servidores externos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué mide este contador?</summary>
+                        <p>Mide palabras, caracteres, caracteres sin espacios, líneas y tiempos aproximados de lectura y habla.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para SEO o redacción?</summary>
+                        <p>Sí. Es útil para controlar la longitud de títulos, descripciones, textos SEO, artículos y contenidos en general.</p>
+                    </details>
+                    <details>
+                        <summary>¿El texto se sube a un servidor?</summary>
+                        <p>No. Todo el procesamiento se realiza directamente en tu navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para escritorio, móvil y tablet.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
 
     <script>
-const text=document.getElementById("text");
+        const text = document.getElementById("text");
 
-text.addEventListener("input",update);
+        text.addEventListener("input", update);
 
-function update(){
-let value=text.value;
+        function update() {
+            let value = text.value;
 
-let words=value.trim().match(/\S+/g);
-words=words?words.length:0;
+            let words = value.trim().match(/\S+/g);
+            words = words ? words.length : 0;
 
-let chars=value.length;
-let charsNoSpace=value.replace(/\s/g,"").length;
-let lines=value.split(/\n/).length;
+            let chars = value.length;
+            let charsNoSpace = value.replace(/\s/g, "").length;
+            let lines = value ? value.split(/\n/).length : 0;
 
-let reading=Math.ceil(words/200);
-let speaking=Math.ceil(words/130);
+            let reading = Math.ceil(words / 200);
+            let speaking = Math.ceil(words / 130);
 
-document.getElementById("words").textContent=words;
-document.getElementById("chars").textContent=chars;
-document.getElementById("charsNoSpace").textContent=charsNoSpace;
-document.getElementById("lines").textContent=lines;
-document.getElementById("reading").textContent=reading+" min";
-document.getElementById("speaking").textContent=speaking+" min";
-}
+            document.getElementById("words").textContent = words;
+            document.getElementById("chars").textContent = chars;
+            document.getElementById("charsNoSpace").textContent = charsNoSpace;
+            document.getElementById("lines").textContent = lines;
+            document.getElementById("reading").textContent = reading + " min";
+            document.getElementById("speaking").textContent = speaking + " min";
+        }
+
+        update();
     </script>
-
 </body>
 </html>

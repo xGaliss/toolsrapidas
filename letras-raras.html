@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -8,86 +8,125 @@
     <meta name="description" content="Convierte texto normal en letras raras y fancy text para Instagram, TikTok, WhatsApp y más. Copia y pega al instante.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/letras-raras.html">
+    <meta name="theme-color" content="#08111f">
 
     <meta property="og:title" content="Generador de letras raras | ToolsRapidas">
     <meta property="og:description" content="Crea fancy text para Instagram, TikTok y WhatsApp fácilmente.">
     <meta property="og:url" content="https://toolsrapidas.com/letras-raras.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
-    <meta name="theme-color" content="#0f172a">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de letras raras | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea fancy text para Instagram, TikTok y WhatsApp fácilmente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de letras raras online",
+          "url": "https://toolsrapidas.com/letras-raras.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte texto normal en letras raras y fancy text para Instagram, TikTok, WhatsApp y más."
+        }
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-984EW75R9H');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
     </script>
 
     <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #111827;
-            --border: #334155;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
-            margin: 0;
-            font-family: Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-            background: linear-gradient(180deg,#0b1220 0%,#111827 100%);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        .wrap {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 24px
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(28px,4vw,42px)
-        }
-
-        .sub {
+        .tool-lead {
             color: var(--muted);
-            margin-bottom: 24px;
-            line-height: 1.5
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
         }
 
-        .card {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
-            margin-bottom: 18px;
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
         }
 
         textarea {
             width: 100%;
             min-height: 120px;
             resize: vertical;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.14);
             border-radius: 14px;
             background: #0b1220;
             color: var(--text);
             padding: 14px;
-            font: 15px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+            font: 15px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
             outline: none;
+        }
+
+            textarea:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+            }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
         }
 
         .variant {
             background: #0b1220;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.12);
             border-radius: 14px;
             padding: 14px;
             margin-top: 12px;
@@ -102,160 +141,265 @@ gtag('config', 'G-984EW75R9H');
         }
 
         .variant-name {
-            font-weight: 700
+            font-weight: 700;
+        }
+
+        .variant-top button {
+            border: 0;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-weight: 700;
+            cursor: pointer;
+            background: #162033;
+            color: var(--text);
         }
 
         .result {
             word-break: break-word;
             line-height: 1.7;
             color: var(--text);
+            font-size: 18px;
         }
 
-        button {
-            border: 0;
-            border-radius: 12px;
-            padding: 10px 14px;
-            font-weight: 600;
-            cursor: pointer;
-            background: #1f2937;
-            color: var(--text);
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
         }
 
-            button.primary {
-                background: var(--accent);
-                color: #052e16
-            }
-
-        .seo-content {
-            max-width: 1100px;
-            margin: 40px auto 0;
-            padding: 0 24px 48px
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
         }
 
-        .seo-box {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .related-tools .card p {
+            margin: 0;
         }
-
-            .seo-box h2 {
-                margin: 0 0 12px;
-                font-size: clamp(24px,3vw,32px)
-            }
-
-            .seo-box p {
-                margin: 0 0 20px;
-                color: var(--muted);
-                line-height: 1.7;
-                max-width: 900px
-            }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Generador de letras raras</h1>
-        <div class="sub">Convierte texto normal en estilos fancy para Instagram, TikTok, WhatsApp o bios.</div>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
 
-        <section class="card">
-            <h2>Texto original</h2>
-<textarea id="input" placeholder="Escribe aquí tu texto...">ToolsRapidas</textarea>
-            <div style="margin-top:14px;">
-                <button class="primary" id="generateBtn">Generar estilos</button>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de letras raras</h1>
+            <p class="tool-lead">
+                Convierte texto normal en estilos fancy para Instagram, TikTok, WhatsApp, bios, nombres y publicaciones.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Texto original</h2>
+                        <textarea id="input" placeholder="Escribe aquí tu texto...">ToolsRapidas</textarea>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="generateBtn">Generar estilos</button>
+                        </div>
+
+                        <div class="tool-help">
+                            Escribe tu texto, genera variantes decorativas y copia la que más te guste para usarla en redes sociales, mensajes o perfiles.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultados</h2>
+                        <div id="results"></div>
+                    </section>
+                </div>
             </div>
         </section>
 
-        <section class="card">
-            <h2>Resultados</h2>
-            <div id="results"></div>
-        </section>
-    </div>
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para redes sociales y WhatsApp</h2>
+                        <p>Mejora tus textos, crea contenido viral y optimiza publicaciones para redes sociales fácilmente.</p>
+                    </div>
+                </div>
 
-    <section class="seo-content">
-        <div class="seo-box">
-            <h2>Generador de fancy text online</h2>
-            <p>Esta herramienta convierte texto normal en letras raras y estilos decorativos para redes sociales, perfiles, nombres y mensajes.</p>
-            <h2>¿Para qué sirve?</h2>
-            <p>Sirve para crear biografías más llamativas en Instagram, nombres diferentes en TikTok o mensajes con estilo en WhatsApp y otras apps.</p>
-            <h2>Cómo usarlo</h2>
-            <p>Escribe tu texto, genera los estilos y copia el que más te guste para pegarlo donde quieras.</p>
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="formatear-whatsapp.html">Formatear texto para WhatsApp</a></h3>
+                        <p>Convierte texto en negrita, cursiva o tachado listo para copiar y enviar.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="texto-invisible-whatsapp.html">Texto invisible para WhatsApp</a></h3>
+                        <p>Genera caracteres invisibles para enviar mensajes vacíos o crear separaciones.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="letras-raras.html">Generador de letras raras</a></h3>
+                        <p>Transforma texto en estilos llamativos para Instagram, TikTok y otras redes.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-caracteres-redes.html">Contador de caracteres para redes</a></h3>
+                        <p>Controla límites de Instagram, X o TikTok antes de publicar.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Generador de fancy text online</h2>
+                    <p>
+                        Esta herramienta convierte texto normal en letras raras y estilos decorativos para redes sociales, perfiles, nombres y mensajes.
+                    </p>
+
+                    <h2>¿Para qué sirve?</h2>
+                    <p>
+                        Sirve para crear biografías más llamativas en Instagram, nombres diferentes en TikTok o mensajes con estilo en WhatsApp y otras apps.
+                    </p>
+
+                    <h2>Cómo usarlo</h2>
+                    <p>
+                        Escribe tu texto, genera los estilos y copia el que más te guste para pegarlo donde quieras.
+                    </p>
+
+                    <h2>Ventajas de usar letras raras</h2>
+                    <p>
+                        Ayudan a destacar nombres, bios, publicaciones o mensajes y a diferenciar tu contenido en redes sociales y apps de mensajería.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué hace este generador de letras raras?</summary>
+                        <p>Convierte texto normal en varios estilos Unicode decorativos para copiar y pegar en redes sociales, perfiles y mensajes.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en Instagram, TikTok y WhatsApp?</summary>
+                        <p>Sí. Muchos de los estilos generados son compatibles con Instagram, TikTok, WhatsApp y otras plataformas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Tengo que instalar algo?</summary>
+                        <p>No. La herramienta funciona directamente desde el navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar cada estilo por separado?</summary>
+                        <p>Sí. Cada variante tiene su propio botón para copiar rápidamente el texto generado.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
         </div>
-    </section>
+    </footer>
 
     <script>
-const input = document.getElementById('input');
-const results = document.getElementById('results');
+        const input = document.getElementById('input');
+        const results = document.getElementById('results');
 
-const maps = {
-  "Negrita Unicode": {
-    a:"𝗮",b:"𝗯",c:"𝗰",d:"𝗱",e:"𝗲",f:"𝗳",g:"𝗴",h:"𝗵",i:"𝗶",j:"𝗷",k:"𝗸",l:"𝗹",m:"𝗺",n:"𝗻",o:"𝗼",p:"𝗽",q:"𝗾",r:"𝗿",s:"𝘀",t:"𝘁",u:"𝘂",v:"𝘃",w:"𝘄",x:"𝘅",y:"𝘆",z:"𝘇",
-    A:"𝗔",B:"𝗕",C:"𝗖",D:"𝗗",E:"𝗘",F:"𝗙",G:"𝗚",H:"𝗛",I:"𝗜",J:"𝗝",K:"𝗞",L:"𝗟",M:"𝗠",N:"𝗡",O:"𝗢",P:"𝗣",Q:"𝗤",R:"𝗥",S:"𝗦",T:"𝗧",U:"𝗨",V:"𝗩",W:"𝗪",X:"𝗫",Y:"𝗬",Z:"𝗭"
-  },
-  "Cursiva Unicode": {
-    a:"𝘢",b:"𝘣",c:"𝘤",d:"𝘥",e:"𝘦",f:"𝘧",g:"𝘨",h:"𝘩",i:"𝘪",j:"𝘫",k:"𝘬",l:"𝘭",m:"𝘮",n:"𝘯",o:"𝘰",p:"𝘱",q:"𝘲",r:"𝘳",s:"𝘴",t:"𝘵",u:"𝘶",v:"𝘷",w:"𝘸",x:"𝘹",y:"𝘺",z:"𝘻",
-    A:"𝘈",B:"𝘉",C:"𝘊",D:"𝘋",E:"𝘌",F:"𝘍",G:"𝘎",H:"𝘏",I:"𝘐",J:"𝘑",K:"𝘒",L:"𝘓",M:"𝘔",N:"𝘕",O:"𝘖",P:"𝘗",Q:"𝘘",R:"𝘙",S:"𝘚",T:"𝘛",U:"𝘜",V:"𝘝",W:"𝘞",X:"𝘟",Y:"𝘠",Z:"𝘡"
-  },
-  "Monospace": {
-    a:"𝚊",b:"𝚋",c:"𝚌",d:"𝚍",e:"𝚎",f:"𝚏",g:"𝚐",h:"𝚑",i:"𝚒",j:"𝚓",k:"𝚔",l:"𝚕",m:"𝚖",n:"𝚗",o:"𝚘",p:"𝚙",q:"𝚚",r:"𝚛",s:"𝚜",t:"𝚝",u:"𝚞",v:"𝚟",w:"𝚠",x:"𝚡",y:"𝚢",z:"𝚣",
-    A:"𝙰",B:"𝙱",C:"𝙲",D:"𝙳",E:"𝙴",F:"𝙵",G:"𝙶",H:"𝙷",I:"𝙸",J:"𝙹",K:"𝙺",L:"𝙻",M:"𝙼",N:"𝙽",O:"𝙾",P:"𝙿",Q:"𝚀",R:"𝚁",S:"𝚂",T:"𝚃",U:"𝚄",V:"𝚅",W:"𝚆",X:"𝚇",Y:"𝚈",Z:"𝚉"
-  }
-};
+        const maps = {
+            "Negrita Unicode": {
+                a: "𝗮", b: "𝗯", c: "𝗰", d: "𝗱", e: "𝗲", f: "𝗳", g: "𝗴", h: "𝗵", i: "𝗶", j: "𝗷", k: "𝗸", l: "𝗹", m: "𝗺", n: "𝗻", o: "𝗼", p: "𝗽", q: "𝗾", r: "𝗿", s: "𝘀", t: "𝘁", u: "𝘂", v: "𝘃", w: "𝘄", x: "𝘅", y: "𝘆", z: "𝘇",
+                A: "𝗔", B: "𝗕", C: "𝗖", D: "𝗗", E: "𝗘", F: "𝗙", G: "𝗚", H: "𝗛", I: "𝗜", J: "𝗝", K: "𝗞", L: "𝗟", M: "𝗠", N: "𝗡", O: "𝗢", P: "𝗣", Q: "𝗤", R: "𝗥", S: "𝗦", T: "𝗧", U: "𝗨", V: "𝗩", W: "𝗪", X: "𝗫", Y: "𝗬", Z: "𝗭"
+            },
+            "Cursiva Unicode": {
+                a: "𝘢", b: "𝘣", c: "𝘤", d: "𝘥", e: "𝘦", f: "𝘧", g: "𝘨", h: "𝘩", i: "𝘪", j: "𝘫", k: "𝘬", l: "𝘭", m: "𝘮", n: "𝘯", o: "𝘰", p: "𝘱", q: "𝘲", r: "𝘳", s: "𝘴", t: "𝘵", u: "𝘶", v: "𝘷", w: "𝘸", x: "𝘹", y: "𝘺", z: "𝘻",
+                A: "𝘈", B: "𝘉", C: "𝘊", D: "𝘋", E: "𝘌", F: "𝘍", G: "𝘎", H: "𝘏", I: "𝘐", J: "𝘑", K: "𝘒", L: "𝘓", M: "𝘔", N: "𝘕", O: "𝘖", P: "𝘗", Q: "𝘘", R: "𝘙", S: "𝘚", T: "𝘛", U: "𝘜", V: "𝘝", W: "𝘞", X: "𝘟", Y: "𝘠", Z: "𝘡"
+            },
+            "Monospace": {
+                a: "𝚊", b: "𝚋", c: "𝚌", d: "𝚍", e: "𝚎", f: "𝚏", g: "𝚐", h: "𝚑", i: "𝚒", j: "𝚓", k: "𝚔", l: "𝚕", m: "𝚖", n: "𝚗", o: "𝚘", p: "𝚙", q: "𝚚", r: "𝚛", s: "𝚜", t: "𝚝", u: "𝚞", v: "𝚟", w: "𝚠", x: "𝚡", y: "𝚢", z: "𝚣",
+                A: "𝙰", B: "𝙱", C: "𝙲", D: "𝙳", E: "𝙴", F: "𝙵", G: "𝙶", H: "𝙷", I: "𝙸", J: "𝙹", K: "𝙺", L: "𝙻", M: "𝙼", N: "𝙽", O: "𝙾", P: "𝙿", Q: "𝚀", R: "𝚁", S: "𝚂", T: "𝚃", U: "𝚄", V: "𝚅", W: "𝚆", X: "𝚇", Y: "𝚈", Z: "𝚉"
+            }
+        };
 
-function transform(text, map){
-  return [...text].map(ch => map[ch] || ch).join('');
-}
+        function transform(text, map) {
+            return [...text].map(ch => map[ch] || ch).join('');
+        }
 
-function spaced(text){
-  return [...text].join(' ');
-}
+        function spaced(text) {
+            return [...text].join(' ');
+        }
 
-function bubble(text){
-  const m = {
-    a:"ⓐ",b:"ⓑ",c:"ⓒ",d:"ⓓ",e:"ⓔ",f:"ⓕ",g:"ⓖ",h:"ⓗ",i:"ⓘ",j:"ⓙ",k:"ⓚ",l:"ⓛ",m:"ⓜ",n:"ⓝ",o:"ⓞ",p:"ⓟ",q:"ⓠ",r:"ⓡ",s:"ⓢ",t:"ⓣ",u:"ⓤ",v:"ⓥ",w:"ⓦ",x:"ⓧ",y:"ⓨ",z:"ⓩ",
-    A:"Ⓐ",B:"Ⓑ",C:"Ⓒ",D:"Ⓓ",E:"Ⓔ",F:"Ⓕ",G:"Ⓖ",H:"Ⓗ",I:"Ⓘ",J:"Ⓙ",K:"Ⓚ",L:"Ⓛ",M:"Ⓜ",N:"Ⓝ",O:"Ⓞ",P:"Ⓟ",Q:"Ⓠ",R:"Ⓡ",S:"Ⓢ",T:"Ⓣ",U:"Ⓤ",V:"Ⓥ",W:"Ⓦ",X:"Ⓧ",Y:"Ⓨ",Z:"Ⓩ"
-  };
-  return [...text].map(ch => m[ch] || ch).join('');
-}
+        function bubble(text) {
+            const m = {
+                a: "ⓐ", b: "ⓑ", c: "ⓒ", d: "ⓓ", e: "ⓔ", f: "ⓕ", g: "ⓖ", h: "ⓗ", i: "ⓘ", j: "ⓙ", k: "ⓚ", l: "ⓛ", m: "ⓜ", n: "ⓝ", o: "ⓞ", p: "ⓟ", q: "ⓠ", r: "ⓡ", s: "ⓢ", t: "ⓣ", u: "ⓤ", v: "ⓥ", w: "ⓦ", x: "ⓧ", y: "ⓨ", z: "ⓩ",
+                A: "Ⓐ", B: "Ⓑ", C: "Ⓒ", D: "Ⓓ", E: "Ⓔ", F: "Ⓕ", G: "Ⓖ", H: "Ⓗ", I: "Ⓘ", J: "Ⓙ", K: "Ⓚ", L: "Ⓛ", M: "Ⓜ", N: "Ⓝ", O: "Ⓞ", P: "Ⓟ", Q: "Ⓠ", R: "Ⓡ", S: "Ⓢ", T: "Ⓣ", U: "Ⓤ", V: "Ⓥ", W: "Ⓦ", X: "Ⓧ", Y: "Ⓨ", Z: "Ⓩ"
+            };
+            return [...text].map(ch => m[ch] || ch).join('');
+        }
 
-function makeVariants(text){
-  return [
-    ["Negrita Unicode", transform(text, maps["Negrita Unicode"])],
-    ["Cursiva Unicode", transform(text, maps["Cursiva Unicode"])],
-    ["Monospace", transform(text, maps["Monospace"])],
-    ["Espaciado", spaced(text)],
-    ["Círculos", bubble(text)]
-  ];
-}
+        function makeVariants(text) {
+            return [
+                ["Negrita Unicode", transform(text, maps["Negrita Unicode"])],
+                ["Cursiva Unicode", transform(text, maps["Cursiva Unicode"])],
+                ["Monospace", transform(text, maps["Monospace"])],
+                ["Espaciado", spaced(text)],
+                ["Círculos", bubble(text)]
+            ];
+        }
 
-function render(){
-  const text = input.value || "";
-  const variants = makeVariants(text);
-  results.innerHTML = "";
+        function render() {
+            const text = input.value || "";
+            const variants = makeVariants(text);
+            results.innerHTML = "";
 
-  variants.forEach(([name, value]) => {
-    const item = document.createElement("div");
-    item.className = "variant";
-    item.innerHTML = `
-      <div class="variant-top">
-        <div class="variant-name">${name}</div>
-        <button type="button">Copiar</button>
-      </div>
-      <div class="result">${value}</div>
-    `;
-    item.querySelector("button").addEventListener("click", async () => {
-      try{
-        await navigator.clipboard.writeText(value);
-        item.querySelector("button").textContent = "Copiado";
-        setTimeout(() => item.querySelector("button").textContent = "Copiar", 1000);
-      }catch{}
-    });
-    results.appendChild(item);
-  });
-}
+            variants.forEach(([name, value]) => {
+                const item = document.createElement("div");
+                item.className = "variant";
+                item.innerHTML = `
+                  <div class="variant-top">
+                    <div class="variant-name">${name}</div>
+                    <button type="button">Copiar</button>
+                  </div>
+                  <div class="result">${value}</div>
+                `;
+                item.querySelector("button").addEventListener("click", async () => {
+                    try {
+                        await navigator.clipboard.writeText(value);
+                        item.querySelector("button").textContent = "Copiado";
+                        setTimeout(() => item.querySelector("button").textContent = "Copiar", 1000);
+                    } catch { }
+                });
+                results.appendChild(item);
+            });
+        }
 
-document.getElementById("generateBtn").addEventListener("click", render);
-render();
+        document.getElementById("generateBtn").addEventListener("click", render);
+        render();
     </script>
 </body>
 </html>

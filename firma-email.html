@@ -3,75 +3,88 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Generador de firma de email online gratis | Outlook y Gmail | ToolsRapidas</title>
     <meta name="description" content="Crea firmas de email profesionales online gratis para Outlook y Gmail. Copia y descarga en segundos.">
+    <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://toolsrapidas.com/firma-email.html">
+    <meta name="theme-color" content="#08111f" />
+
     <meta property="og:title" content="Generador de firma de email | ToolsRapidas">
     <meta property="og:description" content="Crea firmas de email profesionales fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/firma-email.html">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de firma de email | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea firmas de email profesionales fácilmente." />
+
     <link rel="icon" href="/favicon.ico">
-    <!-- Google tag (gtag.js) -->
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de firma de email online",
+          "url": "https://toolsrapidas.com/firma-email.html",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Crea firmas de email profesionales online gratis para Outlook y Gmail."
+        }
+    </script>
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-984EW75R9H');
     </script>
+
     <style>
-        :root {
-            --bg: #0f172a;
-            --card: #111827;
-            --soft: #1f2937;
-            --line: #334155;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(180deg,#0b1220,#111827);
-            color: var(--text);
-            padding: 24px;
+            font-size: 18px;
         }
 
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
+        .tool-layout-2 {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 20px;
+            gap: 18px;
         }
 
-        .card {
-            background: rgba(17,24,39,.95);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
         }
 
-        h1 {
-            font-size: 28px;
-            margin: 0 0 8px 0;
-        }
-
-        p.sub {
-            color: var(--muted);
-            margin: 0 0 18px 0;
-        }
-
-        .grid {
+        .tool-grid-form {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
         }
 
         label {
@@ -84,7 +97,7 @@
         input, textarea, select {
             width: 100%;
             background: #0b1220;
-            border: 1px solid var(--line);
+            border: 1px solid rgba(148,163,184,.14);
             color: var(--text);
             border-radius: 10px;
             padding: 11px 12px;
@@ -94,35 +107,31 @@
 
         textarea {
             min-height: 88px;
-            resize: vertical
+            resize: vertical;
         }
 
-        .full {
-            grid-column: 1 / -1
-        }
-
-        .row {
+        .tool-buttons {
             display: flex;
             gap: 10px;
             flex-wrap: wrap;
             margin-top: 16px;
         }
 
-        button {
-            background: var(--accent);
-            color: #052e16;
-            border: none;
-            border-radius: 10px;
-            padding: 11px 14px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-
-            button.secondary {
-                background: #1e293b;
-                color: var(--text);
-                border: 1px solid var(--line);
+            .tool-buttons button {
+                background: var(--brand2);
+                color: #052e16;
+                border: none;
+                border-radius: 10px;
+                padding: 11px 14px;
+                font-weight: 700;
+                cursor: pointer;
             }
+
+                .tool-buttons button.secondary {
+                    background: #1e293b;
+                    color: var(--text);
+                    border: 1px solid rgba(148,163,184,.14);
+                }
 
         .preview {
             background: white;
@@ -139,112 +148,247 @@
             margin-top: 12px;
             background: #020617;
             color: #d1fae5;
-            border: 1px solid var(--line);
+            border: 1px solid rgba(148,163,184,.14);
             border-radius: 10px;
             padding: 12px;
             font-family: Consolas, monospace;
             font-size: 13px;
         }
 
-        .hint {
+        .tool-help {
             color: var(--muted);
             font-size: 12px;
             margin-top: 10px;
             line-height: 1.5;
         }
 
-        @media (max-width: 900px) {
-            .wrap {
-                grid-template-columns: 1fr
-            }
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
 
-            .grid {
-                grid-template-columns: 1fr
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        @media (max-width: 900px) {
+            .tool-layout-2,
+            .tool-grid-form {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <section class="card">
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="tool-hero">
+        <div class="container">
             <h1>Generador de firma de email</h1>
-            <p class="sub">Rellena los campos y copia la firma en HTML para usarla en Outlook, Gmail o donde quieras.</p>
+            <p class="tool-lead">
+                Crea firmas de email profesionales para Outlook, Gmail y otros clientes de correo. Personaliza los datos, copia la vista previa o descarga el HTML.
+            </p>
+        </div>
+    </header>
 
-            <div class="grid">
-                <div>
-                    <label for="name">Nombre</label>
-                    <input id="name" placeholder="Nombre Apellido" />
-                </div>
-                <div>
-                    <label for="role">Cargo</label>
-                    <input id="role" placeholder="Técnico de Sistemas" />
-                </div>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Datos de la firma</h2>
 
-                <div>
-                    <label for="company">Empresa</label>
-                    <input id="company" placeholder="Nombre de empresa" />
-                </div>
-                <div>
-                    <label for="phone">Teléfono</label>
-                    <input id="phone" placeholder="+34 600 000 000" />
-                </div>
+                        <div class="tool-grid-form">
+                            <div>
+                                <label for="name">Nombre</label>
+                                <input id="name" placeholder="Nombre Apellido" />
+                            </div>
+                            <div>
+                                <label for="role">Cargo</label>
+                                <input id="role" placeholder="Técnico de Sistemas" />
+                            </div>
 
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" placeholder="tu@empresa.com" />
-                </div>
-                <div>
-                    <label for="website">Web</label>
-                    <input id="website" placeholder="https://tuempresa.com" />
-                </div>
+                            <div>
+                                <label for="company">Empresa</label>
+                                <input id="company" placeholder="Nombre de empresa" />
+                            </div>
+                            <div>
+                                <label for="phone">Teléfono</label>
+                                <input id="phone" placeholder="+34 600 000 000" />
+                            </div>
 
-                <div class="full">
-                    <label for="address">Dirección / texto extra</label>
-                    <textarea id="address" placeholder="Madrid · Soporte IT · Horario 9:00–18:00"></textarea>
-                </div>
+                            <div>
+                                <label for="email">Email</label>
+                                <input id="email" placeholder="tu@empresa.com" />
+                            </div>
+                            <div>
+                                <label for="website">Web</label>
+                                <input id="website" placeholder="https://tuempresa.com" />
+                            </div>
 
-                <div>
-                    <label for="brand">Color principal</label>
-                    <input id="brand" type="color" value="#166534" />
-                </div>
-                <div>
-                    <label for="layout">Estilo</label>
-                    <select id="layout">
-                        <option value="clean">Limpio</option>
-                        <option value="line">Con barra lateral</option>
-                        <option value="compact">Compacto</option>
-                    </select>
-                </div>
+                            <div class="full">
+                                <label for="address">Dirección / texto extra</label>
+                                <textarea id="address" placeholder="Madrid · Soporte IT · Horario 9:00–18:00"></textarea>
+                            </div>
 
-                <div>
-                    <label for="linkedin">LinkedIn</label>
-                    <input id="linkedin" placeholder="https://linkedin.com/in/usuario" />
-                </div>
-                <div>
-                    <label for="disclaimer">Aviso breve</label>
-                    <input id="disclaimer" placeholder="Este mensaje puede contener información confidencial." />
-                </div>
-            </div>
+                            <div>
+                                <label for="brand">Color principal</label>
+                                <input id="brand" type="color" value="#166534" />
+                            </div>
+                            <div>
+                                <label for="layout">Estilo</label>
+                                <select id="layout">
+                                    <option value="clean">Limpio</option>
+                                    <option value="line">Con barra lateral</option>
+                                    <option value="compact">Compacto</option>
+                                </select>
+                            </div>
 
-            <div class="row">
-                <button id="generateBtn">Generar firma</button>
-                <button id="copyHtmlBtn" class="secondary">Copiar HTML</button>
-                <button id="copyPreviewBtn" class="secondary">Copiar vista</button>
-                <button id="downloadBtn" class="secondary">Descargar HTML</button>
-                <button id="fillDemoBtn" class="secondary">Rellenar demo</button>
-            </div>
+                            <div>
+                                <label for="linkedin">LinkedIn</label>
+                                <input id="linkedin" placeholder="https://linkedin.com/in/usuario" />
+                            </div>
+                            <div>
+                                <label for="disclaimer">Aviso breve</label>
+                                <input id="disclaimer" placeholder="Este mensaje puede contener información confidencial." />
+                            </div>
+                        </div>
 
-            <div class="hint">
-                Consejo: en Outlook suele funcionar mejor pegar la firma desde la vista previa. Si no, usa el HTML descargado.
+                        <div class="tool-buttons">
+                            <button id="generateBtn">Generar firma</button>
+                            <button id="copyHtmlBtn" class="secondary">Copiar HTML</button>
+                            <button id="copyPreviewBtn" class="secondary">Copiar vista</button>
+                            <button id="downloadBtn" class="secondary">Descargar HTML</button>
+                            <button id="fillDemoBtn" class="secondary">Rellenar demo</button>
+                        </div>
+
+                        <div class="tool-help">
+                            En Outlook suele funcionar mejor pegar la firma desde la vista previa. Si no, usa el HTML descargado.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Vista previa</h2>
+                        <div id="preview" class="preview"></div>
+                        <textarea id="code" class="code" readonly></textarea>
+                    </section>
+                </div>
             </div>
         </section>
 
-        <section class="card">
-            <h2 style="margin-top:0">Vista previa</h2>
-            <div id="preview" class="preview"></div>
-            <textarea id="code" class="code" readonly></textarea>
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajo y productividad</h2>
+                        <p>Utilidades prácticas para email, documentos y tareas diarias en oficina o negocio.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="firma-email.html">Generador de firma de email</a></h3>
+                        <p>Crea firmas profesionales para Outlook o Gmail con vista previa y copia rápida.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="generador-qr.html">Generador de QR</a></h3>
+                        <p>Crea códigos QR para compartir enlaces, WiFi, contactos o información de forma rápida.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="limpiador-texto.html">Limpiador de texto</a></h3>
+                        <p>Prepara textos para emails o documentos eliminando espacios y caracteres innecesarios.</p>
+                    </article>
+                </div>
+            </div>
         </section>
-    </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Crear firma de email online</h2>
+                    <p>
+                        Esta herramienta te permite generar firmas de email profesionales online gratis para usar en Outlook, Gmail y otros clientes de correo.
+                    </p>
+
+                    <h2>Qué puedes incluir</h2>
+                    <p>
+                        Puedes añadir nombre, cargo, empresa, teléfono, email, web, LinkedIn, dirección, aviso legal y personalizar el color principal de la firma.
+                    </p>
+
+                    <h2>Compatible con</h2>
+                    <p>
+                        La firma generada está pensada para copiarla en Outlook, Gmail y otros gestores de correo compatibles con HTML.
+                    </p>
+
+                    <h2>Ventajas de usar una firma profesional</h2>
+                    <p>
+                        Mejora la imagen de marca, aporta confianza, facilita el contacto y da una apariencia más cuidada en comunicaciones de trabajo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Puedo usar esta firma en Outlook y Gmail?</summary>
+                        <p>Sí. Está pensada para usarse en Outlook, Gmail y otros clientes de correo que acepten HTML.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar la firma directamente?</summary>
+                        <p>Sí. Puedes copiar el HTML o intentar copiar la vista previa enriquecida para pegarla en tu cliente de correo.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo descargar la firma?</summary>
+                        <p>Sí. Puedes descargarla como archivo HTML para guardarla o reutilizarla después.</p>
+                    </details>
+                    <details>
+                        <summary>¿Hace falta instalar algo?</summary>
+                        <p>No. La herramienta funciona directamente desde el navegador.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const $ = (id) => document.getElementById(id);
@@ -293,54 +437,54 @@
             if (data.layout === "line") {
                 html = `
 <table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;">
-      <tr>
-        <td style="vertical-align:top;padding-right:14px;">
-          <div style="width:6px;height:110px;background:${data.brand};border-radius:4px;"></div>
-        </td>
-        <td style="vertical-align:top;">
-          <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
-          <div style="font-size:14px;color:${data.brand};font-weight:700;margin:2px 0 10px 0;">${data.role || "Tu cargo"}${data.company ? " · " + data.company : ""}</div>
-          ${phoneLine}
-          ${emailLine}
-          ${webLine}
-          ${liLine}
-          ${addressLine}
-          ${disclaimer}
-        </td>
-      </tr>
+        <tr>
+            <td style="vertical-align:top;padding-right:14px;">
+                <div style="width:6px;height:110px;background:${data.brand};border-radius:4px;"></div>
+            </td>
+            <td style="vertical-align:top;">
+                <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
+                <div style="font-size:14px;color:${data.brand};font-weight:700;margin:2px 0 10px 0;">${data.role || "Tu cargo"}${data.company ? " · " + data.company : ""}</div>
+                ${phoneLine}
+                ${emailLine}
+                ${webLine}
+                ${liLine}
+                ${addressLine}
+                ${disclaimer}
+            </td>
+        </tr>
 </table>`;
             } else if (data.layout === "compact") {
                 html = `
 <div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.5;color:#0f172a;border-top:3px solid ${data.brand};padding-top:10px;max-width:640px;">
-      <div style="font-size:18px;font-weight:700;">${data.name || "Tu nombre"}</div>
-      <div style="color:#334155;margin-bottom:8px;">${data.role || "Tu cargo"}${data.company ? " | " + data.company : ""}</div>
-      <div>
-        ${data.phone ? `${data.phone}` : ""}
-        ${data.phone && data.email ? " · " : ""}
-        ${data.email ? `<a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a>` : ""}
-        ${(data.phone || data.email) && data.website ? " · " : ""}
-        ${data.website ? `<a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a>` : ""}
-      </div>
-      ${data.linkedin ? `<div><a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">LinkedIn</a></div>` : ""}
-      ${addressLine}
-      ${disclaimer}
+        <div style="font-size:18px;font-weight:700;">${data.name || "Tu nombre"}</div>
+        <div style="color:#334155;margin-bottom:8px;">${data.role || "Tu cargo"}${data.company ? " | " + data.company : ""}</div>
+        <div>
+            ${data.phone ? `${data.phone}` : ""}
+            ${data.phone && data.email ? " · " : ""}
+            ${data.email ? `<a href="mailto:${data.email}" style="color:${data.brand};text-decoration:none;">${data.email}</a>` : ""}
+            ${(data.phone || data.email) && data.website ? " · " : ""}
+            ${data.website ? `<a href="${data.website}" style="color:${data.brand};text-decoration:none;" target="_blank">${data.websiteText}</a>` : ""}
+        </div>
+        ${data.linkedin ? `<div><a href="${data.linkedin}" style="color:${data.brand};text-decoration:none;" target="_blank">LinkedIn</a></div>` : ""}
+        ${addressLine}
+        ${disclaimer}
 </div>`;
             } else {
                 html = `
 <table cellpadding="0" cellspacing="0" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0f172a;max-width:680px;">
-      <tr>
-        <td style="vertical-align:top;">
-          <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
-          <div style="font-size:14px;color:${data.brand};font-weight:700;margin:3px 0 10px 0;">${data.role || "Tu cargo"}</div>
-          ${data.company ? `<div style="margin:2px 0;color:#334155;"><strong>${data.company}</strong></div>` : ""}
-          ${phoneLine}
-          ${emailLine}
-          ${webLine}
-          ${liLine}
-          ${addressLine}
-          ${disclaimer}
-        </td>
-      </tr>
+        <tr>
+            <td style="vertical-align:top;">
+                <div style="font-size:22px;font-weight:700;color:#0f172a;">${data.name || "Tu nombre"}</div>
+                <div style="font-size:14px;color:${data.brand};font-weight:700;margin:3px 0 10px 0;">${data.role || "Tu cargo"}</div>
+                ${data.company ? `<div style="margin:2px 0;color:#334155;"><strong>${data.company}</strong></div>` : ""}
+                ${phoneLine}
+                ${emailLine}
+                ${webLine}
+                ${liLine}
+                ${addressLine}
+                ${disclaimer}
+            </td>
+        </tr>
 </table>`;
             }
 
@@ -354,7 +498,7 @@
             try {
                 await navigator.clipboard.writeText($("code").value);
                 alert("HTML copiado.");
-            } catch (e) {
+            } catch {
                 alert("No se pudo copiar el HTML.");
             }
         });
@@ -370,7 +514,7 @@
                 });
                 await navigator.clipboard.write([item]);
                 alert("Firma copiada desde la vista previa.");
-            } catch (e) {
+            } catch {
                 alert("Tu navegador no permite copiar HTML enriquecido. Usa 'Copiar HTML'.");
             }
         });
@@ -386,29 +530,19 @@
         });
 
         $("fillDemoBtn").addEventListener("click", () => {
-            $("name").value = "Pedro Sanchez";
+            $("name").value = "Nombre Apellidos";
             $("role").value = "Técnico de Sistemas";
             $("company").value = "ToolsRapidas";
             $("phone").value = "+34 666 123 456";
-            $("email").value = "pedro@agsystems.es";
+            $("email").value = "nombre@agsystems.es";
             $("website").value = "https://toolsrapidas.com/";
             $("address").value = "Madrid · Soporte IT · Automatización y sistemas";
-            $("linkedin").value = "https://linkedin.com/in/o";
+            $("linkedin").value = "https://linkedin.com/in/usuario";
             $("disclaimer").value = "Este mensaje puede contener información confidencial.";
             buildSignature();
         });
 
         buildSignature();
     </script>
-    <section class="seo-content">
-        <h2>Crear firma de email online</h2>
-        <p>Genera firmas profesionales para correo electrónico.</p>
-
-        <h2>Qué puedes incluir</h2>
-        <p>Nombre, empresa, teléfono, redes sociales y enlaces.</p>
-
-        <h2>Compatible con</h2>
-        <p>Outlook, Gmail y otros clientes de correo.</p>
-    </section>
 </body>
 </html>

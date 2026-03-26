@@ -3,82 +3,93 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Generador de QR gratis online | URL, WiFi y texto | ToolsRapidas</title>
     <meta name="description" content="Genera códigos QR gratis online para URL, WiFi, email o texto. Descarga tu QR en PNG en segundos.">
-    <link rel="canonical" href="https://toolsrapidas.com/generador-qr.html">
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/generador-qr.html" />
+    <meta name="theme-color" content="#08111f" />
+
     <meta property="og:title" content="Generador de QR gratis online | ToolsRapidas">
     <meta property="og:description" content="Crea códigos QR para enlaces, WiFi o texto de forma rápida y gratuita.">
+    <meta property="og:url" content="https://toolsrapidas.com/generador-qr.html">
+    <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de QR gratis online | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea códigos QR para enlaces, WiFi o texto de forma rápida y gratuita." />
+
     <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de QR online",
+          "url": "https://toolsrapidas.com/generador-qr.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Genera códigos QR online gratis para URL, WiFi, email, teléfono o texto."
+        }
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <!-- Google tag (gtag.js) -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-984EW75R9H');
     </script>
+
     <style>
-        :root {
-            --bg: #0b1220;
-            --card: #111827;
-            --line: #334155;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #8b5cf6;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(180deg,#07101d,#0f172a);
-            color: var(--text);
-            padding: 24px;
+            font-size: 18px;
         }
 
-        .wrap {
-            max-width: 1120px;
-            margin: 0 auto;
+        .tool-layout-2 {
             display: grid;
             grid-template-columns: 1fr 380px;
-            gap: 20px;
+            gap: 18px;
         }
 
-        .card {
-            background: #111827;
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.22);
-        }
-
-        h1 {
-            margin: 0 0 8px 0;
-            font-size: 28px
-        }
-
-        .sub {
-            margin: 0 0 16px 0;
-            color: var(--muted)
+        .tool-panel h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
         }
 
         label {
             display: block;
-            font-size: 13px;
+            font-size: 14px;
             color: var(--muted);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         input, textarea, select {
             width: 100%;
-            border-radius: 10px;
-            border: 1px solid var(--line);
+            border-radius: 12px;
+            border: 1px solid rgba(148,163,184,.14);
             background: #020617;
             color: var(--text);
             padding: 11px 12px;
@@ -89,10 +100,10 @@
         textarea {
             min-height: 140px;
             resize: vertical;
-            font-family: Consolas, monospace
+            font-family: Consolas, monospace;
         }
 
-        .grid {
+        .tool-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
@@ -100,30 +111,35 @@
         }
 
         .full {
-            grid-column: 1/-1
+            grid-column: 1 / -1;
         }
 
-        .row {
+        .tool-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 16px;
         }
 
-        button {
-            border: none;
-            border-radius: 10px;
-            padding: 11px 14px;
-            cursor: pointer;
-            font-weight: 700;
-            background: var(--accent);
-            color: white;
-        }
-
-            button.secondary {
-                background: #1e293b;
-                border: 1px solid var(--line);
+            .tool-buttons button {
+                border: none;
+                border-radius: 12px;
+                padding: 12px 14px;
+                cursor: pointer;
+                font-weight: 700;
+                background: #162033;
+                color: var(--text);
             }
+
+                .tool-buttons button.primary {
+                    background: var(--brand3);
+                    color: white;
+                }
+
+                .tool-buttons button.secondary {
+                    background: #162033;
+                    border: 1px solid rgba(148,163,184,.14);
+                }
 
         .qr-box {
             background: white;
@@ -145,26 +161,26 @@
             margin-top: 12px;
             color: var(--muted);
             min-height: 18px;
-            font-size: 13px
+            font-size: 13px;
         }
 
-        .hint {
-            margin-top: 10px;
+        .tool-help {
+            margin-top: 12px;
             color: var(--muted);
-            font-size: 12px;
-            line-height: 1.5
+            font-size: 13px;
+            line-height: 1.6;
         }
 
         .chips {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 12px
+            margin-top: 14px;
         }
 
         .chip {
             background: #1e293b;
-            border: 1px solid var(--line);
+            border: 1px solid rgba(148,163,184,.14);
             color: var(--text);
             border-radius: 999px;
             padding: 8px 10px;
@@ -172,71 +188,226 @@
             cursor: pointer;
         }
 
+        .source-box {
+            margin-top: 14px;
+            padding: 12px;
+            border-radius: 12px;
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
         @media (max-width: 900px) {
-            .wrap {
-                grid-template-columns: 1fr
+            .tool-layout-2,
+            .tool-grid-2 {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <section class="card">
-            <h1>Generador de QR funcional</h1>
-            <p class="sub">Esta versión sí genera códigos QR reales y escaneables.</p>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
 
-            <label for="type">Tipo</label>
-            <select id="type">
-                <option value="url">URL</option>
-                <option value="text">Texto</option>
-                <option value="wifi">WiFi</option>
-                <option value="email">Email</option>
-                <option value="phone">Teléfono</option>
-            </select>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de QR gratis online</h1>
+            <p class="tool-lead">
+                Crea códigos QR reales y escaneables para URL, WiFi, email, teléfono o texto. Genera y descarga tu QR en PNG en segundos.
+            </p>
+        </div>
+    </header>
 
-            <div id="fields" style="margin-top:14px;"></div>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Opciones</h2>
 
-            <div class="grid">
-                <div>
-                    <label for="size">Tamaño</label>
-                    <select id="size">
-                        <option value="200">200 px</option>
-                        <option value="280" selected>280 px</option>
-                        <option value="360">360 px</option>
-                        <option value="480">480 px</option>
-                    </select>
+                        <label for="type">Tipo</label>
+                        <select id="type">
+                            <option value="url">URL</option>
+                            <option value="text">Texto</option>
+                            <option value="wifi">WiFi</option>
+                            <option value="email">Email</option>
+                            <option value="phone">Teléfono</option>
+                        </select>
+
+                        <div id="fields" style="margin-top:14px;"></div>
+
+                        <div class="tool-grid-2">
+                            <div>
+                                <label for="size">Tamaño</label>
+                                <select id="size">
+                                    <option value="200">200 px</option>
+                                    <option value="280" selected>280 px</option>
+                                    <option value="360">360 px</option>
+                                    <option value="480">480 px</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="filename">Nombre del PNG</label>
+                                <input id="filename" value="codigo-qr" />
+                            </div>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="generateBtn">Generar</button>
+                            <button id="downloadBtn" class="secondary">Descargar PNG</button>
+                            <button id="copyBtn" class="secondary">Copiar contenido</button>
+                            <button id="demoBtn" class="secondary">Demo</button>
+                        </div>
+
+                        <div class="chips">
+                            <button class="chip" data-demo="url">Demo URL</button>
+                            <button class="chip" data-demo="wifi">Demo WiFi</button>
+                            <button class="chip" data-demo="email">Demo email</button>
+                            <button class="chip" data-demo="phone">Demo teléfono</button>
+                        </div>
+
+                        <div id="status" class="status"></div>
+
+                        <div class="tool-help">
+                            Esta herramienta usa una librería QR real cargada desde CDN. Necesitas conexión a internet al abrirla por primera vez.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultado</h2>
+                        <div class="qr-box">
+                            <div id="qrcode"></div>
+                        </div>
+                        <div id="source" class="source-box"></div>
+                    </section>
                 </div>
-                <div>
-                    <label for="filename">Nombre del PNG</label>
-                    <input id="filename" value="codigo-qr" />
-                </div>
             </div>
-
-            <div class="row">
-                <button id="generateBtn">Generar</button>
-                <button id="downloadBtn" class="secondary">Descargar PNG</button>
-                <button id="copyBtn" class="secondary">Copiar contenido</button>
-                <button id="demoBtn" class="secondary">Demo</button>
-            </div>
-
-            <div class="chips">
-                <button class="chip" data-demo="url">Demo URL</button>
-                <button class="chip" data-demo="wifi">Demo WiFi</button>
-                <button class="chip" data-demo="email">Demo email</button>
-                <button class="chip" data-demo="phone">Demo teléfono</button>
-            </div>
-
-            <div id="status" class="status"></div>
-            <div class="hint">Nota: esta página usa una librería QR real cargada desde CDN. Necesitas conexión a internet al abrirla por primera vez.</div>
         </section>
 
-        <section class="card">
-            <div class="qr-box">
-                <div id="qrcode"></div>
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas técnicas y de utilidad</h2>
+                        <p>Utilidades prácticas para compartir información, trabajar con datos y resolver tareas rápidas online.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="generador-qr.html">Generador de QR</a></h3>
+                        <p>Crea códigos QR para URL, WiFi, email o texto de forma rápida y gratuita.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="visor-json.html">Visor y formateador JSON</a></h3>
+                        <p>Valida, formatea y analiza JSON fácilmente para trabajar con APIs y datos.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="generador-contrasenas.html">Generador de contraseñas</a></h3>
+                        <p>Crea contraseñas seguras con longitud personalizada, símbolos y combinaciones aleatorias.</p>
+                    </article>
+                </div>
             </div>
-            <div id="source" class="hint" style="margin-top:14px;"></div>
         </section>
-    </div>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Generador de códigos QR online</h2>
+                    <p>
+                        Esta herramienta te permite crear códigos QR online gratis para compartir información de forma rápida desde cualquier dispositivo.
+                    </p>
+
+                    <h2>Tipos de QR compatibles</h2>
+                    <p>
+                        Puedes generar códigos QR para URL, WiFi, teléfono, email o texto personalizado según el uso que necesites.
+                    </p>
+
+                    <h2>Usos comunes</h2>
+                    <p>
+                        Es ideal para marketing, carteles, tarjetas, restaurantes, eventos, acceso a redes WiFi o compartir enlaces desde el móvil.
+                    </p>
+
+                    <h2>Ventajas de usar QR</h2>
+                    <p>
+                        Los códigos QR facilitan el acceso rápido a información y evitan tener que escribir manualmente direcciones, claves o datos largos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué tipos de QR puedo generar?</summary>
+                        <p>Puedes crear QR para URL, texto, WiFi, email y teléfono.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo descargar el QR en PNG?</summary>
+                        <p>Sí. Una vez generado, puedes descargarlo como imagen PNG.</p>
+                    </details>
+                    <details>
+                        <summary>¿Los QR son escaneables de verdad?</summary>
+                        <p>Sí. Esta herramienta genera códigos QR reales y funcionales con una librería especializada.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para usarse en escritorio, móvil y tablet.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const $ = (id) => document.getElementById(id);
@@ -247,53 +418,53 @@
             let html = "";
             if (t === "url") {
                 html = `
-              <label for="url">URL</label>
-              <input id="url" placeholder="https://tusitio.com" />
-            `;
+                        <label for="url">URL</label>
+                        <input id="url" placeholder="https://tusitio.com" />
+                    `;
             } else if (t === "text") {
                 html = `
-              <label for="text">Texto</label>
-              <textarea id="text" placeholder="Escribe aquí el texto"></textarea>
-            `;
+                        <label for="text">Texto</label>
+                        <textarea id="text" placeholder="Escribe aquí el texto"></textarea>
+                    `;
             } else if (t === "wifi") {
                 html = `
-              <div class="grid" style="margin-top:0;">
-                <div class="full">
-                  <label for="ssid">SSID</label>
-                  <input id="ssid" placeholder="MiWifi" />
-                </div>
-                <div>
-                  <label for="password">Contraseña</label>
-                  <input id="password" placeholder="clave123456" />
-                </div>
-                <div>
-                  <label for="security">Seguridad</label>
-                  <select id="security">
-                    <option value="WPA">WPA/WPA2</option>
-                    <option value="WEP">WEP</option>
-                    <option value="nopass">Sin contraseña</option>
-                  </select>
-                </div>
-              </div>
-            `;
+                        <div class="tool-grid-2" style="margin-top:0;">
+                            <div class="full">
+                                <label for="ssid">SSID</label>
+                                <input id="ssid" placeholder="MiWifi" />
+                            </div>
+                            <div>
+                                <label for="password">Contraseña</label>
+                                <input id="password" placeholder="clave123456" />
+                            </div>
+                            <div>
+                                <label for="security">Seguridad</label>
+                                <select id="security">
+                                    <option value="WPA">WPA/WPA2</option>
+                                    <option value="WEP">WEP</option>
+                                    <option value="nopass">Sin contraseña</option>
+                                </select>
+                            </div>
+                        </div>
+                    `;
             } else if (t === "email") {
                 html = `
-              <label for="email">Email</label>
-              <input id="email" placeholder="hola@empresa.com" />
-              <div style="margin-top:12px;">
-                <label for="subject">Asunto</label>
-                <input id="subject" placeholder="Consulta" />
-              </div>
-              <div style="margin-top:12px;">
-                <label for="body">Mensaje</label>
-                <textarea id="body" placeholder="Hola, te escribo porque..."></textarea>
-              </div>
-            `;
+                        <label for="email">Email</label>
+                        <input id="email" placeholder="hola@empresa.com" />
+                        <div style="margin-top:12px;">
+                            <label for="subject">Asunto</label>
+                            <input id="subject" placeholder="Consulta" />
+                        </div>
+                        <div style="margin-top:12px;">
+                            <label for="body">Mensaje</label>
+                            <textarea id="body" placeholder="Hola, te escribo porque..."></textarea>
+                        </div>
+                    `;
             } else if (t === "phone") {
                 html = `
-              <label for="phone">Teléfono</label>
-              <input id="phone" placeholder="+34600123456" />
-            `;
+                        <label for="phone">Teléfono</label>
+                        <input id="phone" placeholder="+34600123456" />
+                    `;
             }
             $("fields").innerHTML = html;
         }
@@ -431,15 +602,5 @@
         renderFields();
         loadDemo("url");
     </script>
-    <section class="seo-content">
-        <h2>Generador de códigos QR online</h2>
-        <p>Crea códigos QR para compartir información de forma rápida.</p>
-
-        <h2>Tipos de QR</h2>
-        <p>URL, WiFi, teléfono, email o texto personalizado.</p>
-
-        <h2>Usos comunes</h2>
-        <p>Marketing, carteles, tarjetas o acceso rápido desde móvil.</p>
-    </section>
 </body>
 </html>

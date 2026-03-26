@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -8,82 +8,74 @@
     <meta name="description" content="Genera contraseñas seguras online gratis. Elige longitud, símbolos, números y mayúsculas para crear passwords fuertes.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/generador-contrasenas.html">
+    <meta name="theme-color" content="#08111f">
 
     <meta property="og:title" content="Generador de contraseñas seguras | ToolsRapidas">
     <meta property="og:description" content="Crea contraseñas seguras online con longitud y opciones personalizadas.">
     <meta property="og:url" content="https://toolsrapidas.com/generador-contrasenas.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
-    <meta name="theme-color" content="#0f172a">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de contraseñas seguras | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea contraseñas seguras online con longitud y opciones personalizadas." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de contraseñas seguras online",
+          "url": "https://toolsrapidas.com/generador-contrasenas.html",
+          "applicationCategory": "SecurityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Genera contraseñas seguras online gratis con longitud personalizada, mayúsculas, minúsculas, números y símbolos."
+        }
+    </script>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-984EW75R9H');
     </script>
 
     <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #111827;
-            --panel-2: #1f2937;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
-            --border: #334155;
-            --danger: #ef4444;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        .wrap {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(28px, 4vw, 42px);
-        }
-
-        .sub {
+        .tool-lead {
             color: var(--muted);
-            margin-bottom: 24px;
-            line-height: 1.5;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
         }
 
-        .grid {
+        .tool-layout-2 {
             display: grid;
             grid-template-columns: 320px 1fr;
             gap: 18px;
         }
 
-        .card {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
         }
-
-            .card h2 {
-                font-size: 18px;
-                margin: 0 0 12px;
-            }
 
         .option {
             display: flex;
@@ -116,37 +108,37 @@
             margin-top: 8px;
         }
 
-        .result-box {
-            background: #0b1220;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px;
-            font: 18px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-            word-break: break-all;
-            min-height: 72px;
-        }
-
-        .actions {
+        .tool-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 14px;
         }
 
-        button {
-            border: 0;
-            border-radius: 12px;
-            padding: 10px 14px;
-            font-weight: 600;
-            cursor: pointer;
-            background: var(--panel-2);
-            color: var(--text);
-        }
-
-            button.primary {
-                background: var(--accent);
-                color: #052e16;
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
             }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .result-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 18px;
+            font: 18px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            word-break: break-all;
+            min-height: 72px;
+        }
 
         .strength {
             margin-top: 16px;
@@ -156,7 +148,7 @@
             width: 100%;
             height: 12px;
             background: #0b1220;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.12);
             border-radius: 999px;
             overflow: hidden;
         }
@@ -164,7 +156,7 @@
         .bar-fill {
             height: 100%;
             width: 0%;
-            background: var(--danger);
+            background: #ef4444;
             transition: width .2s ease;
         }
 
@@ -173,118 +165,219 @@
             color: var(--muted);
         }
 
-        .seo-content {
-            max-width: 1100px;
-            margin: 40px auto 0;
-            padding: 0 24px 48px;
+        .tool-help {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
         }
 
-        .seo-box {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
         }
 
-            .seo-box h2 {
-                margin: 0 0 12px;
-                font-size: clamp(24px, 3vw, 32px);
-                color: var(--text);
-            }
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
 
-            .seo-box p {
-                margin: 0 0 20px;
-                color: var(--muted);
-                line-height: 1.7;
-                max-width: 900px;
-            }
+        .related-tools .card p {
+            margin: 0;
+        }
 
         @media (max-width: 900px) {
-            .grid {
+            .tool-layout-2 {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Generador de contraseñas seguras</h1>
-        <div class="sub">
-            Crea contraseñas fuertes online gratis con longitud personalizada, mayúsculas, números y símbolos.
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="grid">
-            <section class="card">
-                <h2>Opciones</h2>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de contraseñas seguras</h1>
+            <p class="tool-lead">
+                Crea contraseñas fuertes online gratis con longitud personalizada, mayúsculas, minúsculas, números y símbolos.
+            </p>
+        </div>
+    </header>
 
-                <div class="option" style="display:block;">
-                    <label for="length">Longitud</label>
-                    <input type="range" id="length" min="6" max="64" value="16">
-                    <div class="value">Longitud actual: <span id="lengthValue">16</span></div>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Opciones</h2>
+
+                        <div class="option" style="display:block;">
+                            <label for="length">Longitud</label>
+                            <input type="range" id="length" min="6" max="64" value="16">
+                            <div class="value">Longitud actual: <span id="lengthValue">16</span></div>
+                        </div>
+
+                        <div class="option">
+                            <label for="uppercase">Mayúsculas</label>
+                            <input type="checkbox" id="uppercase" checked>
+                        </div>
+
+                        <div class="option">
+                            <label for="lowercase">Minúsculas</label>
+                            <input type="checkbox" id="lowercase" checked>
+                        </div>
+
+                        <div class="option">
+                            <label for="numbers">Números</label>
+                            <input type="checkbox" id="numbers" checked>
+                        </div>
+
+                        <div class="option">
+                            <label for="symbols">Símbolos</label>
+                            <input type="checkbox" id="symbols" checked>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="generateBtn">Generar contraseña</button>
+                            <button id="copyBtn">Copiar</button>
+                        </div>
+
+                        <div class="tool-help">
+                            Una contraseña más larga y con más variedad de caracteres suele ofrecer mayor seguridad.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultado</h2>
+
+                        <div class="result-box" id="result">Haz clic en “Generar contraseña”</div>
+
+                        <div class="strength">
+                            <div class="bar">
+                                <div class="bar-fill" id="barFill"></div>
+                            </div>
+                            <div class="strength-text" id="strengthText">Nivel de seguridad: —</div>
+                        </div>
+
+                        <div class="tool-help">
+                            Usa contraseñas únicas para cada servicio y guárdalas en un gestor seguro si necesitas recordarlas.
+                        </div>
+                    </section>
                 </div>
+            </div>
+        </section>
 
-                <div class="option">
-                    <label for="uppercase">Mayúsculas</label>
-                    <input type="checkbox" id="uppercase" checked>
-                </div>
-
-                <div class="option">
-                    <label for="lowercase">Minúsculas</label>
-                    <input type="checkbox" id="lowercase" checked>
-                </div>
-
-                <div class="option">
-                    <label for="numbers">Números</label>
-                    <input type="checkbox" id="numbers" checked>
-                </div>
-
-                <div class="option">
-                    <label for="symbols">Símbolos</label>
-                    <input type="checkbox" id="symbols" checked>
-                </div>
-
-                <div class="actions">
-                    <button class="primary" id="generateBtn">Generar contraseña</button>
-                    <button id="copyBtn">Copiar</button>
-                </div>
-            </section>
-
-            <section class="card">
-                <h2>Resultado</h2>
-
-                <div class="result-box" id="result">Haz clic en “Generar contraseña”</div>
-
-                <div class="strength">
-                    <div class="bar">
-                        <div class="bar-fill" id="barFill"></div>
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas técnicas y de desarrollo</h2>
+                        <p>Utilidades rápidas para trabajar con datos, seguridad y herramientas de uso técnico o profesional.</p>
                     </div>
-                    <div class="strength-text" id="strengthText">Nivel de seguridad: —</div>
                 </div>
-            </section>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="visor-json.html">Visor y formateador JSON</a></h3>
+                        <p>Valida, formatea y analiza JSON fácilmente para trabajar con APIs y datos.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="generador-contrasenas.html">Generador de contraseñas</a></h3>
+                        <p>Crea contraseñas seguras con longitud personalizada, símbolos y combinaciones aleatorias.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="generador-qr.html">Generador de QR</a></h3>
+                        <p>Genera códigos QR para URL, WiFi, email o texto de forma rápida y gratuita.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Generar contraseñas seguras online</h2>
+                    <p>
+                        Esta herramienta te permite crear contraseñas seguras online gratis con distintos niveles de complejidad.
+                        Puedes elegir la longitud y decidir si quieres incluir mayúsculas, minúsculas, números y símbolos.
+                    </p>
+
+                    <h2>¿Cómo crear una contraseña fuerte?</h2>
+                    <p>
+                        Una buena contraseña debe ser larga, aleatoria y combinar varios tipos de caracteres.
+                        Cuanto más larga y variada sea, más difícil será adivinarla o romperla.
+                    </p>
+
+                    <h2>¿Para qué sirve?</h2>
+                    <p>
+                        Es útil para cuentas de correo, redes sociales, banca online, paneles de administración y cualquier servicio donde necesites una contraseña segura.
+                    </p>
+
+                    <h2>Ventajas de usar un generador de contraseñas</h2>
+                    <p>
+                        Te ayuda a crear claves aleatorias más seguras que las inventadas manualmente y reduce el riesgo de usar patrones débiles o repetidos.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué hace este generador de contraseñas?</summary>
+                        <p>Crea contraseñas aleatorias y seguras según la longitud y los tipos de caracteres que elijas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Qué opciones puedo activar?</summary>
+                        <p>Puedes incluir mayúsculas, minúsculas, números y símbolos para aumentar la complejidad de la contraseña.</p>
+                    </details>
+                    <details>
+                        <summary>¿La contraseña se genera en mi navegador?</summary>
+                        <p>Sí. Todo se genera localmente en tu navegador, sin enviarse a servidores externos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar la contraseña con un clic?</summary>
+                        <p>Sí. Después de generarla puedes copiarla directamente con el botón de copiar.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
         </div>
-    </div>
-
-    <section class="seo-content">
-        <div class="seo-box">
-            <h2>Generar contraseñas seguras online</h2>
-            <p>
-                Esta herramienta te permite crear contraseñas seguras online gratis con distintos niveles de complejidad.
-                Puedes elegir la longitud y decidir si quieres incluir mayúsculas, minúsculas, números y símbolos.
-            </p>
-
-            <h2>¿Cómo crear una contraseña fuerte?</h2>
-            <p>
-                Una buena contraseña debe ser larga, aleatoria y combinar varios tipos de caracteres.
-                Cuanto más larga y variada sea, más difícil será adivinarla o romperla.
-            </p>
-
-            <h2>¿Para qué sirve?</h2>
-            <p>
-                Es útil para cuentas de correo, redes sociales, banca online, paneles de administración y cualquier servicio donde necesites una contraseña segura.
-            </p>
-        </div>
-    </section>
+    </footer>
 
     <script>
         const lengthInput = document.getElementById('length');
@@ -382,9 +475,7 @@
                 const btn = document.getElementById('copyBtn');
                 btn.textContent = 'Copiado';
                 setTimeout(() => btn.textContent = 'Copiar', 1200);
-            } catch {
-                //
-            }
+            } catch { }
         });
 
         lengthInput.addEventListener('input', updateLength);

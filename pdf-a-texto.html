@@ -8,13 +8,17 @@
     <meta name="description" content="Extrae texto de PDF online gratis. Convierte PDF a texto limpio fácilmente sin instalar programas.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/pdf-a-texto.html">
-
+    <link rel="stylesheet" href="assets/styles.css" />
     <meta property="og:title" content="Extraer texto de PDF online | ToolsRapidas">
     <meta property="og:description" content="Convierte PDF a texto limpio fácilmente.">
     <meta property="og:url" content="https://toolsrapidas.com/pdf-a-texto.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
     <meta name="theme-color" content="#0f172a">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Extraer texto de PDF online | ToolsRapidas" />
+    <meta name="twitter:description" content="Convierte PDF a texto limpio fácilmente." />
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
     <script>
@@ -27,68 +31,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
     <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #111827;
-            --panel-2: #1f2937;
-            --text: #e5e7eb;
-            --muted: #94a3b8;
-            --accent: #22c55e;
-            --border: #334155;
-            --danger: #ef4444;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
 
-        body {
-            margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-            background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
-            color: var(--text);
-            min-height: 100vh;
-        }
-
-        .wrap {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 24px;
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(28px, 4vw, 42px);
-        }
-
-        .sub {
+        .tool-lead {
             color: var(--muted);
-            margin-bottom: 24px;
-            line-height: 1.5;
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
         }
 
-        .grid {
+        .tool-layout-2 {
             display: grid;
             grid-template-columns: 320px 1fr;
             gap: 18px;
         }
 
-        .card {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 18px;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
         }
 
-            .card h2 {
-                font-size: 18px;
-                margin: 0 0 12px;
-            }
-
         .dropzone {
-            border: 2px dashed var(--border);
+            border: 2px dashed rgba(148,163,184,.18);
             border-radius: 16px;
             padding: 20px;
             text-align: center;
@@ -104,7 +79,7 @@
         }
 
             .dropzone.dragover {
-                border-color: var(--accent);
+                border-color: var(--brand2);
                 background: rgba(34,197,94,.08);
             }
 
@@ -118,6 +93,7 @@
                 color: var(--muted);
                 font-size: 13px;
                 text-align: center;
+                line-height: 1.5;
             }
 
         input[type="file"] {
@@ -128,7 +104,7 @@
             width: 100%;
             min-height: 430px;
             resize: vertical;
-            border: 1px solid var(--border);
+            border: 1px solid rgba(148,163,184,.14);
             border-radius: 14px;
             background: #0b1220;
             color: var(--text);
@@ -137,37 +113,42 @@
             outline: none;
         }
 
-        .actions {
+            textarea:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        .tool-buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
             margin-top: 14px;
         }
 
-        button {
-            border: 0;
-            border-radius: 12px;
-            padding: 10px 14px;
-            font-weight: 600;
-            cursor: pointer;
-            background: var(--panel-2);
-            color: var(--text);
-        }
-
-            button.primary {
-                background: var(--accent);
-                color: #052e16;
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
             }
 
-            button.danger {
-                background: var(--danger);
-                color: white;
-            }
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
 
-            button:disabled {
-                opacity: .6;
-                cursor: not-allowed;
-            }
+                .tool-buttons button.danger {
+                    background: #ef4444;
+                    color: #fff;
+                }
+
+                .tool-buttons button:disabled {
+                    opacity: .6;
+                    cursor: not-allowed;
+                }
 
         .status {
             margin-top: 14px;
@@ -177,35 +158,30 @@
             min-height: 22px;
         }
 
-        .seo-content {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding: 0 24px 48px;
+        .tool-help {
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
         }
 
-        .seo-box {
-            background: rgba(17,24,39,.9);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.2);
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
         }
 
-            .seo-box h2 {
-                margin: 0 0 12px;
-                font-size: clamp(24px, 3vw, 32px);
-                color: var(--text);
-            }
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
 
-            .seo-box p {
-                margin: 0 0 20px;
-                color: var(--muted);
-                line-height: 1.7;
-                max-width: 900px;
-            }
+        .related-tools .card p {
+            margin: 0;
+        }
 
         @media (max-width: 980px) {
-            .grid {
+            .tool-layout-2 {
                 grid-template-columns: 1fr;
             }
 
@@ -216,58 +192,160 @@
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Extraer texto de PDF online</h1>
-        <div class="sub">
-            Sube un PDF y extrae su texto directamente desde el navegador. Sin instalar nada.
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
         </div>
+    </nav>
 
-        <div class="grid">
-            <section class="card">
-                <h2>Opciones</h2>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Extraer texto de PDF online</h1>
+            <p class="tool-lead">
+                Sube un PDF y extrae su texto directamente desde el navegador. Rápido, gratis y sin instalar programas.
+            </p>
+        </div>
+    </header>
 
-                <label class="dropzone" id="dropzone">
-                    <strong>Arrastra tu PDF aquí</strong>
-                    <span>o haz clic para seleccionar un archivo PDF</span>
-                    <input type="file" id="pdfFile" accept="application/pdf" />
-                </label>
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Opciones</h2>
 
-                <div class="actions">
-                    <button class="primary" id="extractBtn" disabled>Extraer texto</button>
-                    <button id="copyBtn" disabled>Copiar</button>
-                    <button id="downloadBtn" disabled>Descargar .txt</button>
-                    <button class="danger" id="resetBtn">Vaciar</button>
+                        <label class="dropzone" id="dropzone" for="pdfFile">
+                            <strong>Arrastra tu PDF aquí</strong>
+                            <span>o haz clic para seleccionar un archivo PDF</span>
+                        </label>
+                        <input type="file" id="pdfFile" accept="application/pdf" />
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="extractBtn" disabled>Extraer texto</button>
+                            <button id="copyBtn" disabled>Copiar</button>
+                            <button id="downloadBtn" disabled>Descargar .txt</button>
+                            <button class="danger" id="resetBtn">Vaciar</button>
+                        </div>
+
+                        <div class="status" id="status">Selecciona un PDF para empezar.</div>
+
+                        <div class="tool-help">
+                            El archivo se procesa en tu navegador. No se sube a servidores externos.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Texto extraído</h2>
+                        <textarea id="output" placeholder="Aquí aparecerá el texto del PDF..."></textarea>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para trabajar con texto online</h2>
+                        <p>Limpia, formatea y analiza texto fácilmente para copiar, pegar o reutilizar contenido.</p>
+                    </div>
                 </div>
 
-                <div class="status" id="status">Selecciona un PDF para empezar.</div>
-            </section>
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="limpiador-texto.html">Limpiador de texto</a></h3>
+                        <p>Elimina espacios, líneas vacías, duplicados y caracteres raros fácilmente.</p>
+                    </article>
 
-            <section class="card">
-                <h2>Texto extraído</h2>
-                <textarea id="output" placeholder="Aquí aparecerá el texto del PDF..."></textarea>
-            </section>
+                    <article class="card">
+                        <h3><a href="quitar-saltos-linea.html">Quitar saltos de línea</a></h3>
+                        <p>Une texto cortado en múltiples líneas en un solo bloque limpio.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras, caracteres y tiempo de lectura de forma rápida.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="pdf-a-texto.html">Extraer texto de PDF</a></h3>
+                        <p>Convierte PDF a texto limpio online gratis sin instalar programas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Extraer texto de PDF online</h2>
+                    <p>
+                        Esta herramienta te permite convertir un PDF a texto directamente desde el navegador.
+                        Es útil para copiar contenido, reutilizar texto o limpiar documentos antes de pegarlos en Word, Excel o email.
+                    </p>
+
+                    <h2>¿Para qué sirve pasar un PDF a texto?</h2>
+                    <p>
+                        Extraer texto de un PDF facilita editar contenido, reutilizar fragmentos, analizar documentación o limpiar información copiada desde informes y facturas.
+                    </p>
+
+                    <h2>Ventajas</h2>
+                    <p>
+                        El proceso se realiza en tu navegador. No subimos el archivo a ningún servidor, así que es más rápido y privado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Se sube el PDF a un servidor?</summary>
+                        <p>No. El procesamiento se realiza localmente en tu navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar y descargar el texto extraído?</summary>
+                        <p>Sí. Puedes copiar el texto al portapapeles o descargarlo como archivo .txt.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona con todos los PDFs?</summary>
+                        <p>Funciona bien con PDFs que contienen texto real. Si el PDF es solo una imagen escaneada, la extracción puede ser limitada.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil y ordenador?</summary>
+                        <p>Sí. Está preparada para usarse tanto en escritorio como en dispositivos móviles.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
         </div>
-    </div>
-
-    <section class="seo-content">
-        <div class="seo-box">
-            <h2>Extraer texto de PDF online</h2>
-            <p>
-                Esta herramienta te permite convertir un PDF a texto directamente desde el navegador.
-                Es útil para copiar contenido, reutilizar texto o limpiar documentos antes de pegarlos en Word, Excel o email.
-            </p>
-
-            <h2>¿Para qué sirve pasar un PDF a texto?</h2>
-            <p>
-                Extraer texto de un PDF facilita editar contenido, reutilizar fragmentos, analizar documentación o limpiar información copiada desde informes y facturas.
-            </p>
-
-            <h2>Ventajas</h2>
-            <p>
-                El proceso se realiza en tu navegador. No subimos el archivo a ningún servidor, así que es más rápido y privado.
-            </p>
-        </div>
-    </section>
+    </footer>
 
     <script>
         if (window.pdfjsLib) {
@@ -320,8 +398,6 @@
             setFile(e.target.files[0]);
         });
 
-        //dropzone.addEventListener('click', () => pdfFile.click());
-
         dropzone.addEventListener('dragover', (e) => {
             e.preventDefault();
             dropzone.classList.add('dragover');
@@ -345,7 +421,7 @@
             }
 
             if (!window.pdfjsLib) {
-                setStatus('No se ha podido cargar PDF.js. Prueba con conexión a internet o súbelo a Vercel.');
+                setStatus('No se ha podido cargar PDF.js. Prueba con conexión a internet o vuelve a cargar la página.');
                 return;
             }
 
@@ -360,7 +436,6 @@
                 for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
                     const page = await pdf.getPage(pageNum);
                     const textContent = await page.getTextContent();
-
                     const pageText = textContent.items.map(item => item.str).join(' ');
                     finalText += pageText + '\n\n';
                 }

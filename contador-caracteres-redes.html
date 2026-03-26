@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -8,54 +8,86 @@
     <meta name="description" content="Cuenta caracteres para Instagram, Twitter (X) y TikTok. Controla límites y evita errores al publicar.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/contador-caracteres-redes.html">
+    <meta name="theme-color" content="#08111f">
 
     <meta property="og:title" content="Contador de caracteres redes sociales | ToolsRapidas">
     <meta property="og:description" content="Cuenta caracteres para Instagram, Twitter y TikTok fácilmente.">
     <meta property="og:url" content="https://toolsrapidas.com/contador-caracteres-redes.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Inter,system-ui;
-            background: #0f172a;
-            color: #e5e7eb;
-            padding: 20px;
+        .tool-hero {
+            padding: 42px 0 18px;
         }
 
-        .wrap {
-            max-width: 900px;
-            margin: auto;
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 860px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-panel h2 {
+            margin: 0 0 12px;
+            font-size: 18px;
         }
 
         textarea {
             width: 100%;
-            height: 200px;
-            background: #111827;
-            color: white;
-            border: 1px solid #334155;
-            border-radius: 10px;
-            padding: 10px;
+            min-height: 220px;
+            border-radius: 14px;
+            border: 1px solid rgba(148,163,184,.14);
+            background: #020617;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
         }
 
         .stats {
-            margin-top: 20px;
+            margin-top: 16px;
             display: grid;
-            gap: 10px;
+            gap: 12px;
         }
 
-        .card {
-            background: #111827;
-            padding: 15px;
-            border-radius: 10px;
+        .stat {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+            .stat strong {
+                font-size: 18px;
+            }
+
         .limit {
-            font-size: 14px;
-            color: #94a3b8;
+            font-size: 13px;
+            color: var(--muted);
         }
 
         .ok {
@@ -70,62 +102,209 @@
             color: #ef4444;
         }
 
-        h1 {
-            margin-bottom: 10px;
+        .tool-help {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
         }
     </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <h1>Contador de caracteres para redes</h1>
-
-<textarea id="text" placeholder="Escribe tu texto..."></textarea>
-
-        <div class="stats">
-            <div class="card">
-                <span>Instagram</span>
-                <span id="ig"></span>
-            </div>
-
-            <div class="card">
-                <span>Twitter (X)</span>
-                <span id="tw"></span>
-            </div>
-
-            <div class="card">
-                <span>TikTok</span>
-                <span id="tt"></span>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
             </div>
         </div>
+    </nav>
 
-    </div>
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Contador de caracteres para redes</h1>
+            <p class="tool-lead">
+                Controla los límites de Instagram, Twitter (X) y TikTok antes de publicar. Evita errores y optimiza tus textos para redes sociales.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <section class="card tool-panel">
+                    <h2>Texto</h2>
+
+<textarea id="text" placeholder="Escribe o pega tu texto..."></textarea>
+
+                    <div class="stats">
+                        <div class="stat">
+                            <span>Instagram</span>
+                            <strong id="ig"></strong>
+                        </div>
+
+                        <div class="stat">
+                            <span>Twitter (X)</span>
+                            <strong id="tw"></strong>
+                        </div>
+
+                        <div class="stat">
+                            <span>TikTok</span>
+                            <strong id="tt"></strong>
+                        </div>
+                    </div>
+
+                    <div class="tool-help">
+                        Los colores indican si estás dentro del límite (verde), cerca del límite (amarillo) o lo has superado (rojo).
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- CLUSTER 3 -->
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para redes sociales y WhatsApp</h2>
+                        <p>Mejora tus textos, crea contenido viral y optimiza publicaciones fácilmente.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="formatear-whatsapp.html">Formatear texto para WhatsApp</a></h3>
+                        <p>Convierte texto en negrita, cursiva o tachado listo para copiar.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="texto-invisible-whatsapp.html">Texto invisible para WhatsApp</a></h3>
+                        <p>Genera caracteres invisibles para enviar mensajes vacíos.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="letras-raras.html">Generador de letras raras</a></h3>
+                        <p>Convierte texto en estilos llamativos para redes.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras, caracteres y tiempo de lectura fácilmente.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Contador de caracteres para redes sociales</h2>
+                    <p>
+                        Esta herramienta te permite contar caracteres para Instagram, Twitter (X) y TikTok en tiempo real.
+                        Es útil para asegurarte de que tu contenido cumple los límites antes de publicarlo.
+                    </p>
+
+                    <h2>¿Por qué es importante?</h2>
+                    <p>
+                        Cada red social tiene límites diferentes. Superarlos puede impedir la publicación o recortar tu mensaje.
+                    </p>
+
+                    <h2>Usos habituales</h2>
+                    <p>
+                        Ideal para community managers, creadores de contenido, marketing digital y uso personal en redes sociales.
+                    </p>
+
+                    <h2>Ventajas</h2>
+                    <p>
+                        Es rápido, funciona online y no necesitas instalar nada. Puedes escribir y validar tu contenido al instante.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué redes sociales incluye?</summary>
+                        <p>Incluye Instagram, Twitter (X) y TikTok.</p>
+                    </details>
+                    <details>
+                        <summary>¿Se actualiza en tiempo real?</summary>
+                        <p>Sí. El contador se actualiza automáticamente mientras escribes.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funciona en móvil?</summary>
+                        <p>Sí. Puedes usarlo desde cualquier dispositivo.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
 
     <script>
-const text=document.getElementById("text");
+        const text = document.getElementById("text");
 
-function update(){
-let len=text.value.length;
+        function update() {
+            let len = text.value.length;
 
-set("ig",len,2200);
-set("tw",len,280);
-set("tt",len,2200);
-}
+            set("ig", len, 2200);
+            set("tw", len, 280);
+            set("tt", len, 2200);
+        }
 
-function set(id,len,max){
-let el=document.getElementById(id);
-let remaining=max-len;
+        function set(id, len, max) {
+            let el = document.getElementById(id);
+            let remaining = max - len;
 
-let cls="ok";
-if(remaining<50) cls="warn";
-if(remaining<0) cls="bad";
+            let cls = "ok";
+            if (remaining < 50) cls = "warn";
+            if (remaining < 0) cls = "bad";
 
-el.innerHTML=`<span class="${cls}">${len}/${max}</span>`;
-}
+            el.innerHTML = `<span class="${cls}">${len}/${max}</span>`;
+        }
 
-text.addEventListener("input",update);
-update();
+        text.addEventListener("input", update);
+        update();
     </script>
-
 </body>
 </html>
