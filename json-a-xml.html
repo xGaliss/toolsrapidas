@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Convertidor JSON a XML online | ToolsRapidas</title>
+    <meta name="description" content="Convierte JSON a XML online gratis para pruebas e integraciones.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/json-a-xml.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Convertidor JSON a XML online | ToolsRapidas">
+    <meta property="og:description" content="Pasa JSON a XML fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/json-a-xml.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Convertidor JSON a XML online | ToolsRapidas" />
+    <meta name="twitter:description" content="Pasa JSON a XML fácilmente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Convertidor JSON a XML online",
+          "url": "https://toolsrapidas.com/json-a-xml.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Convierte JSON a XML online gratis para pruebas e integraciones."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+        .tool-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.05;
+            margin: 0 0 14px;
+            font-weight: 900;
+            letter-spacing: -1.1px;
+        }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea, input, select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+        textarea:focus, input:focus, select:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+        }
+
+        textarea {
+            min-height: 300px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .tool-buttons button {
+            border: 0;
+            border-radius: 12px;
+            padding: 12px 14px;
+            font-weight: 700;
+            cursor: pointer;
+            background: #162033;
+            color: var(--text);
+        }
+
+        .tool-buttons button.primary {
+            background: var(--brand2);
+            color: #052e16;
+        }
+
+        .tool-help, .tool-meta {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .tool-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .tool-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .stat-card, .result-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .result-card pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .inline-fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .inline-fields-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .tool-grid-3,
+            .tool-grid-2,
+            .inline-fields,
+            .inline-fields-3 {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 220px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Convertidor JSON a XML online</h1>
+            <p class="tool-lead">Convierte objetos JSON a XML de forma rápida para testing, ejemplos técnicos e integraciones.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>JSON</h2>
+                        <textarea id="input" placeholder="Pega aquí tu JSON...">{"usuario":{"nombre":"Ana","email":"ana@example.com"},"activo":true}</textarea>
+                        <div class="tool-buttons">
+                            <button class="primary" id="convertBtn">Convertir a XML</button>
+                        </div>
+                    </section>
+                    <section class="card tool-panel">
+                        <h2>XML</h2>
+                        <textarea id="output" placeholder="Aquí aparecerá el XML..."></textarea>
+                        <div class="tool-buttons">
+                            <button class="primary" id="copyBtn">Copiar</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades que encajan con este tipo de tarea.</p>
+                    </div>
+                </div>
+                <div class="tool-grid">
+
+                    <article class="card">
+                        <h3><a href="formateador-xml.html">Formateador XML</a></h3>
+                        <p>Da formato a XML y mejora su lectura.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="visor-json.html">Visor JSON</a></h3>
+                        <p>Formatea y revisa JSON.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="convertidor-json-a-csv.html">Convertidor JSON a CSV</a></h3>
+                        <p>Convierte arrays JSON en CSV.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+
+                    <h2>Convertir JSON a XML online</h2>
+                    <p>Convierte JSON a XML de forma rápida para pruebas, integraciones, documentación o transformaciones simples de datos. Es útil para desarrollo y soporte técnico.</p>
+                    <h2>Qué tipo de datos acepta</h2>
+                    <p>Funciona mejor con objetos JSON sencillos y arrays básicos. Las estructuras muy complejas pueden requerir adaptación manual.</p>
+                    <h2>Cuándo usarlo</h2>
+                    <p>Es útil para ejemplos técnicos, payloads de prueba, sistemas que aún usan XML o conversiones rápidas entre formatos.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+
+                    <details open>
+                        <summary>¿Convierte cualquier JSON?</summary>
+                        <p>Está orientado a estructuras comunes. En casos complejos puede requerir revisión manual.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para integraciones?</summary>
+                        <p>Sí. Puede servir como base para payloads XML sencillos.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar el XML resultante?</summary>
+                        <p>Sí. Puedes copiarlo con un clic.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+
+        function toXml(value, name) {
+            if (Array.isArray(value)) {
+                return value.map(item => `<${name}>${toXml(item, 'item')}</${name}>`).join('');
+            }
+            if (value !== null && typeof value === 'object') {
+                return Object.entries(value).map(([k, v]) => `<${k}>${toXml(v, k)}</${k}>`).join('');
+            }
+            return String(value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+
+        function convert() {
+            try {
+                const data = JSON.parse(input.value);
+                output.value = `<root>${toXml(data, 'item')}</root>`;
+            } catch {
+                output.value = 'JSON no válido.';
+            }
+        }
+        document.getElementById('convertBtn').addEventListener('click', convert);
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            await navigator.clipboard.writeText(output.value);
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = 'Copiado';
+            setTimeout(() => btn.textContent = 'Copiar', 1000);
+        });
+        convert();
+
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

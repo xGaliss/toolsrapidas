@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Validador de email online | ToolsRapidas</title>
+    <meta name="description" content="Valida emails online gratis y comprueba si su formato es correcto.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/validador-email.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Validador de email online | ToolsRapidas">
+    <meta property="og:description" content="Comprueba si un correo tiene formato válido.">
+    <meta property="og:url" content="https://toolsrapidas.com/validador-email.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Validador de email online | ToolsRapidas" />
+    <meta name="twitter:description" content="Comprueba si un correo tiene formato válido." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Validador de email online",
+          "url": "https://toolsrapidas.com/validador-email.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Valida emails online gratis y comprueba si su formato es correcto."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+        .tool-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.05;
+            margin: 0 0 14px;
+            font-weight: 900;
+            letter-spacing: -1.1px;
+        }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea, input, select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+        textarea:focus, input:focus, select:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+        }
+
+        textarea {
+            min-height: 300px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .tool-buttons button {
+            border: 0;
+            border-radius: 12px;
+            padding: 12px 14px;
+            font-weight: 700;
+            cursor: pointer;
+            background: #162033;
+            color: var(--text);
+        }
+
+        .tool-buttons button.primary {
+            background: var(--brand2);
+            color: #052e16;
+        }
+
+        .tool-help, .tool-meta {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .tool-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .tool-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .stat-card, .result-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .result-card pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .inline-fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .inline-fields-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .tool-grid-3,
+            .tool-grid-2,
+            .inline-fields,
+            .inline-fields-3 {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 220px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Validador de email online</h1>
+            <p class="tool-lead">Comprueba si una dirección de correo tiene una estructura válida y separa usuario y dominio al instante.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-single">
+                    <section class="card tool-panel">
+                        <h2>Validar email</h2>
+                        <input id="emailInput" type="text" placeholder="Escribe un email..." value="hola@toolsrapidas.com" />
+                        <div class="tool-buttons">
+                            <button class="primary" id="validateBtn">Validar email</button>
+                            <button id="copyBtn">Copiar resultado</button>
+                        </div>
+                        <div class="tool-grid-3" style="margin-top:16px;">
+                            <div class="stat-card"><strong id="validState">—</strong><span>Estado</span></div>
+                            <div class="stat-card"><strong id="domainOut">—</strong><span>Dominio</span></div>
+                            <div class="stat-card"><strong id="userOut">—</strong><span>Usuario</span></div>
+                        </div>
+                        <div class="tool-help">Comprueba si la estructura del correo es válida y separa usuario y dominio.</div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades que encajan con este tipo de tarea.</p>
+                    </div>
+                </div>
+                <div class="tool-grid">
+
+                    <article class="card">
+                        <h3><a href="generador-emails-profesionales.html">Generador de emails profesionales</a></h3>
+                        <p>Crea textos para correos formales y trabajo.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="generador-datos-fake.html">Generador de datos fake</a></h3>
+                        <p>Genera emails y otros datos de prueba.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="visor-json.html">Visor JSON</a></h3>
+                        <p>Formatea y revisa datos estructurados.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+
+                    <h2>Validar email online</h2>
+                    <p>Esta herramienta sirve para validar la estructura de una dirección de correo electrónico de forma rápida. Es útil para formularios, testing, listas de contactos y comprobaciones básicas antes de usar un email.</p>
+                    <h2>Qué comprueba</h2>
+                    <p>Comprueba si el email tiene una estructura válida con usuario, arroba y dominio. También separa la parte local y el dominio para revisar el formato.</p>
+                    <h2>Cuándo usarla</h2>
+                    <p>Es útil para desarrollo, automatización, soporte técnico, QA y preparación de formularios o importaciones de datos.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+
+                    <details open>
+                        <summary>¿Comprueba si el correo existe de verdad?</summary>
+                        <p>No. Solo valida el formato de la dirección.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para formularios?</summary>
+                        <p>Sí. Es útil para revisar la estructura antes de guardar o enviar datos.</p>
+                    </details>
+                    <details>
+                        <summary>¿El email se envía a un servidor?</summary>
+                        <p>No. Todo se analiza localmente en tu navegador.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        const emailInput = document.getElementById('emailInput');
+        const validState = document.getElementById('validState');
+        const domainOut = document.getElementById('domainOut');
+        const userOut = document.getElementById('userOut');
+
+        function validateEmail() {
+            const value = emailInput.value.trim();
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+            const parts = value.split('@');
+            const ok = regex.test(value) && parts.length === 2;
+
+            validState.textContent = ok ? 'Válido' : 'No válido';
+            userOut.textContent = ok ? parts[0] : '—';
+            domainOut.textContent = ok ? parts[1] : '—';
+        }
+
+        document.getElementById('validateBtn').addEventListener('click', validateEmail);
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            const text = `Estado: ${validState.textContent}\nUsuario: ${userOut.textContent}\nDominio: ${domainOut.textContent}`;
+            await navigator.clipboard.writeText(text);
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = 'Copiado';
+            setTimeout(() => btn.textContent = 'Copiar resultado', 1000);
+        });
+        validateEmail();
+
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>

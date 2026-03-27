@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sitemap.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sitemap.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\assets\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -158,72 +158,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "generador-regex.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-regex.html",
-              "RelativeDocumentMoniker": "generador-regex.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-regex.html",
-              "RelativeToolTip": "generador-regex.html",
-              "ViewState": "AgIAAAICAAAAAAAAAAAAwDYCAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-27T10:02:09.861Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "regex-tester.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\regex-tester.html",
-              "RelativeDocumentMoniker": "regex-tester.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\regex-tester.html",
-              "RelativeToolTip": "regex-tester.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-27T10:01:42.044Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "generador-logs-fake.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-logs-fake.html",
-              "RelativeDocumentMoniker": "generador-logs-fake.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-logs-fake.html",
-              "RelativeToolTip": "generador-logs-fake.html",
-              "ViewState": "AgIAAIIBAAAAAAAAAAAAwJ4BAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-27T09:51:50.087Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "generador-datos-fake.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-datos-fake.html",
-              "RelativeDocumentMoniker": "generador-datos-fake.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-datos-fake.html",
-              "RelativeToolTip": "generador-datos-fake.html",
-              "ViewState": "AgIAAHQBAAAAAAAAAAAAwI0BAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-27T09:51:36.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "generador-contratos-simples.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-contratos-simples.html",
-              "RelativeDocumentMoniker": "generador-contratos-simples.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-contratos-simples.html",
-              "RelativeToolTip": "generador-contratos-simples.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-26T22:01:01.723Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 10,
@@ -283,6 +219,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAANIBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-03-26T20:24:24.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-26T00:25:16.058Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -358,6 +307,79 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "generador-contratos-simples.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-contratos-simples.html",
+              "RelativeDocumentMoniker": "generador-contratos-simples.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-contratos-simples.html",
+              "RelativeToolTip": "generador-contratos-simples.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-26T22:01:01.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "sitemap.xml",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
+              "RelativeDocumentMoniker": "sitemap.xml",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
+              "RelativeToolTip": "sitemap.xml",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwv08AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-03-26T00:24:48.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "generador-datos-fake.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-datos-fake.html",
+              "RelativeDocumentMoniker": "generador-datos-fake.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-datos-fake.html",
+              "RelativeToolTip": "generador-datos-fake.html",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAAwI0BAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-27T09:51:36.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "generador-logs-fake.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-logs-fake.html",
+              "RelativeDocumentMoniker": "generador-logs-fake.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-logs-fake.html",
+              "RelativeToolTip": "generador-logs-fake.html",
+              "ViewState": "AgIAAIIBAAAAAAAAAAAAwJ4BAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-27T09:51:50.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "regex-tester.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\regex-tester.html",
+              "RelativeDocumentMoniker": "regex-tester.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\regex-tester.html",
+              "RelativeToolTip": "regex-tester.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-27T10:01:42.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "generador-regex.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-regex.html",
+              "RelativeDocumentMoniker": "generador-regex.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-regex.html",
+              "RelativeToolTip": "generador-regex.html",
+              "ViewState": "AgIAAAICAAAAAAAAAAAAwDYCAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-27T10:02:09.861Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 35,
               "Title": "seo-checklist.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\seo-checklist.html",
@@ -430,32 +452,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAC0EAAAAAAAAAAAAwGEEAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-26T00:25:16.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "sitemap.xml",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
-              "RelativeDocumentMoniker": "sitemap.xml",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
-              "RelativeToolTip": "sitemap.xml",
-              "ViewState": "AgIAAGYAAAAAAAAAAADwv5sAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-26T00:24:48.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 30,
               "Title": "compresor-imagenes.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\compresor-imagenes.html",
@@ -488,8 +484,7 @@
               "RelativeToolTip": "assets\\styles.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-03-26T00:58:56.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T00:58:56.752Z"
             },
             {
               "$type": "Document",
@@ -609,8 +604,7 @@
               "RelativeToolTip": "robots.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2026-03-26T00:24:18.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T00:24:18.839Z"
             }
           ]
         }

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quitar espacios duplicados online | ToolsRapidas</title>
+    <meta name="description" content="Elimina espacios dobles o repetidos de un texto online gratis.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/quitar-espacios-duplicados.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Quitar espacios duplicados online | ToolsRapidas">
+    <meta property="og:description" content="Elimina espacios dobles o repetidos de un texto online gratis.">
+    <meta property="og:url" content="https://toolsrapidas.com/quitar-espacios-duplicados.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Quitar espacios duplicados online | ToolsRapidas" />
+    <meta name="twitter:description" content="Elimina espacios dobles o repetidos de un texto online gratis." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Quitar espacios duplicados",
+          "url": "https://toolsrapidas.com/quitar-espacios-duplicados.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Elimina espacios dobles o repetidos de un texto online gratis."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+        .tool-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.05;
+            margin: 0 0 14px;
+            font-weight: 900;
+            letter-spacing: -1.1px;
+        }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea, input, select {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+        }
+
+        textarea:focus, input:focus, select:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+        }
+
+        textarea {
+            min-height: 300px;
+            resize: vertical;
+        }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .tool-buttons button {
+            border: 0;
+            border-radius: 12px;
+            padding: 12px 14px;
+            font-weight: 700;
+            cursor: pointer;
+            background: #162033;
+            color: var(--text);
+        }
+
+        .tool-buttons button.primary {
+            background: var(--brand2);
+            color: #052e16;
+        }
+
+        .tool-help, .tool-meta {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .tool-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .tool-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .stat-card, .result-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .stat-card strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .result-card pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        .inline-fields {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .inline-fields-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .tool-grid-3,
+            .tool-grid-2,
+            .inline-fields,
+            .inline-fields-3 {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 220px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Quitar espacios duplicados</h1>
+            <p class="tool-lead">Elimina espacios dobles o repetidos de un texto online gratis.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Texto original</h2>
+                        <textarea id="input" placeholder="Pega aquí el texto con espacios repetidos...">Este   texto      tiene    muchos    espacios.</textarea>
+                        <div class="tool-buttons">
+                            <button class="primary" id="runBtn">Procesar texto</button>
+                        </div>
+                        <div class="tool-help">Ideal para limpiar textos pegados desde documentos, webs o formularios.</div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultado</h2>
+                        <textarea id="output" placeholder="Aquí aparecerá el resultado..."></textarea>
+                        <div class="tool-buttons">
+                            <button class="primary" id="copyBtn">Copiar</button>
+                            <button id="clearBtn">Limpiar</button>
+                        </div>
+                        <div class="tool-help">El procesamiento se realiza directamente en tu navegador.</div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Más utilidades que encajan con este tipo de tarea.</p>
+                    </div>
+                </div>
+                <div class="tool-grid">
+
+                    <article class="card">
+                        <h3><a href="limpiador-texto.html">Limpiador de texto</a></h3>
+                        <p>Limpia espacios, líneas y ruido en texto.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="quitar-saltos-linea.html">Quitar saltos de línea</a></h3>
+                        <p>Convierte texto partido en un bloque continuo.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="contador-palabras.html">Contador de palabras</a></h3>
+                        <p>Cuenta palabras, caracteres y tiempo de lectura.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+
+                    <h2>Eliminar espacios duplicados online</h2>
+                    <p>Elimina espacios dobles o repetidos de un texto online gratis. Esta herramienta te permite hacerlo directamente desde el navegador y copiar el resultado con un clic.</p>
+                    <h2>Cuándo es útil</h2>
+                    <p>Es útil para redactar mejor, limpiar contenido, preparar textos para formularios, editar copias o trabajar con texto pegado desde otras fuentes.</p>
+                    <h2>Ventajas de usarla online</h2>
+                    <p>Evitas pasos manuales, no instalas nada y obtienes el resultado de forma inmediata en escritorio o móvil.</p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+
+                    <details open>
+                        <summary>¿El texto se sube a un servidor?</summary>
+                        <p>No. Todo se procesa localmente en tu navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar el resultado?</summary>
+                        <p>Sí. Puedes copiar el texto transformado con un clic.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para trabajo y estudio?</summary>
+                        <p>Sí. Es útil para documentos, emails, apuntes, redacción y tareas de oficina.</p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+
+        function runTransform() {
+            output.value = input.value.replace(/[ \t]{2,}/g, ' ').trim();
+        }
+
+        document.getElementById('runBtn').addEventListener('click', runTransform);
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            await navigator.clipboard.writeText(output.value);
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = 'Copiado';
+            setTimeout(() => btn.textContent = 'Copiar', 1000);
+        });
+
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            input.value = '';
+            output.value = '';
+        });
+
+        runTransform();
+
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+
+</body>
+</html>
