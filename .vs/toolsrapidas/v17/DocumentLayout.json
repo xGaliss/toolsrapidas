@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\herramientas-para-trabajo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:herramientas-para-trabajo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\herramientas-seo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:herramientas-seo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sitemap.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\herramientas-para-trabajo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:herramientas-para-trabajo.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -147,10 +151,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:contacto.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\seo-checklist.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:seo-checklist.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\README.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
@@ -167,6 +167,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "herramientas-seo.html",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\herramientas-seo.html",
+              "RelativeDocumentMoniker": "herramientas-seo.html",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\herramientas-seo.html",
+              "RelativeToolTip": "herramientas-seo.html",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAALUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-27T19:20:19.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "herramientas-para-trabajo.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\herramientas-para-trabajo.html",
               "RelativeDocumentMoniker": "herramientas-para-trabajo.html",
@@ -179,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "convertidor-timestamp.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\convertidor-timestamp.html",
               "RelativeDocumentMoniker": "convertidor-timestamp.html",
@@ -191,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "uuid-generator.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\uuid-generator.html",
               "RelativeDocumentMoniker": "uuid-generator.html",
@@ -203,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "base64.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\base64.html",
               "RelativeDocumentMoniker": "base64.html",
@@ -215,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "unir-pdf.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\unir-pdf.html",
               "RelativeDocumentMoniker": "unir-pdf.html",
@@ -227,7 +240,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "pdf-a-word.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\pdf-a-word.html",
               "RelativeDocumentMoniker": "pdf-a-word.html",
@@ -239,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -252,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "imagen-a-texto.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\imagen-a-texto.html",
               "RelativeDocumentMoniker": "imagen-a-texto.html",
@@ -264,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "convertir-imagen.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\convertir-imagen.html",
               "RelativeDocumentMoniker": "convertir-imagen.html",
@@ -276,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "contacto.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\contacto.html",
               "RelativeDocumentMoniker": "contacto.html",
@@ -288,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "politica-cookies.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\politica-cookies.html",
               "RelativeDocumentMoniker": "politica-cookies.html",
@@ -300,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "politica-privacidad.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\politica-privacidad.html",
               "RelativeDocumentMoniker": "politica-privacidad.html",
@@ -312,7 +325,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 1,
+              "Title": "sitemap.xml",
+              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
+              "RelativeDocumentMoniker": "sitemap.xml",
+              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
+              "RelativeToolTip": "sitemap.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2026-03-26T00:24:48.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
               "Title": "aviso-legal.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\aviso-legal.html",
               "RelativeDocumentMoniker": "aviso-legal.html",
@@ -324,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "generador-contratos-simples.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-contratos-simples.html",
               "RelativeDocumentMoniker": "generador-contratos-simples.html",
@@ -336,20 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "sitemap.xml",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
-              "RelativeDocumentMoniker": "sitemap.xml",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\sitemap.xml",
-              "RelativeToolTip": "sitemap.xml",
-              "ViewState": "AgIAABYAAAAAAAAAAADwvzUAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2026-03-26T00:24:48.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "generador-datos-fake.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-datos-fake.html",
               "RelativeDocumentMoniker": "generador-datos-fake.html",
@@ -361,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "generador-logs-fake.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-logs-fake.html",
               "RelativeDocumentMoniker": "generador-logs-fake.html",
@@ -373,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "regex-tester.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\regex-tester.html",
               "RelativeDocumentMoniker": "regex-tester.html",
@@ -385,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "generador-regex.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-regex.html",
               "RelativeDocumentMoniker": "generador-regex.html",
@@ -397,19 +410,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "seo-checklist.html",
-              "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\seo-checklist.html",
-              "RelativeDocumentMoniker": "seo-checklist.html",
-              "ToolTip": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\seo-checklist.html",
-              "RelativeToolTip": "seo-checklist.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-26T15:09:46.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "convertir-webp.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\convertir-webp.html",
               "RelativeDocumentMoniker": "convertir-webp.html",
@@ -421,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "pdf-a-texto.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\pdf-a-texto.html",
               "RelativeDocumentMoniker": "pdf-a-texto.html",
@@ -433,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "limpiador-texto.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\limpiador-texto.html",
               "RelativeDocumentMoniker": "limpiador-texto.html",
@@ -445,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "quitar-saltos-linea.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\quitar-saltos-linea.html",
               "RelativeDocumentMoniker": "quitar-saltos-linea.html",
@@ -457,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "contador-palabras.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\contador-palabras.html",
               "RelativeDocumentMoniker": "contador-palabras.html",
@@ -469,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "compresor-imagenes.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\compresor-imagenes.html",
               "RelativeDocumentMoniker": "compresor-imagenes.html",
@@ -481,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "redimensionar-imagen.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\redimensionar-imagen.html",
               "RelativeDocumentMoniker": "redimensionar-imagen.html",
@@ -493,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "styles.css",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\assets\\styles.css",
               "RelativeDocumentMoniker": "assets\\styles.css",
@@ -505,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "texto-invisible-whatsapp.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\texto-invisible-whatsapp.html",
               "RelativeDocumentMoniker": "texto-invisible-whatsapp.html",
@@ -517,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "contador-caracteres-redes.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\contador-caracteres-redes.html",
               "RelativeDocumentMoniker": "contador-caracteres-redes.html",
@@ -529,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "letras-raras.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\letras-raras.html",
               "RelativeDocumentMoniker": "letras-raras.html",
@@ -541,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "generador-contrasenas.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-contrasenas.html",
               "RelativeDocumentMoniker": "generador-contrasenas.html",
@@ -553,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "formatear-whatsapp.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\formatear-whatsapp.html",
               "RelativeDocumentMoniker": "formatear-whatsapp.html",
@@ -565,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "generador-qr.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\generador-qr.html",
               "RelativeDocumentMoniker": "generador-qr.html",
@@ -577,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "firma-email.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\firma-email.html",
               "RelativeDocumentMoniker": "firma-email.html",
@@ -589,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "visor-json.html",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\visor-json.html",
               "RelativeDocumentMoniker": "visor-json.html",
@@ -613,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "robots.txt",
               "DocumentMoniker": "C:\\Users\\agali\\source\\repos\\xGaliss\\toolsrapidas\\robots.txt",
               "RelativeDocumentMoniker": "robots.txt",
