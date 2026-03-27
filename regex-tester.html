@@ -1,0 +1,646 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Probador de regex online | Regex tester gratis | ToolsRapidas</title>
+    <meta name="description" content="Prueba expresiones regulares online gratis. Comprueba coincidencias, flags y resultados en texto real directamente desde el navegador.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/regex-tester.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Probador de regex online | ToolsRapidas">
+    <meta property="og:description" content="Prueba expresiones regulares online con texto real, flags y coincidencias.">
+    <meta property="og:url" content="https://toolsrapidas.com/regex-tester.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Probador de regex online | ToolsRapidas" />
+    <meta name="twitter:description" content="Comprueba regex online gratis con coincidencias y resultados instantáneos." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Probador de regex online",
+          "url": "https://toolsrapidas.com/regex-tester.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Prueba expresiones regulares online gratis directamente desde el navegador."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+            .tool-hero h1 {
+                font-size: clamp(34px, 5vw, 52px);
+                line-height: 1.05;
+                margin: 0 0 14px;
+                font-weight: 900;
+                letter-spacing: -1.1px;
+            }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-layout-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .tool-layout-single {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .tool-panel h2 {
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        textarea, input {
+            width: 100%;
+            border: 1px solid rgba(148,163,184,.14);
+            border-radius: 14px;
+            background: #0b1220;
+            color: var(--text);
+            padding: 14px;
+            outline: none;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+
+            textarea:focus, input:focus {
+                border-color: #60a5fa;
+                box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+            }
+
+        textarea {
+            min-height: 320px;
+            resize: vertical;
+        }
+
+        .regex-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .flags {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+            .flags label {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+        .tool-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+            .tool-buttons button {
+                border: 0;
+                border-radius: 12px;
+                padding: 12px 14px;
+                font-weight: 700;
+                cursor: pointer;
+                background: #162033;
+                color: var(--text);
+            }
+
+                .tool-buttons button.primary {
+                    background: var(--brand2);
+                    color: #052e16;
+                }
+
+        .tool-help, .result-meta {
+            margin-top: 14px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .result-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            overflow: auto;
+            font: 14px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        mark.regex-hit {
+            background: rgba(96,165,250,.28);
+            color: #fff;
+            border-radius: 4px;
+            padding: 0 2px;
+        }
+
+        .match-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .match-item {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 12px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+
+        .examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+            .examples button {
+                border: 1px solid rgba(148,163,184,.15);
+                border-radius: 999px;
+                padding: 8px 12px;
+                background: #0b1220;
+                color: var(--text);
+                cursor: pointer;
+                font-size: 13px;
+            }
+
+        .related-tools .card a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .related-tools .card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .related-tools .card p {
+            margin: 0;
+        }
+
+        @media (max-width: 980px) {
+            .tool-layout-2,
+            .regex-row {
+                grid-template-columns: 1fr;
+            }
+
+            textarea {
+                min-height: 240px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Probador de regex online</h1>
+            <p class="tool-lead">
+                Prueba expresiones regulares online gratis con texto real, flags y coincidencias destacadas. Ideal para desarrollo, validaciones, limpieza de datos y búsquedas avanzadas.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-single">
+                    <section class="card tool-panel">
+                        <h2>Expresión regular</h2>
+
+                        <div class="regex-row">
+                            <input id="regexInput" type="text" placeholder="Ejemplo: \b\d{4}-\d{2}-\d{2}\b" value="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b">
+                            <button class="btn primary" id="runBtn" type="button">Probar regex</button>
+                        </div>
+
+                        <div class="flags">
+                            <label><input type="checkbox" id="flagG" checked> Global (g)</label>
+                            <label><input type="checkbox" id="flagI" checked> Ignorar mayúsculas (i)</label>
+                            <label><input type="checkbox" id="flagM"> Multilínea (m)</label>
+                            <label><input type="checkbox" id="flagS"> Dotall (s)</label>
+                            <label><input type="checkbox" id="flagU"> Unicode (u)</label>
+                        </div>
+
+                        <div class="examples">
+                            <button type="button" data-pattern="\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\\b">Email</button>
+                            <button type="button" data-pattern="\\b(?:https?:\\/\\/)?(?:www\\.)?[\\w.-]+\\.[A-Za-z]{2,}(?:\\/\\S*)?\\b">URL</button>
+                            <button type="button" data-pattern="\\b\\d{4}-\\d{2}-\\d{2}\\b">Fecha YYYY-MM-DD</button>
+                            <button type="button" data-pattern="\\b\\d{1,3}(?:\\.\\d{1,3}){3}\\b">IP simple</button>
+                            <button type="button" data-pattern="\\b\\+?\\d{9,15}\\b">Teléfono</button>
+                        </div>
+
+                        <div class="tool-help">
+                            Puedes pegar tu regex y activarle flags para probar coincidencias de forma inmediata sobre cualquier texto.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout-2">
+                    <section class="card tool-panel">
+                        <h2>Texto de prueba</h2>
+                        <textarea id="textInput" placeholder="Pega aquí el texto donde quieres probar la expresión regular...">Contacta con soporte en ayuda@toolsrapidas.com o en admin@example.org.
+También puedes visitar https://toolsrapidas.com o https://example.com/docs.
+Fecha de prueba: 2026-03-27
+IP ejemplo: 192.168.1.15</textarea>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="clearTextBtn">Limpiar texto</button>
+                        </div>
+
+                        <div class="tool-help">
+                            El análisis se realiza directamente en tu navegador. No enviamos tu regex ni tu texto a servidores externos.
+                        </div>
+                    </section>
+
+                    <section class="card tool-panel">
+                        <h2>Resultado resaltado</h2>
+                        <div id="highlightedResult" class="result-box">Aquí aparecerán las coincidencias resaltadas.</div>
+
+                        <div class="result-meta" id="resultMeta">Sin analizar todavía.</div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="copyRegexBtn">Copiar regex</button>
+                            <button id="copyMatchesBtn">Copiar coincidencias</button>
+                            <button id="clearAllBtn">Limpiar todo</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <section class="card tool-panel">
+                    <h2>Coincidencias encontradas</h2>
+                    <div id="matchList" class="match-list"></div>
+                </section>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas para desarrolladores y trabajo técnico</h2>
+                        <p>Valida, genera y analiza datos técnicos con herramientas útiles para desarrollo, APIs y testing.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3><a href="generador-regex.html">Generador de regex</a></h3>
+                        <p>Crea expresiones regulares básicas a partir de patrones comunes como email, URL o fecha.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="comparador-json.html">Comparador de JSON</a></h3>
+                        <p>Compara dos JSON y encuentra diferencias de forma rápida.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="visor-json.html">Visor JSON</a></h3>
+                        <p>Formatea y revisa JSON con una estructura más clara.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3><a href="base64.html">Base64 encode y decode</a></h3>
+                        <p>Codifica y decodifica contenido Base64 para APIs y pruebas técnicas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Probar regex online</h2>
+                    <p>
+                        Esta herramienta te permite probar expresiones regulares online gratis sobre texto real, revisar flags y ver coincidencias resaltadas directamente desde el navegador.
+                    </p>
+
+                    <h2>¿Para qué sirve un regex tester?</h2>
+                    <p>
+                        Sirve para validar patrones, encontrar coincidencias, depurar expresiones regulares y comprobar si una regex encuentra exactamente lo que necesitas en un texto.
+                    </p>
+
+                    <h2>Qué puedes comprobar</h2>
+                    <p>
+                        Puedes probar regex para emails, URLs, fechas, teléfonos, direcciones IP, códigos o cualquier otro patrón textual que necesites buscar o validar.
+                    </p>
+
+                    <h2>Ventajas de usar esta herramienta</h2>
+                    <p>
+                        El resultado se actualiza sin instalar programas y el procesamiento se hace localmente en tu navegador, lo que resulta cómodo para desarrollo, testing y tareas técnicas rápidas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta herramienta.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué hace este probador de regex?</summary>
+                        <p>Permite probar una expresión regular sobre un texto, activar flags y ver las coincidencias encontradas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo usar flags como g, i o m?</summary>
+                        <p>Sí. Puedes activar varios flags comunes para probar diferentes comportamientos de la regex.</p>
+                    </details>
+                    <details>
+                        <summary>¿El texto se envía a un servidor?</summary>
+                        <p>No. Todo el procesamiento se realiza localmente en tu navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para desarrollo y validación?</summary>
+                        <p>Sí. Es útil para desarrollo web, scripts, APIs, limpieza de datos y pruebas técnicas de expresiones regulares.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const regexInput = document.getElementById("regexInput");
+        const textInput = document.getElementById("textInput");
+        const highlightedResult = document.getElementById("highlightedResult");
+        const resultMeta = document.getElementById("resultMeta");
+        const matchList = document.getElementById("matchList");
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        function getFlags() {
+            const flags = [];
+            if (document.getElementById("flagG").checked) flags.push("g");
+            if (document.getElementById("flagI").checked) flags.push("i");
+            if (document.getElementById("flagM").checked) flags.push("m");
+            if (document.getElementById("flagS").checked) flags.push("s");
+            if (document.getElementById("flagU").checked) flags.push("u");
+            return flags.join("");
+        }
+
+        function runRegex() {
+            const pattern = regexInput.value;
+            const text = textInput.value;
+            const flags = getFlags();
+
+            matchList.innerHTML = "";
+
+            if (!pattern.trim()) {
+                highlightedResult.textContent = "Introduce una expresión regular.";
+                resultMeta.textContent = "Sin regex.";
+                return;
+            }
+
+            try {
+                const regex = new RegExp(pattern, flags);
+                const matches = [];
+                let html = "";
+                let lastIndex = 0;
+                let match;
+
+                const safeRegex = new RegExp(pattern, flags.includes("g") ? flags : flags + "g");
+                const allMatches = [...text.matchAll(safeRegex)];
+
+                if (!allMatches.length) {
+                    highlightedResult.textContent = text || "No hay texto de prueba.";
+                    resultMeta.textContent = "No se encontraron coincidencias.";
+                    return;
+                }
+
+                for (const item of allMatches) {
+                    const start = item.index;
+                    const found = item[0];
+                    html += escapeHtml(text.slice(lastIndex, start));
+                    html += `<mark class="regex-hit">${escapeHtml(found)}</mark>`;
+                    lastIndex = start + found.length;
+                    matches.push(found);
+                }
+
+                html += escapeHtml(text.slice(lastIndex));
+                highlightedResult.innerHTML = html;
+                resultMeta.textContent = `${matches.length} coincidencia(s) encontrada(s). Flags activas: ${flags || "ninguna"}.`;
+
+                matches.forEach((value, index) => {
+                    const div = document.createElement("div");
+                    div.className = "match-item";
+                    div.textContent = `${index + 1}. ${value}`;
+                    matchList.appendChild(div);
+                });
+
+            } catch (error) {
+                highlightedResult.textContent = "Regex no válida.";
+                resultMeta.textContent = "Hay un error en la expresión regular. Revisa la sintaxis.";
+            }
+        }
+
+        document.getElementById("runBtn").addEventListener("click", runRegex);
+
+        document.getElementById("copyRegexBtn").addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(regexInput.value);
+                const btn = document.getElementById("copyRegexBtn");
+                btn.textContent = "Copiado";
+                setTimeout(() => btn.textContent = "Copiar regex", 1000);
+            } catch { }
+        });
+
+        document.getElementById("copyMatchesBtn").addEventListener("click", async () => {
+            try {
+                const items = [...matchList.querySelectorAll(".match-item")].map(x => x.textContent.replace(/^\d+\.\s/, ""));
+                await navigator.clipboard.writeText(items.join("\n"));
+                const btn = document.getElementById("copyMatchesBtn");
+                btn.textContent = "Copiado";
+                setTimeout(() => btn.textContent = "Copiar coincidencias", 1000);
+            } catch { }
+        });
+
+        document.getElementById("clearTextBtn").addEventListener("click", () => {
+            textInput.value = "";
+            highlightedResult.textContent = "Aquí aparecerán las coincidencias resaltadas.";
+            resultMeta.textContent = "Sin analizar todavía.";
+            matchList.innerHTML = "";
+        });
+
+        document.getElementById("clearAllBtn").addEventListener("click", () => {
+            regexInput.value = "";
+            textInput.value = "";
+            highlightedResult.textContent = "Aquí aparecerán las coincidencias resaltadas.";
+            resultMeta.textContent = "Sin analizar todavía.";
+            matchList.innerHTML = "";
+        });
+
+        document.querySelectorAll(".examples button").forEach(btn => {
+            btn.addEventListener("click", () => {
+                regexInput.value = btn.dataset.pattern;
+                runRegex();
+            });
+        });
+
+        runRegex();
+    </script>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>

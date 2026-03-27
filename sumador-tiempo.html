@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sumador de tiempo online | Sumar horas y minutos | ToolsRapidas</title>
+    <meta name="description" content="Suma horas y minutos online gratis. Ideal para jornadas, tareas, partes de trabajo, proyectos y control de tiempo.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/sumador-tiempo.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Sumador de tiempo online | ToolsRapidas">
+    <meta property="og:description" content="Suma horas y minutos de varias tareas o jornadas fácilmente.">
+    <meta property="og:url" content="https://toolsrapidas.com/sumador-tiempo.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sumador de tiempo online | ToolsRapidas" />
+    <meta name="twitter:description" content="Suma horas y minutos de varias tareas o jornadas fácilmente." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Sumador de tiempo online",
+          "url": "https://toolsrapidas.com/sumador-tiempo.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Suma horas y minutos online gratis. Ideal para jornadas, tareas, partes de trabajo, proyectos y control de tiempo."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .tool-layout-single { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        .tool-panel h2 { font-size: 18px; margin: 0 0 12px; }
+        textarea, input, select {
+            width: 100%; border: 1px solid rgba(148,163,184,.14); border-radius: 14px;
+            background: #0b1220; color: var(--text); padding: 14px; outline: none;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+        textarea:focus, input:focus, select:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.15); }
+        textarea { min-height: 300px; resize: vertical; }
+        .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+        .tool-buttons button, .tool-buttons a.fake-btn {
+            border: 0; border-radius: 12px; padding: 12px 14px; font-weight: 700; cursor: pointer;
+            background: #162033; color: var(--text); text-decoration: none; display: inline-flex; align-items:center; justify-content:center;
+        }
+        .tool-buttons button.primary, .tool-buttons a.fake-btn.primary { background: var(--brand2); color: #052e16; }
+        .tool-help, .result-meta { margin-top: 14px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+        .result-box {
+            background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 14px; padding: 14px;
+            overflow: auto; font: 14px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word;
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+        .stat-card { background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 12px; padding: 14px; text-align: center; }
+        .stat-card strong { display: block; font-size: 24px; margin-bottom: 6px; }
+        .stat-card span { color: var(--muted); font-size: 14px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        .diff-out del { background: rgba(239,68,68,.18); text-decoration: line-through; padding: 0 2px; border-radius: 4px; }
+        .diff-out ins { background: rgba(34,197,94,.18); text-decoration: none; padding: 0 2px; border-radius: 4px; }
+        @media (max-width: 980px) {
+            .tool-layout-2, .field-grid, .stats-grid { grid-template-columns: 1fr; }
+            textarea { min-height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+<header class="tool-hero"><div class="container"><h1>Sumador de tiempo online</h1><p class="tool-lead">Suma horas y minutos de varias tareas, partes, jornadas o tiempos parciales y obtén el total automáticamente. Ideal para trabajo, soporte, producción y control horario.</p></div></header>
+<main>
+<section class="section"><div class="container"><div class="tool-layout-2">
+<section class="card tool-panel"><h2>Tiempos a sumar</h2>
+<textarea id="input" placeholder="Escribe un tiempo por línea. Ejemplos:
+1:30
+00:45
+2h 15m
+90m">1:30
+00:45
+2h 15m
+90m</textarea>
+<div class="tool-buttons"><button class="primary" id="sumBtn">Sumar tiempos</button><button id="sampleBtn">Ejemplo</button></div>
+<div class="tool-help">Acepta formatos como 1:30, 00:45, 2h 15m, 90m o 3h. Debes poner un tiempo por línea.</div></section>
+<section class="card tool-panel"><h2>Resultado</h2>
+<div class="stats-grid"><div class="stat-card"><strong id="totalHm">0 h 00</strong><span>Total</span></div><div class="stat-card"><strong id="totalMin">0</strong><span>Minutos</span></div><div class="stat-card"><strong id="rowsOk">0</strong><span>Líneas válidas</span></div><div class="stat-card"><strong id="rowsBad">0</strong><span>Líneas no válidas</span></div></div>
+<div class="result-box" id="resultBox">Introduce tiempos y pulsa en sumar.</div>
+<div class="tool-buttons"><button class="primary" id="copyBtn">Copiar resultado</button><button id="clearBtn">Limpiar</button></div>
+<div class="tool-help">Todo el cálculo se realiza localmente en tu navegador, sin enviar datos a servidores externos.</div></section>
+</div></div></section>
+
+<section class="section related-tools"><div class="container"><div class="section-head"><div><h2>Herramientas para trabajo y productividad</h2><p>Controla tiempos, cálculos y tareas de oficina con utilidades simples y rápidas.</p></div></div><div class="tool-grid">
+<article class="card"><h3><a href="calculadora-horas-trabajadas.html">Calculadora de horas trabajadas</a></h3><p>Calcula jornadas con entrada, salida y descanso.</p></article>
+<article class="card"><h3><a href="calculadora-iva.html">Calculadora de IVA</a></h3><p>Calcula IVA incluido o desglosado para presupuestos y facturas.</p></article>
+<article class="card"><h3><a href="limpiador-texto.html">Limpiador de texto</a></h3><p>Prepara partes y listados eliminando líneas vacías y espacios innecesarios.</p></article>
+<article class="card"><h3><a href="contador-palabras.html">Contador de palabras</a></h3><p>Cuenta caracteres y palabras en informes y documentación.</p></article>
+</div></div></section>
+
+<section class="section"><div class="container"><div class="seo-box">
+<h2>Sumar horas y minutos online</h2><p>Esta herramienta permite sumar horas y minutos online introduciendo varios tiempos en una lista para obtener un total inmediato.</p>
+<h2>¿Para qué sirve?</h2><p>Sirve para sumar tareas, partes de trabajo, tiempos de soporte, jornadas parciales, reuniones o cualquier bloque de tiempo que necesites consolidar.</p>
+<h2>Formatos compatibles</h2><p>Puedes usar formatos como horas y minutos con dos puntos, horas con h y minutos con m, o minutos totales por línea.</p>
+<h2>Ventajas de usar esta herramienta</h2><p>Ahorras tiempo frente a cálculos manuales o en Excel, especialmente cuando trabajas con muchas líneas de tiempos parciales.</p>
+</div></div></section>
+
+<section class="section" id="faq"><div class="container"><div class="section-head"><div><h2>Preguntas frecuentes</h2><p>Respuestas rápidas sobre esta herramienta.</p></div></div><div class="faq">
+<details open><summary>¿Qué formatos acepta?</summary><p>Acepta formatos como 1:30, 00:45, 2h 15m, 90m o 3h, con un tiempo por línea.</p></details>
+<details><summary>¿Puedo sumar varias líneas a la vez?</summary><p>Sí. Solo tienes que poner cada tiempo en una línea independiente y pulsar en sumar.</p></details>
+<details><summary>¿Me indica si alguna línea está mal escrita?</summary><p>Sí. La herramienta muestra cuántas líneas son válidas y cuántas no se han podido interpretar.</p></details>
+<details><summary>¿Se guarda la información?</summary><p>No. Todo se calcula localmente en tu navegador.</p></details>
+</div></div></section>
+</main>
+<script>
+const input=document.getElementById("input"), totalHm=document.getElementById("totalHm"), totalMin=document.getElementById("totalMin"), rowsOk=document.getElementById("rowsOk"), rowsBad=document.getElementById("rowsBad"), resultBox=document.getElementById("resultBox");
+function parseLine(line){ const v=line.trim(); if(!v) return null; let m=v.match(/^(\d{1,3}):(\d{1,2})$/); if(m) return Number(m[1])*60+Number(m[2]); m=v.match(/^(?:(\d+)\s*h)?\s*(?:(\d+)\s*m)?$/i); if(m&&(m[1]||m[2])) return Number(m[1]||0)*60+Number(m[2]||0); m=v.match(/^(\d+)\s*m$/i); if(m) return Number(m[1]); m=v.match(/^(\d+)$/); if(m) return Number(m[1]); return "bad"; }
+function formatMinutes(mins){ const h=Math.floor(mins/60), m=mins%60; return `${h} h ${m.toString().padStart(2,"0")}`; }
+function calculate(){ const lines=input.value.split(/\r?\n/); let sum=0, ok=0, bad=0, breakdown=[]; lines.forEach((line,idx)=>{const p=parseLine(line); if(p===null) return; if(p==="bad"){bad++; breakdown.push(`Línea ${idx+1}: no válida → ${line}`); return;} ok++; sum+=p; breakdown.push(`Línea ${idx+1}: ${line} → ${formatMinutes(p)}`);}); totalHm.textContent=formatMinutes(sum); totalMin.textContent=String(sum); rowsOk.textContent=String(ok); rowsBad.textContent=String(bad); resultBox.textContent=breakdown.length?`${breakdown.join("\n")}\n\nTOTAL: ${formatMinutes(sum)} (${sum} min)`:"Introduce tiempos y pulsa en sumar."; }
+document.getElementById("sumBtn").addEventListener("click", calculate);
+document.getElementById("sampleBtn").addEventListener("click", ()=>{input.value="1:30\n00:45\n2h 15m\n90m"; calculate();});
+document.getElementById("copyBtn").addEventListener("click", async()=>{try{await navigator.clipboard.writeText(resultBox.textContent); const btn=document.getElementById("copyBtn"); btn.textContent="Copiado"; setTimeout(()=>btn.textContent="Copiar resultado",1000);}catch{}});
+document.getElementById("clearBtn").addEventListener("click", ()=>{input.value=""; totalHm.textContent="0 h 00"; totalMin.textContent="0"; rowsOk.textContent="0"; rowsBad.textContent="0"; resultBox.textContent="Introduce tiempos y pulsa en sumar.";});
+calculate();
+</script>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) { localStorage.setItem(COOKIE_KEY, value); }
+            function getConsent() { return localStorage.getItem(COOKIE_KEY); }
+            function hideBanner() { banner.hidden = true; }
+            function showBanner() { banner.hidden = false; }
+
+            const consent = getConsent();
+            if (consent === 'accepted') { loadAnalytics(); hideBanner(); }
+            else if (consent === 'rejected') { hideBanner(); }
+            else { showBanner(); }
+
+            acceptBtn.addEventListener('click', function () { setConsent('accepted'); loadAnalytics(); hideBanner(); });
+            rejectBtn.addEventListener('click', function () { setConsent('rejected'); hideBanner(); });
+        })();
+    </script>
+</body>
+</html>

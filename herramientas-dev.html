@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Herramientas para desarrolladores y IT online | ToolsRapidas</title>
+    <meta name="description" content="Herramientas online para desarrolladores y sistemas: JSON, JWT, Base64, UUID, regex, subredes, logs fake, timestamps y más.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/herramientas-dev.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Herramientas para desarrolladores y IT | ToolsRapidas">
+    <meta property="og:description" content="Utilidades online para APIs, testing, JSON, JWT, regex, redes y desarrollo.">
+    <meta property="og:url" content="https://toolsrapidas.com/herramientas-dev.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Herramientas para desarrolladores y IT | ToolsRapidas" />
+    <meta name="twitter:description" content="JSON, JWT, Base64, UUID, regex, subredes y más herramientas online para desarrollo y sistemas." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Herramientas para desarrolladores y IT",
+          "url": "https://toolsrapidas.com/herramientas-dev.html",
+          "inLanguage": "es",
+          "description": "Colección de herramientas online para desarrollo, APIs, testing, redes y sistemas."
+        }
+    </script>
+
+    <style>
+        .tool-hero {
+            padding: 42px 0 18px;
+        }
+
+        .tool-hero h1 {
+            font-size: clamp(34px, 5vw, 52px);
+            line-height: 1.05;
+            margin: 0 0 14px;
+            font-weight: 900;
+            letter-spacing: -1.1px;
+        }
+
+        .tool-lead {
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .tool-intro {
+            margin-top: 16px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .landing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .landing-card h3 {
+            font-size: 22px;
+            margin: 0 0 8px;
+        }
+
+        .landing-card p {
+            margin: 0 0 14px;
+        }
+
+        .landing-card .tags {
+            margin-bottom: 14px;
+        }
+
+        .highlight-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 16px;
+            padding: 18px;
+        }
+
+        .highlight-box h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .section .card a.card-link {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+        }
+
+        .benefit-list {
+            display: grid;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .benefit-item {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+
+        .benefit-item strong {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 1100px) {
+            .landing-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .landing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Herramientas para desarrolladores y sistemas</h1>
+            <p class="tool-lead">
+                Utilidades online para trabajar con JSON, JWT, regex, Base64, UUID, logs, datos fake, timestamps y redes. Pensadas para desarrollo, testing, APIs, automatización y soporte técnico.
+            </p>
+            <p class="tool-intro">
+                Si trabajas con código, datos, integraciones o infra, aquí tienes herramientas rápidas para validar, transformar y probar información sin salir del navegador.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="highlight-box">
+                    <h2>Testing, parsing y utilidades técnicas</h2>
+                    <p>Desde comparar JSON hasta generar regex o calcular subredes, esta categoría está orientada a tareas reales de desarrollo, soporte e IT.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="herramientas">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas técnicas disponibles</h2>
+                        <p>Utilidades online para desarrolladores, sysadmins, soporte, APIs y testing.</p>
+                    </div>
+                </div>
+
+                <div class="landing-grid">
+
+                    <article class="card landing-card">
+                        <h3>Visor y formateador JSON</h3>
+                        <p>Valida, formatea y analiza JSON con una estructura clara.</p>
+                        <div class="tags"><span class="tag">JSON</span><span class="tag">API</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="visor-json.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Comparador de JSON</h3>
+                        <p>Compara dos JSON y detecta diferencias rápidamente.</p>
+                        <div class="tags"><span class="tag">JSON</span><span class="tag">Diff</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="comparador-json.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Validador de JWT</h3>
+                        <p>Comprueba si un token JWT tiene estructura válida.</p>
+                        <div class="tags"><span class="tag">JWT</span><span class="tag">Seguridad</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="validador-jwt.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Decodificador de JWT</h3>
+                        <p>Visualiza header y payload de tokens JWT fácilmente.</p>
+                        <div class="tags"><span class="tag">JWT</span><span class="tag">API</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="decodificador-jwt.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Base64 encode y decode</h3>
+                        <p>Codifica y decodifica texto Base64 para APIs y pruebas.</p>
+                        <div class="tags"><span class="tag">Base64</span><span class="tag">API</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="base64.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Generador de UUID</h3>
+                        <p>Genera UUID v4 online para testing, bases de datos y sistemas.</p>
+                        <div class="tags"><span class="tag">UUID</span><span class="tag">Dev</span><span class="tag">Sistemas</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="uuid-generator.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Convertidor de timestamp</h3>
+                        <p>Convierte Unix timestamp a fecha y viceversa.</p>
+                        <div class="tags"><span class="tag">Timestamp</span><span class="tag">Logs</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="convertidor-timestamp.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Generador de regex</h3>
+                        <p>Crea expresiones regulares para emails, URLs, fechas y más.</p>
+                        <div class="tags"><span class="tag">Regex</span><span class="tag">Dev</span><span class="tag">Testing</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-regex.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Probador de regex</h3>
+                        <p>Prueba regex con texto real y resalta coincidencias.</p>
+                        <div class="tags"><span class="tag">Regex</span><span class="tag">Texto</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="regex-tester.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Generador de logs fake</h3>
+                        <p>Crea logs simulados para ejemplos, parsing o pruebas.</p>
+                        <div class="tags"><span class="tag">Logs</span><span class="tag">Testing</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-logs-fake.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Generador de datos fake</h3>
+                        <p>Genera nombres, emails, teléfonos e IBAN para testing.</p>
+                        <div class="tags"><span class="tag">Testing</span><span class="tag">Datos</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-datos-fake.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Generador de endpoints mock</h3>
+                        <p>Prepara ejemplos de endpoints y respuestas mock de API.</p>
+                        <div class="tags"><span class="tag">API</span><span class="tag">Mock</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-endpoints-mock.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Comparador de texto</h3>
+                        <p>Compara dos textos y detecta diferencias línea por línea.</p>
+                        <div class="tags"><span class="tag">Texto</span><span class="tag">Diff</span><span class="tag">Dev</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="comparador-texto.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>Calculadora de subredes</h3>
+                        <p>Calcula rangos de red, hosts y máscara CIDR rápidamente.</p>
+                        <div class="tags"><span class="tag">Subnet</span><span class="tag">Redes</span><span class="tag">IT</span></div>
+                        <div class="actions">
+                            <a class="btn primary" href="calculadora-subredes.html">Abrir herramienta</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Para qué sirve esta categoría</h2>
+                        <p>Herramientas prácticas para problemas frecuentes de desarrollo y sistemas.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-list">
+                    <div class="benefit-item">
+                        <strong>APIs y datos</strong>
+                        <span>Valida JSON, inspecciona JWT, transforma Base64 y crea endpoints mock.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <strong>Testing y QA</strong>
+                        <span>Genera datos fake, logs de ejemplo y regex para validar formatos o casos de prueba.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <strong>Infra y soporte</strong>
+                        <span>Convierte timestamps, calcula subredes y compara textos de configuración o salida.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Herramientas online para desarrolladores y IT</h2>
+                    <p>
+                        Esta categoría reúne herramientas online para desarrolladores, técnicos de sistemas, soporte, testing e integraciones. Incluye utilidades para JSON, JWT, regex, Base64, UUID, logs, timestamps y redes.
+                    </p>
+
+                    <h2>¿Qué tipo de tareas puedes resolver?</h2>
+                    <p>
+                        Puedes validar estructuras, probar patrones, generar datos de ejemplo, comparar contenidos, convertir formatos y resolver tareas técnicas frecuentes en desarrollo y administración.
+                    </p>
+
+                    <h2>Ventajas de usar utilidades técnicas online</h2>
+                    <p>
+                        Ahorras tiempo, evitas abrir múltiples herramientas locales y puedes hacer comprobaciones rápidas desde cualquier navegador, tanto en escritorio como en móvil.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Respuestas rápidas sobre esta categoría.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Estas herramientas son útiles para desarrollo y sistemas?</summary>
+                        <p>Sí. Están pensadas para APIs, testing, validaciones, parsing, logs, redes y tareas técnicas frecuentes.</p>
+                    </details>
+                    <details>
+                        <summary>¿Funcionan sin instalar nada?</summary>
+                        <p>Sí. Todas se ejecutan online desde el navegador.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirven para trabajo real o solo demos?</summary>
+                        <p>Sirven para ambos casos: pruebas rápidas, documentación y tareas reales del día a día.</p>
+                    </details>
+                    <details>
+                        <summary>¿Hay herramientas de regex y JSON?</summary>
+                        <p>Sí. Incluye visor JSON, comparador de JSON, generador de regex y probador de regex, entre otras.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) {
+                localStorage.setItem(COOKIE_KEY, value);
+            }
+
+            function getConsent() {
+                return localStorage.getItem(COOKIE_KEY);
+            }
+
+            function hideBanner() {
+                banner.hidden = true;
+            }
+
+            function showBanner() {
+                banner.hidden = false;
+            }
+
+            const consent = getConsent();
+
+            if (consent === 'accepted') {
+                loadAnalytics();
+                hideBanner();
+            } else if (consent === 'rejected') {
+                hideBanner();
+            } else {
+                showBanner();
+            }
+
+            acceptBtn.addEventListener('click', function () {
+                setConsent('accepted');
+                loadAnalytics();
+                hideBanner();
+            });
+
+            rejectBtn.addEventListener('click', function () {
+                setConsent('rejected');
+                hideBanner();
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Calculadora de subredes online | Subnet calculator | ToolsRapidas</title>
+    <meta name="description" content="Calcula subredes online gratis. Obtén red, broadcast, rango de hosts, máscara y número de hosts a partir de una IP con CIDR.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/calculadora-subredes.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Calculadora de subredes online | ToolsRapidas">
+    <meta property="og:description" content="Calcula red, broadcast, hosts válidos y máscara a partir de IP y CIDR.">
+    <meta property="og:url" content="https://toolsrapidas.com/calculadora-subredes.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Calculadora de subredes online | ToolsRapidas" />
+    <meta name="twitter:description" content="Calcula red, broadcast, hosts válidos y máscara a partir de IP y CIDR." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Calculadora de subredes online",
+          "url": "https://toolsrapidas.com/calculadora-subredes.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Calcula subredes online gratis. Obtén red, broadcast, rango de hosts, máscara y número de hosts a partir de una IP con CIDR."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .tool-layout-single { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        .tool-panel h2 { font-size: 18px; margin: 0 0 12px; }
+        textarea, input, select {
+            width: 100%; border: 1px solid rgba(148,163,184,.14); border-radius: 14px;
+            background: #0b1220; color: var(--text); padding: 14px; outline: none;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+        textarea:focus, input:focus, select:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.15); }
+        textarea { min-height: 300px; resize: vertical; }
+        .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+        .tool-buttons button, .tool-buttons a.fake-btn {
+            border: 0; border-radius: 12px; padding: 12px 14px; font-weight: 700; cursor: pointer;
+            background: #162033; color: var(--text); text-decoration: none; display: inline-flex; align-items:center; justify-content:center;
+        }
+        .tool-buttons button.primary, .tool-buttons a.fake-btn.primary { background: var(--brand2); color: #052e16; }
+        .tool-help, .result-meta { margin-top: 14px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+        .result-box {
+            background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 14px; padding: 14px;
+            overflow: auto; font: 14px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word;
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+        .stat-card { background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 12px; padding: 14px; text-align: center; }
+        .stat-card strong { display: block; font-size: 24px; margin-bottom: 6px; }
+        .stat-card span { color: var(--muted); font-size: 14px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        .diff-out del { background: rgba(239,68,68,.18); text-decoration: line-through; padding: 0 2px; border-radius: 4px; }
+        .diff-out ins { background: rgba(34,197,94,.18); text-decoration: none; padding: 0 2px; border-radius: 4px; }
+        @media (max-width: 980px) {
+            .tool-layout-2, .field-grid, .stats-grid { grid-template-columns: 1fr; }
+            textarea { min-height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+<header class="tool-hero"><div class="container"><h1>Calculadora de subredes online</h1><p class="tool-lead">Calcula red, broadcast, máscara, wildcard, rango de hosts y número de hosts válidos a partir de una dirección IP y un prefijo CIDR. Ideal para redes, sysadmin y soporte técnico.</p></div></header>
+<main>
+<section class="section"><div class="container"><div class="tool-layout-single"><section class="card tool-panel"><h2>IP y prefijo</h2>
+<div class="field-grid"><input id="ipInput" type="text" placeholder="Ejemplo: 192.168.1.10" value="192.168.1.10"><input id="cidrInput" type="number" min="0" max="32" placeholder="CIDR" value="24"></div>
+<div class="tool-buttons"><button class="primary" id="calcBtn">Calcular subred</button><button id="copyBtn">Copiar resultado</button><button id="clearBtn">Limpiar</button></div>
+<div class="tool-help">Introduce una IP IPv4 y un prefijo CIDR entre 0 y 32. Ejemplo típico: 192.168.1.10 /24.</div>
+<div class="stats-grid"><div class="stat-card"><strong id="networkStat">-</strong><span>Red</span></div><div class="stat-card"><strong id="broadcastStat">-</strong><span>Broadcast</span></div><div class="stat-card"><strong id="usableStat">-</strong><span>Hosts válidos</span></div><div class="stat-card"><strong id="maskStat">-</strong><span>Máscara</span></div></div>
+<div class="result-box" id="resultBox">Introduce una IP y un CIDR para calcular la subred.</div></section></div></div></section>
+
+<section class="section related-tools"><div class="container"><div class="section-head"><div><h2>Herramientas para sysadmin y desarrollo</h2><p>Utilidades útiles para redes, datos técnicos, APIs y validaciones.</p></div></div><div class="tool-grid">
+<article class="card"><h3><a href="regex-tester.html">Probador de regex</a></h3><p>Prueba expresiones regulares con texto real y flags.</p></article>
+<article class="card"><h3><a href="convertidor-timestamp.html">Convertidor de timestamp</a></h3><p>Convierte Unix timestamp a fecha y viceversa.</p></article>
+<article class="card"><h3><a href="base64.html">Base64 encode y decode</a></h3><p>Codifica y decodifica texto Base64 para APIs y scripts.</p></article>
+<article class="card"><h3><a href="generador-datos-fake.html">Generador de datos fake</a></h3><p>Crea datos de prueba para testing y demos.</p></article>
+</div></div></section>
+
+<section class="section"><div class="container"><div class="seo-box">
+<h2>Calcular subredes online</h2><p>Esta herramienta permite calcular subredes online introduciendo una IP y un prefijo CIDR para obtener red, broadcast, máscara y rango de hosts.</p>
+<h2>¿Para qué sirve?</h2><p>Sirve para administración de redes, diseño de direccionamiento, configuración de equipos, soporte técnico y tareas de sistemas.</p>
+<h2>Qué resultados ofrece</h2><p>Obtienes red, broadcast, máscara decimal, wildcard, primer host, último host y número de hosts válidos.</p>
+<h2>Ventajas de usar esta herramienta</h2><p>Permite comprobar cálculos rápidamente sin usar comandos ni hojas de cálculo, directamente desde el navegador.</p>
+</div></div></section>
+
+<section class="section" id="faq"><div class="container"><div class="section-head"><div><h2>Preguntas frecuentes</h2><p>Respuestas rápidas sobre esta herramienta.</p></div></div><div class="faq">
+<details open><summary>¿Qué calcula esta herramienta?</summary><p>Calcula la red, broadcast, máscara, wildcard, rango de hosts y número de hosts válidos a partir de una IP y un prefijo CIDR.</p></details>
+<details><summary>¿Sirve para IPv4?</summary><p>Sí. Esta versión está orientada a direcciones IPv4.</p></details>
+<details><summary>¿Puedo introducir cualquier prefijo CIDR?</summary><p>Sí, desde /0 hasta /32.</p></details>
+<details><summary>¿Se envían mis datos a un servidor?</summary><p>No. Todo se calcula localmente en tu navegador.</p></details>
+</div></div></section>
+</main>
+<script>
+const ipInput=document.getElementById("ipInput"), cidrInput=document.getElementById("cidrInput"), resultBox=document.getElementById("resultBox");
+function ipToInt(ip){ const parts=ip.split(".").map(Number); if(parts.length!==4||parts.some(n=>Number.isNaN(n)||n<0||n>255)) return null; return ((((parts[0]<<24)>>>0)+(parts[1]<<16)+(parts[2]<<8)+parts[3])>>>0); }
+function intToIp(int){ return [(int>>>24)&255,(int>>>16)&255,(int>>>8)&255,int&255].join("."); }
+function prefixToMask(prefix){ return prefix===0?0:((0xFFFFFFFF<<(32-prefix))>>>0); }
+function calculate(){ const ip=ipInput.value.trim(), prefix=Number(cidrInput.value); if(!ip||Number.isNaN(prefix)||prefix<0||prefix>32){resultBox.textContent="Introduce una IP válida y un prefijo CIDR entre 0 y 32."; return;} const ipInt=ipToInt(ip); if(ipInt===null){resultBox.textContent="La dirección IP no es válida."; return;} const mask=prefixToMask(prefix), wildcard=(~mask)>>>0, network=(ipInt&mask)>>>0, broadcast=(network|wildcard)>>>0; let firstHost=network, lastHost=broadcast, usableHosts=0; if(prefix<31){ firstHost=network+1; lastHost=broadcast-1; usableHosts=Math.max(0,(2**(32-prefix))-2);} else if(prefix===31){ usableHosts=2; } else { usableHosts=1; } document.getElementById("networkStat").textContent=intToIp(network); document.getElementById("broadcastStat").textContent=intToIp(broadcast); document.getElementById("usableStat").textContent=String(usableHosts); document.getElementById("maskStat").textContent=intToIp(mask); resultBox.textContent=`IP introducida: ${ip}
+Prefijo CIDR: /${prefix}
+Máscara decimal: ${intToIp(mask)}
+Wildcard: ${intToIp(wildcard)}
+Dirección de red: ${intToIp(network)}
+Broadcast: ${intToIp(broadcast)}
+Primer host: ${intToIp(firstHost)}
+Último host: ${intToIp(lastHost)}
+Hosts válidos: ${usableHosts}`; }
+document.getElementById("calcBtn").addEventListener("click", calculate);
+document.getElementById("copyBtn").addEventListener("click", async()=>{try{await navigator.clipboard.writeText(resultBox.textContent); const btn=document.getElementById("copyBtn"); btn.textContent="Copiado"; setTimeout(()=>btn.textContent="Copiar resultado",1000);}catch{}});
+document.getElementById("clearBtn").addEventListener("click", ()=>{ipInput.value=""; cidrInput.value=""; document.getElementById("networkStat").textContent="-"; document.getElementById("broadcastStat").textContent="-"; document.getElementById("usableStat").textContent="-"; document.getElementById("maskStat").textContent="-"; resultBox.textContent="Introduce una IP y un CIDR para calcular la subred.";});
+calculate();
+</script>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) { localStorage.setItem(COOKIE_KEY, value); }
+            function getConsent() { return localStorage.getItem(COOKIE_KEY); }
+            function hideBanner() { banner.hidden = true; }
+            function showBanner() { banner.hidden = false; }
+
+            const consent = getConsent();
+            if (consent === 'accepted') { loadAnalytics(); hideBanner(); }
+            else if (consent === 'rejected') { hideBanner(); }
+            else { showBanner(); }
+
+            acceptBtn.addEventListener('click', function () { setConsent('accepted'); loadAnalytics(); hideBanner(); });
+            rejectBtn.addEventListener('click', function () { setConsent('rejected'); hideBanner(); });
+        })();
+    </script>
+</body>
+</html>

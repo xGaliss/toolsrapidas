@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Comparador de texto online | Ver diferencias entre textos | ToolsRapidas</title>
+    <meta name="description" content="Compara dos textos online gratis y detecta diferencias rápidamente. Útil para documentos, configuraciones, código, contratos y contenido.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/comparador-texto.html">
+    <meta name="theme-color" content="#08111f">
+
+    <meta property="og:title" content="Comparador de texto online | ToolsRapidas">
+    <meta property="og:description" content="Compara dos textos y encuentra diferencias de forma rápida y visual.">
+    <meta property="og:url" content="https://toolsrapidas.com/comparador-texto.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Comparador de texto online | ToolsRapidas" />
+    <meta name="twitter:description" content="Compara dos textos y encuentra diferencias de forma rápida y visual." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Comparador de texto online",
+          "url": "https://toolsrapidas.com/comparador-texto.html",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Compara dos textos online gratis y detecta diferencias rápidamente. Útil para documentos, configuraciones, código, contratos y contenido."
+        }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-984EW75R9H');
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .tool-layout-single { display: grid; grid-template-columns: 1fr; gap: 18px; }
+        .tool-panel h2 { font-size: 18px; margin: 0 0 12px; }
+        textarea, input, select {
+            width: 100%; border: 1px solid rgba(148,163,184,.14); border-radius: 14px;
+            background: #0b1220; color: var(--text); padding: 14px; outline: none;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+        textarea:focus, input:focus, select:focus { border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.15); }
+        textarea { min-height: 300px; resize: vertical; }
+        .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+        .tool-buttons button, .tool-buttons a.fake-btn {
+            border: 0; border-radius: 12px; padding: 12px 14px; font-weight: 700; cursor: pointer;
+            background: #162033; color: var(--text); text-decoration: none; display: inline-flex; align-items:center; justify-content:center;
+        }
+        .tool-buttons button.primary, .tool-buttons a.fake-btn.primary { background: var(--brand2); color: #052e16; }
+        .tool-help, .result-meta { margin-top: 14px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+        .result-box {
+            background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 14px; padding: 14px;
+            overflow: auto; font: 14px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word;
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
+        .stat-card { background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 12px; padding: 14px; text-align: center; }
+        .stat-card strong { display: block; font-size: 24px; margin-bottom: 6px; }
+        .stat-card span { color: var(--muted); font-size: 14px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        .diff-out del { background: rgba(239,68,68,.18); text-decoration: line-through; padding: 0 2px; border-radius: 4px; }
+        .diff-out ins { background: rgba(34,197,94,.18); text-decoration: none; padding: 0 2px; border-radius: 4px; }
+        @media (max-width: 980px) {
+            .tool-layout-2, .field-grid, .stats-grid { grid-template-columns: 1fr; }
+            textarea { min-height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html#herramientas">Herramientas</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+<header class="tool-hero"><div class="container"><h1>Comparador de texto online</h1><p class="tool-lead">Compara dos textos y detecta diferencias visualmente. Ideal para revisar documentos, contratos, configuraciones, borradores, contenido copiado o cambios entre versiones.</p></div></header>
+<main>
+<section class="section"><div class="container"><div class="tool-layout-2">
+<section class="card tool-panel"><h2>Texto A</h2><textarea id="textA" placeholder="Pega aquí el primer texto...">Hola equipo:
+La reunión se mueve al jueves a las 10:00.
+Gracias.</textarea><div class="tool-help">Introduce el texto original o la versión que quieras comparar.</div></section>
+<section class="card tool-panel"><h2>Texto B</h2><textarea id="textB" placeholder="Pega aquí el segundo texto...">Hola equipo:
+La reunión se mueve al viernes a las 10:30.
+Muchas gracias.</textarea><div class="tool-help">Introduce la versión modificada para ver diferencias.</div></section>
+</div></div></section>
+
+<section class="section"><div class="container"><section class="card tool-panel"><h2>Comparación</h2>
+<div class="field-grid">
+<label style="display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;"><input type="checkbox" id="ignoreCase"> Ignorar mayúsculas</label>
+<label style="display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;"><input type="checkbox" id="ignoreSpaces"> Ignorar espacios extra</label>
+</div>
+<div class="tool-buttons"><button class="primary" id="compareBtn">Comparar textos</button><button id="copyBtn">Copiar resumen</button><button id="clearBtn">Limpiar</button></div>
+<div class="stats-grid"><div class="stat-card"><strong id="equalStat">No</strong><span>¿Iguales?</span></div><div class="stat-card"><strong id="aWords">0</strong><span>Palabras A</span></div><div class="stat-card"><strong id="bWords">0</strong><span>Palabras B</span></div><div class="stat-card"><strong id="diffCount">0</strong><span>Cambios</span></div></div>
+<div class="result-meta" id="summaryMeta">Pulsa en comparar para ver diferencias.</div>
+<div class="tool-layout-2" style="margin-top:16px;"><div><h2>Vista A</h2><div id="outA" class="result-box diff-out">Aquí aparecerá el texto A comparado.</div></div><div><h2>Vista B</h2><div id="outB" class="result-box diff-out">Aquí aparecerá el texto B comparado.</div></div></div>
+</section></div></section>
+
+<section class="section related-tools"><div class="container"><div class="section-head"><div><h2>Herramientas para texto y desarrollo</h2><p>Compara, limpia y analiza contenido fácilmente desde el navegador.</p></div></div><div class="tool-grid">
+<article class="card"><h3><a href="comparador-json.html">Comparador de JSON</a></h3><p>Compara estructuras JSON y encuentra diferencias rápidamente.</p></article>
+<article class="card"><h3><a href="limpiador-texto.html">Limpiador de texto</a></h3><p>Elimina líneas vacías, duplicados y espacios innecesarios.</p></article>
+<article class="card"><h3><a href="quitar-saltos-linea.html">Quitar saltos de línea</a></h3><p>Une texto cortado para compararlo o reutilizarlo mejor.</p></article>
+<article class="card"><h3><a href="contador-palabras.html">Contador de palabras</a></h3><p>Cuenta palabras y caracteres de los textos comparados.</p></article>
+</div></div></section>
+
+<section class="section"><div class="container"><div class="seo-box">
+<h2>Comparar dos textos online</h2><p>Esta herramienta te permite comparar dos textos online y detectar diferencias de forma visual y rápida.</p>
+<h2>¿Para qué sirve?</h2><p>Sirve para revisar documentos, contratos, configuraciones, contenido web, versiones de texto o cambios entre borradores.</p>
+<h2>Qué puedes detectar</h2><p>Puedes ver palabras eliminadas, añadidas o modificadas, además de comprobar si dos textos son iguales o no.</p>
+<h2>Ventajas de usar esta herramienta</h2><p>Te ayuda a ahorrar tiempo al revisar cambios sin necesidad de software adicional ni herramientas externas.</p>
+</div></div></section>
+
+<section class="section" id="faq"><div class="container"><div class="section-head"><div><h2>Preguntas frecuentes</h2><p>Respuestas rápidas sobre esta herramienta.</p></div></div><div class="faq">
+<details open><summary>¿Qué hace esta herramienta?</summary><p>Compara dos textos y resalta diferencias de forma visual para que puedas revisar cambios rápidamente.</p></details>
+<details><summary>¿Sirve para contratos, código o documentos?</summary><p>Sí. Es útil para cualquier contenido textual donde necesites ver diferencias entre dos versiones.</p></details>
+<details><summary>¿Puedo ignorar mayúsculas o espacios?</summary><p>Sí. Puedes activar opciones para ignorar mayúsculas o espacios extra al comparar.</p></details>
+<details><summary>¿Se sube mi texto a un servidor?</summary><p>No. Todo el procesamiento se realiza localmente en tu navegador.</p></details>
+</div></div></section>
+</main>
+<script>
+const textA=document.getElementById("textA"), textB=document.getElementById("textB"), outA=document.getElementById("outA"), outB=document.getElementById("outB"), summaryMeta=document.getElementById("summaryMeta");
+function normalizeText(text){ if(document.getElementById("ignoreSpaces").checked) text=text.replace(/\s+/g," ").trim(); if(document.getElementById("ignoreCase").checked) text=text.toLowerCase(); return text; }
+function escapeHtml(text){ return text.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function tokenize(text){ return text.split(/(\s+)/).filter(x=>x!==""); }
+function diffTokens(aTokens,bTokens){ const m=aTokens.length,n=bTokens.length; const dp=Array.from({length:m+1},()=>Array(n+1).fill(0)); for(let i=m-1;i>=0;i--){for(let j=n-1;j>=0;j--){dp[i][j]=aTokens[i]===bTokens[j]?1+dp[i+1][j+1]:Math.max(dp[i+1][j],dp[i][j+1]);}} let aOut=[], bOut=[], i=0,j=0,changes=0; while(i<m&&j<n){ if(aTokens[i]===bTokens[j]){aOut.push(escapeHtml(aTokens[i])); bOut.push(escapeHtml(bTokens[j])); i++; j++;} else if(dp[i+1][j]>=dp[i][j+1]){aOut.push(`<del>${escapeHtml(aTokens[i])}</del>`); changes++; i++;} else {bOut.push(`<ins>${escapeHtml(bTokens[j])}</ins>`); changes++; j++;}} while(i<m){aOut.push(`<del>${escapeHtml(aTokens[i])}</del>`); changes++; i++;} while(j<n){bOut.push(`<ins>${escapeHtml(bTokens[j])}</ins>`); changes++; j++;} return {aHtml:aOut.join(""), bHtml:bOut.join(""), changes}; }
+function wordCount(text){ const m=text.trim().match(/\S+/g); return m?m.length:0; }
+function compare(){ const rawA=textA.value, rawB=textB.value, normA=normalizeText(rawA), normB=normalizeText(rawB); document.getElementById("aWords").textContent=wordCount(rawA); document.getElementById("bWords").textContent=wordCount(rawB); const res=diffTokens(tokenize(normA), tokenize(normB)); outA.innerHTML=res.aHtml||"Sin contenido."; outB.innerHTML=res.bHtml||"Sin contenido."; const equal=normA===normB; document.getElementById("equalStat").textContent=equal?"Sí":"No"; document.getElementById("diffCount").textContent=String(res.changes); summaryMeta.textContent=equal?"Los textos son equivalentes según las opciones activas.":`Se han detectado ${res.changes} cambio(s) entre ambos textos.`; }
+document.getElementById("compareBtn").addEventListener("click", compare);
+document.getElementById("copyBtn").addEventListener("click", async()=>{try{const text=`Comparación de texto
+Iguales: ${document.getElementById("equalStat").textContent}
+Palabras A: ${document.getElementById("aWords").textContent}
+Palabras B: ${document.getElementById("bWords").textContent}
+Cambios: ${document.getElementById("diffCount").textContent}`; await navigator.clipboard.writeText(text); const btn=document.getElementById("copyBtn"); btn.textContent="Copiado"; setTimeout(()=>btn.textContent="Copiar resumen",1000);}catch{}});
+document.getElementById("clearBtn").addEventListener("click", ()=>{textA.value=""; textB.value=""; outA.textContent="Aquí aparecerá el texto A comparado."; outB.textContent="Aquí aparecerá el texto B comparado."; summaryMeta.textContent="Pulsa en comparar para ver diferencias."; document.getElementById("equalStat").textContent="No"; document.getElementById("aWords").textContent="0"; document.getElementById("bWords").textContent="0"; document.getElementById("diffCount").textContent="0";});
+compare();
+</script>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div>
+                <a href="aviso-legal.html">Aviso legal</a> ·
+                <a href="politica-privacidad.html">Privacidad</a> ·
+                <a href="politica-cookies.html">Cookies</a> ·
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
+            const GA_ID = 'G-984EW75R9H';
+            const banner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('cookieAcceptBtn');
+            const rejectBtn = document.getElementById('cookieRejectBtn');
+
+            function loadAnalytics() {
+                if (window.__trAnalyticsLoaded) return;
+                window.__trAnalyticsLoaded = true;
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+                document.head.appendChild(script);
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { dataLayer.push(arguments); };
+                gtag('js', new Date());
+                gtag('config', GA_ID);
+            }
+
+            function setConsent(value) { localStorage.setItem(COOKIE_KEY, value); }
+            function getConsent() { return localStorage.getItem(COOKIE_KEY); }
+            function hideBanner() { banner.hidden = true; }
+            function showBanner() { banner.hidden = false; }
+
+            const consent = getConsent();
+            if (consent === 'accepted') { loadAnalytics(); hideBanner(); }
+            else if (consent === 'rejected') { hideBanner(); }
+            else { showBanner(); }
+
+            acceptBtn.addEventListener('click', function () { setConsent('accepted'); loadAnalytics(); hideBanner(); });
+            rejectBtn.addEventListener('click', function () { setConsent('rejected'); hideBanner(); });
+        })();
+    </script>
+</body>
+</html>
