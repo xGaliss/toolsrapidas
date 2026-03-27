@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Herramientas para desarrolladores y IT online | ToolsRapidas</title>
-    <meta name="description" content="Herramientas online para desarrolladores y sistemas: JSON, JWT, Base64, UUID, regex, subredes, XML, logs fake, timestamps, SQL y más.">
+    <meta name="description" content="Herramientas online para desarrolladores y sistemas: JSON, JWT, Base64, UUID, regex, subredes, XML, SQL, emails, logs, texto, PDF y más.">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/herramientas-dev.html">
     <meta name="theme-color" content="#08111f">
 
     <meta property="og:title" content="Herramientas para desarrolladores y IT | ToolsRapidas">
-    <meta property="og:description" content="Utilidades online para APIs, testing, JSON, JWT, regex, XML, redes y desarrollo.">
+    <meta property="og:description" content="Utilidades online para APIs, testing, JSON, JWT, regex, XML, redes, texto y desarrollo.">
     <meta property="og:url" content="https://toolsrapidas.com/herramientas-dev.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Herramientas para desarrolladores y IT | ToolsRapidas" />
-    <meta name="twitter:description" content="JSON, JWT, Base64, UUID, regex, subredes, XML y más herramientas online para desarrollo y sistemas." />
+    <meta name="twitter:description" content="JSON, JWT, Base64, UUID, regex, subredes, XML, SQL y más herramientas online para desarrollo y sistemas." />
 
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="assets/styles.css" />
@@ -49,8 +49,11 @@
         .benefit-list { display: grid; gap: 10px; margin-top: 14px; }
         .benefit-item { background: #0b1220; border: 1px solid rgba(148,163,184,.12); border-radius: 12px; padding: 14px; }
         .benefit-item strong { display: block; margin-bottom: 6px; }
+        .mini-links { display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+        .mini-links a { display:block; background:#0b1220; border:1px solid rgba(148,163,184,.12); border-radius:12px; padding:14px; color:var(--text); text-decoration:none; }
+        .mini-links a span { display:block; color:var(--muted); margin-top:4px; font-size:14px; }
         @media (max-width: 1100px) { .landing-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 760px) { .landing-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 760px) { .landing-grid, .mini-links { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -88,11 +91,10 @@
         <div class="container">
             <h1>Herramientas para desarrolladores y sistemas</h1>
             <p class="tool-lead">
-                Utilidades online para trabajar con JSON, JWT, regex, Base64, UUID, XML, logs, datos fake, timestamps y redes.
-                Pensadas para desarrollo, testing, APIs, automatización y soporte técnico.
+                Utilidades online para trabajar con JSON, JWT, regex, Base64, UUID, XML, logs, datos fake, timestamps, SQL, texto técnico y redes.
             </p>
             <p class="tool-intro">
-                Si trabajas con código, datos, integraciones o infra, aquí tienes herramientas rápidas para validar, transformar y probar información sin salir del navegador.
+                Si trabajas con código, datos, integraciones o infra, aquí tienes herramientas rápidas para validar, transformar, probar y comparar información sin salir del navegador.
             </p>
         </div>
     </header>
@@ -101,8 +103,8 @@
         <section class="section">
             <div class="container">
                 <div class="highlight-box">
-                    <h2>Testing, parsing y utilidades técnicas</h2>
-                    <p>Desde comparar JSON hasta generar regex, formatear XML o calcular subredes, esta categoría está orientada a tareas reales de desarrollo, soporte e IT.</p>
+                    <h2>Un cluster dev más completo</h2>
+                    <p>La landing ya cubría bastante bien JSON, JWT y regex, pero quedaban fuera algunas utilidades que también son muy buscadas por perfiles técnicos, como validación de email, comparadores, PDF para documentación y herramientas de texto útil para soporte.</p>
                 </div>
             </div>
         </section>
@@ -112,7 +114,7 @@
                 <div class="section-head">
                     <div>
                         <h2>Herramientas técnicas disponibles</h2>
-                        <p>Utilidades online para desarrolladores, sysadmins, soporte, APIs y testing.</p>
+                        <p>Utilidades online para desarrolladores, sysadmins, soporte, APIs, documentación y testing.</p>
                     </div>
                 </div>
 
@@ -263,6 +265,38 @@
                         <div class="tags"><span class="tag">Subnet</span><span class="tag">Redes</span><span class="tag">IT</span></div>
                         <div class="actions"><a class="btn primary" href="calculadora-subredes.html">Abrir herramienta</a></div>
                     </article>
+
+                    <article class="card landing-card">
+                        <h3>PDF a texto</h3>
+                        <p>Extrae texto de PDF para documentación, soporte o reutilización rápida.</p>
+                        <div class="tags"><span class="tag">PDF</span><span class="tag">Texto</span><span class="tag">Documentación</span></div>
+                        <div class="actions"><a class="btn primary" href="pdf-a-texto.html">Abrir herramienta</a></div>
+                    </article>
+
+                    <article class="card landing-card">
+                        <h3>PDF a Word</h3>
+                        <p>Prepara la conversión de PDF a Word para editar documentación y anexos.</p>
+                        <div class="tags"><span class="tag">PDF</span><span class="tag">Word</span><span class="tag">Docs</span></div>
+                        <div class="actions"><a class="btn primary" href="pdf-a-word.html">Abrir herramienta</a></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Rutas rápidas dentro del cluster dev</h2>
+                        <p>Enlazado interno para reforzar temática y facilitar navegación.</p>
+                    </div>
+                </div>
+
+                <div class="mini-links">
+                    <a href="visor-json.html"><strong>JSON</strong><span>Validar, comparar y convertir estructuras.</span></a>
+                    <a href="regex-tester.html"><strong>Regex</strong><span>Crear y probar expresiones regulares.</span></a>
+                    <a href="formateador-xml.html"><strong>XML</strong><span>Dar formato y convertir desde JSON.</span></a>
+                    <a href="calculadora-subredes.html"><strong>Redes</strong><span>Subredes, hosts válidos y rangos CIDR.</span></a>
                 </div>
             </div>
         </section>
@@ -279,15 +313,15 @@
                 <div class="benefit-list">
                     <div class="benefit-item">
                         <strong>APIs y datos</strong>
-                        <span>Valida JSON, inspecciona JWT, transforma Base64 y crea endpoints mock.</span>
+                        <span>Valida JSON, inspecciona JWT, transforma Base64, trabaja con XML y crea endpoints mock.</span>
                     </div>
                     <div class="benefit-item">
                         <strong>Testing y QA</strong>
-                        <span>Genera datos fake, logs de ejemplo, tokens y regex para validar formatos o casos de prueba.</span>
+                        <span>Genera datos fake, logs de ejemplo, tokens, emails válidos y regex para validar formatos o casos de prueba.</span>
                     </div>
                     <div class="benefit-item">
-                        <strong>Infra y soporte</strong>
-                        <span>Convierte timestamps, calcula subredes, trabaja con XML y compara contenidos técnicos.</span>
+                        <strong>Infra, soporte y documentación</strong>
+                        <span>Convierte timestamps, calcula subredes, compara texto y reaprovecha PDFs en tareas técnicas del día a día.</span>
                     </div>
                 </div>
             </div>
@@ -299,13 +333,13 @@
                     <h2>Herramientas online para desarrolladores y IT</h2>
                     <p>
                         Esta categoría reúne herramientas online para desarrolladores, técnicos de sistemas, soporte, testing e integraciones.
-                        Incluye utilidades para JSON, JWT, regex, Base64, UUID, logs, timestamps, SQL, XML y redes.
+                        Incluye utilidades para JSON, JWT, regex, Base64, UUID, logs, timestamps, SQL, XML, redes y documentación técnica.
                     </p>
 
                     <h2>¿Qué tipo de tareas puedes resolver?</h2>
                     <p>
                         Puedes validar estructuras, probar patrones, generar datos de ejemplo, comparar contenidos, convertir formatos,
-                        preparar inserts SQL, generar tokens y resolver tareas técnicas frecuentes en desarrollo y administración.
+                        preparar inserts SQL, generar tokens, revisar emails y resolver tareas técnicas frecuentes en desarrollo y administración.
                     </p>
 
                     <h2>Ventajas de usar utilidades técnicas online</h2>
@@ -329,7 +363,7 @@
                 <div class="faq">
                     <details open>
                         <summary>¿Estas herramientas son útiles para desarrollo y sistemas?</summary>
-                        <p>Sí. Están pensadas para APIs, testing, validaciones, parsing, logs, XML, redes y tareas técnicas frecuentes.</p>
+                        <p>Sí. Están pensadas para APIs, testing, validaciones, parsing, logs, XML, redes, documentación y tareas técnicas frecuentes.</p>
                     </details>
                     <details>
                         <summary>¿Funcionan sin instalar nada?</summary>
@@ -340,8 +374,8 @@
                         <p>Sirven para ambos casos: pruebas rápidas, documentación y tareas reales del día a día.</p>
                     </details>
                     <details>
-                        <summary>¿Hay herramientas de regex, JSON y XML?</summary>
-                        <p>Sí. Incluye visor JSON, comparador de JSON, regex, convertidores JSON/XML y formateador XML, entre otras.</p>
+                        <summary>¿Por qué hay utilidades de PDF aquí?</summary>
+                        <p>Porque muchos perfiles técnicos trabajan con documentación, anexos, manuales o tickets exportados en PDF y les viene bien extraer o convertir contenido.</p>
                     </details>
                 </div>
             </div>
@@ -423,5 +457,6 @@
             });
         })();
     </script>
+
 </body>
 </html>

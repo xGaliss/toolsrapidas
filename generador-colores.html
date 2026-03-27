@@ -4,21 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PDF a Word online | ToolsRapidas</title>
-    <meta name="description" content="Convierte PDF a Word online con una interfaz limpia y preparada para integrar backend o API.">
+    <title>Generador de colores online | ToolsRapidas</title>
+    <meta name="description" content="Genera colores HEX y paletas online gratis para diseño, branding y desarrollo web.">
     <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://toolsrapidas.com/pdf-a-word.html">
+    <link rel="canonical" href="https://toolsrapidas.com/generador-colores.html">
     <meta name="theme-color" content="#08111f">
 
-    <meta property="og:title" content="PDF a Word online | ToolsRapidas">
-    <meta property="og:description" content="Convierte PDF a Word online con una interfaz limpia y preparada para integrar backend o API.">
-    <meta property="og:url" content="https://toolsrapidas.com/pdf-a-word.html">
+    <meta property="og:title" content="Generador de colores online | ToolsRapidas">
+    <meta property="og:description" content="Genera colores HEX y paletas online gratis para diseño, branding y desarrollo web.">
+    <meta property="og:url" content="https://toolsrapidas.com/generador-colores.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PDF a Word online | ToolsRapidas" />
-    <meta name="twitter:description" content="Convierte PDF a Word online con una interfaz limpia y preparada para integrar backend o API." />
+    <meta name="twitter:title" content="Generador de colores online | ToolsRapidas" />
+    <meta name="twitter:description" content="Genera colores HEX y paletas online gratis para diseño, branding y desarrollo web." />
 
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="assets/styles.css" />
@@ -27,13 +27,13 @@
         {
           "@context": "https://schema.org",
           "@type": "WebApplication",
-          "name": "Convertir PDF a Word online",
-          "url": "https://toolsrapidas.com/pdf-a-word.html",
-          "applicationCategory": "ProductivityApplication",
+          "name": "Generador de colores y paletas online",
+          "url": "https://toolsrapidas.com/generador-colores.html",
+          "applicationCategory": "DesignApplication",
           "operatingSystem": "Any",
           "browserRequirements": "Requires JavaScript",
           "inLanguage": "es",
-          "description": "Convierte PDF a Word online con una interfaz limpia y preparada para integrar backend o API."
+          "description": "Genera colores HEX y paletas online gratis para diseño, branding y desarrollo web."
         }
     </script>
 
@@ -307,8 +307,8 @@
 
     <header class="tool-hero">
         <div class="container">
-            <h1>Convertir PDF a Word online</h1>
-            <p class="tool-lead">Prepara la conversión de PDF a Word con una página completa, optimizada y lista para integrar tu backend.</p>
+            <h1>Generador de colores y paletas online</h1>
+            <p class="tool-lead">Genera paletas de color y copia códigos HEX para diseño, branding, CSS y UI.</p>
         </div>
     </header>
 
@@ -318,37 +318,33 @@
             <div class="container">
                 <div class="tool-layout-single">
                     <section class="card tool-panel">
-                        <h2>PDF a Word</h2>
-                        <div class="dropzone">
-                            <p>Sube un archivo PDF para preparar la conversión.</p>
-                            <input id="pdfFile" type="file" accept="application/pdf" />
-                        </div>
+                        <h2>Generador de colores y paletas</h2>
 
-                        <div class="tool-grid-3">
-                            <div class="stat-card">
-                                <strong id="fileName">—</strong>
-                                <span>Archivo</span>
-                            </div>
-                            <div class="stat-card">
-                                <strong id="fileSize">—</strong>
-                                <span>Tamaño</span>
-                            </div>
-                            <div class="stat-card">
-                                <strong id="status">Listo</strong>
-                                <span>Estado</span>
-                            </div>
+                        <div class="inline-fields-3">
+                            <select id="paletteType">
+                                <option value="random">Aleatoria</option>
+                                <option value="warm">Cálida</option>
+                                <option value="cool">Fría</option>
+                                <option value="pastel">Pastel</option>
+                            </select>
+
+                            <input id="baseColor" type="color" value="#3b82f6" />
+
+                            <input id="countSel" type="number" min="3" max="8" value="5" />
                         </div>
 
                         <div class="tool-buttons">
-                            <button class="primary" id="prepareBtn">Preparar conversión</button>
-                            <a class="btn-link primary download-link" id="downloadBtn" hidden download="documento.docx">Descargar DOCX</a>
+                            <button class="primary" id="generateBtn">Generar paleta</button>
+                            <button id="copyBtn">Copiar HEX</button>
                         </div>
+
+                        <div class="palette-grid" id="paletteGrid"></div>
+
+                        <textarea id="output" readonly placeholder="Aquí aparecerán los códigos HEX..."></textarea>
 
                         <div class="tool-help">
-                            Esta página deja preparada la experiencia visual completa. La conversión real requiere integrar tu backend o servicio de conversión DOCX.
+                            Útil para diseño web, branding, UI, CSS y pruebas rápidas de color.
                         </div>
-
-                        <textarea id="log" readonly placeholder="Aquí aparecerá el estado..."></textarea>
                     </section>
                 </div>
             </div>
@@ -390,14 +386,14 @@
             <div class="container">
                 <div class="seo-box">
 
-                    <h2>Convertir PDF a Word online</h2>
-                    <p>Esta herramienta está pensada para convertir PDF a Word online con una interfaz limpia, rápida y fácil de usar. Es útil para editar documentos, recuperar texto y reutilizar contenido de archivos PDF en formato DOCX.</p>
+                    <h2>Generador de colores online</h2>
+                    <p>Esta herramienta genera colores HEX y paletas rápidas para diseño, branding, interfaces y desarrollo web. Es útil para elegir combinaciones visuales sin abrir programas externos.</p>
 
-                    <h2>Cuándo usar un conversor de PDF a Word</h2>
-                    <p>Sirve cuando necesitas modificar contratos, presupuestos, informes, apuntes o documentos que solo tienes en PDF y quieres abrir después en Word o herramientas compatibles.</p>
+                    <h2>Qué puedes hacer con esta herramienta</h2>
+                    <p>Puedes generar paletas aleatorias, cálidas, frías o pastel y copiar los códigos HEX al instante para usarlos en CSS, diseño o prototipos.</p>
 
-                    <h2>Nota sobre la conversión</h2>
-                    <p>La interfaz está lista con el estilo de ToolsRapidas. Para una conversión real y precisa de PDF a DOCX tendrás que conectar un backend o una API especializada.</p>
+                    <h2>Cuándo usar un generador de colores</h2>
+                    <p>Sirve para crear combinaciones visuales, probar estilos, montar interfaces, trabajar una identidad de marca o simplemente inspirarte con nuevas paletas.</p>
 
                 </div>
             </div>
@@ -415,16 +411,16 @@
                 <div class="faq">
 
                     <details open>
-                        <summary>¿Convierte ya el PDF a Word?</summary>
-                        <p>La página está preparada visualmente. Para convertir de verdad necesitas conectarla a un backend o servicio de conversión.</p>
+                        <summary>¿Genera colores HEX?</summary>
+                        <p>Sí. Cada color se muestra con su código HEX listo para copiar.</p>
                     </details>
                     <details>
-                        <summary>¿Sirve para mostrar la herramienta en la web?</summary>
-                        <p>Sí. Ya tiene estructura, SEO, estilo y flujo visual listos para integrar.</p>
+                        <summary>¿Sirve para CSS o diseño web?</summary>
+                        <p>Sí. Está pensada para diseño, interfaces, branding y frontend.</p>
                     </details>
                     <details>
-                        <summary>¿Puedo añadir backend después?</summary>
-                        <p>Sí. Es justo la idea: dejar la página lista para conectar tu lógica cuando quieras.</p>
+                        <summary>¿Puedo generar varias paletas?</summary>
+                        <p>Sí. Puedes cambiar el tipo y volver a generar tantas veces como quieras.</p>
                     </details>
 
                 </div>
@@ -447,48 +443,101 @@
 
     <script>
 
-        const pdfFile = document.getElementById('pdfFile');
-        const fileName = document.getElementById('fileName');
-        const fileSize = document.getElementById('fileSize');
-        const statusOut = document.getElementById('status');
-        const log = document.getElementById('log');
-        const downloadBtn = document.getElementById('downloadBtn');
+        const paletteGrid = document.getElementById('paletteGrid');
+        const output = document.getElementById('output');
 
-        function formatSize(bytes) {
-            if (!bytes) return '—';
-            if (bytes < 1024) return bytes + ' B';
-            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-            return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        function hexToRgb(hex) {
+            const clean = hex.replace('#', '');
+            const bigint = parseInt(clean, 16);
+            return {
+                r: (bigint >> 16) & 255,
+                g: (bigint >> 8) & 255,
+                b: bigint & 255
+            };
         }
 
-        pdfFile.addEventListener('change', () => {
-            const file = pdfFile.files[0];
-            if (!file) return;
+        function rgbToHex(r, g, b) {
+            return '#' + [r, g, b].map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('').toUpperCase();
+        }
 
-            fileName.textContent = file.name;
-            fileSize.textContent = formatSize(file.size);
-            statusOut.textContent = 'Cargado';
-            log.value = `Archivo cargado correctamente: ${file.name}\nTamaño: ${formatSize(file.size)}\n\nSiguiente paso: conectar esta vista con tu backend de conversión PDF a DOCX.`;
-            downloadBtn.hidden = true;
-        });
+        function clamp(v) {
+            return Math.max(0, Math.min(255, v));
+        }
 
-        document.getElementById('prepareBtn').addEventListener('click', () => {
-            const file = pdfFile.files[0];
-            if (!file) {
-                statusOut.textContent = 'Falta PDF';
-                log.value = 'Sube primero un archivo PDF para preparar la conversión.';
-                return;
+        function vary(base, amountR, amountG, amountB) {
+            return rgbToHex(base.r + amountR, base.g + amountG, base.b + amountB);
+        }
+
+        function makePalette(baseHex, type, count) {
+            const base = hexToRgb(baseHex);
+            const colors = [];
+
+            for (let i = 0; i < count; i++) {
+                if (type === 'random') {
+                    colors.push(rgbToHex(Math.random() * 255, Math.random() * 255, Math.random() * 255));
+                } else if (type === 'warm') {
+                    colors.push(rgbToHex(clamp(base.r + i * 18), clamp(base.g + i * 8), clamp(base.b - i * 10)));
+                } else if (type === 'cool') {
+                    colors.push(rgbToHex(clamp(base.r - i * 10), clamp(base.g + i * 8), clamp(base.b + i * 18)));
+                } else if (type === 'pastel') {
+                    colors.push(rgbToHex(
+                        clamp((base.r + 255 + i * 6) / 2),
+                        clamp((base.g + 255 + i * 6) / 2),
+                        clamp((base.b + 255 + i * 6) / 2)
+                    ));
+                }
             }
 
-            statusOut.textContent = 'Preparado';
-            const blob = new Blob(
-                ['Esta descarga es un placeholder visual. Integra tu backend o API para generar el DOCX real.'],
-                { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }
-            );
-            downloadBtn.href = URL.createObjectURL(blob);
-            downloadBtn.hidden = false;
-            log.value = `Interfaz preparada para convertir: ${file.name}\n\nEsta versión genera una descarga de prueba para que puedas dejar el flujo montado.\nCuando conectes backend, solo tendrás que reemplazar esta parte por la llamada real a tu servicio.`;
+            return colors;
+        }
+
+        function textColorFor(hex) {
+            const {r, g, b} = hexToRgb(hex);
+            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+            return luminance > 0.65 ? '#08111f' : '#ffffff';
+        }
+
+        function renderPalette(colors) {
+            paletteGrid.innerHTML = '';
+            colors.forEach(hex => {
+                const swatch = document.createElement('div');
+                swatch.className = 'swatch';
+                swatch.style.background = hex;
+
+                const code = document.createElement('div');
+                code.className = 'swatch-code';
+                code.textContent = hex;
+                code.style.color = textColorFor(hex);
+
+                swatch.appendChild(code);
+                swatch.addEventListener('click', async () => {
+                    await navigator.clipboard.writeText(hex);
+                    code.textContent = 'Copiado';
+                    setTimeout(() => code.textContent = hex, 900);
+                });
+                paletteGrid.appendChild(swatch);
+            });
+
+            output.value = colors.join('\n');
+        }
+
+        function generate() {
+            const type = document.getElementById('paletteType').value;
+            const baseColor = document.getElementById('baseColor').value;
+            const count = Math.max(3, Math.min(8, parseInt(document.getElementById('countSel').value || '5', 10)));
+            const palette = makePalette(baseColor, type, count);
+            renderPalette(palette);
+        }
+
+        document.getElementById('generateBtn').addEventListener('click', generate);
+        document.getElementById('copyBtn').addEventListener('click', async () => {
+            await navigator.clipboard.writeText(output.value);
+            const btn = document.getElementById('copyBtn');
+            btn.textContent = 'Copiado';
+            setTimeout(() => btn.textContent = 'Copiar HEX', 1000);
         });
+
+        generate();
 
     </script>
 
