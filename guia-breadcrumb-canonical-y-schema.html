@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Guía de breadcrumb, canonical y schema | SEO técnico | ToolsRapidas</title>
+    <meta name="description" content="Qué revisar en breadcrumbs, canonical y schema para que una página sea más clara, coherente y técnicamente sólida." />
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://toolsrapidas.com/guia-breadcrumb-canonical-y-schema.html">
+    <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
+
+    <meta property="og:title" content="Guía de breadcrumb, canonical y schema | SEO técnico | ToolsRapidas">
+    <meta property="og:description" content="Cómo usar breadcrumbs, canonical y schema con más sentido técnico y editorial." />
+    <meta property="og:url" content="https://toolsrapidas.com/guia-breadcrumb-canonical-y-schema.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="ToolsRapidas">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Guía de breadcrumb, canonical y schema | SEO técnico | ToolsRapidas" />
+    <meta name="twitter:description" content="Cuándo usar breadcrumb, canonical y schema sin complicar ni duplicar señales." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Guía de breadcrumb, canonical y schema",
+          "description": "Guía práctica para entender cuándo y cómo usar breadcrumb, canonical y schema con coherencia.",
+          "inLanguage": "es",
+          "mainEntityOfPage": "https://toolsrapidas.com/guia-breadcrumb-canonical-y-schema.html",
+          "author": {
+            "@type": "Organization",
+            "name": "ToolsRapidas"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "ToolsRapidas"
+          }
+        }
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 920px; margin: 0; font-size: 18px; }
+        .article-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+        .article-card h2 { margin: 0 0 12px; font-size: 24px; }
+        .article-card p, .article-card li { color: var(--muted); line-height: 1.8; }
+        .article-card ul { margin: 0; padding-left: 20px; }
+        .signal-list { display: grid; gap: 12px; }
+        .signal-item {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+        .signal-item strong { display: block; margin-bottom: 6px; }
+        .route-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .route-card h3 { margin: 0 0 8px; font-size: 22px; }
+        .route-card p { margin: 0 0 12px; }
+        @media (max-width: 980px) {
+            .article-layout, .route-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <a href="guia-de-herramientas-online.html">Guía</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Guía de breadcrumb, canonical y schema</h1>
+            <p class="tool-lead">
+                Estas señales no arreglan por sí solas una página floja, pero ayudan a que la URL sea más clara, más coherente y menos propensa a errores técnicos de publicación.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="article-layout">
+                    <article class="card article-card">
+                        <h2>Qué papel cumple cada señal</h2>
+                        <p>
+                            El breadcrumb ayuda a explicar la jerarquía de la página dentro del sitio. La canonical indica qué versión debería considerarse principal cuando hay riesgo de duplicidad. El schema aporta contexto adicional si describe contenido real y visible.
+                        </p>
+
+                        <p>
+                            El error habitual es tratarlos como un checklist ciego. En realidad, cada uno tiene sentido solo cuando corresponde a una estructura de navegación o a un bloque de contenido real.
+                        </p>
+
+                        <h2>Cuándo suele tener sentido</h2>
+                        <ul>
+                            <li><strong>Breadcrumb:</strong> cuando la página pertenece claramente a una categoría o ruta jerárquica.</li>
+                            <li><strong>Canonical:</strong> cuando existe una versión principal que conviene consolidar.</li>
+                            <li><strong>Schema:</strong> cuando el contenido visible justifica un marcado concreto, como FAQs o breadcrumbs.</li>
+                        </ul>
+                    </article>
+
+                    <aside class="card article-card">
+                        <h2>Errores frecuentes</h2>
+                        <div class="signal-list">
+                            <div class="signal-item">
+                                <strong>Breadcrumb inventado</strong>
+                                <span>No tiene sentido marcar una ruta que el usuario no ve o que no encaja con la navegación real.</span>
+                            </div>
+                            <div class="signal-item">
+                                <strong>Canonical incoherente</strong>
+                                <span>Una canonical mal puesta puede enviar señales confusas sobre qué URL debería indexarse.</span>
+                            </div>
+                            <div class="signal-item">
+                                <strong>Schema sin respaldo visible</strong>
+                                <span>El marcado debería reflejar contenido real de la página, no inventar bloques solo para SEO.</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas que encajan con esta guía</h2>
+                        <p>Recursos útiles si estás revisando la parte técnica de publicación de una página.</p>
+                    </div>
+                </div>
+
+                <div class="route-grid">
+                    <article class="card route-card">
+                        <h3>Generar breadcrumb</h3>
+                        <p>Crea un `BreadcrumbList` si la página depende claramente de una jerarquía visible.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-schema-breadcrumb.html">Schema breadcrumb</a>
+                        </div>
+                    </article>
+
+                    <article class="card route-card">
+                        <h3>Validar el head</h3>
+                        <p>Comprueba canonical, robots y otras meta tags básicas en el HTML final.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="validador-meta-tags.html">Validador meta</a>
+                        </div>
+                    </article>
+
+                    <article class="card route-card">
+                        <h3>Revisar la URL completa</h3>
+                        <p>Haz una validación on-page si quieres cerrar también headings, enlaces y calidad general.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="seo-checklist.html">Checklist SEO</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Qué revisar junto a estas señales</h2>
+                    <p>
+                        Breadcrumb, canonical y schema sirven de apoyo, pero no sustituyen la calidad de la página. Si el contenido es débil, si el snippet no explica bien la URL o si el enlazado interno es pobre, estas señales por sí solas no arreglan el problema.
+                    </p>
+
+                    <h2>Cuándo simplificar</h2>
+                    <p>
+                        Si una página no tiene jerarquía clara o no necesita un tipo concreto de marcado, a veces es mejor no añadir nada extra. La coherencia vale más que acumular elementos técnicos innecesarios.
+                    </p>
+
+                    <h2>Qué guía seguir después</h2>
+                    <p>
+                        Si estás montando una página desde cero, puedes seguir con <a href="como-preparar-una-url-para-publicar.html">cómo preparar una URL para publicar</a> y cerrar el proceso con la <a href="checklist-antes-de-indexar-una-pagina.html">checklist antes de indexar una página</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Dudas habituales sobre breadcrumb, canonical y schema.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Tengo que usar breadcrumb en todas las páginas?</summary>
+                        <p>No. Tiene más sentido cuando la página forma parte de una jerarquía clara y visible dentro del sitio.</p>
+                    </details>
+                    <details>
+                        <summary>¿La canonical arregla siempre los problemas de duplicidad?</summary>
+                        <p>No por sí sola. Ayuda a indicar una versión principal, pero debe ir acompañada de una arquitectura coherente.</p>
+                    </details>
+                    <details>
+                        <summary>¿Todo schema mejora SEO?</summary>
+                        <p>No. El marcado solo aporta cuando describe contenido real y visible de forma útil y coherente.</p>
+                    </details>
+                    <details>
+                        <summary>¿Esta guía sirve para categorías y tools?</summary>
+                        <p>Sí. En proyectos como ToolsRapidas es especialmente útil para reforzar navegación y consistencia entre clusters.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/site.js"></script>
+</body>
+</html>
