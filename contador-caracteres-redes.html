@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/contador-caracteres-redes.html">
     <meta name="theme-color" content="#08111f">
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Contador de caracteres redes sociales | ToolsRapidas">
     <meta property="og:description" content="Cuenta caracteres para Instagram, Twitter y TikTok fácilmente.">
@@ -16,15 +17,25 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ToolsRapidas">
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contador de caracteres redes sociales | ToolsRapidas" />
+    <meta name="twitter:description" content="Cuenta caracteres para Instagram, X y TikTok fácilmente." />
+
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="assets/styles.css" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-984EW75R9H');
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Contador de caracteres para redes sociales",
+          "url": "https://toolsrapidas.com/contador-caracteres-redes.html",
+          "applicationCategory": "UtilityApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Cuenta caracteres para Instagram, X y TikTok y revisa límites antes de publicar."
+        }
     </script>
 
     <style>
@@ -127,6 +138,7 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html">
@@ -165,7 +177,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container">
                 <section class="card tool-panel">
@@ -322,68 +334,6 @@
         text.addEventListener("input", update);
         update();
     </script>
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) {
-                localStorage.setItem(COOKIE_KEY, value);
-            }
-
-            function getConsent() {
-                return localStorage.getItem(COOKIE_KEY);
-            }
-
-            function hideBanner() {
-                banner.hidden = true;
-            }
-
-            function showBanner() {
-                banner.hidden = false;
-            }
-
-            const consent = getConsent();
-
-            if (consent === 'accepted') {
-                loadAnalytics();
-                hideBanner();
-            } else if (consent === 'rejected') {
-                hideBanner();
-            } else {
-                showBanner();
-            }
-
-            acceptBtn.addEventListener('click', function () {
-                setConsent('accepted');
-                loadAnalytics();
-                hideBanner();
-            });
-
-            rejectBtn.addEventListener('click', function () {
-                setConsent('rejected');
-                hideBanner();
-            });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 </body>
 </html>

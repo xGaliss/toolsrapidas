@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/enlace-whatsapp.html">
     <meta name="theme-color" content="#08111f">
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Generador de enlace de WhatsApp online | ToolsRapidas">
     <meta property="og:description" content="Crea links de WhatsApp con mensaje listo para compartir o usar en bio, web y anuncios.">
@@ -35,14 +36,6 @@
           "inLanguage": "es",
           "description": "Crea enlaces de WhatsApp online gratis con número y mensaje predefinido. Ideal para negocio, atención al cliente y redes sociales."
         }
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-984EW75R9H');
     </script>
 
     <style>
@@ -87,6 +80,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -119,7 +113,7 @@
     </div>
 
 <header class="tool-hero"><div class="container"><h1>Generador de enlace de WhatsApp online</h1><p class="tool-lead">Crea enlaces de WhatsApp con número y mensaje predefinido para compartir en web, Instagram, anuncios, email o atención al cliente. Copia tu link listo para usar en segundos.</p></div></header>
-<main>
+<main id="main-content">
 <section class="section"><div class="container"><div class="tool-layout-2">
 <section class="card tool-panel"><h2>Datos del enlace</h2>
 <div class="field-grid"><input id="countryCode" type="text" placeholder="Código país, ej. 34" value="34"><input id="phoneNumber" type="text" placeholder="Número sin espacios ni símbolos" value="600123123"></div>
@@ -171,49 +165,24 @@ generateLink();
     <footer class="footer">
         <div class="container footer-grid">
             <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
-            <div>
-                <a href="aviso-legal.html">Aviso legal</a> ·
-                <a href="politica-privacidad.html">Privacidad</a> ·
-                <a href="politica-cookies.html">Cookies</a> ·
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
                 <a href="contacto.html">Contacto</a>
             </div>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) { localStorage.setItem(COOKIE_KEY, value); }
-            function getConsent() { return localStorage.getItem(COOKIE_KEY); }
-            function hideBanner() { banner.hidden = true; }
-            function showBanner() { banner.hidden = false; }
-
-            const consent = getConsent();
-            if (consent === 'accepted') { loadAnalytics(); hideBanner(); }
-            else if (consent === 'rejected') { hideBanner(); }
-            else { showBanner(); }
-
-            acceptBtn.addEventListener('click', function () { setConsent('accepted'); loadAnalytics(); hideBanner(); });
-            rejectBtn.addEventListener('click', function () { setConsent('rejected'); hideBanner(); });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 </body>
 </html>

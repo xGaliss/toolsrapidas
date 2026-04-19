@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/herramientas-para-trabajo.html">
     <meta name="theme-color" content="#08111f">
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Herramientas para trabajo y oficina | ToolsRapidas">
     <meta property="og:description" content="Utilidades online para trabajo, oficina, PDFs, emails, horas, IVA y productividad.">
@@ -33,6 +34,51 @@
           "description": "Colección de herramientas online para trabajo, oficina y productividad."
         }
     </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Herramientas destacadas para trabajo y oficina",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://toolsrapidas.com/calculadora-iva.html",
+              "name": "Calculadora de IVA"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://toolsrapidas.com/calculadora-horas-trabajadas.html",
+              "name": "Calculadora de horas trabajadas"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://toolsrapidas.com/sumador-tiempo.html",
+              "name": "Sumador de tiempo"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://toolsrapidas.com/generador-emails-profesionales.html",
+              "name": "Generador de emails profesionales"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://toolsrapidas.com/pdf-a-word.html",
+              "name": "PDF a Word"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "url": "https://toolsrapidas.com/firma-email.html",
+              "name": "Firma de email"
+            }
+          ]
+        }
+    </script>
 
     <style>
         .tool-hero { padding: 42px 0 18px; }
@@ -52,11 +98,19 @@
         .mini-links { display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
         .mini-links a { display:block; background:#0b1220; border:1px solid rgba(148,163,184,.12); border-radius:12px; padding:14px; color:var(--text); text-decoration:none; }
         .mini-links a span { display:block; color:var(--muted); margin-top:4px; font-size:14px; }
+        .workflow-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+        .workflow-card h3 { margin:0 0 8px; font-size:22px; }
+        .workflow-card p { margin:0 0 12px; }
+        .workflow-card .actions { padding-top:0; }
+        .related-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+        .related-card h3 { margin:0 0 8px; font-size:22px; }
+        .related-card p { margin:0 0 14px; }
         @media (max-width: 1100px) { .landing-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 760px) { .landing-grid, .mini-links { grid-template-columns: 1fr; } }
+        @media (max-width: 760px) { .landing-grid, .mini-links, .workflow-grid, .related-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -99,12 +153,52 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container">
                 <div class="highlight-box">
                     <h2>Productividad real para tareas del día a día</h2>
                     <p>Si trabajas con clientes, presupuestos, emails, horarios, PDFs o reportes, estas herramientas te ayudan a resolver tareas prácticas en segundos desde el navegador.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Empieza por aquí</h2>
+                        <p>Recorridos rápidos según la tarea que tengas entre manos.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-grid">
+                    <article class="card workflow-card">
+                        <h3>Presupuestos y facturación</h3>
+                        <p>Si necesitas calcular importes, revisar IVA y preparar un documento base para enviar a un cliente, esta es la ruta más directa.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="calculadora-iva.html">Calcular IVA</a>
+                            <a class="btn secondary" href="generador-contratos-simples.html">Contrato base</a>
+                        </div>
+                    </article>
+
+                    <article class="card workflow-card">
+                        <h3>Horario y control de jornada</h3>
+                        <p>Para sumar tiempos, saber cuándo termina una jornada o revisar plazos y diferencias entre fechas.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="calculadora-horas-trabajadas.html">Horas trabajadas</a>
+                            <a class="btn secondary" href="sumador-tiempo.html">Sumar tiempo</a>
+                        </div>
+                    </article>
+
+                    <article class="card workflow-card">
+                        <h3>Comunicación y documentación</h3>
+                        <p>Para responder mejor, preparar una firma, reutilizar contenido de PDF o crear vías de contacto rápidas.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-emails-profesionales.html">Emails</a>
+                            <a class="btn secondary" href="firma-email.html">Firma email</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -302,6 +396,10 @@
                         <strong>Documentos y comunicación profesional</strong>
                         <span>Trabaja con PDF, genera emails claros, crea firmas y enlaces de WhatsApp para clientes o proveedores.</span>
                     </div>
+                    <div class="benefit-item">
+                        <strong>Gestión rápida sin cambiar de herramienta</strong>
+                        <span>La categoría está pensada para que puedas encadenar cálculos, documentos y comunicación en una misma sesión.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -309,6 +407,11 @@
         <section class="section">
             <div class="container">
                 <div class="seo-box">
+                    <h2>Si vienes por una tarea concreta</h2>
+                    <p>
+                        Para precios y presupuestos, empieza por la <a href="calculadora-iva.html">calculadora de IVA</a>. Para horarios y fichajes, ve a <a href="calculadora-horas-trabajadas.html">horas trabajadas</a>, <a href="sumador-tiempo.html">sumador de tiempo</a> y <a href="calcular-fin-jornada.html">fin de jornada</a>. Para clientes y documentos, combina <a href="generador-emails-profesionales.html">emails</a>, <a href="firma-email.html">firma de email</a> y las herramientas de <a href="pdf-a-word.html">PDF</a>.
+                    </p>
+
                     <h2>Herramientas online para trabajo y oficina</h2>
                     <p>
                         Esta página reúne herramientas online para trabajo y oficina pensadas para ahorrar tiempo en tareas frecuentes como cálculo de IVA,
@@ -326,6 +429,48 @@
                         Permiten hacer cálculos, generar textos, trabajar con documentos PDF y preparar información sin instalar programas,
                         con acceso rápido desde móvil u ordenador y con resultados inmediatos.
                     </p>
+
+                    <h2>Cómo aprovechar mejor esta categoría</h2>
+                    <p>
+                        Si todavía no sabes qué herramienta usar primero, puedes apoyarte en la <a href="guia-de-herramientas-online.html">guía de herramientas online</a> o revisar <a href="sobre-toolsrapidas.html">Sobre ToolsRapidas</a> para entender mejor cómo se organizan los clusters del sitio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Explora también</h2>
+                        <p>Enlaces relacionados para ampliar tareas que suelen aparecer junto a trabajo y oficina.</p>
+                    </div>
+                </div>
+
+                <div class="related-grid">
+                    <article class="card related-card">
+                        <h3>SEO y marketing</h3>
+                        <p>Si además de preparar documentos necesitas publicar páginas, optimizar snippets o comprimir imágenes para web, este es el siguiente paso lógico.</p>
+                        <div class="actions">
+                            <a class="btn secondary" href="herramientas-seo.html">Ver categoría SEO</a>
+                        </div>
+                    </article>
+
+                    <article class="card related-card">
+                        <h3>Dev, datos y validaciones</h3>
+                        <p>Cuando tu flujo pasa por CSV, validaciones técnicas o formatos de datos, el cluster dev te ayuda a continuar sin salir del sitio.</p>
+                        <div class="actions">
+                            <a class="btn secondary" href="herramientas-dev.html">Ver categoría dev</a>
+                        </div>
+                    </article>
+
+                    <article class="card related-card">
+                        <h3>Guía del sitio</h3>
+                        <p>Si quieres usar mejor el proyecto y entender qué herramienta abrir primero según tu tarea, te conviene revisar la guía general.</p>
+                        <div class="actions">
+                            <a class="btn secondary" href="guia-de-herramientas-online.html">Abrir guía</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -345,8 +490,16 @@
                         <p>Sí. Están orientadas a tareas de productividad, gestión, cálculo, documentación y comunicación profesional.</p>
                     </details>
                     <details>
+                        <summary>¿Qué herramientas son más útiles para autónomos o pymes?</summary>
+                        <p>Normalmente destacan la calculadora de IVA, horas trabajadas, fin de jornada, emails profesionales, firma de email y las herramientas de PDF para presupuestos, seguimiento y documentación.</p>
+                    </details>
+                    <details>
                         <summary>¿Hay herramientas de PDF para trabajo?</summary>
                         <p>Sí. Aquí ya se incluyen PDF a texto, PDF a Word y unir PDF porque son tareas muy habituales en oficina.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo combinar varias herramientas en un mismo flujo?</summary>
+                        <p>Sí. La idea de la categoría es precisamente enlazar cálculos, documentos y comunicación. Por ejemplo, puedes calcular IVA, preparar un PDF editable y terminar con un email profesional o una firma.</p>
                     </details>
                     <details>
                         <summary>¿Puedo usarlas en móvil y ordenador?</summary>
@@ -364,78 +517,25 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
-            <div>
-                <a href="aviso-legal.html">Aviso legal</a> ·
-                <a href="politica-privacidad.html">Privacidad</a> ·
-                <a href="politica-cookies.html">Cookies</a> ·
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
                 <a href="contacto.html">Contacto</a>
             </div>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) {
-                localStorage.setItem(COOKIE_KEY, value);
-            }
-
-            function getConsent() {
-                return localStorage.getItem(COOKIE_KEY);
-            }
-
-            function hideBanner() {
-                banner.hidden = true;
-            }
-
-            function showBanner() {
-                banner.hidden = false;
-            }
-
-            const consent = getConsent();
-
-            if (consent === 'accepted') {
-                loadAnalytics();
-                hideBanner();
-            } else if (consent === 'rejected') {
-                hideBanner();
-            } else {
-                showBanner();
-            }
-
-            acceptBtn.addEventListener('click', function () {
-                setConsent('accepted');
-                loadAnalytics();
-                hideBanner();
-            });
-
-            rejectBtn.addEventListener('click', function () {
-                setConsent('rejected');
-                hideBanner();
-            });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 
 </body>
 </html>

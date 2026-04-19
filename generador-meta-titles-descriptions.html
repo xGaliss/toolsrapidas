@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/generador-meta-titles-descriptions.html">
     <meta name="theme-color" content="#08111f">
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Generador de meta titles y descriptions online | ToolsRapidas">
     <meta property="og:description" content="Crea meta titles y descriptions para SEO fácilmente.">
@@ -35,15 +36,6 @@
           "inLanguage": "es",
           "description": "Genera meta titles y meta descriptions online para SEO y CTR con control de longitud."
         }
-    </script>
-
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-984EW75R9H');
     </script>
 
 
@@ -269,6 +261,7 @@
 
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -309,7 +302,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         
 <section class="section"><div class="container"><div class="tool-layout-single">
 <section class="card tool-panel">
@@ -340,10 +333,10 @@
 
                 <div class="tool-grid">
                     
-<article class="card"><h3><a href="contador-palabras.html">Contador de palabras</a></h3><p>Cuenta palabras y caracteres para títulos, textos y descripciones.</p></article>
-<article class="card"><h3><a href="contador-caracteres-redes.html">Contador de caracteres</a></h3><p>Controla límites antes de publicar o escribir metadatos.</p></article>
-<article class="card"><h3><a href="limpiador-texto.html">Limpiador de texto</a></h3><p>Limpia texto antes de analizarlo o reutilizarlo.</p></article>
-<article class="card"><h3><a href="visor-json.html">Visor JSON</a></h3><p>Útil para trabajar con datos y herramientas técnicas.</p></article>
+<article class="card"><h3><a href="simulador-serp-google.html">Simulador SERP de Google</a></h3><p>Comprueba cómo puede verse el snippet antes de publicar.</p></article>
+<article class="card"><h3><a href="generador-slugs-seo.html">Generador de slugs SEO</a></h3><p>Prepara una URL limpia para acompañar el title y la description.</p></article>
+<article class="card"><h3><a href="seo-checklist.html">Checklist SEO on-page</a></h3><p>Valida title, description, canonical y estructura antes de lanzar la página.</p></article>
+<article class="card"><h3><a href="generador-schema-faq.html">Generador de schema FAQ</a></h3><p>Crea JSON-LD FAQ si la página final incluye preguntas frecuentes visibles.</p></article>
 
                 </div>
             </div>
@@ -379,10 +372,19 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
-            <div>
-                <a href="aviso-legal.html">Aviso legal</a> ·
-                <a href="politica-privacidad.html">Privacidad</a> ·
-                <a href="politica-cookies.html">Cookies</a> ·
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
                 <a href="contacto.html">Contacto</a>
             </div>
         </div>
@@ -417,69 +419,7 @@ buildMeta();
 </script>
 
 
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) {
-                localStorage.setItem(COOKIE_KEY, value);
-            }
-
-            function getConsent() {
-                return localStorage.getItem(COOKIE_KEY);
-            }
-
-            function hideBanner() {
-                banner.hidden = true;
-            }
-
-            function showBanner() {
-                banner.hidden = false;
-            }
-
-            const consent = getConsent();
-
-            if (consent === 'accepted') {
-                loadAnalytics();
-                hideBanner();
-            } else if (consent === 'rejected') {
-                hideBanner();
-            } else {
-                showBanner();
-            }
-
-            acceptBtn.addEventListener('click', function () {
-                setConsent('accepted');
-                loadAnalytics();
-                hideBanner();
-            });
-
-            rejectBtn.addEventListener('click', function () {
-                setConsent('rejected');
-                hideBanner();
-            });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 
 </body>
 </html>

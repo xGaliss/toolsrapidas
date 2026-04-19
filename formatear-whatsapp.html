@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/formatear-whatsapp.html">
     <meta name="theme-color" content="#08111f">
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Formateador de texto para WhatsApp | ToolsRapidas">
     <meta property="og:description" content="Convierte texto en negrita, cursiva, tachado o monoespaciado para WhatsApp.">
@@ -35,14 +36,6 @@
           "inLanguage": "es",
           "description": "Convierte texto en negrita, cursiva, tachado o monoespaciado para WhatsApp online gratis."
         }
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-984EW75R9H');
     </script>
 
     <style>
@@ -229,6 +222,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -267,7 +261,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container">
                 <div class="tool-layout">
@@ -486,68 +480,6 @@
         input.addEventListener('input', updateStats);
         updateStats();
     </script>
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) {
-                localStorage.setItem(COOKIE_KEY, value);
-            }
-
-            function getConsent() {
-                return localStorage.getItem(COOKIE_KEY);
-            }
-
-            function hideBanner() {
-                banner.hidden = true;
-            }
-
-            function showBanner() {
-                banner.hidden = false;
-            }
-
-            const consent = getConsent();
-
-            if (consent === 'accepted') {
-                loadAnalytics();
-                hideBanner();
-            } else if (consent === 'rejected') {
-                hideBanner();
-            } else {
-                showBanner();
-            }
-
-            acceptBtn.addEventListener('click', function () {
-                setConsent('accepted');
-                loadAnalytics();
-                hideBanner();
-            });
-
-            rejectBtn.addEventListener('click', function () {
-                setConsent('rejected');
-                hideBanner();
-            });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 </body>
 </html>

@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>[TITLE_SEO]</title>
-    <meta name="description" content="[META_DESCRIPTION]" />
-    <meta name="robots" content="index,follow" />
-    <link rel="canonical" href="[CANONICAL_URL]" />
+    <title>Plantilla interna no indexable | ToolsRapidas</title>
+    <meta name="description" content="Plantilla interna de desarrollo de ToolsRapidas. No indexable." />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="https://toolsrapidas.com/" />
     <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="[OG_TITLE]" />
     <meta property="og:description" content="[OG_DESCRIPTION]" />
@@ -25,19 +26,12 @@
 
     [SCHEMA_JSON_LD]
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-984EW75R9H');
-    </script>
-
     <style>
         [TOOL_SPECIFIC_CSS]
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -60,7 +54,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container">
                 [TOOL_UI]

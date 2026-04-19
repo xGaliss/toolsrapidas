@@ -4,11 +4,13 @@
   --bg2:#0f172a;
   --card:rgba(17,24,39,.92);
   --line:#334155;
+  --border:rgba(148,163,184,.14);
   --text:#e5e7eb;
   --muted:#94a3b8;
   --brand:#38bdf8;
   --brand2:#22c55e;
   --brand3:#a78bfa;
+  --accent:#38bdf8;
   --shadow:0 18px 40px rgba(0,0,0,.28);
   --radius:18px;
 }
@@ -24,7 +26,33 @@ body{
     linear-gradient(180deg,var(--bg),var(--bg2));
 }
 a{color:inherit}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible{
+  outline:3px solid rgba(56,189,248,.55);
+  outline-offset:3px;
+}
 .container{max-width:1180px;margin:0 auto;padding:0 20px}
+.skip-link{
+  position:absolute;
+  left:20px;
+  top:12px;
+  z-index:10000;
+  transform:translateY(-140%);
+  background:#f8fafc;
+  color:#08111f;
+  padding:10px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:var(--shadow);
+}
+.skip-link:focus{
+  transform:translateY(0);
+}
 .nav{
   position:sticky;top:0;z-index:40;
   backdrop-filter: blur(10px);
@@ -52,6 +80,41 @@ a{color:inherit}
   padding:10px 12px;border-radius:10px;
 }
 .nav-links a:hover{background:rgba(148,163,184,.08);color:var(--text)}
+.breadcrumbs{
+  padding:14px 0 0;
+}
+.breadcrumbs .container{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.breadcrumbs ol{
+  list-style:none;
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:0;
+  padding:0;
+  color:var(--muted);
+  font-size:14px;
+}
+.breadcrumbs li{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.breadcrumbs li+li::before{
+  content:"/";
+  color:rgba(148,163,184,.45);
+}
+.breadcrumbs a{
+  text-decoration:none;
+}
+.breadcrumbs span[aria-current="page"]{
+  color:var(--text);
+}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;
   text-decoration:none;font-weight:700;
@@ -121,9 +184,20 @@ h1{
 .footer{
   padding:34px 0 46px;color:var(--muted);font-size:14px;line-height:1.7
 }
+.footer a{text-decoration:none}
+.footer a:hover{color:var(--text)}
 .footer-grid{
   display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;
   border-top:1px solid rgba(148,163,184,.12);padding-top:22px
+}
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:10px;
+}
+.footer-links span{
+  color:rgba(148,163,184,.45);
 }
 .code{
   display:block;background:#0b1220;border:1px solid rgba(148,163,184,.12);
@@ -162,7 +236,7 @@ h1{
         max-width: 900px;
     }
 
-ㅤㅤ.cookie-banner {
+.cookie-banner {
     position: fixed;
     left: 20px;
     right: 20px;

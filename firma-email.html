@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://toolsrapidas.com/firma-email.html">
     <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Generador de firma de email | ToolsRapidas">
     <meta property="og:description" content="Crea firmas de email profesionales fácilmente.">
@@ -35,14 +36,6 @@
           "inLanguage": "es",
           "description": "Crea firmas de email profesionales online gratis para Outlook y Gmail."
         }
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-984EW75R9H"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-984EW75R9H');
     </script>
 
     <style>
@@ -186,6 +179,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -224,7 +218,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container">
                 <div class="tool-layout-2">
@@ -536,7 +530,8 @@
         });
 
         $("downloadBtn").addEventListener("click", () => {
-            const content = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Firma Email</title></head><body>${$("code").value}</body></html>`;
+            const content = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Firma Email</title></head><body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>${$("code").value}</body></html>`;
             const blob = new Blob([content], { type: "text/html;charset=utf-8" });
             const a = document.createElement("a");
             a.href = URL.createObjectURL(blob);
@@ -560,68 +555,6 @@
 
         buildSignature();
     </script>
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) {
-                localStorage.setItem(COOKIE_KEY, value);
-            }
-
-            function getConsent() {
-                return localStorage.getItem(COOKIE_KEY);
-            }
-
-            function hideBanner() {
-                banner.hidden = true;
-            }
-
-            function showBanner() {
-                banner.hidden = false;
-            }
-
-            const consent = getConsent();
-
-            if (consent === 'accepted') {
-                loadAnalytics();
-                hideBanner();
-            } else if (consent === 'rejected') {
-                hideBanner();
-            } else {
-                showBanner();
-            }
-
-            acceptBtn.addEventListener('click', function () {
-                setConsent('accepted');
-                loadAnalytics();
-                hideBanner();
-            });
-
-            rejectBtn.addEventListener('click', function () {
-                setConsent('rejected');
-                hideBanner();
-            });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 </body>
 </html>

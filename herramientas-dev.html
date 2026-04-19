@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8" />
@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://toolsrapidas.com/herramientas-dev.html">
     <meta name="theme-color" content="#08111f">
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
 
     <meta property="og:title" content="Herramientas para desarrolladores y IT | ToolsRapidas">
     <meta property="og:description" content="Utilidades online para APIs, testing, JSON, JWT, regex, XML, redes, texto y desarrollo.">
@@ -33,6 +34,51 @@
           "description": "Colección de herramientas online para desarrollo, APIs, testing, redes y sistemas."
         }
     </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Herramientas destacadas para desarrolladores y sistemas",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://toolsrapidas.com/visor-json.html",
+              "name": "Visor y formateador JSON"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://toolsrapidas.com/comparador-json.html",
+              "name": "Comparador de JSON"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://toolsrapidas.com/regex-tester.html",
+              "name": "Probador de regex"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://toolsrapidas.com/generador-datos-fake.html",
+              "name": "Generador de datos fake"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "url": "https://toolsrapidas.com/convertidor-timestamp.html",
+              "name": "Convertidor de timestamp"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "url": "https://toolsrapidas.com/calculadora-subredes.html",
+              "name": "Calculadora de subredes"
+            }
+          ]
+        }
+    </script>
 
     <style>
         .tool-hero { padding: 42px 0 18px; }
@@ -52,11 +98,19 @@
         .mini-links { display:grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
         .mini-links a { display:block; background:#0b1220; border:1px solid rgba(148,163,184,.12); border-radius:12px; padding:14px; color:var(--text); text-decoration:none; }
         .mini-links a span { display:block; color:var(--muted); margin-top:4px; font-size:14px; }
+        .workflow-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+        .workflow-card h3 { margin:0 0 8px; font-size:22px; }
+        .workflow-card p { margin:0 0 12px; }
+        .workflow-card .actions { padding-top:0; }
+        .related-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+        .related-card h3 { margin:0 0 8px; font-size:22px; }
+        .related-card p { margin:0 0 14px; }
         @media (max-width: 1100px) { .landing-grid { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 760px) { .landing-grid, .mini-links { grid-template-columns: 1fr; } }
+        @media (max-width: 760px) { .landing-grid, .mini-links, .workflow-grid, .related-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
     <nav class="nav">
         <div class="container nav-inner">
             <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
@@ -99,12 +153,52 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="section">
             <div class="container">
                 <div class="highlight-box">
                     <h2>Un cluster dev más completo</h2>
                     <p>La landing ya cubría bastante bien JSON, JWT y regex, pero quedaban fuera algunas utilidades que también son muy buscadas por perfiles técnicos, como validación de email, comparadores, PDF para documentación y herramientas de texto útil para soporte.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Empieza por aquí</h2>
+                        <p>Rutas rápidas según el tipo de trabajo técnico que estés haciendo.</p>
+                    </div>
+                </div>
+
+                <div class="workflow-grid">
+                    <article class="card workflow-card">
+                        <h3>JSON, APIs e integraciones</h3>
+                        <p>Para validar estructuras, comparar respuestas, transformar formatos y trabajar más rápido con datos de API.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="visor-json.html">Visor JSON</a>
+                            <a class="btn secondary" href="comparador-json.html">Comparador JSON</a>
+                        </div>
+                    </article>
+
+                    <article class="card workflow-card">
+                        <h3>Testing y QA</h3>
+                        <p>Si necesitas generar datos de prueba, validar formatos o preparar ejemplos para escenarios técnicos y demos.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="generador-datos-fake.html">Datos fake</a>
+                            <a class="btn secondary" href="regex-tester.html">Regex tester</a>
+                        </div>
+                    </article>
+
+                    <article class="card workflow-card">
+                        <h3>Soporte, sistemas e infra</h3>
+                        <p>Para revisar tokens, timestamps, redes, documentación y diferencias de texto durante incidencias o tareas operativas.</p>
+                        <div class="actions">
+                            <a class="btn primary" href="convertidor-timestamp.html">Timestamp</a>
+                            <a class="btn secondary" href="calculadora-subredes.html">Subredes</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -323,6 +417,10 @@
                         <strong>Infra, soporte y documentación</strong>
                         <span>Convierte timestamps, calcula subredes, compara texto y reaprovecha PDFs en tareas técnicas del día a día.</span>
                     </div>
+                    <div class="benefit-item">
+                        <strong>Flujos rápidos de depuración</strong>
+                        <span>Puedes encadenar validación, transformación y comparación sin salir del navegador, lo que hace la categoría más útil como hub técnico.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -330,6 +428,11 @@
         <section class="section">
             <div class="container">
                 <div class="seo-box">
+                    <h2>Si vienes por un problema técnico concreto</h2>
+                    <p>
+                        Para payloads y respuestas de API, empieza por <a href="visor-json.html">JSON</a> y <a href="comparador-json.html">comparador JSON</a>. Para expresiones y validaciones de texto, ve a <a href="generador-regex.html">generador de regex</a> y <a href="regex-tester.html">regex tester</a>. Para soporte e infra, suele encajar mejor <a href="convertidor-timestamp.html">timestamp</a>, <a href="calculadora-subredes.html">subredes</a> y <a href="comparador-texto.html">comparador de texto</a>.
+                    </p>
+
                     <h2>Herramientas online para desarrolladores y IT</h2>
                     <p>
                         Esta categoría reúne herramientas online para desarrolladores, técnicos de sistemas, soporte, testing e integraciones.
@@ -347,6 +450,48 @@
                         Ahorras tiempo, evitas abrir múltiples herramientas locales y puedes hacer comprobaciones rápidas desde cualquier navegador,
                         tanto en escritorio como en móvil.
                     </p>
+
+                    <h2>Cómo aprovechar mejor esta categoría</h2>
+                    <p>
+                        Si necesitas una vista más global del proyecto, puedes complementar esta landing con <a href="guia-de-herramientas-online.html">la guía de herramientas</a> y la página <a href="sobre-toolsrapidas.html">Sobre ToolsRapidas</a>, donde se explica cómo se organiza el sitio y qué intenta cubrir cada cluster.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Explora también</h2>
+                        <p>Enlaces relacionados para tareas técnicas que suelen mezclarse con documentación, SEO o trabajo operativo.</p>
+                    </div>
+                </div>
+
+                <div class="related-grid">
+                    <article class="card related-card">
+                        <h3>SEO técnico y publicación</h3>
+                        <p>Si lo que estás tocando termina en una web o landing, esta categoría te ayuda con slugs, snippets, schema y revisión on-page.</p>
+                        <div class="actions">
+                            <a class="btn secondary" href="herramientas-seo.html">Ver categoría SEO</a>
+                        </div>
+                    </article>
+
+                    <article class="card related-card">
+                        <h3>Trabajo y documentación</h3>
+                        <p>Para tareas de oficina, PDFs, emails o pequeños procesos administrativos, el cluster trabajo amplía bien este flujo técnico.</p>
+                        <div class="actions">
+                            <a class="btn secondary" href="herramientas-para-trabajo.html">Ver categoría trabajo</a>
+                        </div>
+                    </article>
+
+                    <article class="card related-card">
+                        <h3>Guía del proyecto</h3>
+                        <p>Si quieres entender mejor cómo se relacionan las herramientas y por qué están agrupadas así, la guía general da contexto rápido.</p>
+                        <div class="actions">
+                            <a class="btn secondary" href="guia-de-herramientas-online.html">Abrir guía</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -366,12 +511,20 @@
                         <p>Sí. Están pensadas para APIs, testing, validaciones, parsing, logs, XML, redes, documentación y tareas técnicas frecuentes.</p>
                     </details>
                     <details>
+                        <summary>¿Qué debería abrir primero si trabajo con APIs?</summary>
+                        <p>Lo más habitual es empezar por visor JSON, comparador JSON, Base64, JWT o JSON a CSV según el tipo de payload o integración que estés revisando.</p>
+                    </details>
+                    <details>
                         <summary>¿Funcionan sin instalar nada?</summary>
                         <p>Sí. Todas se ejecutan online desde el navegador.</p>
                     </details>
                     <details>
                         <summary>¿Sirven para trabajo real o solo demos?</summary>
                         <p>Sirven para ambos casos: pruebas rápidas, documentación y tareas reales del día a día.</p>
+                    </details>
+                    <details>
+                        <summary>¿También sirven para soporte o incidencias?</summary>
+                        <p>Sí. Timestamp, comparador de texto, regex, subredes, logs fake y PDF a texto son bastante útiles para incidencias, documentación y tickets técnicos.</p>
                     </details>
                     <details>
                         <summary>¿Por qué hay utilidades de PDF aquí?</summary>
@@ -385,78 +538,25 @@
     <footer class="footer">
         <div class="container footer-grid">
             <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
-            <div>
-                <a href="aviso-legal.html">Aviso legal</a> ·
-                <a href="politica-privacidad.html">Privacidad</a> ·
-                <a href="politica-cookies.html">Cookies</a> ·
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
                 <a href="contacto.html">Contacto</a>
             </div>
         </div>
     </footer>
 
-    <script>
-        (function () {
-            const COOKIE_KEY = 'toolsrapidas_cookie_consent';
-            const GA_ID = 'G-984EW75R9H';
-
-            const banner = document.getElementById('cookieBanner');
-            const acceptBtn = document.getElementById('cookieAcceptBtn');
-            const rejectBtn = document.getElementById('cookieRejectBtn');
-
-            function loadAnalytics() {
-                if (window.__trAnalyticsLoaded) return;
-                window.__trAnalyticsLoaded = true;
-
-                const script = document.createElement('script');
-                script.async = true;
-                script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-                document.head.appendChild(script);
-
-                window.dataLayer = window.dataLayer || [];
-                window.gtag = function () { dataLayer.push(arguments); };
-                gtag('js', new Date());
-                gtag('config', GA_ID);
-            }
-
-            function setConsent(value) {
-                localStorage.setItem(COOKIE_KEY, value);
-            }
-
-            function getConsent() {
-                return localStorage.getItem(COOKIE_KEY);
-            }
-
-            function hideBanner() {
-                banner.hidden = true;
-            }
-
-            function showBanner() {
-                banner.hidden = false;
-            }
-
-            const consent = getConsent();
-
-            if (consent === 'accepted') {
-                loadAnalytics();
-                hideBanner();
-            } else if (consent === 'rejected') {
-                hideBanner();
-            } else {
-                showBanner();
-            }
-
-            acceptBtn.addEventListener('click', function () {
-                setConsent('accepted');
-                loadAnalytics();
-                hideBanner();
-            });
-
-            rejectBtn.addEventListener('click', function () {
-                setConsent('rejected');
-                hideBanner();
-            });
-        })();
-    </script>
+        <script src="assets/site.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Generador de schema FAQ online gratis | ToolsRapidas</title>
+    <meta name="description" content="Crea JSON-LD FAQPage online gratis para preguntas frecuentes visibles en tu página con este generador de schema FAQ." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/generador-schema-faq.html" />
+    <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
+
+    <meta property="og:title" content="Generador de schema FAQ online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Genera JSON-LD FAQPage para preguntas frecuentes visibles en tu web." />
+    <meta property="og:url" content="https://toolsrapidas.com/generador-schema-faq.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de schema FAQ online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Crea marcado FAQPage en JSON-LD listo para copiar." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de schema FAQ online",
+          "url": "https://toolsrapidas.com/generador-schema-faq.html",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Generador de JSON-LD FAQPage para preguntas frecuentes visibles en una página."
+        }
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+        .tool-panel h2 { margin: 0 0 12px; font-size: 22px; }
+        .tool-panel p { color: var(--muted); line-height: 1.7; }
+        .faq-item {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        .faq-item h3 { margin: 0 0 10px; font-size: 16px; }
+        .field { margin-bottom: 12px; }
+        .field label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--muted); }
+        .field input, .field textarea {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(148,163,184,.14);
+            background: #020617;
+            color: var(--text);
+            padding: 11px 12px;
+            font-size: 14px;
+            outline: none;
+        }
+        .field textarea { min-height: 90px; resize: vertical; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+        .tool-buttons button {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #162033;
+            color: var(--text);
+        }
+        .tool-buttons .primary { background: var(--brand2); color: #052e16; }
+        .output-box, .preview-box, .notice-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+        .output-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: Consolas, monospace;
+            color: #dbeafe;
+            line-height: 1.7;
+            font-size: 13px;
+        }
+        .preview-box details + details { margin-top: 10px; }
+        .preview-box summary { cursor: pointer; font-weight: 700; }
+        .preview-box p, .notice-box p, .notice-box li { color: var(--muted); line-height: 1.7; }
+        .notice-box ul { margin: 0; padding-left: 18px; }
+        .status { margin-top: 12px; color: var(--muted); min-height: 20px; font-size: 13px; }
+        .remove-btn {
+            margin-top: 6px;
+            background: transparent;
+            border: 1px solid rgba(148,163,184,.18);
+            color: var(--muted);
+            padding: 8px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        @media (max-width: 920px) {
+            .tool-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de schema FAQ online gratis</h1>
+            <p class="tool-lead">
+                Crea JSON-LD `FAQPage` a partir de preguntas y respuestas visibles en tu página y copia el resultado listo para implementar.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Preguntas y respuestas</h2>
+                        <p>Escribe FAQs reales y visibles en la página final. El schema debe reflejar contenido que el usuario pueda leer.</p>
+
+                        <div id="faqItems"></div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="generateBtn" type="button">Generar JSON-LD</button>
+                            <button id="addBtn" type="button">Añadir FAQ</button>
+                            <button id="demoBtn" type="button">Demo</button>
+                            <button id="copyBtn" type="button">Copiar schema</button>
+                        </div>
+
+                        <div class="status" id="status"></div>
+
+                        <div class="output-box">
+                            <strong>Resultado JSON-LD</strong>
+                            <pre id="jsonOutput"></pre>
+                        </div>
+                    </section>
+
+                    <aside class="card tool-panel">
+                        <h2>Preview visible</h2>
+                        <div class="preview-box" id="faqPreview">
+                            <p>Al generar el schema verás aquí la previsualización de las preguntas frecuentes.</p>
+                        </div>
+
+                        <div class="notice-box">
+                            <strong>Notas importantes</strong>
+                            <ul>
+                                <li>El contenido del schema debe ser visible en la página final.</li>
+                                <li>No uses FAQ markup solo para “forzar” rich results.</li>
+                                <li>Google limita la visibilidad de rich results FAQ a ciertos tipos de sitios autoritativos, aunque el marcado siga siendo válido como dato estructurado.</li>
+                            </ul>
+                        </div>
+
+                        <div class="notice-box">
+                            <strong>Cuándo usarlo</strong>
+                            <p>
+                                Úsalo cuando una página realmente tenga varias preguntas frecuentes escritas por el propio sitio y una respuesta clara para cada una.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Completa el trabajo SEO técnico con utilidades conectadas al schema y la publicación.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <a href="seo-checklist.html">
+                            <h3>Checklist SEO on-page</h3>
+                            <p>Comprueba que el schema acompaña a una página correctamente estructurada e indexable.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="simulador-serp-google.html">
+                            <h3>Simulador SERP de Google</h3>
+                            <p>Revisa el snippet de la página donde vas a insertar las FAQs.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="generador-meta-titles-descriptions.html">
+                            <h3>Generador de meta titles y descriptions</h3>
+                            <p>Prepara títulos y descriptions antes de cerrar la página final.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="generador-slugs-seo.html">
+                            <h3>Generador de slugs SEO</h3>
+                            <p>Define una URL clara para la página de FAQs o la landing donde irá el schema.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Qué hace esta herramienta</h2>
+                    <p>
+                        Genera un bloque JSON-LD `FAQPage` con `Question` y `Answer` para que puedas usarlo en páginas con preguntas frecuentes reales, visibles y coherentes con el contenido.
+                    </p>
+
+                    <h2>Qué no conviene hacer</h2>
+                    <p>
+                        No conviene crear FAQs artificiales solo para SEO ni marcar contenido que no existe en la página. El schema debe reflejar preguntas y respuestas que el usuario realmente pueda encontrar.
+                    </p>
+
+                    <h2>Cuándo merece la pena</h2>
+                    <p>
+                        Es útil en landings, páginas de herramientas, soporte, servicios y categorías cuando el usuario necesita aclaraciones repetidas antes de completar una tarea o entender una página.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Dudas habituales sobre el generador de schema FAQ.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Este schema garantiza rich results?</summary>
+                        <p>No. El marcado puede ser válido y aun así no mostrarse como rich result.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo usarlo en cualquier página?</summary>
+                        <p>Solo cuando esa página tenga preguntas frecuentes reales y visibles para el usuario.</p>
+                    </details>
+                    <details>
+                        <summary>¿Qué tipo de schema genera?</summary>
+                        <p>Genera JSON-LD con `FAQPage`, `Question` y `Answer` listo para copiar.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve también como plantilla editorial?</summary>
+                        <p>Sí. La preview te ayuda a preparar el bloque de FAQs visible antes de insertar el schema.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const faqItems = document.getElementById('faqItems');
+            const jsonOutput = document.getElementById('jsonOutput');
+            const faqPreview = document.getElementById('faqPreview');
+            const status = document.getElementById('status');
+
+            function setStatus(message) {
+                status.textContent = message || '';
+            }
+
+            function createFaqItem(question, answer) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'faq-item';
+                wrapper.innerHTML =
+                    '<h3>FAQ</h3>' +
+                    '<div class="field"><label>Pregunta</label><input type="text" class="faq-question" value="' + (question || '') + '"></div>' +
+                    '<div class="field"><label>Respuesta</label><textarea class="faq-answer">' + (answer || '') + '</textarea></div>' +
+                    '<button class="remove-btn" type="button">Eliminar</button>';
+
+                wrapper.querySelector('.remove-btn').addEventListener('click', function () {
+                    if (faqItems.children.length > 1) {
+                        wrapper.remove();
+                        generateSchema();
+                    } else {
+                        setStatus('Necesitas al menos una FAQ.');
+                    }
+                });
+
+                faqItems.appendChild(wrapper);
+            }
+
+            function collectFaqs() {
+                return Array.from(faqItems.querySelectorAll('.faq-item')).map((item) => ({
+                    question: item.querySelector('.faq-question').value.trim(),
+                    answer: item.querySelector('.faq-answer').value.trim()
+                })).filter((item) => item.question && item.answer);
+            }
+
+            function generateSchema() {
+                const faqs = collectFaqs();
+                const schema = {
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: faqs.map((item) => ({
+                        '@type': 'Question',
+                        name: item.question,
+                        acceptedAnswer: {
+                            '@type': 'Answer',
+                            text: item.answer
+                        }
+                    }))
+                };
+
+                jsonOutput.textContent = JSON.stringify(schema, null, 2);
+
+                if (!faqs.length) {
+                    faqPreview.innerHTML = '<p>Completa al menos una pregunta y su respuesta para generar el preview.</p>';
+                    setStatus('Añade contenido a las FAQs.');
+                    return;
+                }
+
+                faqPreview.innerHTML = faqs.map((item, index) => (
+                    '<details' + (index === 0 ? ' open' : '') + '>' +
+                    '<summary>' + item.question + '</summary>' +
+                    '<p>' + item.answer.replace(/\n/g, '<br>') + '</p>' +
+                    '</details>'
+                )).join('');
+
+                setStatus('Schema FAQ generado.');
+            }
+
+            async function copySchema() {
+                try {
+                    await navigator.clipboard.writeText(jsonOutput.textContent);
+                    setStatus('Schema copiado.');
+                } catch (_) {
+                    setStatus('No se pudo copiar el schema.');
+                }
+            }
+
+            function loadDemo() {
+                faqItems.innerHTML = '';
+                createFaqItem('¿La herramienta es gratis?', 'Sí. Puedes usarla online gratis desde el navegador.');
+                createFaqItem('¿Necesito instalar algo?', 'No. Funciona directamente en la web sin instalación.');
+                createFaqItem('¿Puedo copiar el resultado?', 'Sí. Puedes copiar el JSON-LD generado y adaptarlo a tu página final.');
+                generateSchema();
+            }
+
+            document.getElementById('generateBtn').addEventListener('click', generateSchema);
+            document.getElementById('addBtn').addEventListener('click', function () {
+                createFaqItem('', '');
+                setStatus('Nueva FAQ añadida.');
+            });
+            document.getElementById('demoBtn').addEventListener('click', loadDemo);
+            document.getElementById('copyBtn').addEventListener('click', copySchema);
+
+            createFaqItem('¿Qué hace esta herramienta?', 'Genera un bloque JSON-LD FAQPage listo para copiar.');
+            createFaqItem('¿Debo mostrar estas FAQs en la página?', 'Sí. El contenido marcado debe ser visible para el usuario.');
+            generateSchema();
+        })();
+    </script>
+    <script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Generador de slugs SEO online gratis | ToolsRapidas</title>
+    <meta name="description" content="Convierte títulos en slugs limpios y SEO-friendly con este generador de slugs online gratis para URLs, posts, categorías y herramientas." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/generador-slugs-seo.html" />
+    <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
+
+    <meta property="og:title" content="Generador de slugs SEO online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Genera URLs limpias y fáciles de leer para posts, categorías y herramientas." />
+    <meta property="og:url" content="https://toolsrapidas.com/generador-slugs-seo.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de slugs SEO online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Transforma títulos en slugs SEO limpios y listos para publicar." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de slugs SEO online",
+          "url": "https://toolsrapidas.com/generador-slugs-seo.html",
+          "applicationCategory": "MarketingApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Generador de slugs SEO para convertir títulos en URLs limpias y listas para publicar."
+        }
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+        .tool-panel h2 { margin: 0 0 12px; font-size: 22px; }
+        .tool-panel p { color: var(--muted); line-height: 1.7; }
+        .field { margin-bottom: 14px; }
+        .field label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--muted); }
+        .field input, .field textarea {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(148,163,184,.14);
+            background: #020617;
+            color: var(--text);
+            padding: 11px 12px;
+            font-size: 14px;
+            outline: none;
+        }
+        .field textarea { min-height: 130px; resize: vertical; }
+        .option-list { display: grid; gap: 10px; margin-top: 14px; }
+        .option-item {
+            display: grid;
+            grid-template-columns: 22px 1fr;
+            gap: 10px;
+            align-items: start;
+            padding: 12px;
+            border-radius: 12px;
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+        }
+        .option-item input { margin-top: 3px; accent-color: var(--brand2); }
+        .option-item strong { display: block; margin-bottom: 4px; }
+        .option-item span { color: var(--muted); line-height: 1.6; font-size: 14px; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+        .tool-buttons button {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #162033;
+            color: var(--text);
+        }
+        .tool-buttons .primary { background: var(--brand2); color: #052e16; }
+        .result-box, .url-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 16px;
+            margin-top: 14px;
+        }
+        .result-box code, .url-box code {
+            display: block;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: Consolas, monospace;
+            color: #dbeafe;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+        .stat-list { display: grid; gap: 12px; margin-top: 16px; }
+        .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+        }
+        .stat-card strong { display: block; font-size: 24px; margin-bottom: 6px; }
+        .stat-card span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+        .helper-box {
+            margin-top: 14px;
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 14px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+        .helper-box strong { display: block; color: var(--text); margin-bottom: 6px; }
+        .status { margin-top: 12px; color: var(--muted); min-height: 20px; font-size: 13px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        @media (max-width: 920px) {
+            .tool-layout { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de slugs SEO online gratis</h1>
+            <p class="tool-lead">
+                Convierte títulos y frases en slugs limpios, legibles y listos para URLs de posts, categorías, páginas y herramientas online.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Generar slug</h2>
+                        <p>Pega un título o una frase y ajusta el resultado con opciones típicas de limpieza SEO.</p>
+
+                        <div class="field">
+                            <label for="slugSource">Título o texto base</label>
+                            <textarea id="slugSource">Cómo comprimir imágenes para web sin perder calidad</textarea>
+                        </div>
+
+                        <div class="field">
+                            <label for="baseDomain">Dominio base opcional</label>
+                            <input id="baseDomain" type="text" value="https://toolsrapidas.com/blog" />
+                        </div>
+
+                        <div class="option-list">
+                            <label class="option-item"><input id="stripStopwords" type="checkbox" checked><span><strong>Quitar stopwords comunes</strong><span>Elimina artículos y conectores frecuentes para acortar la URL.</span></span></label>
+                            <label class="option-item"><input id="limitWords" type="checkbox" checked><span><strong>Limitar el número de palabras</strong><span>Reduce el slug a un tamaño más manejable.</span></span></label>
+                            <label class="option-item"><input id="keepNumbers" type="checkbox" checked><span><strong>Conservar números</strong><span>Mantiene años, versiones o cantidades si están en el título.</span></span></label>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="generateBtn" type="button">Generar slug</button>
+                            <button id="copySlugBtn" type="button">Copiar slug</button>
+                            <button id="copyUrlBtn" type="button">Copiar URL</button>
+                            <button id="demoBtn" type="button">Demo</button>
+                        </div>
+
+                        <div class="result-box">
+                            <strong>Slug generado</strong>
+                            <code id="slugResult">como-comprimir-imagenes-web</code>
+                        </div>
+
+                        <div class="url-box">
+                            <strong>URL final</strong>
+                            <code id="urlResult">https://toolsrapidas.com/blog/como-comprimir-imagenes-web</code>
+                        </div>
+
+                        <div class="status" id="status"></div>
+                    </section>
+
+                    <aside class="card tool-panel">
+                        <h2>Comprobaciones rápidas</h2>
+                        <div class="stat-list">
+                            <div class="stat-card">
+                                <strong id="wordCount">0</strong>
+                                <span>Palabras aproximadas del slug generado.</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="charCount">0</strong>
+                                <span>Caracteres del slug para controlar longitud y legibilidad.</span>
+                            </div>
+                        </div>
+
+                        <div class="helper-box">
+                            <strong>Buenas prácticas</strong>
+                            <span>
+                                Usa palabras reales, evita parámetros innecesarios, no repitas keywords sin sentido y mantén una estructura fácil de entender tanto para usuarios como para buscadores.
+                            </span>
+                        </div>
+
+                        <div class="helper-box">
+                            <strong>Cuándo acortar más</strong>
+                            <span>
+                                Si el slug queda demasiado largo, elimina matices secundarios y conserva solo la intención principal de la página.
+                            </span>
+                        </div>
+
+                        <div class="helper-box">
+                            <strong>Cuándo conservar términos</strong>
+                            <span>
+                                Mantén marcas, años o versiones cuando realmente ayudan a identificar la URL y su contenido.
+                            </span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Completa la preparación de la URL con otras utilidades SEO del sitio.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <a href="simulador-serp-google.html">
+                            <h3>Simulador SERP de Google</h3>
+                            <p>Comprueba cómo puede verse el title, la description y la ruta generada.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="generador-meta-titles-descriptions.html">
+                            <h3>Generador de meta titles y descriptions</h3>
+                            <p>Prepara el snippet SEO después de definir una URL limpia.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="seo-checklist.html">
+                            <h3>Checklist SEO on-page</h3>
+                            <p>Valida canonical, title, headings y otros elementos antes de publicar.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="contador-palabras.html">
+                            <h3>Contador de palabras</h3>
+                            <p>Mide títulos y textos si estás ajustando la estructura editorial de la página.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Qué hace un buen slug SEO</h2>
+                    <p>
+                        Un buen slug resume la intención principal de la página con palabras claras, sin ruido innecesario y sin hacer la URL difícil de leer. También ayuda a mantener una arquitectura más consistente entre categorías y herramientas.
+                    </p>
+
+                    <h2>Cuándo usar esta herramienta</h2>
+                    <p>
+                        Es útil cuando vas a publicar una herramienta nueva, una página de categoría, un artículo o una landing y quieres evitar URLs largas, confusas o llenas de palabras irrelevantes.
+                    </p>
+
+                    <h2>Qué conviene evitar</h2>
+                    <p>
+                        Evita repetir keywords sin aportar valor, mezclar demasiados conceptos en una sola ruta o dejar el slug casi igual que un título largo pensado para el usuario, no para la URL.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Dudas comunes sobre los slugs SEO.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué es un slug SEO?</summary>
+                        <p>Es la parte legible de la URL que ayuda a identificar el contenido de una página.</p>
+                    </details>
+                    <details>
+                        <summary>¿Conviene quitar palabras vacías?</summary>
+                        <p>Muchas veces sí, sobre todo cuando alargan la URL sin aportar contexto útil.</p>
+                    </details>
+                    <details>
+                        <summary>¿Debo incluir la keyword exacta?</summary>
+                        <p>Incluye la intención principal si encaja de forma natural, pero no fuerces repeticiones ni slugs artificiales.</p>
+                    </details>
+                    <details>
+                        <summary>¿Esta herramienta genera la URL completa?</summary>
+                        <p>Sí. Puede mostrar tanto el slug como la URL final si añades un dominio base.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const source = document.getElementById('slugSource');
+            const baseDomain = document.getElementById('baseDomain');
+            const stripStopwords = document.getElementById('stripStopwords');
+            const limitWords = document.getElementById('limitWords');
+            const keepNumbers = document.getElementById('keepNumbers');
+            const slugResult = document.getElementById('slugResult');
+            const urlResult = document.getElementById('urlResult');
+            const wordCount = document.getElementById('wordCount');
+            const charCount = document.getElementById('charCount');
+            const status = document.getElementById('status');
+
+            const stopwords = ['de', 'la', 'las', 'el', 'los', 'y', 'o', 'u', 'en', 'para', 'por', 'con', 'sin', 'del', 'al', 'un', 'una', 'como'];
+
+            function setStatus(message) {
+                status.textContent = message || '';
+            }
+
+            function normalizeText(value) {
+                return value.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            }
+
+            function generateSlug() {
+                let value = normalizeText(source.value.trim().toLowerCase());
+                value = value.replace(/[^\w\s-]/g, ' ');
+
+                let parts = value.split(/\s+/).filter(Boolean);
+
+                if (!keepNumbers.checked) {
+                    parts = parts.filter((part) => !/^\d+$/.test(part));
+                }
+
+                if (stripStopwords.checked) {
+                    parts = parts.filter((part) => !stopwords.includes(part));
+                }
+
+                if (limitWords.checked) {
+                    parts = parts.slice(0, 7);
+                }
+
+                const slug = parts.join('-').replace(/-+/g, '-').replace(/^-|-$/g, '') || 'slug-ejemplo';
+                const domain = baseDomain.value.trim().replace(/\/+$/, '');
+
+                slugResult.textContent = slug;
+                urlResult.textContent = domain ? domain + '/' + slug : slug;
+                wordCount.textContent = String(parts.length);
+                charCount.textContent = String(slug.length);
+                setStatus('Slug generado.');
+            }
+
+            async function copyNodeText(node, successMessage) {
+                try {
+                    await navigator.clipboard.writeText(node.textContent);
+                    setStatus(successMessage);
+                } catch (_) {
+                    setStatus('No se pudo copiar.');
+                }
+            }
+
+            document.getElementById('generateBtn').addEventListener('click', generateSlug);
+            document.getElementById('copySlugBtn').addEventListener('click', function () {
+                copyNodeText(slugResult, 'Slug copiado.');
+            });
+            document.getElementById('copyUrlBtn').addEventListener('click', function () {
+                copyNodeText(urlResult, 'URL copiada.');
+            });
+            document.getElementById('demoBtn').addEventListener('click', function () {
+                source.value = 'Checklist SEO on-page para herramientas online';
+                baseDomain.value = 'https://toolsrapidas.com/seo';
+                stripStopwords.checked = true;
+                limitWords.checked = true;
+                keepNumbers.checked = true;
+                generateSlug();
+            });
+
+            [source, baseDomain].forEach((field) => field.addEventListener('input', generateSlug));
+            [stripStopwords, limitWords, keepNumbers].forEach((field) => field.addEventListener('change', generateSlug));
+
+            generateSlug();
+        })();
+    </script>
+    <script src="assets/site.js"></script>
+</body>
+</html>

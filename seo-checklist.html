@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Checklist SEO on-page online gratis | ToolsRapidas</title>
+    <meta name="description" content="Revisa title, meta description, H1, canonical, schema, enlazado interno e indexabilidad con esta checklist SEO on-page online gratis." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/seo-checklist.html" />
+    <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
+
+    <meta property="og:title" content="Checklist SEO on-page online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Valida los puntos SEO más importantes antes de publicar una página." />
+    <meta property="og:url" content="https://toolsrapidas.com/seo-checklist.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Checklist SEO on-page online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Checklist práctica para revisar SEO técnico y on-page antes de publicar." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Checklist SEO on-page online",
+          "url": "https://toolsrapidas.com/seo-checklist.html",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Checklist SEO on-page para revisar title, meta description, headings, canonical, schema, enlazado interno e indexabilidad antes de publicar."
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Para qué sirve esta checklist SEO?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sirve para revisar rápidamente elementos SEO on-page y técnicos básicos antes de publicar una URL."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Incluye solo SEO técnico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Combina revisión técnica básica con contenido, enlazado interno y señales de calidad editorial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Puedo copiar el resultado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí. La herramienta genera un resumen que puedes copiar para revisar una página o compartirlo con tu equipo."
+              }
+            }
+          ]
+        }
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout { display: grid; grid-template-columns: 1.15fr .85fr; gap: 18px; }
+        .tool-panel h2 { margin: 0 0 12px; font-size: 22px; }
+        .tool-panel p { color: var(--muted); line-height: 1.7; }
+        .field { margin-bottom: 14px; }
+        .field label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--muted); }
+        .field input, .field textarea {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(148,163,184,.14);
+            background: #020617;
+            color: var(--text);
+            padding: 11px 12px;
+            font-size: 14px;
+            outline: none;
+        }
+        .field textarea { min-height: 110px; resize: vertical; }
+        .checklist-group { margin-top: 18px; }
+        .checklist-group h3 { margin: 0 0 10px; font-size: 18px; }
+        .checklist-items { display: grid; gap: 10px; }
+        .check-item {
+            display: grid;
+            grid-template-columns: 22px 1fr;
+            gap: 10px;
+            align-items: start;
+            padding: 12px;
+            border-radius: 12px;
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+        }
+        .check-item input { margin-top: 3px; accent-color: var(--brand2); }
+        .check-item strong { display: block; margin-bottom: 4px; }
+        .check-item span { color: var(--muted); line-height: 1.6; font-size: 14px; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+        .tool-buttons button {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #162033;
+            color: var(--text);
+        }
+        .tool-buttons .primary { background: var(--brand2); color: #052e16; }
+        .summary-box, .score-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 16px;
+        }
+        .score-box { margin-bottom: 14px; }
+        .score-number { font-size: 42px; font-weight: 900; line-height: 1; margin-bottom: 8px; }
+        .summary-box h3, .score-box h2 { margin: 0 0 10px; }
+        .summary-box p, .summary-box li, .score-box p { color: var(--muted); line-height: 1.7; }
+        .summary-box ul { margin: 0; padding-left: 18px; }
+        .status { margin-top: 12px; color: var(--muted); min-height: 20px; font-size: 13px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        @media (max-width: 920px) { .tool-layout { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Checklist SEO on-page online gratis</h1>
+            <p class="tool-lead">
+                Revisa de forma rápida title, meta description, headings, canonical, schema, enlazado interno, indexabilidad y calidad editorial antes de publicar una URL.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Checklist de revisión</h2>
+                        <p>Marca los puntos que ya están resueltos en tu página. La herramienta calcula un progreso orientativo y prepara un resumen con los pendientes.</p>
+
+                        <div class="field">
+                            <label for="pageUrl">URL o página revisada</label>
+                            <input id="pageUrl" type="text" placeholder="https://tusitio.com/url-a-revisar" />
+                        </div>
+
+                        <div class="field">
+                            <label for="reviewNotes">Notas rápidas</label>
+                            <textarea id="reviewNotes" placeholder="Ejemplo: falta ampliar contenido, añadir enlaces internos y revisar schema FAQ."></textarea>
+                        </div>
+
+                        <div class="checklist-group">
+                            <h3>SEO on-page básico</h3>
+                            <div class="checklist-items">
+                                <label class="check-item"><input type="checkbox" data-label="Title único y claro"><span><strong>Title único y claro</strong><span>Describe la intención principal y evita títulos genéricos o duplicados.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Meta description trabajada"><span><strong>Meta description trabajada</strong><span>Resume el valor de la página con una descripción útil y específica.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Un solo H1 alineado con la intención"><span><strong>Un solo H1 alineado con la intención</strong><span>El H1 debe ser coherente con title, contenido y consulta objetivo.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Subheadings útiles (H2/H3)"><span><strong>Subheadings útiles (H2/H3)</strong><span>Estructura la información para mejorar lectura y cobertura temática.</span></span></label>
+                            </div>
+                        </div>
+
+                        <div class="checklist-group">
+                            <h3>SEO técnico básico</h3>
+                            <div class="checklist-items">
+                                <label class="check-item"><input type="checkbox" data-label="Canonical correcta"><span><strong>Canonical correcta</strong><span>Evita inconsistencias entre versiones duplicadas o rutas alternativas.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Página indexable"><span><strong>Página indexable</strong><span>Comprueba `index,follow`, ausencia de bloqueos y presencia en sitemap si aplica.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Schema relevante"><span><strong>Schema relevante</strong><span>Añade datos estructurados útiles y coherentes con el contenido real.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Rendimiento básico aceptable"><span><strong>Rendimiento básico aceptable</strong><span>Optimiza peso, scripts y experiencia móvil antes de publicar.</span></span></label>
+                            </div>
+                        </div>
+
+                        <div class="checklist-group">
+                            <h3>Calidad y enlazado</h3>
+                            <div class="checklist-items">
+                                <label class="check-item"><input type="checkbox" data-label="Contenido suficiente y original"><span><strong>Contenido suficiente y original</strong><span>Evita páginas finas o demasiado parecidas a otras ya existentes.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Enlaces internos relevantes"><span><strong>Enlaces internos relevantes</strong><span>Conecta la página con categorías y herramientas relacionadas.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="CTA o siguiente paso claro"><span><strong>CTA o siguiente paso claro</strong><span>Ayuda al usuario a seguir navegando o completar su tarea.</span></span></label>
+                                <label class="check-item"><input type="checkbox" data-label="Revisión móvil y accesibilidad básica"><span><strong>Revisión móvil y accesibilidad básica</strong><span>Comprueba foco visible, labels, contraste y usabilidad en pantallas pequeñas.</span></span></label>
+                            </div>
+                        </div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="evaluateBtn" type="button">Evaluar checklist</button>
+                            <button id="markCoreBtn" type="button">Marcar esenciales</button>
+                            <button id="resetBtn" type="button">Limpiar</button>
+                            <button id="copyBtn" type="button">Copiar resumen</button>
+                        </div>
+
+                        <div class="status" id="status"></div>
+                    </section>
+
+                    <aside class="card tool-panel">
+                        <div class="score-box">
+                            <h2>Puntuación orientativa</h2>
+                            <div class="score-number" id="scoreValue">0%</div>
+                            <p id="scoreText">Marca elementos de la checklist para obtener un resumen rápido del estado de la página.</p>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Resumen</h3>
+                            <div id="summaryContent">
+                                <p>Cuando evalúes la checklist verás aquí los puntos completados, los pendientes y una nota lista para copiar.</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Complementa la revisión on-page con otras utilidades del cluster SEO.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <a href="simulador-serp-google.html">
+                            <h3>Simulador SERP de Google</h3>
+                            <p>Previsualiza title, description y URL antes de publicar la página revisada.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="generador-slugs-seo.html">
+                            <h3>Generador de slugs SEO</h3>
+                            <p>Define una ruta limpia y coherente con la intención principal de la página.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="generador-meta-titles-descriptions.html">
+                            <h3>Generador de meta titles y descriptions</h3>
+                            <p>Prepara snippets optimizados para páginas, posts y landings.</p>
+                        </a>
+                    </article>
+
+                    <article class="card">
+                        <a href="generador-schema-faq.html">
+                            <h3>Generador de schema FAQ</h3>
+                            <p>Crea el bloque JSON-LD si tu página incluye preguntas frecuentes visibles.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Qué revisa una checklist SEO on-page</h2>
+                    <p>
+                        Una checklist SEO on-page ayuda a comprobar los elementos que más suelen afectar a la indexación, a la claridad temática y a la calidad percibida de una página: título, descripción, headings, canonical, indexabilidad, schema, contenido y enlazado interno.
+                    </p>
+
+                    <h2>Cuándo usar esta herramienta</h2>
+                    <p>
+                        Resulta útil antes de publicar una landing, una ficha de herramienta, una página de categoría, un post o cualquier URL nueva. También sirve para auditar páginas antiguas que quieres mejorar sin hacer una revisión completa desde cero.
+                    </p>
+
+                    <h2>Qué no sustituye</h2>
+                    <p>
+                        Esta checklist no reemplaza una auditoría SEO completa ni el análisis en Search Console o un crawler, pero sí funciona como control rápido para evitar errores frecuentes antes de lanzar una página.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Dudas habituales sobre la checklist SEO.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Para qué sirve esta checklist SEO?</summary>
+                        <p>Sirve para revisar rápidamente elementos SEO on-page y técnicos básicos antes de publicar una URL.</p>
+                    </details>
+                    <details>
+                        <summary>¿Incluye solo SEO técnico?</summary>
+                        <p>No. También incluye señales editoriales como contenido suficiente, encabezados útiles y enlazado interno relevante.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo copiar el resultado?</summary>
+                        <p>Sí. La herramienta genera un resumen con porcentaje orientativo, puntos completados y pendientes.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para páginas de herramientas online?</summary>
+                        <p>Sí. De hecho es especialmente útil para sitios como ToolsRapidas, donde conviene revisar calidad, indexabilidad y enlazado interno de cada URL.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div class="footer-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const checks = Array.from(document.querySelectorAll('.check-item input'));
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreText = document.getElementById('scoreText');
+            const summaryContent = document.getElementById('summaryContent');
+            const status = document.getElementById('status');
+            const urlInput = document.getElementById('pageUrl');
+            const notesInput = document.getElementById('reviewNotes');
+            const STORAGE_KEY = 'toolsrapidas_seo_checklist_state';
+
+            function setStatus(message) {
+                status.textContent = message || '';
+            }
+
+            function getState() {
+                return {
+                    url: urlInput.value,
+                    notes: notesInput.value,
+                    checks: checks.map((check) => check.checked)
+                };
+            }
+
+            function saveState() {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(getState()));
+            }
+
+            function loadState() {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    if (!raw) return;
+                    const state = JSON.parse(raw);
+                    urlInput.value = state.url || '';
+                    notesInput.value = state.notes || '';
+                    checks.forEach((check, index) => {
+                        check.checked = Boolean(state.checks && state.checks[index]);
+                    });
+                } catch (_) {
+                    // Ignore invalid saved state.
+                }
+            }
+
+            function evaluateChecklist() {
+                const completed = checks.filter((check) => check.checked);
+                const pending = checks.filter((check) => !check.checked);
+                const percent = Math.round((completed.length / checks.length) * 100);
+                const reviewedUrl = urlInput.value.trim();
+                const notes = notesInput.value.trim();
+
+                scoreValue.textContent = percent + '%';
+                scoreText.textContent = completed.length + ' de ' + checks.length + ' puntos marcados.';
+
+                const completedItems = completed.map((check) => '<li>' + check.dataset.label + '</li>').join('');
+                const pendingItems = pending.map((check) => '<li>' + check.dataset.label + '</li>').join('');
+
+                summaryContent.innerHTML =
+                    '<p><strong>Página revisada:</strong> ' + (reviewedUrl || 'Sin URL especificada') + '</p>' +
+                    '<p><strong>Estado:</strong> ' + percent + '% completado.</p>' +
+                    '<p><strong>Completado:</strong></p><ul>' + (completedItems || '<li>Ningún punto marcado todavía.</li>') + '</ul>' +
+                    '<p><strong>Pendiente:</strong></p><ul>' + (pendingItems || '<li>No hay pendientes en esta checklist.</li>') + '</ul>' +
+                    (notes ? '<p><strong>Notas:</strong> ' + notes.replace(/\n/g, '<br>') + '</p>' : '');
+
+                saveState();
+                setStatus('Checklist evaluada y guardada en este navegador.');
+            }
+
+            function markCoreItems() {
+                checks.forEach((check, index) => {
+                    check.checked = index < 8;
+                });
+                evaluateChecklist();
+            }
+
+            function resetChecklist() {
+                checks.forEach((check) => {
+                    check.checked = false;
+                });
+                urlInput.value = '';
+                notesInput.value = '';
+                scoreValue.textContent = '0%';
+                scoreText.textContent = 'Marca elementos de la checklist para obtener un resumen rápido del estado de la página.';
+                summaryContent.innerHTML = '<p>Cuando evalúes la checklist verás aquí los puntos completados, los pendientes y una nota lista para copiar.</p>';
+                localStorage.removeItem(STORAGE_KEY);
+                setStatus('Checklist reiniciada.');
+            }
+
+            async function copySummary() {
+                const lines = [];
+                lines.push('Checklist SEO on-page');
+                lines.push('Pagina: ' + (urlInput.value.trim() || 'Sin URL especificada'));
+                lines.push('Puntuacion: ' + scoreValue.textContent);
+                lines.push('');
+                lines.push('Completado:');
+                checks.filter((check) => check.checked).forEach((check) => lines.push('- ' + check.dataset.label));
+                lines.push('');
+                lines.push('Pendiente:');
+                checks.filter((check) => !check.checked).forEach((check) => lines.push('- ' + check.dataset.label));
+                if (notesInput.value.trim()) {
+                    lines.push('');
+                    lines.push('Notas:');
+                    lines.push(notesInput.value.trim());
+                }
+
+                try {
+                    await navigator.clipboard.writeText(lines.join('\n'));
+                    setStatus('Resumen copiado al portapapeles.');
+                } catch (_) {
+                    setStatus('No se pudo copiar el resumen.');
+                }
+            }
+
+            loadState();
+
+            document.getElementById('evaluateBtn').addEventListener('click', evaluateChecklist);
+            document.getElementById('markCoreBtn').addEventListener('click', markCoreItems);
+            document.getElementById('resetBtn').addEventListener('click', resetChecklist);
+            document.getElementById('copyBtn').addEventListener('click', copySummary);
+
+            checks.forEach((check) => check.addEventListener('change', saveState));
+            urlInput.addEventListener('input', saveState);
+            notesInput.addEventListener('input', saveState);
+        })();
+    </script>
+    <script src="assets/site.js"></script>
+</body>
+</html>
