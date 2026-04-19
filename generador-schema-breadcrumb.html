@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Generador de schema Breadcrumb online gratis | ToolsRapidas</title>
+    <meta name="description" content="Genera JSON-LD BreadcrumbList online gratis para rutas de navegación SEO con preview, niveles y copia rápida." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/generador-schema-breadcrumb.html" />
+    <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
+
+    <meta property="og:title" content="Generador de schema Breadcrumb online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Crea JSON-LD BreadcrumbList con vista previa y copia rápida para páginas, categorías y landings." />
+    <meta property="og:url" content="https://toolsrapidas.com/generador-schema-breadcrumb.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Generador de schema Breadcrumb online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Genera rutas BreadcrumbList para mejorar navegación y datos estructurados." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Generador de schema Breadcrumb online",
+          "url": "https://toolsrapidas.com/generador-schema-breadcrumb.html",
+          "applicationCategory": "MarketingApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Generador de schema BreadcrumbList para crear JSON-LD de breadcrumbs en páginas, categorías y herramientas."
+        }
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 900px; margin: 0; font-size: 18px; }
+        .tool-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+        .tool-panel h2 { margin: 0 0 12px; font-size: 22px; }
+        .tool-panel p { color: var(--muted); line-height: 1.7; }
+        .field { margin-bottom: 14px; }
+        .field label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--muted); }
+        .field input {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid rgba(148,163,184,.14);
+            background: #020617;
+            color: var(--text);
+            padding: 11px 12px;
+            font-size: 14px;
+            outline: none;
+        }
+        .items-list { display: grid; gap: 12px; margin-top: 14px; }
+        .item-row {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .item-row h3 { margin: 0 0 10px; font-size: 18px; }
+        .item-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+        .tool-buttons button {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #162033;
+            color: var(--text);
+        }
+        .tool-buttons .primary { background: var(--brand2); color: #052e16; }
+        .remove-btn {
+            margin-top: 12px;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #1f2937;
+            color: var(--text);
+        }
+        .output-box, .preview-box, .helper-box, .stat-card {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .output-box { margin-top: 14px; }
+        .output-box code {
+            display: block;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: #dbeafe;
+            font-family: Consolas, monospace;
+            line-height: 1.7;
+        }
+        .preview-box { margin-top: 14px; }
+        .preview-trail { color: var(--text); line-height: 1.8; }
+        .preview-trail span { color: var(--muted); }
+        .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 14px; }
+        .stat-card strong { display: block; font-size: 24px; margin-bottom: 6px; }
+        .stat-card span { color: var(--muted); font-size: 14px; line-height: 1.5; }
+        .helper-stack { display: grid; gap: 12px; margin-top: 14px; }
+        .helper-box strong { display: block; margin-bottom: 6px; }
+        .helper-box span { color: var(--muted); line-height: 1.7; }
+        .status { margin-top: 12px; color: var(--muted); min-height: 20px; font-size: 13px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        @media (max-width: 920px) {
+            .tool-layout, .item-grid, .stat-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Generador de schema Breadcrumb online gratis</h1>
+            <p class="tool-lead">
+                Crea JSON-LD `BreadcrumbList` para páginas, categorías, landings y herramientas con vista previa, niveles y copia rápida.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Configurar breadcrumb</h2>
+                        <p>Introduce el dominio y los niveles de navegación. Puedes usar URLs absolutas o rutas relativas como `herramientas-seo.html`.</p>
+
+                        <div class="field">
+                            <label for="siteUrl">Dominio base</label>
+                            <input id="siteUrl" type="text" value="https://toolsrapidas.com" />
+                        </div>
+
+                        <div class="items-list" id="breadcrumbItems"></div>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="generateBtn" type="button">Generar schema</button>
+                            <button id="addBtn" type="button">Añadir nivel</button>
+                            <button id="demoBtn" type="button">Demo</button>
+                            <button id="copyBtn" type="button">Copiar JSON-LD</button>
+                        </div>
+
+                        <div class="output-box">
+                            <strong>Schema generado</strong>
+                            <code id="jsonOutput">{}</code>
+                        </div>
+
+                        <div class="status" id="status"></div>
+                    </section>
+
+                    <aside class="card tool-panel">
+                        <h2>Preview de navegación</h2>
+                        <div class="preview-box">
+                            <div class="preview-trail" id="previewTrail">Inicio <span>›</span> SEO <span>›</span> Generador de schema breadcrumb</div>
+                        </div>
+
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <strong id="levelCount">0</strong>
+                                <span>Niveles detectados en la ruta.</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong id="validCount">0</strong>
+                                <span>Elementos con nombre y URL listos para el marcado.</span>
+                            </div>
+                        </div>
+
+                        <div class="helper-stack">
+                            <div class="helper-box">
+                                <strong>Cuándo usarlo</strong>
+                                <span>Es especialmente útil en categorías, herramientas, landings y secciones donde la navegación jerárquica ayuda al usuario.</span>
+                            </div>
+                            <div class="helper-box">
+                                <strong>Qué conviene evitar</strong>
+                                <span>No añadas niveles que el usuario no vea realmente en la navegación. El schema debe reflejar una ruta comprensible y coherente.</span>
+                            </div>
+                            <div class="helper-box">
+                                <strong>Flujo recomendado</strong>
+                                <span>Define primero la URL y la estructura de la página, luego genera el breadcrumb y termina revisando meta tags y checklist SEO.</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Casos de uso y ejemplos</h2>
+                        <p>Situaciones donde el schema BreadcrumbList aporta más claridad temática y de navegación.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3>Categorías y subcategorías</h3>
+                        <p>Muy útil cuando una URL depende de una categoría principal y el usuario necesita contexto para moverse entre niveles.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Landings y tools relacionadas</h3>
+                        <p>También encaja en páginas como ToolsRapidas, donde una herramienta pertenece claramente a un cluster como SEO, trabajo o desarrollo.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Auditorías on-page</h3>
+                        <p>Si revisas una URL y detectas navegación poco clara, el breadcrumb ayuda a reforzar jerarquía, enlazado interno y contexto editorial.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Completa el trabajo técnico con utilidades conectadas al marcado, la navegación y la revisión on-page.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <a href="validador-meta-tags.html">
+                            <h3>Validador de meta tags</h3>
+                            <p>Comprueba title, description, canonical, robots y etiquetas sociales antes de cerrar la página.</p>
+                        </a>
+                    </article>
+                    <article class="card">
+                        <a href="seo-checklist.html">
+                            <h3>Checklist SEO on-page</h3>
+                            <p>Valida navegación, canonical, schema y otras señales básicas antes de publicar.</p>
+                        </a>
+                    </article>
+                    <article class="card">
+                        <a href="generador-slugs-seo.html">
+                            <h3>Generador de slugs SEO</h3>
+                            <p>Define la URL limpia antes de montar el breadcrumb final de la página.</p>
+                        </a>
+                    </article>
+                    <article class="card">
+                        <a href="generador-schema-faq.html">
+                            <h3>Generador de schema FAQ</h3>
+                            <p>Prepara otros datos estructurados si la página también incluye preguntas frecuentes visibles.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Qué hace esta herramienta</h2>
+                    <p>
+                        Genera un bloque JSON-LD `BreadcrumbList` con `ListItem`, `position`, `name` e `item` para que puedas marcar rutas de navegación de forma limpia y rápida.
+                    </p>
+
+                    <h2>Cuándo merece la pena usar schema breadcrumb</h2>
+                    <p>
+                        Tiene sentido cuando una página forma parte de una estructura jerárquica clara y el usuario puede entender dónde está dentro del sitio.
+                    </p>
+
+                    <h2>Qué no conviene hacer</h2>
+                    <p>
+                        No uses breadcrumbs artificiales ni niveles que no existan en la navegación real. El marcado debe reflejar lo que ve el usuario, no inventar estructura solo para SEO.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Dudas habituales sobre el generador de schema breadcrumb.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Qué tipo de schema genera?</summary>
+                        <p>Genera JSON-LD con `BreadcrumbList` y elementos `ListItem` listos para copiar en tu página.</p>
+                    </details>
+                    <details>
+                        <summary>¿Necesito mostrar breadcrumbs también en la página?</summary>
+                        <p>Es lo recomendable. El marcado debería corresponderse con una navegación visible o al menos coherente con la estructura real del sitio.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para páginas de herramientas?</summary>
+                        <p>Sí. En proyectos como ToolsRapidas ayuda a conectar cada tool con su categoría y con la home.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo usar rutas relativas?</summary>
+                        <p>Sí. La herramienta puede convertirlas a URL completas usando el dominio base que introduzcas.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const itemsWrap = document.getElementById('breadcrumbItems');
+            const siteUrlInput = document.getElementById('siteUrl');
+            const jsonOutput = document.getElementById('jsonOutput');
+            const previewTrail = document.getElementById('previewTrail');
+            const levelCount = document.getElementById('levelCount');
+            const validCount = document.getElementById('validCount');
+            const status = document.getElementById('status');
+
+            function setStatus(message) {
+                status.textContent = message || '';
+            }
+
+            function escapeHtml(value) {
+                return String(value)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function normalizeUrl(value) {
+                const clean = (value || '').trim();
+                if (!clean) return '';
+                if (/^https?:\/\//i.test(clean)) return clean;
+                const base = siteUrlInput.value.trim().replace(/\/+$/, '');
+                return base + '/' + clean.replace(/^\/+/, '');
+            }
+
+            function createRow(name, url) {
+                const row = document.createElement('div');
+                row.className = 'item-row';
+                row.innerHTML =
+                    '<h3>Nivel</h3>' +
+                    '<div class="item-grid">' +
+                    '<div class="field"><label>Nombre visible</label><input type="text" class="crumb-name" value="' + (name || '') + '" /></div>' +
+                    '<div class="field"><label>URL</label><input type="text" class="crumb-url" value="' + (url || '') + '" /></div>' +
+                    '</div>' +
+                    '<button class="remove-btn" type="button">Eliminar nivel</button>';
+
+                row.querySelector('.remove-btn').addEventListener('click', function () {
+                    if (itemsWrap.children.length > 2) {
+                        row.remove();
+                        generateSchema();
+                    } else {
+                        setStatus('Mantén al menos dos niveles para un breadcrumb útil.');
+                    }
+                });
+
+                row.querySelectorAll('input').forEach(function (input) {
+                    input.addEventListener('input', generateSchema);
+                });
+
+                itemsWrap.appendChild(row);
+            }
+
+            function collectItems() {
+                return Array.from(itemsWrap.querySelectorAll('.item-row')).map(function (row, index) {
+                    const name = row.querySelector('.crumb-name').value.trim();
+                    const url = row.querySelector('.crumb-url').value.trim();
+                    return {
+                        position: index + 1,
+                        name: name,
+                        item: normalizeUrl(url)
+                    };
+                }).filter(function (item) {
+                    return item.name && item.item;
+                });
+            }
+
+            function generateSchema() {
+                const items = collectItems();
+                const schema = {
+                    '@context': 'https://schema.org',
+                    '@type': 'BreadcrumbList',
+                    itemListElement: items.map(function (item) {
+                        return {
+                            '@type': 'ListItem',
+                            position: item.position,
+                            name: item.name,
+                            item: item.item
+                        };
+                    })
+                };
+
+                jsonOutput.textContent = JSON.stringify(schema, null, 2);
+                previewTrail.innerHTML = items.map(function (item) {
+                    return escapeHtml(item.name);
+                }).join(' <span>›</span> ') || 'Añade niveles para ver la ruta.';
+                levelCount.textContent = String(itemsWrap.children.length);
+                validCount.textContent = String(items.length);
+                setStatus(items.length ? 'Schema breadcrumb generado.' : 'Completa nombre y URL en cada nivel para generar el marcado.');
+            }
+
+            function loadDemo() {
+                itemsWrap.innerHTML = '';
+                siteUrlInput.value = 'https://toolsrapidas.com';
+                createRow('Inicio', '/');
+                createRow('SEO', 'herramientas-seo.html');
+                createRow('Generador de schema breadcrumb', 'generador-schema-breadcrumb.html');
+                generateSchema();
+            }
+
+            async function copySchema() {
+                try {
+                    await navigator.clipboard.writeText(jsonOutput.textContent);
+                    setStatus('Schema breadcrumb copiado.');
+                } catch (_) {
+                    setStatus('No se pudo copiar el schema.');
+                }
+            }
+
+            document.getElementById('generateBtn').addEventListener('click', generateSchema);
+            document.getElementById('addBtn').addEventListener('click', function () {
+                createRow('', '');
+                setStatus('Nuevo nivel añadido.');
+            });
+            document.getElementById('demoBtn').addEventListener('click', loadDemo);
+            document.getElementById('copyBtn').addEventListener('click', copySchema);
+            siteUrlInput.addEventListener('input', generateSchema);
+
+            loadDemo();
+        })();
+    </script>
+    <script src="assets/site.js"></script>
+</body>
+</html>

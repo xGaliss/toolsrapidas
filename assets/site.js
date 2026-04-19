@@ -67,6 +67,7 @@
             'generador-captions-tiktok.html', 'convertir-webp.html', 'compresor-imagenes.html',
             'redimensionar-imagen.html', 'generador-colores.html', 'seo-checklist.html',
             'simulador-serp-google.html', 'generador-slugs-seo.html', 'generador-schema-faq.html',
+            'generador-schema-breadcrumb.html', 'validador-meta-tags.html',
             'copiar-texto-invisible.html', 'formatear-whatsapp.html', 'texto-invisible-whatsapp.html',
             'letras-raras.html', 'generador-nombres-usuario.html', 'generador-nombres-empresa.html',
             'generador-nombres-fantasy.html', 'generador-nombres-aleatorios.html'

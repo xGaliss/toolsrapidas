@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Validador de meta tags online gratis | ToolsRapidas</title>
+    <meta name="description" content="Valida title, meta description, canonical, robots, Open Graph y Twitter Cards pegando el HTML o el head de una página." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://toolsrapidas.com/validador-meta-tags.html" />
+    <meta name="theme-color" content="#08111f" />
+    <meta name="google-adsense-account" content="ca-pub-2721553592404949">
+
+    <meta property="og:title" content="Validador de meta tags online gratis | ToolsRapidas" />
+    <meta property="og:description" content="Revisa meta tags esenciales y detecta faltas o señales básicas de mejora SEO." />
+    <meta property="og:url" content="https://toolsrapidas.com/validador-meta-tags.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ToolsRapidas" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Validador de meta tags online gratis | ToolsRapidas" />
+    <meta name="twitter:description" content="Pega el HTML o el head de una página y valida title, description, canonical, robots y etiquetas sociales." />
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="assets/styles.css" />
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebApplication",
+          "name": "Validador de meta tags online",
+          "url": "https://toolsrapidas.com/validador-meta-tags.html",
+          "applicationCategory": "MarketingApplication",
+          "operatingSystem": "Any",
+          "browserRequirements": "Requires JavaScript",
+          "inLanguage": "es",
+          "description": "Validador de meta tags para revisar title, meta description, canonical, robots, Open Graph y Twitter Cards."
+        }
+    </script>
+
+    <style>
+        .tool-hero { padding: 42px 0 18px; }
+        .tool-hero h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.05; margin: 0 0 14px; font-weight: 900; letter-spacing: -1.1px; }
+        .tool-lead { color: var(--muted); line-height: 1.7; max-width: 920px; margin: 0; font-size: 18px; }
+        .tool-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+        .tool-panel h2 { margin: 0 0 12px; font-size: 22px; }
+        .tool-panel p { color: var(--muted); line-height: 1.7; }
+        textarea {
+            width: 100%;
+            min-height: 360px;
+            border-radius: 14px;
+            border: 1px solid rgba(148,163,184,.14);
+            background: #020617;
+            color: var(--text);
+            padding: 14px;
+            font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            outline: none;
+            resize: vertical;
+        }
+        .tool-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+        .tool-buttons button {
+            border: none;
+            border-radius: 12px;
+            padding: 12px 14px;
+            cursor: pointer;
+            font-weight: 700;
+            background: #162033;
+            color: var(--text);
+        }
+        .tool-buttons .primary { background: var(--brand2); color: #052e16; }
+        .status { margin-top: 12px; color: var(--muted); min-height: 20px; font-size: 13px; }
+        .score-box, .summary-box, .helper-box {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .score-number { font-size: 42px; font-weight: 900; line-height: 1; margin-bottom: 8px; }
+        .score-box p, .summary-box p, .helper-box span { color: var(--muted); line-height: 1.7; }
+        .summary-box { margin-top: 14px; }
+        .summary-box ul { margin: 10px 0 0; padding-left: 18px; }
+        .summary-box li { color: var(--muted); line-height: 1.7; }
+        .tag-list { display: grid; gap: 10px; margin-top: 14px; }
+        .tag-item {
+            background: #0b1220;
+            border: 1px solid rgba(148,163,184,.12);
+            border-radius: 12px;
+            padding: 12px;
+        }
+        .tag-item strong { display: block; margin-bottom: 6px; }
+        .tag-item code {
+            display: block;
+            color: #dbeafe;
+            white-space: pre-wrap;
+            word-break: break-word;
+            font-family: Consolas, monospace;
+            line-height: 1.7;
+        }
+        .helper-stack { display: grid; gap: 12px; margin-top: 14px; }
+        .helper-box strong { display: block; margin-bottom: 6px; }
+        .related-tools .card a { color: inherit; text-decoration: none; display: block; }
+        .related-tools .card h3 { font-size: 22px; margin: 0 0 8px; }
+        .related-tools .card p { margin: 0; }
+        @media (max-width: 980px) {
+            .tool-layout { grid-template-columns: 1fr; }
+            textarea { min-height: 260px; }
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html" aria-label="Ir a la página principal de ToolsRapidas">
+                <span class="brand-mark">Tr</span>
+                <span>ToolsRapidas</span>
+            </a>
+            <div class="nav-links">
+                <a href="herramientas-seo.html">SEO</a>
+                <a href="#faq">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cookie-banner" id="cookieBanner" hidden>
+        <div class="cookie-banner__content">
+            <div class="cookie-banner__text">
+                <strong>Usamos cookies</strong>
+                <p>
+                    ToolsRapidas usa cookies analíticas para entender cómo se utiliza la web y mejorar la experiencia.
+                    Puedes aceptar o rechazarlas. Más información en la
+                    <a href="politica-cookies.html">política de cookies</a>.
+                </p>
+            </div>
+            <div class="cookie-banner__actions">
+                <button class="btn secondary" id="cookieRejectBtn" type="button">Rechazar</button>
+                <button class="btn primary" id="cookieAcceptBtn" type="button">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="tool-hero">
+        <div class="container">
+            <h1>Validador de meta tags online gratis</h1>
+            <p class="tool-lead">
+                Pega el HTML completo o solo el bloque `&lt;head&gt;` y revisa title, meta description, canonical, robots, Open Graph y Twitter Cards con una validación rápida.
+            </p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="section">
+            <div class="container">
+                <div class="tool-layout">
+                    <section class="card tool-panel">
+                        <h2>Analizar meta tags</h2>
+                        <p>Pega el código de una página y comprueba qué etiquetas clave están presentes, cuáles faltan y qué señales rápidas merece la pena revisar.</p>
+
+                        <textarea id="htmlInput" placeholder="<title>...</title>
+<meta name=&quot;description&quot; content=&quot;...&quot;>
+<link rel=&quot;canonical&quot; href=&quot;...&quot;>
+<meta property=&quot;og:title&quot; content=&quot;...&quot;>"></textarea>
+
+                        <div class="tool-buttons">
+                            <button class="primary" id="validateBtn" type="button">Validar meta tags</button>
+                            <button id="demoBtn" type="button">Cargar demo</button>
+                            <button id="clearBtn" type="button">Limpiar</button>
+                            <button id="copyBtn" type="button">Copiar resumen</button>
+                        </div>
+
+                        <div class="status" id="status"></div>
+                    </section>
+
+                    <aside class="card tool-panel">
+                        <div class="score-box">
+                            <h2>Cobertura esencial</h2>
+                            <div class="score-number" id="scoreValue">0%</div>
+                            <p id="scoreText">Pega HTML y valida para ver qué meta tags básicas están presentes.</p>
+                        </div>
+
+                        <div class="summary-box">
+                            <h3>Resumen rápido</h3>
+                            <div id="summaryContent">
+                                <p>Aquí verás etiquetas encontradas, faltantes y avisos rápidos sobre longitud o consistencia.</p>
+                            </div>
+                        </div>
+
+                        <div class="helper-stack">
+                            <div class="helper-box">
+                                <strong>Qué revisa</strong>
+                                <span>Title, meta description, canonical, robots, OG title, OG description, OG URL, Twitter Card y etiquetas asociadas.</span>
+                            </div>
+                            <div class="helper-box">
+                                <strong>Qué no hace</strong>
+                                <span>No rastrea URLs externas ni sustituye un crawler completo. Sirve como validación rápida a partir del código que pegues.</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Valores detectados</h2>
+                        <p>Extracción rápida de las etiquetas principales encontradas en el código.</p>
+                    </div>
+                </div>
+
+                <div class="tag-list" id="tagList">
+                    <div class="tag-item">
+                        <strong>Sin análisis todavía</strong>
+                        <code>Pega HTML o un bloque head y pulsa en validar.</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Casos de uso y ejemplos</h2>
+                        <p>Momentos donde validar meta tags antes de publicar evita errores frecuentes.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <h3>Auditar una URL nueva</h3>
+                        <p>Úsalo antes de indexar una landing o una tool para comprobar si al menos están title, description, canonical y etiquetas sociales básicas.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Revisar plantillas o snippets</h3>
+                        <p>También va bien cuando un CMS genera el head automáticamente y quieres validar rápidamente el resultado final.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Detectar faltas en revisiones SEO</h3>
+                        <p>Si pegas el head de una página antigua, puedes detectar enseguida carencias básicas sin arrancar una auditoría más grande.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section related-tools">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Herramientas relacionadas</h2>
+                        <p>Complementa la validación de meta tags con otras utilidades del cluster SEO técnico.</p>
+                    </div>
+                </div>
+
+                <div class="tool-grid">
+                    <article class="card">
+                        <a href="simulador-serp-google.html">
+                            <h3>Simulador SERP de Google</h3>
+                            <p>Previsualiza title, description y URL después de revisar que las etiquetas básicas estén presentes.</p>
+                        </a>
+                    </article>
+                    <article class="card">
+                        <a href="generador-meta-titles-descriptions.html">
+                            <h3>Generador de meta titles y descriptions</h3>
+                            <p>Prepara nuevas propuestas si detectas títulos o descriptions pobres o ausentes.</p>
+                        </a>
+                    </article>
+                    <article class="card">
+                        <a href="seo-checklist.html">
+                            <h3>Checklist SEO on-page</h3>
+                            <p>Amplía la revisión a headings, contenido, enlazado interno, schema e indexabilidad.</p>
+                        </a>
+                    </article>
+                    <article class="card">
+                        <a href="generador-schema-breadcrumb.html">
+                            <h3>Generador de schema Breadcrumb</h3>
+                            <p>Completa el marcado técnico si la página necesita reforzar también la navegación jerárquica.</p>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="seo-box">
+                    <h2>Qué hace esta herramienta</h2>
+                    <p>
+                        Analiza el HTML pegado y extrae meta tags esenciales para una revisión rápida de SEO on-page y social sharing sin depender de un crawler externo.
+                    </p>
+
+                    <h2>Qué conviene revisar después</h2>
+                    <p>
+                        Aunque title, description y canonical estén bien, conviene revisar también headings, contenido, enlazado interno, rendimiento, schema y experiencia móvil.
+                    </p>
+
+                    <h2>Qué no sustituye</h2>
+                    <p>
+                        No sustituye una auditoría completa ni la validación del HTML servido en producción, pero sí ayuda a detectar faltas básicas y errores comunes en plantillas o páginas aisladas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Preguntas frecuentes</h2>
+                        <p>Dudas habituales sobre el validador de meta tags.</p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <details open>
+                        <summary>¿Tengo que pegar la página completa?</summary>
+                        <p>No. Puedes pegar el HTML completo o solo el bloque head si es lo que quieres revisar.</p>
+                    </details>
+                    <details>
+                        <summary>¿Valida canonical y robots?</summary>
+                        <p>Sí. Extrae esos valores y los incluye en el resumen para que veas si faltan o necesitan revisión.</p>
+                    </details>
+                    <details>
+                        <summary>¿Sirve para Open Graph y Twitter Cards?</summary>
+                        <p>Sí. Revisa etiquetas OG y Twitter básicas como title, description, URL y card.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puede detectar todos los problemas SEO de una página?</summary>
+                        <p>No. Está pensada como validación rápida de meta tags, no como auditoría integral del sitio.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><strong>ToolsRapidas</strong><br>Herramientas online rápidas, gratis y fáciles de usar.</div>
+            <div class="footer-links">
+                <a href="herramientas-para-trabajo.html">Trabajo</a>
+                <span>·</span>
+                <a href="herramientas-dev.html">Desarrollo</a>
+                <span>·</span>
+                <a href="herramientas-seo.html">SEO</a>
+                <span>·</span>
+                <a href="aviso-legal.html">Aviso legal</a>
+                <span>·</span>
+                <a href="politica-privacidad.html">Privacidad</a>
+                <span>·</span>
+                <a href="politica-cookies.html">Cookies</a>
+                <span>·</span>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const htmlInput = document.getElementById('htmlInput');
+            const scoreValue = document.getElementById('scoreValue');
+            const scoreText = document.getElementById('scoreText');
+            const summaryContent = document.getElementById('summaryContent');
+            const tagList = document.getElementById('tagList');
+            const status = document.getElementById('status');
+
+            function setStatus(message) {
+                status.textContent = message || '';
+            }
+
+            function escapeHtml(value) {
+                return String(value)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function getDocumentFromInput() {
+                const raw = htmlInput.value.trim();
+                if (!raw) return null;
+                const normalized = /<html[\s>]/i.test(raw) ? raw : '<!DOCTYPE html><html><head>' + raw + '</head><body></body></html>';
+                return new DOMParser().parseFromString(normalized, 'text/html');
+            }
+
+            function getMeta(doc, key, attr) {
+                const selector = attr === 'property'
+                    ? 'meta[property="' + key + '"]'
+                    : 'meta[name="' + key + '"]';
+                const node = doc.querySelector(selector);
+                return node ? (node.getAttribute('content') || '').trim() : '';
+            }
+
+            function lengthAdvice(label, value, min, max) {
+                if (!value) return label + ': falta.';
+                if (value.length < min) return label + ': parece corto.';
+                if (value.length > max) return label + ': parece largo.';
+                return label + ': rango orientativo correcto.';
+            }
+
+            function analyze() {
+                const doc = getDocumentFromInput();
+                if (!doc) {
+                    setStatus('Pega HTML o un bloque head para validar.');
+                    return;
+                }
+
+                const title = doc.querySelector('title') ? doc.querySelector('title').textContent.trim() : '';
+                const description = getMeta(doc, 'description', 'name');
+                const robots = getMeta(doc, 'robots', 'name');
+                const canonicalNode = doc.querySelector('link[rel="canonical"]');
+                const canonical = canonicalNode ? (canonicalNode.getAttribute('href') || '').trim() : '';
+                const ogTitle = getMeta(doc, 'og:title', 'property');
+                const ogDescription = getMeta(doc, 'og:description', 'property');
+                const ogUrl = getMeta(doc, 'og:url', 'property');
+                const twitterCard = getMeta(doc, 'twitter:card', 'name');
+                const twitterTitle = getMeta(doc, 'twitter:title', 'name');
+                const twitterDescription = getMeta(doc, 'twitter:description', 'name');
+
+                const checks = [
+                    { label: 'Title', value: title },
+                    { label: 'Meta description', value: description },
+                    { label: 'Canonical', value: canonical },
+                    { label: 'Robots', value: robots },
+                    { label: 'OG title', value: ogTitle },
+                    { label: 'OG description', value: ogDescription },
+                    { label: 'Twitter card', value: twitterCard }
+                ];
+
+                const present = checks.filter(function (check) { return Boolean(check.value); });
+                const missing = checks.filter(function (check) { return !check.value; });
+                const percent = Math.round((present.length / checks.length) * 100);
+                const warnings = [
+                    lengthAdvice('Title', title, 35, 65),
+                    lengthAdvice('Description', description, 90, 160),
+                    canonical && /^https?:\/\//i.test(canonical) ? 'Canonical: parece absoluta.' : 'Canonical: revisa si debería ser absoluta.',
+                    robots ? 'Robots: detectada.' : 'Robots: no detectada.',
+                    doc.querySelectorAll('title').length > 1 ? 'Hay más de un title en el código.' : 'Solo se detecta un title.',
+                    doc.querySelectorAll('meta[name="description"]').length > 1 ? 'Hay más de una meta description.' : 'No se detectan duplicados de description.'
+                ];
+
+                scoreValue.textContent = percent + '%';
+                scoreText.textContent = present.length + ' de ' + checks.length + ' etiquetas esenciales detectadas.';
+
+                summaryContent.innerHTML =
+                    '<p><strong>Etiquetas presentes:</strong></p><ul>' +
+                    (present.map(function (item) { return '<li>' + item.label + '</li>'; }).join('') || '<li>No se ha encontrado ninguna.</li>') +
+                    '</ul>' +
+                    '<p><strong>Etiquetas faltantes:</strong></p><ul>' +
+                    (missing.map(function (item) { return '<li>' + item.label + '</li>'; }).join('') || '<li>No faltan etiquetas esenciales en esta revisión.</li>') +
+                    '</ul>' +
+                    '<p><strong>Avisos rápidos:</strong></p><ul>' +
+                    warnings.map(function (warning) { return '<li>' + warning + '</li>'; }).join('') +
+                    '</ul>';
+
+                const extracted = [
+                    ['Title', title],
+                    ['Meta description', description],
+                    ['Canonical', canonical],
+                    ['Robots', robots],
+                    ['OG title', ogTitle],
+                    ['OG description', ogDescription],
+                    ['OG URL', ogUrl],
+                    ['Twitter card', twitterCard],
+                    ['Twitter title', twitterTitle],
+                    ['Twitter description', twitterDescription]
+                ];
+
+                tagList.innerHTML = extracted.map(function (item) {
+                    return '<div class="tag-item"><strong>' + item[0] + '</strong><code>' + escapeHtml(item[1] || 'No detectado') + '</code></div>';
+                }).join('');
+
+                setStatus('Meta tags validadas.');
+            }
+
+            function loadDemo() {
+                htmlInput.value = '<title>Generador de schema Breadcrumb online gratis | ToolsRapidas</title>\n' +
+                    '<meta name="description" content="Genera JSON-LD BreadcrumbList online gratis para rutas de navegacion SEO.">\n' +
+                    '<meta name="robots" content="index,follow">\n' +
+                    '<link rel="canonical" href="https://toolsrapidas.com/generador-schema-breadcrumb.html">\n' +
+                    '<meta property="og:title" content="Generador de schema Breadcrumb online gratis | ToolsRapidas">\n' +
+                    '<meta property="og:description" content="Crea schema breadcrumb con vista previa y copia rapida.">\n' +
+                    '<meta property="og:url" content="https://toolsrapidas.com/generador-schema-breadcrumb.html">\n' +
+                    '<meta name="twitter:card" content="summary_large_image">\n' +
+                    '<meta name="twitter:title" content="Generador de schema Breadcrumb online gratis | ToolsRapidas">\n' +
+                    '<meta name="twitter:description" content="Genera rutas breadcrumb para categorias y herramientas.">';
+                analyze();
+            }
+
+            function clearAll() {
+                htmlInput.value = '';
+                scoreValue.textContent = '0%';
+                scoreText.textContent = 'Pega HTML y valida para ver qué meta tags básicas están presentes.';
+                summaryContent.innerHTML = '<p>Aquí verás etiquetas encontradas, faltantes y avisos rápidos sobre longitud o consistencia.</p>';
+                tagList.innerHTML = '<div class="tag-item"><strong>Sin análisis todavía</strong><code>Pega HTML o un bloque head y pulsa en validar.</code></div>';
+                setStatus('Contenido limpiado.');
+            }
+
+            async function copySummary() {
+                try {
+                    await navigator.clipboard.writeText([
+                        'Validador de meta tags',
+                        'Cobertura: ' + scoreValue.textContent,
+                        '',
+                        summaryContent.textContent.trim()
+                    ].join('\n'));
+                    setStatus('Resumen copiado.');
+                } catch (_) {
+                    setStatus('No se pudo copiar el resumen.');
+                }
+            }
+
+            document.getElementById('validateBtn').addEventListener('click', analyze);
+            document.getElementById('demoBtn').addEventListener('click', loadDemo);
+            document.getElementById('clearBtn').addEventListener('click', clearAll);
+            document.getElementById('copyBtn').addEventListener('click', copySummary);
+        })();
+    </script>
+    <script src="assets/site.js"></script>
+</body>
+</html>
